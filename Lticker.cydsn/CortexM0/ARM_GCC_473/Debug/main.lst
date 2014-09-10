@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccSoJryB.s 			page 1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,14 +58,14 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccSoJryB.s 			page 1
   16:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
   17:.\main.c      ****     //Clock_1_Start();
   18:.\main.c      ****     /* CyGlobalIntEnable; */ /* Uncomment this line to enable global interrupts. */
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccSoJryB.s 			page 2
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 2
 
 
   19:.\main.c      ****     int i;
   20:.\main.c      ****     for(;;)
   21:.\main.c      ****     {
   22:.\main.c      ****         /* Place your application code here. */
-  23:.\main.c      ****         for(i=0;i<64;i++);
+  23:.\main.c      ****         for(i=0;i<128;i++);
   40              		.loc 1 23 0
   41 0006 0023     		mov	r3, #0
   42 0008 7B60     		str	r3, [r7, #4]
@@ -78,411 +78,407 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccSoJryB.s 			page 1
   49              	.L2:
   50              		.loc 1 23 0 discriminator 1
   51 0012 7B68     		ldr	r3, [r7, #4]
-  52 0014 3F2B     		cmp	r3, #63
+  52 0014 7F2B     		cmp	r3, #127
   53 0016 F9DD     		ble	.L3
-  24:.\main.c      ****             CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,5);  // pulse 1
+  24:.\main.c      ****             CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa2);
   54              		.loc 1 24 0 is_stmt 1
-  55 0018 064B     		ldr	r3, .L5
-  56 001a 0522     		mov	r2, #5
+  55 0018 014B     		ldr	r3, .L5
+  56 001a A222     		mov	r2, #162
   57 001c 1A70     		strb	r2, [r3]
-  25:.\main.c      ****             CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,17); // pulse 0
-  58              		.loc 1 25 0
-  59 001e 054B     		ldr	r3, .L5
-  60 0020 1122     		mov	r2, #17
-  61 0022 1A70     		strb	r2, [r3]
-  26:.\main.c      ****             CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,5);
-  62              		.loc 1 26 0
-  63 0024 034B     		ldr	r3, .L5
-  64 0026 0522     		mov	r2, #5
-  65 0028 1A70     		strb	r2, [r3]
-  27:.\main.c      ****             CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,17);
-  66              		.loc 1 27 0
-  67 002a 024B     		ldr	r3, .L5
-  68 002c 1122     		mov	r2, #17
-  69 002e 1A70     		strb	r2, [r3]
-  28:.\main.c      ****             
-  29:.\main.c      ****     }
-  70              		.loc 1 29 0
-  71 0030 E9E7     		b	.L4
-  72              	.L6:
-  73 0032 C046     		.align	2
-  74              	.L5:
-  75 0034 50000F40 		.word	1074724944
-  76              		.cfi_endproc
-  77              	.LFE33:
-  78              		.size	main, .-main
-  79              		.text
-  80              	.Letext0:
-  81              		.file 2 "./Generated_Source/PSoC4/cytypes.h"
-  82              		.section	.debug_info,"",%progbits
-  83              	.Ldebug_info0:
-  84 0000 C9000000 		.4byte	0xc9
-  85 0004 0200     		.2byte	0x2
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccSoJryB.s 			page 3
+  25:.\main.c      **** /*            CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa1);
+  26:.\main.c      ****             CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa1);
+  27:.\main.c      ****             CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa1);
+  28:.\main.c      ****             CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,5);  // pulse 1
+  29:.\main.c      ****             CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,17); // pulse 0
+  30:.\main.c      ****             CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,5);
+  31:.\main.c      ****             CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,17);
+  32:.\main.c      ****             CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,5);  // pulse 1
+  33:.\main.c      ****             CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,17); // pulse 0
+  34:.\main.c      ****             CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,5);
+  35:.\main.c      ****             CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,17);*/
+  36:.\main.c      ****             
+  37:.\main.c      ****     }
+  58              		.loc 1 37 0
+  59 001e F2E7     		b	.L4
+  60              	.L6:
+  61              		.align	2
+  62              	.L5:
+  63 0020 43000F40 		.word	1074724931
+  64              		.cfi_endproc
+  65              	.LFE33:
+  66              		.size	main, .-main
+  67              		.text
+  68              	.Letext0:
+  69              		.file 2 "./Generated_Source/PSoC4/cytypes.h"
+  70              		.section	.debug_info,"",%progbits
+  71              	.Ldebug_info0:
+  72 0000 C9000000 		.4byte	0xc9
+  73 0004 0200     		.2byte	0x2
+  74 0006 00000000 		.4byte	.Ldebug_abbrev0
+  75 000a 04       		.byte	0x4
+  76 000b 01       		.uleb128 0x1
+  77 000c 20000000 		.4byte	.LASF15
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 3
 
 
-  86 0006 00000000 		.4byte	.Ldebug_abbrev0
-  87 000a 04       		.byte	0x4
-  88 000b 01       		.uleb128 0x1
-  89 000c 20000000 		.4byte	.LASF15
-  90 0010 01       		.byte	0x1
-  91 0011 31010000 		.4byte	.LASF16
-  92 0015 A6000000 		.4byte	.LASF17
-  93 0019 00000000 		.4byte	.Ldebug_ranges0+0
-  94 001d 00000000 		.4byte	0
-  95 0021 00000000 		.4byte	0
-  96 0025 00000000 		.4byte	.Ldebug_line0
-  97 0029 02       		.uleb128 0x2
-  98 002a 01       		.byte	0x1
-  99 002b 06       		.byte	0x6
- 100 002c 1F010000 		.4byte	.LASF0
- 101 0030 02       		.uleb128 0x2
- 102 0031 01       		.byte	0x1
- 103 0032 08       		.byte	0x8
- 104 0033 98000000 		.4byte	.LASF1
- 105 0037 02       		.uleb128 0x2
- 106 0038 02       		.byte	0x2
- 107 0039 05       		.byte	0x5
- 108 003a FB000000 		.4byte	.LASF2
- 109 003e 02       		.uleb128 0x2
- 110 003f 02       		.byte	0x2
- 111 0040 07       		.byte	0x7
- 112 0041 0C010000 		.4byte	.LASF3
- 113 0045 02       		.uleb128 0x2
- 114 0046 04       		.byte	0x4
- 115 0047 05       		.byte	0x5
- 116 0048 F2000000 		.4byte	.LASF4
- 117 004c 02       		.uleb128 0x2
- 118 004d 04       		.byte	0x4
- 119 004e 07       		.byte	0x7
- 120 004f 6F000000 		.4byte	.LASF5
- 121 0053 02       		.uleb128 0x2
- 122 0054 08       		.byte	0x8
- 123 0055 05       		.byte	0x5
- 124 0056 00000000 		.4byte	.LASF6
- 125 005a 02       		.uleb128 0x2
- 126 005b 08       		.byte	0x8
- 127 005c 07       		.byte	0x7
- 128 005d 81000000 		.4byte	.LASF7
- 129 0061 03       		.uleb128 0x3
- 130 0062 04       		.byte	0x4
- 131 0063 05       		.byte	0x5
- 132 0064 696E7400 		.ascii	"int\000"
- 133 0068 02       		.uleb128 0x2
- 134 0069 04       		.byte	0x4
- 135 006a 07       		.byte	0x7
- 136 006b 0E000000 		.4byte	.LASF8
- 137 006f 04       		.uleb128 0x4
- 138 0070 69000000 		.4byte	.LASF12
- 139 0074 02       		.byte	0x2
- 140 0075 5B       		.byte	0x5b
- 141 0076 30000000 		.4byte	0x30
- 142 007a 02       		.uleb128 0x2
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccSoJryB.s 			page 4
+  78 0010 01       		.byte	0x1
+  79 0011 31010000 		.4byte	.LASF16
+  80 0015 A6000000 		.4byte	.LASF17
+  81 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  82 001d 00000000 		.4byte	0
+  83 0021 00000000 		.4byte	0
+  84 0025 00000000 		.4byte	.Ldebug_line0
+  85 0029 02       		.uleb128 0x2
+  86 002a 01       		.byte	0x1
+  87 002b 06       		.byte	0x6
+  88 002c 1F010000 		.4byte	.LASF0
+  89 0030 02       		.uleb128 0x2
+  90 0031 01       		.byte	0x1
+  91 0032 08       		.byte	0x8
+  92 0033 98000000 		.4byte	.LASF1
+  93 0037 02       		.uleb128 0x2
+  94 0038 02       		.byte	0x2
+  95 0039 05       		.byte	0x5
+  96 003a FB000000 		.4byte	.LASF2
+  97 003e 02       		.uleb128 0x2
+  98 003f 02       		.byte	0x2
+  99 0040 07       		.byte	0x7
+ 100 0041 0C010000 		.4byte	.LASF3
+ 101 0045 02       		.uleb128 0x2
+ 102 0046 04       		.byte	0x4
+ 103 0047 05       		.byte	0x5
+ 104 0048 F2000000 		.4byte	.LASF4
+ 105 004c 02       		.uleb128 0x2
+ 106 004d 04       		.byte	0x4
+ 107 004e 07       		.byte	0x7
+ 108 004f 6F000000 		.4byte	.LASF5
+ 109 0053 02       		.uleb128 0x2
+ 110 0054 08       		.byte	0x8
+ 111 0055 05       		.byte	0x5
+ 112 0056 00000000 		.4byte	.LASF6
+ 113 005a 02       		.uleb128 0x2
+ 114 005b 08       		.byte	0x8
+ 115 005c 07       		.byte	0x7
+ 116 005d 81000000 		.4byte	.LASF7
+ 117 0061 03       		.uleb128 0x3
+ 118 0062 04       		.byte	0x4
+ 119 0063 05       		.byte	0x5
+ 120 0064 696E7400 		.ascii	"int\000"
+ 121 0068 02       		.uleb128 0x2
+ 122 0069 04       		.byte	0x4
+ 123 006a 07       		.byte	0x7
+ 124 006b 0E000000 		.4byte	.LASF8
+ 125 006f 04       		.uleb128 0x4
+ 126 0070 69000000 		.4byte	.LASF12
+ 127 0074 02       		.byte	0x2
+ 128 0075 5B       		.byte	0x5b
+ 129 0076 30000000 		.4byte	0x30
+ 130 007a 02       		.uleb128 0x2
+ 131 007b 04       		.byte	0x4
+ 132 007c 04       		.byte	0x4
+ 133 007d 2B010000 		.4byte	.LASF9
+ 134 0081 02       		.uleb128 0x2
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 4
 
 
- 143 007b 04       		.byte	0x4
- 144 007c 04       		.byte	0x4
- 145 007d 2B010000 		.4byte	.LASF9
- 146 0081 02       		.uleb128 0x2
- 147 0082 08       		.byte	0x8
- 148 0083 04       		.byte	0x4
- 149 0084 05010000 		.4byte	.LASF10
- 150 0088 02       		.uleb128 0x2
- 151 0089 01       		.byte	0x1
- 152 008a 08       		.byte	0x8
- 153 008b ED000000 		.4byte	.LASF11
- 154 008f 04       		.uleb128 0x4
- 155 0090 3A010000 		.4byte	.LASF13
- 156 0094 02       		.byte	0x2
- 157 0095 F0       		.byte	0xf0
- 158 0096 9A000000 		.4byte	0x9a
- 159 009a 05       		.uleb128 0x5
- 160 009b 6F000000 		.4byte	0x6f
- 161 009f 02       		.uleb128 0x2
- 162 00a0 04       		.byte	0x4
- 163 00a1 07       		.byte	0x7
- 164 00a2 3F010000 		.4byte	.LASF14
- 165 00a6 06       		.uleb128 0x6
- 166 00a7 01       		.byte	0x1
- 167 00a8 1B000000 		.4byte	.LASF18
- 168 00ac 01       		.byte	0x1
- 169 00ad 0E       		.byte	0xe
- 170 00ae 61000000 		.4byte	0x61
- 171 00b2 00000000 		.4byte	.LFB33
- 172 00b6 38000000 		.4byte	.LFE33
- 173 00ba 00000000 		.4byte	.LLST0
- 174 00be 01       		.byte	0x1
- 175 00bf 07       		.uleb128 0x7
- 176 00c0 6900     		.ascii	"i\000"
- 177 00c2 01       		.byte	0x1
- 178 00c3 13       		.byte	0x13
- 179 00c4 61000000 		.4byte	0x61
- 180 00c8 02       		.byte	0x2
- 181 00c9 91       		.byte	0x91
- 182 00ca 74       		.sleb128 -12
- 183 00cb 00       		.byte	0
- 184 00cc 00       		.byte	0
- 185              		.section	.debug_abbrev,"",%progbits
- 186              	.Ldebug_abbrev0:
- 187 0000 01       		.uleb128 0x1
- 188 0001 11       		.uleb128 0x11
- 189 0002 01       		.byte	0x1
- 190 0003 25       		.uleb128 0x25
- 191 0004 0E       		.uleb128 0xe
- 192 0005 13       		.uleb128 0x13
- 193 0006 0B       		.uleb128 0xb
- 194 0007 03       		.uleb128 0x3
- 195 0008 0E       		.uleb128 0xe
- 196 0009 1B       		.uleb128 0x1b
- 197 000a 0E       		.uleb128 0xe
- 198 000b 55       		.uleb128 0x55
- 199 000c 06       		.uleb128 0x6
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccSoJryB.s 			page 5
+ 135 0082 08       		.byte	0x8
+ 136 0083 04       		.byte	0x4
+ 137 0084 05010000 		.4byte	.LASF10
+ 138 0088 02       		.uleb128 0x2
+ 139 0089 01       		.byte	0x1
+ 140 008a 08       		.byte	0x8
+ 141 008b ED000000 		.4byte	.LASF11
+ 142 008f 04       		.uleb128 0x4
+ 143 0090 3A010000 		.4byte	.LASF13
+ 144 0094 02       		.byte	0x2
+ 145 0095 F0       		.byte	0xf0
+ 146 0096 9A000000 		.4byte	0x9a
+ 147 009a 05       		.uleb128 0x5
+ 148 009b 6F000000 		.4byte	0x6f
+ 149 009f 02       		.uleb128 0x2
+ 150 00a0 04       		.byte	0x4
+ 151 00a1 07       		.byte	0x7
+ 152 00a2 3F010000 		.4byte	.LASF14
+ 153 00a6 06       		.uleb128 0x6
+ 154 00a7 01       		.byte	0x1
+ 155 00a8 1B000000 		.4byte	.LASF18
+ 156 00ac 01       		.byte	0x1
+ 157 00ad 0E       		.byte	0xe
+ 158 00ae 61000000 		.4byte	0x61
+ 159 00b2 00000000 		.4byte	.LFB33
+ 160 00b6 24000000 		.4byte	.LFE33
+ 161 00ba 00000000 		.4byte	.LLST0
+ 162 00be 01       		.byte	0x1
+ 163 00bf 07       		.uleb128 0x7
+ 164 00c0 6900     		.ascii	"i\000"
+ 165 00c2 01       		.byte	0x1
+ 166 00c3 13       		.byte	0x13
+ 167 00c4 61000000 		.4byte	0x61
+ 168 00c8 02       		.byte	0x2
+ 169 00c9 91       		.byte	0x91
+ 170 00ca 74       		.sleb128 -12
+ 171 00cb 00       		.byte	0
+ 172 00cc 00       		.byte	0
+ 173              		.section	.debug_abbrev,"",%progbits
+ 174              	.Ldebug_abbrev0:
+ 175 0000 01       		.uleb128 0x1
+ 176 0001 11       		.uleb128 0x11
+ 177 0002 01       		.byte	0x1
+ 178 0003 25       		.uleb128 0x25
+ 179 0004 0E       		.uleb128 0xe
+ 180 0005 13       		.uleb128 0x13
+ 181 0006 0B       		.uleb128 0xb
+ 182 0007 03       		.uleb128 0x3
+ 183 0008 0E       		.uleb128 0xe
+ 184 0009 1B       		.uleb128 0x1b
+ 185 000a 0E       		.uleb128 0xe
+ 186 000b 55       		.uleb128 0x55
+ 187 000c 06       		.uleb128 0x6
+ 188 000d 11       		.uleb128 0x11
+ 189 000e 01       		.uleb128 0x1
+ 190 000f 52       		.uleb128 0x52
+ 191 0010 01       		.uleb128 0x1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 5
 
 
- 200 000d 11       		.uleb128 0x11
- 201 000e 01       		.uleb128 0x1
- 202 000f 52       		.uleb128 0x52
- 203 0010 01       		.uleb128 0x1
- 204 0011 10       		.uleb128 0x10
- 205 0012 06       		.uleb128 0x6
- 206 0013 00       		.byte	0
- 207 0014 00       		.byte	0
- 208 0015 02       		.uleb128 0x2
- 209 0016 24       		.uleb128 0x24
- 210 0017 00       		.byte	0
- 211 0018 0B       		.uleb128 0xb
- 212 0019 0B       		.uleb128 0xb
- 213 001a 3E       		.uleb128 0x3e
- 214 001b 0B       		.uleb128 0xb
- 215 001c 03       		.uleb128 0x3
- 216 001d 0E       		.uleb128 0xe
- 217 001e 00       		.byte	0
- 218 001f 00       		.byte	0
- 219 0020 03       		.uleb128 0x3
- 220 0021 24       		.uleb128 0x24
- 221 0022 00       		.byte	0
- 222 0023 0B       		.uleb128 0xb
- 223 0024 0B       		.uleb128 0xb
- 224 0025 3E       		.uleb128 0x3e
- 225 0026 0B       		.uleb128 0xb
- 226 0027 03       		.uleb128 0x3
- 227 0028 08       		.uleb128 0x8
- 228 0029 00       		.byte	0
- 229 002a 00       		.byte	0
- 230 002b 04       		.uleb128 0x4
- 231 002c 16       		.uleb128 0x16
- 232 002d 00       		.byte	0
- 233 002e 03       		.uleb128 0x3
- 234 002f 0E       		.uleb128 0xe
- 235 0030 3A       		.uleb128 0x3a
- 236 0031 0B       		.uleb128 0xb
- 237 0032 3B       		.uleb128 0x3b
- 238 0033 0B       		.uleb128 0xb
- 239 0034 49       		.uleb128 0x49
- 240 0035 13       		.uleb128 0x13
- 241 0036 00       		.byte	0
- 242 0037 00       		.byte	0
- 243 0038 05       		.uleb128 0x5
- 244 0039 35       		.uleb128 0x35
- 245 003a 00       		.byte	0
- 246 003b 49       		.uleb128 0x49
- 247 003c 13       		.uleb128 0x13
- 248 003d 00       		.byte	0
- 249 003e 00       		.byte	0
- 250 003f 06       		.uleb128 0x6
- 251 0040 2E       		.uleb128 0x2e
- 252 0041 01       		.byte	0x1
- 253 0042 3F       		.uleb128 0x3f
- 254 0043 0C       		.uleb128 0xc
- 255 0044 03       		.uleb128 0x3
- 256 0045 0E       		.uleb128 0xe
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccSoJryB.s 			page 6
+ 192 0011 10       		.uleb128 0x10
+ 193 0012 06       		.uleb128 0x6
+ 194 0013 00       		.byte	0
+ 195 0014 00       		.byte	0
+ 196 0015 02       		.uleb128 0x2
+ 197 0016 24       		.uleb128 0x24
+ 198 0017 00       		.byte	0
+ 199 0018 0B       		.uleb128 0xb
+ 200 0019 0B       		.uleb128 0xb
+ 201 001a 3E       		.uleb128 0x3e
+ 202 001b 0B       		.uleb128 0xb
+ 203 001c 03       		.uleb128 0x3
+ 204 001d 0E       		.uleb128 0xe
+ 205 001e 00       		.byte	0
+ 206 001f 00       		.byte	0
+ 207 0020 03       		.uleb128 0x3
+ 208 0021 24       		.uleb128 0x24
+ 209 0022 00       		.byte	0
+ 210 0023 0B       		.uleb128 0xb
+ 211 0024 0B       		.uleb128 0xb
+ 212 0025 3E       		.uleb128 0x3e
+ 213 0026 0B       		.uleb128 0xb
+ 214 0027 03       		.uleb128 0x3
+ 215 0028 08       		.uleb128 0x8
+ 216 0029 00       		.byte	0
+ 217 002a 00       		.byte	0
+ 218 002b 04       		.uleb128 0x4
+ 219 002c 16       		.uleb128 0x16
+ 220 002d 00       		.byte	0
+ 221 002e 03       		.uleb128 0x3
+ 222 002f 0E       		.uleb128 0xe
+ 223 0030 3A       		.uleb128 0x3a
+ 224 0031 0B       		.uleb128 0xb
+ 225 0032 3B       		.uleb128 0x3b
+ 226 0033 0B       		.uleb128 0xb
+ 227 0034 49       		.uleb128 0x49
+ 228 0035 13       		.uleb128 0x13
+ 229 0036 00       		.byte	0
+ 230 0037 00       		.byte	0
+ 231 0038 05       		.uleb128 0x5
+ 232 0039 35       		.uleb128 0x35
+ 233 003a 00       		.byte	0
+ 234 003b 49       		.uleb128 0x49
+ 235 003c 13       		.uleb128 0x13
+ 236 003d 00       		.byte	0
+ 237 003e 00       		.byte	0
+ 238 003f 06       		.uleb128 0x6
+ 239 0040 2E       		.uleb128 0x2e
+ 240 0041 01       		.byte	0x1
+ 241 0042 3F       		.uleb128 0x3f
+ 242 0043 0C       		.uleb128 0xc
+ 243 0044 03       		.uleb128 0x3
+ 244 0045 0E       		.uleb128 0xe
+ 245 0046 3A       		.uleb128 0x3a
+ 246 0047 0B       		.uleb128 0xb
+ 247 0048 3B       		.uleb128 0x3b
+ 248 0049 0B       		.uleb128 0xb
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 6
 
 
- 257 0046 3A       		.uleb128 0x3a
- 258 0047 0B       		.uleb128 0xb
- 259 0048 3B       		.uleb128 0x3b
- 260 0049 0B       		.uleb128 0xb
- 261 004a 49       		.uleb128 0x49
- 262 004b 13       		.uleb128 0x13
- 263 004c 11       		.uleb128 0x11
- 264 004d 01       		.uleb128 0x1
- 265 004e 12       		.uleb128 0x12
- 266 004f 01       		.uleb128 0x1
- 267 0050 40       		.uleb128 0x40
- 268 0051 06       		.uleb128 0x6
- 269 0052 9742     		.uleb128 0x2117
- 270 0054 0C       		.uleb128 0xc
- 271 0055 00       		.byte	0
- 272 0056 00       		.byte	0
- 273 0057 07       		.uleb128 0x7
- 274 0058 34       		.uleb128 0x34
- 275 0059 00       		.byte	0
- 276 005a 03       		.uleb128 0x3
- 277 005b 08       		.uleb128 0x8
- 278 005c 3A       		.uleb128 0x3a
- 279 005d 0B       		.uleb128 0xb
- 280 005e 3B       		.uleb128 0x3b
- 281 005f 0B       		.uleb128 0xb
- 282 0060 49       		.uleb128 0x49
- 283 0061 13       		.uleb128 0x13
- 284 0062 02       		.uleb128 0x2
- 285 0063 0A       		.uleb128 0xa
- 286 0064 00       		.byte	0
- 287 0065 00       		.byte	0
- 288 0066 00       		.byte	0
- 289              		.section	.debug_loc,"",%progbits
- 290              	.Ldebug_loc0:
- 291              	.LLST0:
- 292 0000 00000000 		.4byte	.LFB33
- 293 0004 02000000 		.4byte	.LCFI0
- 294 0008 0200     		.2byte	0x2
- 295 000a 7D       		.byte	0x7d
- 296 000b 00       		.sleb128 0
- 297 000c 02000000 		.4byte	.LCFI0
- 298 0010 04000000 		.4byte	.LCFI1
- 299 0014 0200     		.2byte	0x2
- 300 0016 7D       		.byte	0x7d
- 301 0017 08       		.sleb128 8
- 302 0018 04000000 		.4byte	.LCFI1
- 303 001c 06000000 		.4byte	.LCFI2
- 304 0020 0200     		.2byte	0x2
- 305 0022 7D       		.byte	0x7d
- 306 0023 10       		.sleb128 16
- 307 0024 06000000 		.4byte	.LCFI2
- 308 0028 38000000 		.4byte	.LFE33
- 309 002c 0200     		.2byte	0x2
- 310 002e 77       		.byte	0x77
- 311 002f 10       		.sleb128 16
- 312 0030 00000000 		.4byte	0
- 313 0034 00000000 		.4byte	0
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccSoJryB.s 			page 7
+ 249 004a 49       		.uleb128 0x49
+ 250 004b 13       		.uleb128 0x13
+ 251 004c 11       		.uleb128 0x11
+ 252 004d 01       		.uleb128 0x1
+ 253 004e 12       		.uleb128 0x12
+ 254 004f 01       		.uleb128 0x1
+ 255 0050 40       		.uleb128 0x40
+ 256 0051 06       		.uleb128 0x6
+ 257 0052 9742     		.uleb128 0x2117
+ 258 0054 0C       		.uleb128 0xc
+ 259 0055 00       		.byte	0
+ 260 0056 00       		.byte	0
+ 261 0057 07       		.uleb128 0x7
+ 262 0058 34       		.uleb128 0x34
+ 263 0059 00       		.byte	0
+ 264 005a 03       		.uleb128 0x3
+ 265 005b 08       		.uleb128 0x8
+ 266 005c 3A       		.uleb128 0x3a
+ 267 005d 0B       		.uleb128 0xb
+ 268 005e 3B       		.uleb128 0x3b
+ 269 005f 0B       		.uleb128 0xb
+ 270 0060 49       		.uleb128 0x49
+ 271 0061 13       		.uleb128 0x13
+ 272 0062 02       		.uleb128 0x2
+ 273 0063 0A       		.uleb128 0xa
+ 274 0064 00       		.byte	0
+ 275 0065 00       		.byte	0
+ 276 0066 00       		.byte	0
+ 277              		.section	.debug_loc,"",%progbits
+ 278              	.Ldebug_loc0:
+ 279              	.LLST0:
+ 280 0000 00000000 		.4byte	.LFB33
+ 281 0004 02000000 		.4byte	.LCFI0
+ 282 0008 0200     		.2byte	0x2
+ 283 000a 7D       		.byte	0x7d
+ 284 000b 00       		.sleb128 0
+ 285 000c 02000000 		.4byte	.LCFI0
+ 286 0010 04000000 		.4byte	.LCFI1
+ 287 0014 0200     		.2byte	0x2
+ 288 0016 7D       		.byte	0x7d
+ 289 0017 08       		.sleb128 8
+ 290 0018 04000000 		.4byte	.LCFI1
+ 291 001c 06000000 		.4byte	.LCFI2
+ 292 0020 0200     		.2byte	0x2
+ 293 0022 7D       		.byte	0x7d
+ 294 0023 10       		.sleb128 16
+ 295 0024 06000000 		.4byte	.LCFI2
+ 296 0028 24000000 		.4byte	.LFE33
+ 297 002c 0200     		.2byte	0x2
+ 298 002e 77       		.byte	0x77
+ 299 002f 10       		.sleb128 16
+ 300 0030 00000000 		.4byte	0
+ 301 0034 00000000 		.4byte	0
+ 302              		.section	.debug_aranges,"",%progbits
+ 303 0000 1C000000 		.4byte	0x1c
+ 304 0004 0200     		.2byte	0x2
+ 305 0006 00000000 		.4byte	.Ldebug_info0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 7
 
 
- 314              		.section	.debug_aranges,"",%progbits
- 315 0000 1C000000 		.4byte	0x1c
- 316 0004 0200     		.2byte	0x2
- 317 0006 00000000 		.4byte	.Ldebug_info0
- 318 000a 04       		.byte	0x4
- 319 000b 00       		.byte	0
- 320 000c 0000     		.2byte	0
- 321 000e 0000     		.2byte	0
- 322 0010 00000000 		.4byte	.LFB33
- 323 0014 38000000 		.4byte	.LFE33-.LFB33
- 324 0018 00000000 		.4byte	0
- 325 001c 00000000 		.4byte	0
- 326              		.section	.debug_ranges,"",%progbits
- 327              	.Ldebug_ranges0:
- 328 0000 00000000 		.4byte	.LFB33
- 329 0004 38000000 		.4byte	.LFE33
- 330 0008 00000000 		.4byte	0
- 331 000c 00000000 		.4byte	0
- 332              		.section	.debug_line,"",%progbits
- 333              	.Ldebug_line0:
- 334 0000 6C000000 		.section	.debug_str,"MS",%progbits,1
- 334      02004500 
- 334      00000201 
- 334      FB0E0D00 
- 334      01010101 
- 335              	.LASF6:
- 336 0000 6C6F6E67 		.ascii	"long long int\000"
- 336      206C6F6E 
- 336      6720696E 
- 336      7400
- 337              	.LASF8:
- 338 000e 756E7369 		.ascii	"unsigned int\000"
- 338      676E6564 
- 338      20696E74 
- 338      00
- 339              	.LASF18:
- 340 001b 6D61696E 		.ascii	"main\000"
- 340      00
- 341              	.LASF15:
- 342 0020 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 342      4320342E 
- 342      372E3320 
- 342      32303133 
- 342      30333132 
- 343 0053 616E6368 		.ascii	"anch revision 196615]\000"
- 343      20726576 
- 343      6973696F 
- 343      6E203139 
- 343      36363135 
- 344              	.LASF12:
- 345 0069 75696E74 		.ascii	"uint8\000"
- 345      3800
- 346              	.LASF5:
- 347 006f 6C6F6E67 		.ascii	"long unsigned int\000"
- 347      20756E73 
- 347      69676E65 
- 347      6420696E 
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccSoJryB.s 			page 8
+ 306 000a 04       		.byte	0x4
+ 307 000b 00       		.byte	0
+ 308 000c 0000     		.2byte	0
+ 309 000e 0000     		.2byte	0
+ 310 0010 00000000 		.4byte	.LFB33
+ 311 0014 24000000 		.4byte	.LFE33-.LFB33
+ 312 0018 00000000 		.4byte	0
+ 313 001c 00000000 		.4byte	0
+ 314              		.section	.debug_ranges,"",%progbits
+ 315              	.Ldebug_ranges0:
+ 316 0000 00000000 		.4byte	.LFB33
+ 317 0004 24000000 		.4byte	.LFE33
+ 318 0008 00000000 		.4byte	0
+ 319 000c 00000000 		.4byte	0
+ 320              		.section	.debug_line,"",%progbits
+ 321              	.Ldebug_line0:
+ 322 0000 6B000000 		.section	.debug_str,"MS",%progbits,1
+ 322      02004500 
+ 322      00000201 
+ 322      FB0E0D00 
+ 322      01010101 
+ 323              	.LASF6:
+ 324 0000 6C6F6E67 		.ascii	"long long int\000"
+ 324      206C6F6E 
+ 324      6720696E 
+ 324      7400
+ 325              	.LASF8:
+ 326 000e 756E7369 		.ascii	"unsigned int\000"
+ 326      676E6564 
+ 326      20696E74 
+ 326      00
+ 327              	.LASF18:
+ 328 001b 6D61696E 		.ascii	"main\000"
+ 328      00
+ 329              	.LASF15:
+ 330 0020 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 330      4320342E 
+ 330      372E3320 
+ 330      32303133 
+ 330      30333132 
+ 331 0053 616E6368 		.ascii	"anch revision 196615]\000"
+ 331      20726576 
+ 331      6973696F 
+ 331      6E203139 
+ 331      36363135 
+ 332              	.LASF12:
+ 333 0069 75696E74 		.ascii	"uint8\000"
+ 333      3800
+ 334              	.LASF5:
+ 335 006f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 335      20756E73 
+ 335      69676E65 
+ 335      6420696E 
+ 335      7400
+ 336              	.LASF7:
+ 337 0081 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 337      206C6F6E 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 8
 
 
- 347      7400
- 348              	.LASF7:
- 349 0081 6C6F6E67 		.ascii	"long long unsigned int\000"
- 349      206C6F6E 
- 349      6720756E 
- 349      7369676E 
- 349      65642069 
- 350              	.LASF1:
- 351 0098 756E7369 		.ascii	"unsigned char\000"
- 351      676E6564 
- 351      20636861 
- 351      7200
- 352              	.LASF17:
- 353 00a6 433A5C55 		.ascii	"C:\\Users\\Tsubasa Maruyama\\Documents\\PSoC Creato"
- 353      73657273 
- 353      5C547375 
- 353      62617361 
- 353      204D6172 
- 354 00d5 725C4C74 		.ascii	"r\\Lticker\\Lticker.cydsn\000"
- 354      69636B65 
- 354      725C4C74 
- 354      69636B65 
- 354      722E6379 
- 355              	.LASF11:
- 356 00ed 63686172 		.ascii	"char\000"
- 356      00
- 357              	.LASF4:
- 358 00f2 6C6F6E67 		.ascii	"long int\000"
- 358      20696E74 
+ 337      6720756E 
+ 337      7369676E 
+ 337      65642069 
+ 338              	.LASF1:
+ 339 0098 756E7369 		.ascii	"unsigned char\000"
+ 339      676E6564 
+ 339      20636861 
+ 339      7200
+ 340              	.LASF17:
+ 341 00a6 433A5C55 		.ascii	"C:\\Users\\Tsubasa Maruyama\\Documents\\PSoC Creato"
+ 341      73657273 
+ 341      5C547375 
+ 341      62617361 
+ 341      204D6172 
+ 342 00d5 725C4C74 		.ascii	"r\\Lticker\\Lticker.cydsn\000"
+ 342      69636B65 
+ 342      725C4C74 
+ 342      69636B65 
+ 342      722E6379 
+ 343              	.LASF11:
+ 344 00ed 63686172 		.ascii	"char\000"
+ 344      00
+ 345              	.LASF4:
+ 346 00f2 6C6F6E67 		.ascii	"long int\000"
+ 346      20696E74 
+ 346      00
+ 347              	.LASF2:
+ 348 00fb 73686F72 		.ascii	"short int\000"
+ 348      7420696E 
+ 348      7400
+ 349              	.LASF10:
+ 350 0105 646F7562 		.ascii	"double\000"
+ 350      6C6500
+ 351              	.LASF3:
+ 352 010c 73686F72 		.ascii	"short unsigned int\000"
+ 352      7420756E 
+ 352      7369676E 
+ 352      65642069 
+ 352      6E7400
+ 353              	.LASF0:
+ 354 011f 7369676E 		.ascii	"signed char\000"
+ 354      65642063 
+ 354      68617200 
+ 355              	.LASF9:
+ 356 012b 666C6F61 		.ascii	"float\000"
+ 356      7400
+ 357              	.LASF16:
+ 358 0131 2E5C6D61 		.ascii	".\\main.c\000"
+ 358      696E2E63 
  358      00
- 359              	.LASF2:
- 360 00fb 73686F72 		.ascii	"short int\000"
- 360      7420696E 
- 360      7400
- 361              	.LASF10:
- 362 0105 646F7562 		.ascii	"double\000"
- 362      6C6500
- 363              	.LASF3:
- 364 010c 73686F72 		.ascii	"short unsigned int\000"
- 364      7420756E 
- 364      7369676E 
- 364      65642069 
- 364      6E7400
- 365              	.LASF0:
- 366 011f 7369676E 		.ascii	"signed char\000"
- 366      65642063 
- 366      68617200 
- 367              	.LASF9:
- 368 012b 666C6F61 		.ascii	"float\000"
- 368      7400
- 369              	.LASF16:
- 370 0131 2E5C6D61 		.ascii	".\\main.c\000"
- 370      696E2E63 
- 370      00
- 371              	.LASF13:
- 372 013a 72656738 		.ascii	"reg8\000"
- 372      00
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccSoJryB.s 			page 9
+ 359              	.LASF13:
+ 360 013a 72656738 		.ascii	"reg8\000"
+ 360      00
+ 361              	.LASF14:
+ 362 013f 73697A65 		.ascii	"sizetype\000"
+ 362      74797065 
+ 362      00
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 9
 
 
- 373              	.LASF14:
- 374 013f 73697A65 		.ascii	"sizetype\000"
- 374      74797065 
- 374      00
- 375              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
+ 363              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

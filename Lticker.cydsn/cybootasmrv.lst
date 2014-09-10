@@ -1,0 +1,245 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;-------------------------------------------------------
+                       ------------------------
+    2 00000000         ; FILENAME: CyBootAsmRv.s
+    3 00000000         ; Version 4.10
+    4 00000000         ;
+    5 00000000         ;  DESCRIPTION:
+    6 00000000         ;    Assembly routines for RealView.
+    7 00000000         ;
+    8 00000000         ;-------------------------------------------------------
+                       ------------------------
+    9 00000000         ; Copyright 2010-2014, Cypress Semiconductor Corporation
+                       .  All rights reserved.
+   10 00000000         ; You may use this file only in accordance with the lice
+                       nse, terms, conditions,
+   11 00000000         ; disclaimers, and limitations in the end user license a
+                       greement accompanying
+   12 00000000         ; the software package with which this file was provided
+                       .
+   13 00000000         ;-------------------------------------------------------
+                       ------------------------
+   14 00000000         
+   15 00000000                 AREA             |.text|,CODE,ALIGN=3
+   16 00000000                 THUMB
+   17 00000000                 EXTERN           Reset
+   18 00000000         
+   19 00000000         ;-------------------------------------------------------
+                       ------------------------
+   20 00000000         ; Function Name: CyDelayCycles
+   21 00000000         ;-------------------------------------------------------
+                       ------------------------
+   22 00000000         ;
+   23 00000000         ; Summary:
+   24 00000000         ;  Delays for the specified number of cycles.
+   25 00000000         ;
+   26 00000000         ; Parameters:
+   27 00000000         ;  uint32 cycles: number of cycles to delay.
+   28 00000000         ;
+   29 00000000         ; Return:
+   30 00000000         ;  None
+   31 00000000         ;
+   32 00000000         ;-------------------------------------------------------
+                       ------------------------
+   33 00000000         ; void CyDelayCycles(uint32 cycles)
+   34 00000000                 ALIGN            8
+   35 00000000         CyDelayCycles
+                               FUNCTION
+   36 00000000                 EXPORT           CyDelayCycles
+   37 00000000         ; cycles bytes
+   38 00000000 1C80            ADDS             r0, r0, #2  ; 1 2 Round to near
+                                                            est multiple of 4
+   39 00000002 0880            LSRS             r0, r0, #2  ; 1 2 Divide by 4 a
+                                                            nd set flags
+   40 00000004 D004            BEQ              CyDelayCycles_done 
+                                                            ; 2 2 Skip if 0
+   41 00000006 BF00            NOP                          ; 1 2 Loop alignmen
+                                                            t padding
+   42 00000008         CyDelayCycles_loop
+   43 00000008 1E40            SUBS             r0, r0, #1  ; 1 2   Decrement c
+                                                            ounter
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   44 0000000A D1FD            BNE              CyDelayCycles_loop ; 3 2   3 CP
+                                                            U cycles (if branch
+                                                            e is taken)
+   45 0000000C BF00            NOP                          ; 1 2 Loop alignmen
+                                                            t padding
+   46 0000000E BF00            NOP                          ; 1 2 Loop alignmen
+                                                            t padding
+   47 00000010         CyDelayCycles_done
+   48 00000010 4770            BX               lr          ; 3 2
+   49 00000012                 ENDFUNC
+   50 00000012         
+   51 00000012         
+   52 00000012         ;-------------------------------------------------------
+                       ------------------------
+   53 00000012         ; Function Name: CyEnterCriticalSection
+   54 00000012         ;-------------------------------------------------------
+                       ------------------------
+   55 00000012         ;
+   56 00000012         ; Summary:
+   57 00000012         ;  CyEnterCriticalSection disables interrupts and return
+                       s a value indicating
+   58 00000012         ;  whether interrupts were previously enabled (the actua
+                       l value depends on
+   59 00000012         ;  whether the device is PSoC 3 or PSoC 5).
+   60 00000012         ;
+   61 00000012         ;  Note Implementation of CyEnterCriticalSection manipul
+                       ates the IRQ enable bit
+   62 00000012         ;  with interrupts still enabled. The test and set of th
+                       e interrupt bits is not
+   63 00000012         ;  atomic; this is true for both PSoC 3 and PSoC 5. Ther
+                       efore, to avoid a
+   64 00000012         ;  corrupting processor state, it must be the policy tha
+                       t all interrupt routines
+   65 00000012         ;  restore the interrupt enable bits as they were found 
+                       on entry.
+   66 00000012         ;
+   67 00000012         ; Parameters:
+   68 00000012         ;  None
+   69 00000012         ;
+   70 00000012         ; Return:
+   71 00000012         ;  uint8
+   72 00000012         ;   Returns 0 if interrupts were previously enabled or 1
+                        if interrupts
+   73 00000012         ;   were previously disabled.
+   74 00000012         ;
+   75 00000012         ;-------------------------------------------------------
+                       ------------------------
+   76 00000012         ; uint8 CyEnterCriticalSection(void)
+   77 00000012         CyEnterCriticalSection
+                               FUNCTION
+   78 00000012                 EXPORT           CyEnterCriticalSection
+   79 00000012 F3EF 8010       MRS              r0, PRIMASK ; Save and return i
+                                                            nterrupt state
+   80 00000016 B672            CPSID            I           ; Disable interrupt
+                                                            s
+   81 00000018 4770            BX               lr
+   82 0000001A                 ENDFUNC
+   83 0000001A         
+   84 0000001A         
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+   85 0000001A         ;-------------------------------------------------------
+                       ------------------------
+   86 0000001A         ; Function Name: CyExitCriticalSection
+   87 0000001A         ;-------------------------------------------------------
+                       ------------------------
+   88 0000001A         ;
+   89 0000001A         ; Summary:
+   90 0000001A         ;  CyExitCriticalSection re-enables interrupts if they w
+                       ere enabled before
+   91 0000001A         ;  CyEnterCriticalSection was called. The argument shoul
+                       d be the value returned
+   92 0000001A         ;  from CyEnterCriticalSection.
+   93 0000001A         ;
+   94 0000001A         ; Parameters:
+   95 0000001A         ;  uint8 savedIntrStatus:
+   96 0000001A         ;   Saved interrupt status returned by the CyEnterCritic
+                       alSection function.
+   97 0000001A         ;
+   98 0000001A         ; Return:
+   99 0000001A         ;  None
+  100 0000001A         ;
+  101 0000001A         ;-------------------------------------------------------
+                       ------------------------
+  102 0000001A         ; void CyExitCriticalSection(uint8 savedIntrStatus)
+  103 0000001A         CyExitCriticalSection
+                               FUNCTION
+  104 0000001A                 EXPORT           CyExitCriticalSection
+  105 0000001A F380 8810       MSR              PRIMASK, r0 ; Restore interrupt
+                                                             state
+  106 0000001E 4770            BX               lr
+  107 00000020                 ENDFUNC
+  108 00000020         
+  109 00000020                 END
+Command Line: --debug --xref --cpu=Cortex-M0 --apcs=interwork --depend=.\uvbuil
+d\cybootasmrv.d -o.\uvbuild\cybootasmrv.o -I. -I.\Generated_Source\PSoC4 -IC:\K
+eil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include --prede
+fine="__EVAL SETA 1" --predefine="NDEBUG SETA 1" --list=.\cybootasmrv.lst ./Gen
+erated_Source/PSoC4/CyBootAsmRv.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 15 in file ./Generated_Source/PSoC4/CyBootAsmRv.s
+   Uses
+      None
+Comment: .text unused
+CyDelayCycles 00000000
+
+Symbol: CyDelayCycles
+   Definitions
+      At line 35 in file ./Generated_Source/PSoC4/CyBootAsmRv.s
+   Uses
+      At line 36 in file ./Generated_Source/PSoC4/CyBootAsmRv.s
+Comment: CyDelayCycles used once
+CyDelayCycles_done 00000010
+
+Symbol: CyDelayCycles_done
+   Definitions
+      At line 47 in file ./Generated_Source/PSoC4/CyBootAsmRv.s
+   Uses
+      At line 40 in file ./Generated_Source/PSoC4/CyBootAsmRv.s
+Comment: CyDelayCycles_done used once
+CyDelayCycles_loop 00000008
+
+Symbol: CyDelayCycles_loop
+   Definitions
+      At line 42 in file ./Generated_Source/PSoC4/CyBootAsmRv.s
+   Uses
+      At line 44 in file ./Generated_Source/PSoC4/CyBootAsmRv.s
+Comment: CyDelayCycles_loop used once
+CyEnterCriticalSection 00000012
+
+Symbol: CyEnterCriticalSection
+   Definitions
+      At line 77 in file ./Generated_Source/PSoC4/CyBootAsmRv.s
+   Uses
+      At line 78 in file ./Generated_Source/PSoC4/CyBootAsmRv.s
+Comment: CyEnterCriticalSection used once
+CyExitCriticalSection 0000001A
+
+Symbol: CyExitCriticalSection
+   Definitions
+      At line 103 in file ./Generated_Source/PSoC4/CyBootAsmRv.s
+   Uses
+      At line 104 in file ./Generated_Source/PSoC4/CyBootAsmRv.s
+Comment: CyExitCriticalSection used once
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+Reset 00000000
+
+Symbol: Reset
+   Definitions
+      At line 17 in file ./Generated_Source/PSoC4/CyBootAsmRv.s
+   Uses
+      None
+Comment: Reset unused
+1 symbol
+339 symbols in table

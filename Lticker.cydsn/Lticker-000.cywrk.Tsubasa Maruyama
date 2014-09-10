@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Lticker-000\Lticker\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Lticker-000\Lticker\Generated_Source\PSoC4\cyfitter.h">
 <ExpandedNodeIds>
 <v>Lticker-000</v>
 <v>Lticker-000\Lticker</v>
@@ -49,14 +49,6 @@
 <v>Lticker-000\Lticker\Generated_Source\PSoC4\Pin_1\Pin_1.c</v>
 <v>Lticker-000\Lticker\Generated_Source\PSoC4\Pin_1\Pin_1.h</v>
 <v>Lticker-000\Lticker\Generated_Source\PSoC4\Pin_1\Pin_1_aliases.h</v>
-<v>Lticker-000\Lticker\Generated_Source\PSoC4\UART_1\UART_1.c</v>
-<v>Lticker-000\Lticker\Generated_Source\PSoC4\UART_1\UART_1.h</v>
-<v>Lticker-000\Lticker\Generated_Source\PSoC4\UART_1\UART_1_BOOT.c</v>
-<v>Lticker-000\Lticker\Generated_Source\PSoC4\UART_1\UART_1_INT.c</v>
-<v>Lticker-000\Lticker\Generated_Source\PSoC4\UART_1\UART_1_PM.c</v>
-<v>Lticker-000\Lticker\Generated_Source\PSoC4\UART_1_IntClock</v>
-<v>Lticker-000\Lticker\Generated_Source\PSoC4\UART_1_IntClock\UART_1_IntClock.c</v>
-<v>Lticker-000\Lticker\Generated_Source\PSoC4\UART_1_IntClock\UART_1_IntClock.h</v>
 <v>Lticker-000\Lticker\Generated_Source\PSoC4\cydevice_trm.h</v>
 <v>Lticker-000\Lticker\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
 <v>Lticker-000\Lticker\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
@@ -86,10 +78,6 @@
 <v>Lticker-000\Lticker\Generated_Source\PSoC4\Pin_1</v>
 <v>Lticker-000\Lticker\Generated_Source\PSoC4\Pin_2</v>
 <v>Lticker-000\Lticker\Generated_Source\PSoC4\Pin_3</v>
-<v>Lticker-000\Lticker\Generated_Source\PSoC4\UART_1</v>
-<v>Lticker-000\Lticker\Generated_Source\PSoC4\UART_1_IntClock</v>
-<v>Lticker-000\Lticker\Generated_Source\PSoC4\UART_1_IntClock\UART_1_IntClock.c</v>
-<v>Lticker-000\Lticker\Generated_Source\PSoC4\UART_1_IntClock\UART_1_IntClock.h</v>
 <v>Lticker-000\Lticker\Generated_Source\PSoC4\cydevice_trm.h</v>
 <v>Lticker-000\Lticker\Generated_Source\PSoC4\cydevicegnu_trm.inc</v>
 <v>Lticker-000\Lticker\Generated_Source\PSoC4\cydeviceiar_trm.inc</v>
@@ -144,11 +132,6 @@
 <v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\Pin_1.lst</v>
 <v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\Pin_2.lst</v>
 <v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\Pin_3.lst</v>
-<v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1.lst</v>
-<v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_BOOT.lst</v>
-<v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_INT.lst</v>
-<v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_IntClock.lst</v>
-<v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_PM.lst</v>
 <v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Lticker.elf</v>
 <v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Lticker.hex</v>
 <v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Lticker.map</v>
@@ -175,11 +158,6 @@
 <v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\Pin_1.lst</v>
 <v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\Pin_2.lst</v>
 <v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\Pin_3.lst</v>
-<v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1.lst</v>
-<v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_BOOT.lst</v>
-<v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_INT.lst</v>
-<v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_IntClock.lst</v>
-<v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_PM.lst</v>
 <v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Lticker.elf</v>
 <v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Lticker.hex</v>
 <v>Lticker-000\Lticker\CortexM0\ARM_GCC_473\Debug\Lticker.map</v>
@@ -200,9 +178,7 @@
 <v>Lticker-000\Lticker\PSoC 4200 Family Datasheet</v>
 <v>Lticker-000\Lticker\System Reference Guide v4_10</v>
 <v>Lticker-000\Lticker\cy_clock_v2_20</v>
-<v>Lticker-000\Lticker\cy_constant_v1_0</v>
 <v>Lticker-000\Lticker\cy_pins_v2_0</v>
-<v>Lticker-000\Lticker\UART_v2_30</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Lticker-000</v>
@@ -211,9 +187,7 @@
 <v>Lticker-000\Lticker\PSoC 4200 Family Datasheet</v>
 <v>Lticker-000\Lticker\System Reference Guide v4_10</v>
 <v>Lticker-000\Lticker\cy_clock_v2_20</v>
-<v>Lticker-000\Lticker\cy_constant_v1_0</v>
 <v>Lticker-000\Lticker\cy_pins_v2_0</v>
-<v>Lticker-000\Lticker\UART_v2_30</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -230,6 +204,8 @@
 <OpenDocs>
 <name v=".\TopDesign\TopDesign.cysch" />
 <name v=".\Lticker.cydwr" />
+<name v=".\main.c" />
+<name v=".\WS2812driver\WS2812driver.v" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

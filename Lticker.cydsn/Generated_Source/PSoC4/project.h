@@ -21,12 +21,10 @@
 #include <Pin_1.h>
 #include <Pin_1_aliases.h>
 #include <Clock_1.h>
-#include <UART_1.h>
 #include <Pin_2.h>
 #include <Pin_2_aliases.h>
 #include <Pin_3.h>
 #include <Pin_3_aliases.h>
-#include <UART_1_IntClock.h>
 #include <core_cm0_psoc4.h>
 #include <core_cm0.h>
 #include <CyFlash.h>
