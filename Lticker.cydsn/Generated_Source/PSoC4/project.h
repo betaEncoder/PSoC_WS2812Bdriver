@@ -25,6 +25,8 @@
 #include <Pin_2_aliases.h>
 #include <Pin_3.h>
 #include <Pin_3_aliases.h>
+#include <Pin_4.h>
+#include <Pin_4_aliases.h>
 #include <core_cm0_psoc4.h>
 #include <core_cm0.h>
 #include <CyFlash.h>

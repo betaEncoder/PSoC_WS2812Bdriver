@@ -16,6 +16,7 @@
 // Component: WS2812driver
 module WS2812driver (
 	output  PulseOut,
+    output  BUSY,
     output  FIFO_FULL,
     output  FIFO_EMPTY,
 	input   CLK
@@ -43,14 +44,14 @@ reg [2:0] shift_counter;
 wire[7:0] comp_val;
 wire shift_out;
 wire shifter_f0_empty;
+wire shifter_f0_notfull;
 
 //        Your code goes here
 assign PulseOut = pg_out;
-assign FIFO_EMPTY = shift_out;
-//assign PulseOut = shift_out;
-assign FIFO_FULL = shifter_state[0];
+assign BUSY = |{shifter_state, pg_state};
+assign FIFO_EMPTY = shifter_f0_empty;
+assign FIFO_FULL = !shifter_f0_notfull;
 assign comp_val = shift_out?8'd5:8'd17;
-//assign pg_start = shifter_state[0];
 
 // pulseGen state machine
 always @ (posedge CLK) begin
@@ -58,7 +59,7 @@ always @ (posedge CLK) begin
         PG_IDLE:begin
             pg_out <= 1'b0;
             pg_data_req <= 1'b0;
-            if(!shifter_state[0])
+            if(~|shifter_state)
                 begin
                 pg_state <= PG_IDLE;
                 end
@@ -89,7 +90,7 @@ always @ (posedge CLK) begin
             pg_out <= 1'b0;
             if(pg_det_zero)
                 begin
-                if(!shifter_state[0])
+                if(~|shifter_state)
                     begin
                     pg_state <= PG_IDLE;
                     end
@@ -121,6 +122,7 @@ end
 always @ (posedge CLK) begin
     case(shifter_state) 
         SHIFTER_IDLE:begin
+            shift_counter <= 3'd7;
             if(shifter_f0_empty)
                 begin
                 shifter_state <= SHIFTER_IDLE;
@@ -132,9 +134,10 @@ always @ (posedge CLK) begin
         end
         SHIFTER_LOAD:begin
             shifter_state <= SHIFTER_WAIT;
-            shift_counter <= 3'd6;
+            shift_counter <= 3'd7;
         end
         SHIFTER_WAIT:begin
+            shift_counter <= shift_counter;
             if(pg_data_req)
                 begin
                 shifter_state <= SHIFTER_SHIFT;
@@ -163,6 +166,7 @@ always @ (posedge CLK) begin
                 end
         end
         default:begin
+            shift_counter <= 3'd7;
             shifter_state <= SHIFTER_IDLE;
         end
     endcase
@@ -240,13 +244,13 @@ cy_psoc3_dp8 #(.cy_dpconfig_a(
         /*  output                  */  .co_msb(),
         /*  output                  */  .cmsb(),
         /*  output                  */  .so(shift_out),
-        /*  output                  */  .f0_bus_stat(),
+        /*  output                  */  .f0_bus_stat(shifter_f0_notfull),
         /*  output                  */  .f0_blk_stat(shifter_f0_empty),
         /*  output                  */  .f1_bus_stat(),
         /*  output                  */  .f1_blk_stat()
 );
 cy_psoc3_dp #(.a0_init(23), .a1_init(5), .d0_init(23), 
-.d1_init(1), 
+.d1_init(3), 
 .cy_dpconfig(
 {
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,

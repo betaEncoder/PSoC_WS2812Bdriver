@@ -19,7 +19,7 @@
                     1::Clock Frequency Summary
 ===================================================================== 
 Number of clocks: 6
-Clock: Clock_1   | Frequency: 48.35 MHz  | Target: 20.00 MHz  | 
+Clock: Clock_1   | Frequency: 44.60 MHz  | Target: 20.00 MHz  | 
 Clock: CyHFCLK   | N/A                   | Target: 40.00 MHz  | 
 Clock: CyILO     | N/A                   | Target: 0.03 MHz   | 
 Clock: CyIMO     | N/A                   | Target: 40.00 MHz  | 
@@ -37,7 +37,7 @@ Clock: CySYSCLK  | N/A                   | Target: 40.00 MHz  |
 
 Launch Clock  Capture Clock  Constraint(R-R)  Slack(R-R)  Constraint(R-F)  Slack(R-F)  Constraint(F-F)  Slack(F-F)  Constraint(F-R)  Slack(F-R)  
 ------------  -------------  ---------------  ----------  ---------------  ----------  ---------------  ----------  ---------------  ----------  
-Clock_1       Clock_1        50000            29319       N/A              N/A         N/A              N/A         N/A              N/A         
+Clock_1       Clock_1        50000            27576       N/A              N/A         N/A              N/A         N/A              N/A         
 
  =====================================================================
                     End of Clock Relationship Summary
@@ -62,9 +62,10 @@ Port Name  Setup to Clk  Clock Name:Phase
 
 Port Name     Clock to Out  Clock Name:Phase  
 ------------  ------------  ----------------  
-Pin_1(0)_PAD  26260         Clock_1:R         
-Pin_2(0)_PAD  26452         Clock_1:R         
-Pin_3(0)_PAD  28238         Clock_1:R         
+Pin_1(0)_PAD  26266         Clock_1:R         
+Pin_2(0)_PAD  31443         Clock_1:R         
+Pin_3(0)_PAD  36564         CyHFCLK:R         
+Pin_4(0)_PAD  30816         Clock_1:R         
 
 
                          3.3::Pad to Pad
@@ -82,14 +83,14 @@ Port Name (Source)  Port Name (Destination)  Delay
 4.1::Critical Path Report for Clock_1
 *************************************
 Clock: Clock_1
-Frequency: 48.35 MHz | Target: 20.00 MHz
+Frequency: 44.60 MHz | Target: 20.00 MHz
 
 ++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:shifter:u0\/so_comb
 Path End       : \WS2812driver_1:pulseGen\/p_in_4
 Capture Clock  : \WS2812driver_1:pulseGen\/clock
-Path slack     : 29319p
+Path slack     : 27576p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -100,9 +101,9 @@ End-of-path required time (ps)                 41720
 
 Launch Clock Arrival Time                       0
 + Clock path delay                          0
-+ Data path delay                       12401
++ Data path delay                       14144
 -------------------------------------   ----- 
-End-of-path arrival time (ps)           12401
+End-of-path arrival time (ps)           14144
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -115,10 +116,10 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 Data path
 pin name                             model name     delay     AT  slack  edge  Fanout
 -----------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:shifter:u0\/so_comb  datapathcell2   4550   4550  29319  RISE       1
-\WS2812driver_1:comp_val_4\/main_0   macrocell3      2250   6800  29319  RISE       1
-\WS2812driver_1:comp_val_4\/q        macrocell3      3350  10150  29319  RISE       1
-\WS2812driver_1:pulseGen\/p_in_4     datapathcell1   2251  12401  29319  RISE       1
+\WS2812driver_1:shifter:u0\/so_comb  datapathcell2   4550   4550  27576  RISE       1
+\WS2812driver_1:comp_val_4\/main_0   macrocell4      2247   6797  27576  RISE       1
+\WS2812driver_1:comp_val_4\/q        macrocell4      3350  10147  27576  RISE       1
+\WS2812driver_1:pulseGen\/p_in_4     datapathcell1   3997  14144  27576  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -147,7 +148,7 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 Path Begin     : \WS2812driver_1:shifter:u0\/so_comb
 Path End       : \WS2812driver_1:pulseGen\/p_in_4
 Capture Clock  : \WS2812driver_1:pulseGen\/clock
-Path slack     : 29319p
+Path slack     : 27576p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -158,9 +159,9 @@ End-of-path required time (ps)                 41720
 
 Launch Clock Arrival Time                       0
 + Clock path delay                          0
-+ Data path delay                       12401
++ Data path delay                       14144
 -------------------------------------   ----- 
-End-of-path arrival time (ps)           12401
+End-of-path arrival time (ps)           14144
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -173,10 +174,10 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 Data path
 pin name                             model name     delay     AT  slack  edge  Fanout
 -----------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:shifter:u0\/so_comb  datapathcell2   4550   4550  29319  RISE       1
-\WS2812driver_1:comp_val_4\/main_0   macrocell3      2250   6800  29319  RISE       1
-\WS2812driver_1:comp_val_4\/q        macrocell3      3350  10150  29319  RISE       1
-\WS2812driver_1:pulseGen\/p_in_4     datapathcell1   2251  12401  29319  RISE       1
+\WS2812driver_1:shifter:u0\/so_comb  datapathcell2   4550   4550  27576  RISE       1
+\WS2812driver_1:comp_val_4\/main_0   macrocell4      2247   6797  27576  RISE       1
+\WS2812driver_1:comp_val_4\/q        macrocell4      3350  10147  27576  RISE       1
+\WS2812driver_1:pulseGen\/p_in_4     datapathcell1   3997  14144  27576  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -201,7 +202,7 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 Path Begin     : \WS2812driver_1:shifter:u0\/so_comb
 Path End       : \WS2812driver_1:pulseGen\/p_in_4
 Capture Clock  : \WS2812driver_1:pulseGen\/clock
-Path slack     : 29319p
+Path slack     : 27576p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -212,9 +213,9 @@ End-of-path required time (ps)                 41720
 
 Launch Clock Arrival Time                       0
 + Clock path delay                          0
-+ Data path delay                       12401
++ Data path delay                       14144
 -------------------------------------   ----- 
-End-of-path arrival time (ps)           12401
+End-of-path arrival time (ps)           14144
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -227,10 +228,10 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 Data path
 pin name                             model name     delay     AT  slack  edge  Fanout
 -----------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:shifter:u0\/so_comb  datapathcell2   4550   4550  29319  RISE       1
-\WS2812driver_1:comp_val_4\/main_0   macrocell3      2250   6800  29319  RISE       1
-\WS2812driver_1:comp_val_4\/q        macrocell3      3350  10150  29319  RISE       1
-\WS2812driver_1:pulseGen\/p_in_4     datapathcell1   2251  12401  29319  RISE       1
+\WS2812driver_1:shifter:u0\/so_comb  datapathcell2   4550   4550  27576  RISE       1
+\WS2812driver_1:comp_val_4\/main_0   macrocell4      2247   6797  27576  RISE       1
+\WS2812driver_1:comp_val_4\/q        macrocell4      3350  10147  27576  RISE       1
+\WS2812driver_1:pulseGen\/p_in_4     datapathcell1   3997  14144  27576  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -245,9 +246,9 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 ++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:pg_state_1\/q
-Path End       : \WS2812driver_1:pg_state_0\/main_3
-Capture Clock  : \WS2812driver_1:pg_state_0\/clock_0
-Path slack     : 29491p
+Path End       : \WS2812driver_1:pg_data_req\/main_2
+Capture Clock  : \WS2812driver_1:pg_data_req\/clock_0
+Path slack     : 28518p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -258,9 +259,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                       0
 + Clock path delay                          0
-+ Data path delay                       16999
++ Data path delay                       17972
 -------------------------------------   ----- 
-End-of-path arrival time (ps)           16999
+End-of-path arrival time (ps)           17972
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -268,15 +269,15 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_1\/clock_0                       macrocell6                 0      0  RISE       1
+\WS2812driver_1:pg_state_1\/clock_0                       macrocell7                 0      0  RISE       1
 
 Data path
 pin name                             model name     delay     AT  slack  edge  Fanout
 -----------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_1\/q        macrocell6      1250   1250  29491  RISE       1
-\WS2812driver_1:pulseGen\/cs_addr_1  datapathcell1   3462   4712  29491  RISE       1
-\WS2812driver_1:pulseGen\/ce1_comb   datapathcell1   9740  14452  29491  RISE       1
-\WS2812driver_1:pg_state_0\/main_3   macrocell5      2547  16999  29491  RISE       1
+\WS2812driver_1:pg_state_1\/q        macrocell7      1250   1250  28518  RISE       1
+\WS2812driver_1:pulseGen\/cs_addr_1  datapathcell1   4290   5540  28518  RISE       1
+\WS2812driver_1:pulseGen\/ce1_comb   datapathcell1   9740  15280  28518  RISE       1
+\WS2812driver_1:pg_data_req\/main_2  macrocell5      2692  17972  28518  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -284,16 +285,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_0\/clock_0                       macrocell5                 0      0  RISE       1
+\WS2812driver_1:pg_data_req\/clock_0                      macrocell5                 0      0  RISE       1
 
 
 
 ++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:pg_state_1\/q
-Path End       : Net_187/main_2
-Capture Clock  : Net_187/clock_0
-Path slack     : 29499p
+Path End       : \WS2812driver_1:pg_state_0\/main_4
+Capture Clock  : \WS2812driver_1:pg_state_0\/clock_0
+Path slack     : 28518p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -304,9 +305,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                       0
 + Clock path delay                          0
-+ Data path delay                       16991
++ Data path delay                       17972
 -------------------------------------   ----- 
-End-of-path arrival time (ps)           16991
+End-of-path arrival time (ps)           17972
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -314,15 +315,61 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_1\/clock_0                       macrocell6                 0      0  RISE       1
+\WS2812driver_1:pg_state_1\/clock_0                       macrocell7                 0      0  RISE       1
 
 Data path
 pin name                             model name     delay     AT  slack  edge  Fanout
 -----------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_1\/q        macrocell6      1250   1250  29491  RISE       1
-\WS2812driver_1:pulseGen\/cs_addr_1  datapathcell1   3462   4712  29491  RISE       1
-\WS2812driver_1:pulseGen\/ce1_comb   datapathcell1   9740  14452  29491  RISE       1
-Net_187/main_2                       macrocell1      2539  16991  29499  RISE       1
+\WS2812driver_1:pg_state_1\/q        macrocell7      1250   1250  28518  RISE       1
+\WS2812driver_1:pulseGen\/cs_addr_1  datapathcell1   4290   5540  28518  RISE       1
+\WS2812driver_1:pulseGen\/ce1_comb   datapathcell1   9740  15280  28518  RISE       1
+\WS2812driver_1:pg_state_0\/main_4   macrocell6      2692  17972  28518  RISE       1
+
+Capture Clock Path
+pin name                                                  model name             delay     AT  edge  Fanout
+--------------------------------------------------------  ---------------------  -----  -----  ----  ------
+ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
+ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
+ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
+\WS2812driver_1:pg_state_0\/clock_0                       macrocell6                 0      0  RISE       1
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \WS2812driver_1:pg_state_1\/q
+Path End       : Net_187/main_2
+Capture Clock  : Net_187/clock_0
+Path slack     : 28537p
+
+Capture Clock Arrival Time                         0
++ Clock path delay                                 0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   50000
+- Setup time                                   -3510
+--------------------------------------------   ----- 
+End-of-path required time (ps)                 46490
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       17953
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           17953
+ 
+Launch Clock Path
+pin name                                                  model name             delay     AT  edge  Fanout
+--------------------------------------------------------  ---------------------  -----  -----  ----  ------
+ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
+ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
+ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
+\WS2812driver_1:pg_state_1\/clock_0                       macrocell7                 0      0  RISE       1
+
+Data path
+pin name                             model name     delay     AT  slack  edge  Fanout
+-----------------------------------  -------------  -----  -----  -----  ----  ------
+\WS2812driver_1:pg_state_1\/q        macrocell7      1250   1250  28518  RISE       1
+\WS2812driver_1:pulseGen\/cs_addr_1  datapathcell1   4290   5540  28518  RISE       1
+\WS2812driver_1:pulseGen\/ce1_comb   datapathcell1   9740  15280  28518  RISE       1
+Net_187/main_2                       macrocell1      2673  17953  28537  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -334,58 +381,12 @@ Net_187/clock_0                                           macrocell1            
 
 
 
-++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-
-Path Begin     : \WS2812driver_1:pg_state_1\/q
-Path End       : \WS2812driver_1:pg_data_req\/main_2
-Capture Clock  : \WS2812driver_1:pg_data_req\/clock_0
-Path slack     : 29499p
-
-Capture Clock Arrival Time                         0
-+ Clock path delay                                 0
-+ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   50000
-- Setup time                                   -3510
---------------------------------------------   ----- 
-End-of-path required time (ps)                 46490
-
-Launch Clock Arrival Time                       0
-+ Clock path delay                          0
-+ Data path delay                       16991
--------------------------------------   ----- 
-End-of-path arrival time (ps)           16991
- 
-Launch Clock Path
-pin name                                                  model name             delay     AT  edge  Fanout
---------------------------------------------------------  ---------------------  -----  -----  ----  ------
-ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
-ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
-ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_1\/clock_0                       macrocell6                 0      0  RISE       1
-
-Data path
-pin name                             model name     delay     AT  slack  edge  Fanout
------------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_1\/q        macrocell6      1250   1250  29491  RISE       1
-\WS2812driver_1:pulseGen\/cs_addr_1  datapathcell1   3462   4712  29491  RISE       1
-\WS2812driver_1:pulseGen\/ce1_comb   datapathcell1   9740  14452  29491  RISE       1
-\WS2812driver_1:pg_data_req\/main_2  macrocell4      2539  16991  29499  RISE       1
-
-Capture Clock Path
-pin name                                                  model name             delay     AT  edge  Fanout
---------------------------------------------------------  ---------------------  -----  -----  ----  ------
-ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
-ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
-ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_data_req\/clock_0                      macrocell4                 0      0  RISE       1
-
-
-
 ++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:pg_state_1\/q
 Path End       : \WS2812driver_1:pulseGen\/cs_addr_1
 Capture Clock  : \WS2812driver_1:pulseGen\/clock
-Path slack     : 32658p
+Path slack     : 31830p
 
 Capture Clock Arrival Time                          0
 + Clock path delay                                  0
@@ -396,9 +397,9 @@ End-of-path required time (ps)                  37370
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4712
++ Data path delay                       5540
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4712
+End-of-path arrival time (ps)           5540
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -406,13 +407,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_1\/clock_0                       macrocell6                 0      0  RISE       1
+\WS2812driver_1:pg_state_1\/clock_0                       macrocell7                 0      0  RISE       1
 
 Data path
 pin name                             model name     delay     AT  slack  edge  Fanout
 -----------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_1\/q        macrocell6      1250   1250  29491  RISE       1
-\WS2812driver_1:pulseGen\/cs_addr_1  datapathcell1   3462   4712  32658  RISE       1
+\WS2812driver_1:pg_state_1\/q        macrocell7      1250   1250  28518  RISE       1
+\WS2812driver_1:pulseGen\/cs_addr_1  datapathcell1   4290   5540  31830  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -429,7 +430,7 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 Path Begin     : \WS2812driver_1:pg_state_0\/q
 Path End       : \WS2812driver_1:pulseGen\/cs_addr_0
 Capture Clock  : \WS2812driver_1:pulseGen\/clock
-Path slack     : 32815p
+Path slack     : 32961p
 
 Capture Clock Arrival Time                          0
 + Clock path delay                                  0
@@ -440,9 +441,9 @@ End-of-path required time (ps)                  37370
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4555
++ Data path delay                       4409
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4555
+End-of-path arrival time (ps)           4409
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -450,13 +451,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_0\/clock_0                       macrocell5                 0      0  RISE       1
+\WS2812driver_1:pg_state_0\/clock_0                       macrocell6                 0      0  RISE       1
 
 Data path
 pin name                             model name     delay     AT  slack  edge  Fanout
 -----------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_0\/q        macrocell5      1250   1250  29648  RISE       1
-\WS2812driver_1:pulseGen\/cs_addr_0  datapathcell1   3305   4555  32815  RISE       1
+\WS2812driver_1:pg_state_0\/q        macrocell6      1250   1250  29649  RISE       1
+\WS2812driver_1:pulseGen\/cs_addr_0  datapathcell1   3159   4409  32961  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -473,7 +474,7 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 Path Begin     : \WS2812driver_1:shifter:u0\/so_comb
 Path End       : \WS2812driver_1:pulseGen\/p_in_2
 Capture Clock  : \WS2812driver_1:pulseGen\/clock
-Path slack     : 33711p
+Path slack     : 34921p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -484,9 +485,9 @@ End-of-path required time (ps)                 41720
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       8009
++ Data path delay                       6799
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           8009
+End-of-path arrival time (ps)           6799
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -499,8 +500,8 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 Data path
 pin name                             model name     delay     AT  slack  edge  Fanout
 -----------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:shifter:u0\/so_comb  datapathcell2   4550   4550  29319  RISE       1
-\WS2812driver_1:pulseGen\/p_in_2     datapathcell1   3459   8009  33711  RISE       1
+\WS2812driver_1:shifter:u0\/so_comb  datapathcell2   4550   4550  27576  RISE       1
+\WS2812driver_1:pulseGen\/p_in_2     datapathcell1   2249   6799  34921  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -514,10 +515,10 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 
 ++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : Net_188/q
+Path Begin     : \WS2812driver_1:shifter_state_0\/q
 Path End       : \WS2812driver_1:shifter:u0\/cs_addr_0
 Capture Clock  : \WS2812driver_1:shifter:u0\/clock
-Path slack     : 37784p
+Path slack     : 38874p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -528,9 +529,9 @@ End-of-path required time (ps)                 43710
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       5926
++ Data path delay                       4836
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           5926
+End-of-path arrival time (ps)           4836
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -538,13 +539,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 Data path
 pin name                               model name     delay     AT  slack  edge  Fanout
 -------------------------------------  -------------  -----  -----  -----  ----  ------
-Net_188/q                              macrocell2      1250   1250  37784  RISE       1
-\WS2812driver_1:shifter:u0\/cs_addr_0  datapathcell2   4676   5926  37784  RISE       1
+\WS2812driver_1:shifter_state_0\/q     macrocell11     1250   1250  38874  RISE       1
+\WS2812driver_1:shifter:u0\/cs_addr_0  datapathcell2   3586   4836  38874  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -559,9 +560,9 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 ++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:shifter:u0\/f0_blk_stat_comb
-Path End       : Net_188/main_6
-Capture Clock  : Net_188/clock_0
-Path slack     : 38967p
+Path End       : \WS2812driver_1:shifter_state_0\/main_2
+Capture Clock  : \WS2812driver_1:shifter_state_0\/clock_0
+Path slack     : 38981p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -572,9 +573,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       7523
++ Data path delay                       7509
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           7523
+End-of-path arrival time (ps)           7509
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -587,8 +588,8 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 Data path
 pin name                                      model name     delay     AT  slack  edge  Fanout
 --------------------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:shifter:u0\/f0_blk_stat_comb  datapathcell2   5280   5280  38967  RISE       1
-Net_188/main_6                                macrocell2      2243   7523  38967  RISE       1
+\WS2812driver_1:shifter:u0\/f0_blk_stat_comb  datapathcell2   5280   5280  38981  RISE       1
+\WS2812driver_1:shifter_state_0\/main_2       macrocell11     2229   7509  38981  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -596,7 +597,7 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 
 
@@ -605,7 +606,7 @@ Net_188/clock_0                                           macrocell2            
 Path Begin     : \WS2812driver_1:shifter_state_1\/q
 Path End       : \WS2812driver_1:shifter:u0\/cs_addr_1
 Capture Clock  : \WS2812driver_1:shifter:u0\/clock
-Path slack     : 39183p
+Path slack     : 39034p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -616,9 +617,9 @@ End-of-path required time (ps)                 43710
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4527
++ Data path delay                       4676
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4527
+End-of-path arrival time (ps)           4676
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -626,13 +627,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shifter_state_1\/clock_0                  macrocell10                0      0  RISE       1
+\WS2812driver_1:shifter_state_1\/clock_0                  macrocell12                0      0  RISE       1
 
 Data path
 pin name                               model name     delay     AT  slack  edge  Fanout
 -------------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:shifter_state_1\/q     macrocell10     1250   1250  39183  RISE       1
-\WS2812driver_1:shifter:u0\/cs_addr_1  datapathcell2   3277   4527  39183  RISE       1
+\WS2812driver_1:shifter_state_1\/q     macrocell12     1250   1250  39034  RISE       1
+\WS2812driver_1:shifter:u0\/cs_addr_1  datapathcell2   3426   4676  39034  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -647,9 +648,9 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 ++++ Path 11 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:pulseGen\/z0_comb
-Path End       : \WS2812driver_1:pg_state_0\/main_4
+Path End       : \WS2812driver_1:pg_state_0\/main_5
 Capture Clock  : \WS2812driver_1:pg_state_0\/clock_0
-Path slack     : 40104p
+Path slack     : 40399p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -660,9 +661,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       6386
++ Data path delay                       6091
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           6386
+End-of-path arrival time (ps)           6091
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -675,8 +676,8 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 Data path
 pin name                            model name     delay     AT  slack  edge  Fanout
 ----------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:pulseGen\/z0_comb   datapathcell1   3850   3850  40104  RISE       1
-\WS2812driver_1:pg_state_0\/main_4  macrocell5      2536   6386  40104  RISE       1
+\WS2812driver_1:pulseGen\/z0_comb   datapathcell1   3850   3850  40399  RISE       1
+\WS2812driver_1:pg_state_0\/main_5  macrocell6      2241   6091  40399  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -684,7 +685,7 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_0\/clock_0                       macrocell5                 0      0  RISE       1
+\WS2812driver_1:pg_state_0\/clock_0                       macrocell6                 0      0  RISE       1
 
 
 
@@ -693,7 +694,7 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 Path Begin     : \WS2812driver_1:pulseGen\/z0_comb
 Path End       : \WS2812driver_1:pg_state_1\/main_2
 Capture Clock  : \WS2812driver_1:pg_state_1\/clock_0
-Path slack     : 40116p
+Path slack     : 40399p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -704,9 +705,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       6374
++ Data path delay                       6091
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           6374
+End-of-path arrival time (ps)           6091
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -719,8 +720,8 @@ ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell 
 Data path
 pin name                            model name     delay     AT  slack  edge  Fanout
 ----------------------------------  -------------  -----  -----  -----  ----  ------
-\WS2812driver_1:pulseGen\/z0_comb   datapathcell1   3850   3850  40104  RISE       1
-\WS2812driver_1:pg_state_1\/main_2  macrocell6      2524   6374  40116  RISE       1
+\WS2812driver_1:pulseGen\/z0_comb   datapathcell1   3850   3850  40399  RISE       1
+\WS2812driver_1:pg_state_1\/main_2  macrocell7      2241   6091  40399  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -728,16 +729,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_1\/clock_0                       macrocell6                 0      0  RISE       1
+\WS2812driver_1:pg_state_1\/clock_0                       macrocell7                 0      0  RISE       1
 
 
 
 ++++ Path 13 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : Net_188/q
-Path End       : \WS2812driver_1:shifter_state_1\/main_0
-Capture Clock  : \WS2812driver_1:shifter_state_1\/clock_0
-Path slack     : 40597p
+Path Begin     : \WS2812driver_1:pg_state_1\/q
+Path End       : Net_187/main_0
+Capture Clock  : Net_187/clock_0
+Path slack     : 41486p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -748,9 +749,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       5893
++ Data path delay                       5004
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           5893
+End-of-path arrival time (ps)           5004
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -758,13 +759,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:pg_state_1\/clock_0                       macrocell7                 0      0  RISE       1
 
 Data path
-pin name                                 model name   delay     AT  slack  edge  Fanout
----------------------------------------  -----------  -----  -----  -----  ----  ------
-Net_188/q                                macrocell2    1250   1250  37784  RISE       1
-\WS2812driver_1:shifter_state_1\/main_0  macrocell10   4643   5893  40597  RISE       1
+pin name                       model name   delay     AT  slack  edge  Fanout
+-----------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:pg_state_1\/q  macrocell7    1250   1250  28518  RISE       1
+Net_187/main_0                 macrocell1    3754   5004  41486  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -772,16 +773,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shifter_state_1\/clock_0                  macrocell10                0      0  RISE       1
+Net_187/clock_0                                           macrocell1                 0      0  RISE       1
 
 
 
 ++++ Path 14 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : Net_188/q
-Path End       : \WS2812driver_1:pg_state_0\/main_0
-Capture Clock  : \WS2812driver_1:pg_state_0\/clock_0
-Path slack     : 40604p
+Path Begin     : \WS2812driver_1:shifter_state_0\/q
+Path End       : \WS2812driver_1:shifter_state_0\/main_1
+Capture Clock  : \WS2812driver_1:shifter_state_0\/clock_0
+Path slack     : 41626p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -792,9 +793,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       5886
++ Data path delay                       4864
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           5886
+End-of-path arrival time (ps)           4864
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -802,13 +803,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 Data path
-pin name                            model name   delay     AT  slack  edge  Fanout
-----------------------------------  -----------  -----  -----  -----  ----  ------
-Net_188/q                           macrocell2    1250   1250  37784  RISE       1
-\WS2812driver_1:pg_state_0\/main_0  macrocell5    4636   5886  40604  RISE       1
+pin name                                 model name   delay     AT  slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:shifter_state_0\/q       macrocell11   1250   1250  38874  RISE       1
+\WS2812driver_1:shifter_state_0\/main_1  macrocell11   3614   4864  41626  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -816,16 +817,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_0\/clock_0                       macrocell5                 0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 
 
 ++++ Path 15 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : Net_188/q
-Path End       : \WS2812driver_1:shift_counter_2\/main_0
-Capture Clock  : \WS2812driver_1:shift_counter_2\/clock_0
-Path slack     : 41269p
+Path Begin     : \WS2812driver_1:shifter_state_0\/q
+Path End       : \WS2812driver_1:shift_counter_1\/main_1
+Capture Clock  : \WS2812driver_1:shift_counter_1\/clock_0
+Path slack     : 41629p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -836,9 +837,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       5221
++ Data path delay                       4861
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           5221
+End-of-path arrival time (ps)           4861
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -846,13 +847,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 Data path
 pin name                                 model name   delay     AT  slack  edge  Fanout
 ---------------------------------------  -----------  -----  -----  -----  ----  ------
-Net_188/q                                macrocell2    1250   1250  37784  RISE       1
-\WS2812driver_1:shift_counter_2\/main_0  macrocell9    3971   5221  41269  RISE       1
+\WS2812driver_1:shifter_state_0\/q       macrocell11   1250   1250  38874  RISE       1
+\WS2812driver_1:shift_counter_1\/main_1  macrocell9    3611   4861  41629  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -860,16 +861,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_2\/clock_0                  macrocell9                 0      0  RISE       1
+\WS2812driver_1:shift_counter_1\/clock_0                  macrocell9                 0      0  RISE       1
 
 
 
 ++++ Path 16 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : Net_188/q
-Path End       : Net_188/main_0
-Capture Clock  : Net_188/clock_0
-Path slack     : 41278p
+Path Begin     : \WS2812driver_1:shifter_state_0\/q
+Path End       : \WS2812driver_1:shift_counter_2\/main_1
+Capture Clock  : \WS2812driver_1:shift_counter_2\/clock_0
+Path slack     : 41629p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -880,9 +881,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       5212
++ Data path delay                       4861
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           5212
+End-of-path arrival time (ps)           4861
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -890,13 +891,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 Data path
-pin name        model name   delay     AT  slack  edge  Fanout
---------------  -----------  -----  -----  -----  ----  ------
-Net_188/q       macrocell2    1250   1250  37784  RISE       1
-Net_188/main_0  macrocell2    3962   5212  41278  RISE       1
+pin name                                 model name   delay     AT  slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:shifter_state_0\/q       macrocell11   1250   1250  38874  RISE       1
+\WS2812driver_1:shift_counter_2\/main_1  macrocell10   3611   4861  41629  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -904,16 +905,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:shift_counter_2\/clock_0                  macrocell10                0      0  RISE       1
 
 
 
 ++++ Path 17 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : Net_188/q
-Path End       : \WS2812driver_1:shift_counter_0\/main_0
-Capture Clock  : \WS2812driver_1:shift_counter_0\/clock_0
-Path slack     : 41278p
+Path Begin     : \WS2812driver_1:shifter_state_0\/q
+Path End       : \WS2812driver_1:shifter_state_1\/main_1
+Capture Clock  : \WS2812driver_1:shifter_state_1\/clock_0
+Path slack     : 41629p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -924,9 +925,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       5212
++ Data path delay                       4861
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           5212
+End-of-path arrival time (ps)           4861
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -934,13 +935,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 Data path
 pin name                                 model name   delay     AT  slack  edge  Fanout
 ---------------------------------------  -----------  -----  -----  -----  ----  ------
-Net_188/q                                macrocell2    1250   1250  37784  RISE       1
-\WS2812driver_1:shift_counter_0\/main_0  macrocell7    3962   5212  41278  RISE       1
+\WS2812driver_1:shifter_state_0\/q       macrocell11   1250   1250  38874  RISE       1
+\WS2812driver_1:shifter_state_1\/main_1  macrocell12   3611   4861  41629  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -948,16 +949,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_0\/clock_0                  macrocell7                 0      0  RISE       1
+\WS2812driver_1:shifter_state_1\/clock_0                  macrocell12                0      0  RISE       1
 
 
 
 ++++ Path 18 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : Net_188/q
-Path End       : \WS2812driver_1:shift_counter_1\/main_0
-Capture Clock  : \WS2812driver_1:shift_counter_1\/clock_0
-Path slack     : 41278p
+Path Begin     : \WS2812driver_1:shifter_state_0\/q
+Path End       : \WS2812driver_1:shift_counter_0\/main_1
+Capture Clock  : \WS2812driver_1:shift_counter_0\/clock_0
+Path slack     : 41655p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -968,9 +969,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       5212
++ Data path delay                       4835
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           5212
+End-of-path arrival time (ps)           4835
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -978,13 +979,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 Data path
 pin name                                 model name   delay     AT  slack  edge  Fanout
 ---------------------------------------  -----------  -----  -----  -----  ----  ------
-Net_188/q                                macrocell2    1250   1250  37784  RISE       1
-\WS2812driver_1:shift_counter_1\/main_0  macrocell8    3962   5212  41278  RISE       1
+\WS2812driver_1:shifter_state_0\/q       macrocell11   1250   1250  38874  RISE       1
+\WS2812driver_1:shift_counter_0\/main_1  macrocell8    3585   4835  41655  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -992,16 +993,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_1\/clock_0                  macrocell8                 0      0  RISE       1
+\WS2812driver_1:shift_counter_0\/clock_0                  macrocell8                 0      0  RISE       1
 
 
 
 ++++ Path 19 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:pg_state_1\/q
-Path End       : \WS2812driver_1:pg_state_1\/main_0
-Capture Clock  : \WS2812driver_1:pg_state_1\/clock_0
-Path slack     : 41781p
+Path Begin     : \WS2812driver_1:shifter_state_0\/q
+Path End       : \WS2812driver_1:pg_state_0\/main_1
+Capture Clock  : \WS2812driver_1:pg_state_0\/clock_0
+Path slack     : 41761p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1012,9 +1013,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4709
++ Data path delay                       4729
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4709
+End-of-path arrival time (ps)           4729
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1022,13 +1023,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_1\/clock_0                       macrocell6                 0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 Data path
 pin name                            model name   delay     AT  slack  edge  Fanout
 ----------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_1\/q       macrocell6    1250   1250  29491  RISE       1
-\WS2812driver_1:pg_state_1\/main_0  macrocell6    3459   4709  41781  RISE       1
+\WS2812driver_1:shifter_state_0\/q  macrocell11   1250   1250  38874  RISE       1
+\WS2812driver_1:pg_state_0\/main_1  macrocell6    3479   4729  41761  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1036,16 +1037,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_1\/clock_0                       macrocell6                 0      0  RISE       1
+\WS2812driver_1:pg_state_0\/clock_0                       macrocell6                 0      0  RISE       1
 
 
 
 ++++ Path 20 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:pg_state_1\/q
-Path End       : Net_187/main_0
-Capture Clock  : Net_187/clock_0
-Path slack     : 41912p
+Path Begin     : \WS2812driver_1:shifter_state_1\/q
+Path End       : \WS2812driver_1:pg_state_0\/main_0
+Capture Clock  : \WS2812driver_1:pg_state_0\/clock_0
+Path slack     : 41816p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1056,9 +1057,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4578
++ Data path delay                       4674
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4578
+End-of-path arrival time (ps)           4674
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1066,13 +1067,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_1\/clock_0                       macrocell6                 0      0  RISE       1
+\WS2812driver_1:shifter_state_1\/clock_0                  macrocell12                0      0  RISE       1
 
 Data path
-pin name                       model name   delay     AT  slack  edge  Fanout
------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_1\/q  macrocell6    1250   1250  29491  RISE       1
-Net_187/main_0                 macrocell1    3328   4578  41912  RISE       1
+pin name                            model name   delay     AT  slack  edge  Fanout
+----------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:shifter_state_1\/q  macrocell12   1250   1250  39034  RISE       1
+\WS2812driver_1:pg_state_0\/main_0  macrocell6    3424   4674  41816  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1080,16 +1081,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_187/clock_0                                           macrocell1                 0      0  RISE       1
+\WS2812driver_1:pg_state_0\/clock_0                       macrocell6                 0      0  RISE       1
 
 
 
 ++++ Path 21 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:pg_state_1\/q
-Path End       : \WS2812driver_1:pg_data_req\/main_0
-Capture Clock  : \WS2812driver_1:pg_data_req\/clock_0
-Path slack     : 41912p
+Path Begin     : \WS2812driver_1:shifter_state_1\/q
+Path End       : \WS2812driver_1:shift_counter_1\/main_0
+Capture Clock  : \WS2812driver_1:shift_counter_1\/clock_0
+Path slack     : 41819p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1100,9 +1101,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4578
++ Data path delay                       4671
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4578
+End-of-path arrival time (ps)           4671
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1110,13 +1111,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_1\/clock_0                       macrocell6                 0      0  RISE       1
+\WS2812driver_1:shifter_state_1\/clock_0                  macrocell12                0      0  RISE       1
 
 Data path
-pin name                             model name   delay     AT  slack  edge  Fanout
------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_1\/q        macrocell6    1250   1250  29491  RISE       1
-\WS2812driver_1:pg_data_req\/main_0  macrocell4    3328   4578  41912  RISE       1
+pin name                                 model name   delay     AT  slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:shifter_state_1\/q       macrocell12   1250   1250  39034  RISE       1
+\WS2812driver_1:shift_counter_1\/main_0  macrocell9    3421   4671  41819  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1124,16 +1125,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_data_req\/clock_0                      macrocell4                 0      0  RISE       1
+\WS2812driver_1:shift_counter_1\/clock_0                  macrocell9                 0      0  RISE       1
 
 
 
 ++++ Path 22 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:pg_state_0\/q
-Path End       : Net_187/main_1
-Capture Clock  : Net_187/clock_0
-Path slack     : 41942p
+Path Begin     : \WS2812driver_1:shifter_state_1\/q
+Path End       : \WS2812driver_1:shift_counter_2\/main_0
+Capture Clock  : \WS2812driver_1:shift_counter_2\/clock_0
+Path slack     : 41819p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1144,9 +1145,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4548
++ Data path delay                       4671
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4548
+End-of-path arrival time (ps)           4671
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1154,13 +1155,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_0\/clock_0                       macrocell5                 0      0  RISE       1
+\WS2812driver_1:shifter_state_1\/clock_0                  macrocell12                0      0  RISE       1
 
 Data path
-pin name                       model name   delay     AT  slack  edge  Fanout
------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_0\/q  macrocell5    1250   1250  29648  RISE       1
-Net_187/main_1                 macrocell1    3298   4548  41942  RISE       1
+pin name                                 model name   delay     AT  slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:shifter_state_1\/q       macrocell12   1250   1250  39034  RISE       1
+\WS2812driver_1:shift_counter_2\/main_0  macrocell10   3421   4671  41819  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1168,16 +1169,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_187/clock_0                                           macrocell1                 0      0  RISE       1
+\WS2812driver_1:shift_counter_2\/clock_0                  macrocell10                0      0  RISE       1
 
 
 
 ++++ Path 23 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:pg_state_0\/q
-Path End       : \WS2812driver_1:pg_data_req\/main_1
-Capture Clock  : \WS2812driver_1:pg_data_req\/clock_0
-Path slack     : 41942p
+Path Begin     : \WS2812driver_1:shifter_state_1\/q
+Path End       : \WS2812driver_1:shifter_state_1\/main_0
+Capture Clock  : \WS2812driver_1:shifter_state_1\/clock_0
+Path slack     : 41819p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1188,9 +1189,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4548
++ Data path delay                       4671
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4548
+End-of-path arrival time (ps)           4671
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1198,13 +1199,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_0\/clock_0                       macrocell5                 0      0  RISE       1
+\WS2812driver_1:shifter_state_1\/clock_0                  macrocell12                0      0  RISE       1
 
 Data path
-pin name                             model name   delay     AT  slack  edge  Fanout
------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_0\/q        macrocell5    1250   1250  29648  RISE       1
-\WS2812driver_1:pg_data_req\/main_1  macrocell4    3298   4548  41942  RISE       1
+pin name                                 model name   delay     AT  slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:shifter_state_1\/q       macrocell12   1250   1250  39034  RISE       1
+\WS2812driver_1:shifter_state_1\/main_0  macrocell12   3421   4671  41819  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1212,16 +1213,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_data_req\/clock_0                      macrocell4                 0      0  RISE       1
+\WS2812driver_1:shifter_state_1\/clock_0                  macrocell12                0      0  RISE       1
 
 
 
 ++++ Path 24 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:pg_state_0\/q
-Path End       : \WS2812driver_1:pg_state_0\/main_2
-Capture Clock  : \WS2812driver_1:pg_state_0\/clock_0
-Path slack     : 41952p
+Path Begin     : \WS2812driver_1:pg_state_1\/q
+Path End       : \WS2812driver_1:pg_data_req\/main_0
+Capture Clock  : \WS2812driver_1:pg_data_req\/clock_0
+Path slack     : 41878p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1232,9 +1233,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4538
++ Data path delay                       4612
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4538
+End-of-path arrival time (ps)           4612
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1242,13 +1243,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_0\/clock_0                       macrocell5                 0      0  RISE       1
+\WS2812driver_1:pg_state_1\/clock_0                       macrocell7                 0      0  RISE       1
 
 Data path
-pin name                            model name   delay     AT  slack  edge  Fanout
-----------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_0\/q       macrocell5    1250   1250  29648  RISE       1
-\WS2812driver_1:pg_state_0\/main_2  macrocell5    3288   4538  41952  RISE       1
+pin name                             model name   delay     AT  slack  edge  Fanout
+-----------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:pg_state_1\/q        macrocell7    1250   1250  28518  RISE       1
+\WS2812driver_1:pg_data_req\/main_0  macrocell5    3362   4612  41878  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1256,16 +1257,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_0\/clock_0                       macrocell5                 0      0  RISE       1
+\WS2812driver_1:pg_data_req\/clock_0                      macrocell5                 0      0  RISE       1
 
 
 
 ++++ Path 25 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:pg_state_1\/q
-Path End       : \WS2812driver_1:pg_state_0\/main_1
+Path End       : \WS2812driver_1:pg_state_0\/main_2
 Capture Clock  : \WS2812driver_1:pg_state_0\/clock_0
-Path slack     : 41954p
+Path slack     : 41878p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1276,9 +1277,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4536
++ Data path delay                       4612
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4536
+End-of-path arrival time (ps)           4612
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1286,13 +1287,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_1\/clock_0                       macrocell6                 0      0  RISE       1
+\WS2812driver_1:pg_state_1\/clock_0                       macrocell7                 0      0  RISE       1
 
 Data path
 pin name                            model name   delay     AT  slack  edge  Fanout
 ----------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_1\/q       macrocell6    1250   1250  29491  RISE       1
-\WS2812driver_1:pg_state_0\/main_1  macrocell5    3286   4536  41954  RISE       1
+\WS2812driver_1:pg_state_1\/q       macrocell7    1250   1250  28518  RISE       1
+\WS2812driver_1:pg_state_0\/main_2  macrocell6    3362   4612  41878  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1300,16 +1301,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_0\/clock_0                       macrocell5                 0      0  RISE       1
+\WS2812driver_1:pg_state_0\/clock_0                       macrocell6                 0      0  RISE       1
 
 
 
 ++++ Path 26 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:shifter_state_1\/q
-Path End       : \WS2812driver_1:shifter_state_1\/main_1
-Capture Clock  : \WS2812driver_1:shifter_state_1\/clock_0
-Path slack     : 41967p
+Path Begin     : \WS2812driver_1:pg_state_1\/q
+Path End       : \WS2812driver_1:pg_state_1\/main_0
+Capture Clock  : \WS2812driver_1:pg_state_1\/clock_0
+Path slack     : 41878p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1320,9 +1321,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4523
++ Data path delay                       4612
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4523
+End-of-path arrival time (ps)           4612
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1330,13 +1331,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shifter_state_1\/clock_0                  macrocell10                0      0  RISE       1
+\WS2812driver_1:pg_state_1\/clock_0                       macrocell7                 0      0  RISE       1
 
 Data path
-pin name                                 model name   delay     AT  slack  edge  Fanout
----------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shifter_state_1\/q       macrocell10   1250   1250  39183  RISE       1
-\WS2812driver_1:shifter_state_1\/main_1  macrocell10   3273   4523  41967  RISE       1
+pin name                            model name   delay     AT  slack  edge  Fanout
+----------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:pg_state_1\/q       macrocell7    1250   1250  28518  RISE       1
+\WS2812driver_1:pg_state_1\/main_0  macrocell7    3362   4612  41878  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1344,16 +1345,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shifter_state_1\/clock_0                  macrocell10                0      0  RISE       1
+\WS2812driver_1:pg_state_1\/clock_0                       macrocell7                 0      0  RISE       1
 
 
 
 ++++ Path 27 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:shifter_state_1\/q
-Path End       : Net_188/main_2
-Capture Clock  : Net_188/clock_0
-Path slack     : 41970p
+Path End       : \WS2812driver_1:shift_counter_0\/main_0
+Capture Clock  : \WS2812driver_1:shift_counter_0\/clock_0
+Path slack     : 41939p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1364,9 +1365,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4520
++ Data path delay                       4551
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4520
+End-of-path arrival time (ps)           4551
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1374,13 +1375,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shifter_state_1\/clock_0                  macrocell10                0      0  RISE       1
+\WS2812driver_1:shifter_state_1\/clock_0                  macrocell12                0      0  RISE       1
 
 Data path
-pin name                            model name   delay     AT  slack  edge  Fanout
-----------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shifter_state_1\/q  macrocell10   1250   1250  39183  RISE       1
-Net_188/main_2                      macrocell2    3270   4520  41970  RISE       1
+pin name                                 model name   delay     AT  slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:shifter_state_1\/q       macrocell12   1250   1250  39034  RISE       1
+\WS2812driver_1:shift_counter_0\/main_0  macrocell8    3301   4551  41939  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1388,16 +1389,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:shift_counter_0\/clock_0                  macrocell8                 0      0  RISE       1
 
 
 
 ++++ Path 28 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:shifter_state_1\/q
-Path End       : \WS2812driver_1:shift_counter_0\/main_1
-Capture Clock  : \WS2812driver_1:shift_counter_0\/clock_0
-Path slack     : 41970p
+Path End       : \WS2812driver_1:shifter_state_0\/main_0
+Capture Clock  : \WS2812driver_1:shifter_state_0\/clock_0
+Path slack     : 41940p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1408,9 +1409,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4520
++ Data path delay                       4550
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4520
+End-of-path arrival time (ps)           4550
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1418,13 +1419,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shifter_state_1\/clock_0                  macrocell10                0      0  RISE       1
+\WS2812driver_1:shifter_state_1\/clock_0                  macrocell12                0      0  RISE       1
 
 Data path
 pin name                                 model name   delay     AT  slack  edge  Fanout
 ---------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shifter_state_1\/q       macrocell10   1250   1250  39183  RISE       1
-\WS2812driver_1:shift_counter_0\/main_1  macrocell7    3270   4520  41970  RISE       1
+\WS2812driver_1:shifter_state_1\/q       macrocell12   1250   1250  39034  RISE       1
+\WS2812driver_1:shifter_state_0\/main_0  macrocell11   3300   4550  41940  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1432,16 +1433,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_0\/clock_0                  macrocell7                 0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 
 
 ++++ Path 29 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:shifter_state_1\/q
-Path End       : \WS2812driver_1:shift_counter_1\/main_1
-Capture Clock  : \WS2812driver_1:shift_counter_1\/clock_0
-Path slack     : 41970p
+Path Begin     : \WS2812driver_1:pg_state_0\/q
+Path End       : \WS2812driver_1:pg_data_req\/main_1
+Capture Clock  : \WS2812driver_1:pg_data_req\/clock_0
+Path slack     : 42089p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1452,9 +1453,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4520
++ Data path delay                       4401
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4520
+End-of-path arrival time (ps)           4401
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1462,13 +1463,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shifter_state_1\/clock_0                  macrocell10                0      0  RISE       1
+\WS2812driver_1:pg_state_0\/clock_0                       macrocell6                 0      0  RISE       1
 
 Data path
-pin name                                 model name   delay     AT  slack  edge  Fanout
----------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shifter_state_1\/q       macrocell10   1250   1250  39183  RISE       1
-\WS2812driver_1:shift_counter_1\/main_1  macrocell8    3270   4520  41970  RISE       1
+pin name                             model name   delay     AT  slack  edge  Fanout
+-----------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:pg_state_0\/q        macrocell6    1250   1250  29649  RISE       1
+\WS2812driver_1:pg_data_req\/main_1  macrocell5    3151   4401  42089  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1476,16 +1477,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_1\/clock_0                  macrocell8                 0      0  RISE       1
+\WS2812driver_1:pg_data_req\/clock_0                      macrocell5                 0      0  RISE       1
 
 
 
 ++++ Path 30 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:shifter_state_1\/q
-Path End       : \WS2812driver_1:shift_counter_2\/main_1
-Capture Clock  : \WS2812driver_1:shift_counter_2\/clock_0
-Path slack     : 42229p
+Path Begin     : \WS2812driver_1:pg_state_0\/q
+Path End       : \WS2812driver_1:pg_state_0\/main_3
+Capture Clock  : \WS2812driver_1:pg_state_0\/clock_0
+Path slack     : 42089p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1496,9 +1497,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4261
++ Data path delay                       4401
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4261
+End-of-path arrival time (ps)           4401
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1506,13 +1507,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shifter_state_1\/clock_0                  macrocell10                0      0  RISE       1
+\WS2812driver_1:pg_state_0\/clock_0                       macrocell6                 0      0  RISE       1
 
 Data path
-pin name                                 model name   delay     AT  slack  edge  Fanout
----------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shifter_state_1\/q       macrocell10   1250   1250  39183  RISE       1
-\WS2812driver_1:shift_counter_2\/main_1  macrocell9    3011   4261  42229  RISE       1
+pin name                            model name   delay     AT  slack  edge  Fanout
+----------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:pg_state_0\/q       macrocell6    1250   1250  29649  RISE       1
+\WS2812driver_1:pg_state_0\/main_3  macrocell6    3151   4401  42089  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1520,16 +1521,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_2\/clock_0                  macrocell9                 0      0  RISE       1
+\WS2812driver_1:pg_state_0\/clock_0                       macrocell6                 0      0  RISE       1
 
 
 
 ++++ Path 31 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:shift_counter_0\/q
-Path End       : Net_188/main_5
-Capture Clock  : Net_188/clock_0
-Path slack     : 42229p
+Path Begin     : \WS2812driver_1:pg_state_0\/q
+Path End       : \WS2812driver_1:pg_state_1\/main_1
+Capture Clock  : \WS2812driver_1:pg_state_1\/clock_0
+Path slack     : 42089p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1540,9 +1541,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4261
++ Data path delay                       4401
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4261
+End-of-path arrival time (ps)           4401
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1550,13 +1551,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_0\/clock_0                  macrocell7                 0      0  RISE       1
+\WS2812driver_1:pg_state_0\/clock_0                       macrocell6                 0      0  RISE       1
 
 Data path
 pin name                            model name   delay     AT  slack  edge  Fanout
 ----------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shift_counter_0\/q  macrocell7    1250   1250  42229  RISE       1
-Net_188/main_5                      macrocell2    3011   4261  42229  RISE       1
+\WS2812driver_1:pg_state_0\/q       macrocell6    1250   1250  29649  RISE       1
+\WS2812driver_1:pg_state_1\/main_1  macrocell7    3151   4401  42089  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1564,16 +1565,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:pg_state_1\/clock_0                       macrocell7                 0      0  RISE       1
 
 
 
 ++++ Path 32 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:shift_counter_0\/q
-Path End       : \WS2812driver_1:shift_counter_0\/main_2
-Capture Clock  : \WS2812driver_1:shift_counter_0\/clock_0
-Path slack     : 42229p
+Path Begin     : \WS2812driver_1:pg_state_0\/q
+Path End       : Net_187/main_1
+Capture Clock  : Net_187/clock_0
+Path slack     : 42118p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1584,9 +1585,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4261
++ Data path delay                       4372
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4261
+End-of-path arrival time (ps)           4372
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1594,13 +1595,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_0\/clock_0                  macrocell7                 0      0  RISE       1
+\WS2812driver_1:pg_state_0\/clock_0                       macrocell6                 0      0  RISE       1
 
 Data path
-pin name                                 model name   delay     AT  slack  edge  Fanout
----------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shift_counter_0\/q       macrocell7    1250   1250  42229  RISE       1
-\WS2812driver_1:shift_counter_0\/main_2  macrocell7    3011   4261  42229  RISE       1
+pin name                       model name   delay     AT  slack  edge  Fanout
+-----------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:pg_state_0\/q  macrocell6    1250   1250  29649  RISE       1
+Net_187/main_1                 macrocell1    3122   4372  42118  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1608,16 +1609,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_0\/clock_0                  macrocell7                 0      0  RISE       1
+Net_187/clock_0                                           macrocell1                 0      0  RISE       1
 
 
 
 ++++ Path 33 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:shift_counter_0\/q
-Path End       : \WS2812driver_1:shift_counter_1\/main_3
-Capture Clock  : \WS2812driver_1:shift_counter_1\/clock_0
-Path slack     : 42229p
+Path End       : \WS2812driver_1:shift_counter_0\/main_2
+Capture Clock  : \WS2812driver_1:shift_counter_0\/clock_0
+Path slack     : 42252p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1628,9 +1629,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4261
++ Data path delay                       4238
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4261
+End-of-path arrival time (ps)           4238
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1638,13 +1639,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_0\/clock_0                  macrocell7                 0      0  RISE       1
+\WS2812driver_1:shift_counter_0\/clock_0                  macrocell8                 0      0  RISE       1
 
 Data path
 pin name                                 model name   delay     AT  slack  edge  Fanout
 ---------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shift_counter_0\/q       macrocell7    1250   1250  42229  RISE       1
-\WS2812driver_1:shift_counter_1\/main_3  macrocell8    3011   4261  42229  RISE       1
+\WS2812driver_1:shift_counter_0\/q       macrocell8    1250   1250  42252  RISE       1
+\WS2812driver_1:shift_counter_0\/main_2  macrocell8    2988   4238  42252  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1652,16 +1653,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_1\/clock_0                  macrocell8                 0      0  RISE       1
+\WS2812driver_1:shift_counter_0\/clock_0                  macrocell8                 0      0  RISE       1
 
 
 
 ++++ Path 34 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:shift_counter_0\/q
-Path End       : \WS2812driver_1:shift_counter_2\/main_4
-Capture Clock  : \WS2812driver_1:shift_counter_2\/clock_0
-Path slack     : 42231p
+Path End       : \WS2812driver_1:shift_counter_1\/main_3
+Capture Clock  : \WS2812driver_1:shift_counter_1\/clock_0
+Path slack     : 42253p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1672,9 +1673,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4259
++ Data path delay                       4237
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4259
+End-of-path arrival time (ps)           4237
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1682,13 +1683,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_0\/clock_0                  macrocell7                 0      0  RISE       1
+\WS2812driver_1:shift_counter_0\/clock_0                  macrocell8                 0      0  RISE       1
 
 Data path
 pin name                                 model name   delay     AT  slack  edge  Fanout
 ---------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shift_counter_0\/q       macrocell7    1250   1250  42229  RISE       1
-\WS2812driver_1:shift_counter_2\/main_4  macrocell9    3009   4259  42231  RISE       1
+\WS2812driver_1:shift_counter_0\/q       macrocell8    1250   1250  42252  RISE       1
+\WS2812driver_1:shift_counter_1\/main_3  macrocell9    2987   4237  42253  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1696,16 +1697,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_2\/clock_0                  macrocell9                 0      0  RISE       1
+\WS2812driver_1:shift_counter_1\/clock_0                  macrocell9                 0      0  RISE       1
 
 
 
 ++++ Path 35 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:pg_state_0\/q
-Path End       : \WS2812driver_1:pg_state_1\/main_1
-Capture Clock  : \WS2812driver_1:pg_state_1\/clock_0
-Path slack     : 42245p
+Path Begin     : \WS2812driver_1:shift_counter_0\/q
+Path End       : \WS2812driver_1:shift_counter_2\/main_4
+Capture Clock  : \WS2812driver_1:shift_counter_2\/clock_0
+Path slack     : 42253p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1716,9 +1717,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4245
++ Data path delay                       4237
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4245
+End-of-path arrival time (ps)           4237
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1726,13 +1727,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_0\/clock_0                       macrocell5                 0      0  RISE       1
+\WS2812driver_1:shift_counter_0\/clock_0                  macrocell8                 0      0  RISE       1
 
 Data path
-pin name                            model name   delay     AT  slack  edge  Fanout
-----------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_state_0\/q       macrocell5    1250   1250  29648  RISE       1
-\WS2812driver_1:pg_state_1\/main_1  macrocell6    2995   4245  42245  RISE       1
+pin name                                 model name   delay     AT  slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:shift_counter_0\/q       macrocell8    1250   1250  42252  RISE       1
+\WS2812driver_1:shift_counter_2\/main_4  macrocell10   2987   4237  42253  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1740,16 +1741,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_state_1\/clock_0                       macrocell6                 0      0  RISE       1
+\WS2812driver_1:shift_counter_2\/clock_0                  macrocell10                0      0  RISE       1
 
 
 
 ++++ Path 36 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:shift_counter_2\/q
-Path End       : \WS2812driver_1:shifter_state_1\/main_2
+Path Begin     : \WS2812driver_1:shift_counter_0\/q
+Path End       : \WS2812driver_1:shifter_state_1\/main_4
 Capture Clock  : \WS2812driver_1:shifter_state_1\/clock_0
-Path slack     : 42266p
+Path slack     : 42253p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1760,9 +1761,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4224
++ Data path delay                       4237
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4224
+End-of-path arrival time (ps)           4237
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1770,13 +1771,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_2\/clock_0                  macrocell9                 0      0  RISE       1
+\WS2812driver_1:shift_counter_0\/clock_0                  macrocell8                 0      0  RISE       1
 
 Data path
 pin name                                 model name   delay     AT  slack  edge  Fanout
 ---------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shift_counter_2\/q       macrocell9    1250   1250  42266  RISE       1
-\WS2812driver_1:shifter_state_1\/main_2  macrocell10   2974   4224  42266  RISE       1
+\WS2812driver_1:shift_counter_0\/q       macrocell8    1250   1250  42252  RISE       1
+\WS2812driver_1:shifter_state_1\/main_4  macrocell12   2987   4237  42253  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1784,16 +1785,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shifter_state_1\/clock_0                  macrocell10                0      0  RISE       1
+\WS2812driver_1:shifter_state_1\/clock_0                  macrocell12                0      0  RISE       1
 
 
 
 ++++ Path 37 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:shift_counter_2\/q
-Path End       : \WS2812driver_1:shift_counter_2\/main_2
-Capture Clock  : \WS2812driver_1:shift_counter_2\/clock_0
-Path slack     : 42269p
+Path Begin     : \WS2812driver_1:shift_counter_0\/q
+Path End       : \WS2812driver_1:shifter_state_0\/main_6
+Capture Clock  : \WS2812driver_1:shifter_state_0\/clock_0
+Path slack     : 42372p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1804,9 +1805,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4221
++ Data path delay                       4118
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4221
+End-of-path arrival time (ps)           4118
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1814,13 +1815,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_2\/clock_0                  macrocell9                 0      0  RISE       1
+\WS2812driver_1:shift_counter_0\/clock_0                  macrocell8                 0      0  RISE       1
 
 Data path
 pin name                                 model name   delay     AT  slack  edge  Fanout
 ---------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shift_counter_2\/q       macrocell9    1250   1250  42266  RISE       1
-\WS2812driver_1:shift_counter_2\/main_2  macrocell9    2971   4221  42269  RISE       1
+\WS2812driver_1:shift_counter_0\/q       macrocell8    1250   1250  42252  RISE       1
+\WS2812driver_1:shifter_state_0\/main_6  macrocell11   2868   4118  42372  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1828,16 +1829,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_2\/clock_0                  macrocell9                 0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 
 
 ++++ Path 38 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:shift_counter_0\/q
-Path End       : \WS2812driver_1:shifter_state_1\/main_4
-Capture Clock  : \WS2812driver_1:shifter_state_1\/clock_0
-Path slack     : 42387p
+Path Begin     : \WS2812driver_1:shift_counter_2\/q
+Path End       : \WS2812driver_1:shift_counter_2\/main_2
+Capture Clock  : \WS2812driver_1:shift_counter_2\/clock_0
+Path slack     : 42544p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1848,9 +1849,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4103
++ Data path delay                       3946
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4103
+End-of-path arrival time (ps)           3946
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1858,13 +1859,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_0\/clock_0                  macrocell7                 0      0  RISE       1
+\WS2812driver_1:shift_counter_2\/clock_0                  macrocell10                0      0  RISE       1
 
 Data path
 pin name                                 model name   delay     AT  slack  edge  Fanout
 ---------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shift_counter_0\/q       macrocell7    1250   1250  42229  RISE       1
-\WS2812driver_1:shifter_state_1\/main_4  macrocell10   2853   4103  42387  RISE       1
+\WS2812driver_1:shift_counter_2\/q       macrocell10   1250   1250  42544  RISE       1
+\WS2812driver_1:shift_counter_2\/main_2  macrocell10   2696   3946  42544  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1872,16 +1873,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shifter_state_1\/clock_0                  macrocell10                0      0  RISE       1
+\WS2812driver_1:shift_counter_2\/clock_0                  macrocell10                0      0  RISE       1
 
 
 
 ++++ Path 39 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:shift_counter_2\/q
-Path End       : Net_188/main_3
-Capture Clock  : Net_188/clock_0
-Path slack     : 42389p
+Path End       : \WS2812driver_1:shifter_state_1\/main_2
+Capture Clock  : \WS2812driver_1:shifter_state_1\/clock_0
+Path slack     : 42544p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1892,9 +1893,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4101
++ Data path delay                       3946
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4101
+End-of-path arrival time (ps)           3946
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1902,13 +1903,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_2\/clock_0                  macrocell9                 0      0  RISE       1
+\WS2812driver_1:shift_counter_2\/clock_0                  macrocell10                0      0  RISE       1
 
 Data path
-pin name                            model name   delay     AT  slack  edge  Fanout
-----------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shift_counter_2\/q  macrocell9    1250   1250  42266  RISE       1
-Net_188/main_3                      macrocell2    2851   4101  42389  RISE       1
+pin name                                 model name   delay     AT  slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:shift_counter_2\/q       macrocell10   1250   1250  42544  RISE       1
+\WS2812driver_1:shifter_state_1\/main_2  macrocell12   2696   3946  42544  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1916,16 +1917,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:shifter_state_1\/clock_0                  macrocell12                0      0  RISE       1
 
 
 
 ++++ Path 40 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:shift_counter_1\/q
-Path End       : \WS2812driver_1:shift_counter_2\/main_3
-Capture Clock  : \WS2812driver_1:shift_counter_2\/clock_0
-Path slack     : 42406p
+Path Begin     : \WS2812driver_1:shift_counter_2\/q
+Path End       : \WS2812driver_1:shifter_state_0\/main_4
+Capture Clock  : \WS2812driver_1:shifter_state_0\/clock_0
+Path slack     : 42547p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1936,9 +1937,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4084
++ Data path delay                       3943
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4084
+End-of-path arrival time (ps)           3943
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1946,13 +1947,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_1\/clock_0                  macrocell8                 0      0  RISE       1
+\WS2812driver_1:shift_counter_2\/clock_0                  macrocell10                0      0  RISE       1
 
 Data path
 pin name                                 model name   delay     AT  slack  edge  Fanout
 ---------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shift_counter_1\/q       macrocell8    1250   1250  42406  RISE       1
-\WS2812driver_1:shift_counter_2\/main_3  macrocell9    2834   4084  42406  RISE       1
+\WS2812driver_1:shift_counter_2\/q       macrocell10   1250   1250  42544  RISE       1
+\WS2812driver_1:shifter_state_0\/main_4  macrocell11   2693   3943  42547  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1960,16 +1961,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_2\/clock_0                  macrocell9                 0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 
 
 ++++ Path 41 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:shift_counter_1\/q
-Path End       : \WS2812driver_1:shifter_state_1\/main_3
-Capture Clock  : \WS2812driver_1:shifter_state_1\/clock_0
-Path slack     : 42409p
+Path End       : \WS2812driver_1:shifter_state_0\/main_5
+Capture Clock  : \WS2812driver_1:shifter_state_0\/clock_0
+Path slack     : 42707p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -1980,9 +1981,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4081
++ Data path delay                       3783
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4081
+End-of-path arrival time (ps)           3783
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -1990,13 +1991,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_1\/clock_0                  macrocell8                 0      0  RISE       1
+\WS2812driver_1:shift_counter_1\/clock_0                  macrocell9                 0      0  RISE       1
 
 Data path
 pin name                                 model name   delay     AT  slack  edge  Fanout
 ---------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shift_counter_1\/q       macrocell8    1250   1250  42406  RISE       1
-\WS2812driver_1:shifter_state_1\/main_3  macrocell10   2831   4081  42409  RISE       1
+\WS2812driver_1:shift_counter_1\/q       macrocell9    1250   1250  42707  RISE       1
+\WS2812driver_1:shifter_state_0\/main_5  macrocell11   2533   3783  42707  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -2004,16 +2005,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shifter_state_1\/clock_0                  macrocell10                0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 
 
 ++++ Path 42 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:shift_counter_1\/q
-Path End       : Net_188/main_4
-Capture Clock  : Net_188/clock_0
-Path slack     : 42417p
+Path End       : \WS2812driver_1:shift_counter_1\/main_2
+Capture Clock  : \WS2812driver_1:shift_counter_1\/clock_0
+Path slack     : 42712p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -2024,9 +2025,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4073
++ Data path delay                       3778
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4073
+End-of-path arrival time (ps)           3778
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -2034,13 +2035,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_1\/clock_0                  macrocell8                 0      0  RISE       1
+\WS2812driver_1:shift_counter_1\/clock_0                  macrocell9                 0      0  RISE       1
 
 Data path
-pin name                            model name   delay     AT  slack  edge  Fanout
-----------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shift_counter_1\/q  macrocell8    1250   1250  42406  RISE       1
-Net_188/main_4                      macrocell2    2823   4073  42417  RISE       1
+pin name                                 model name   delay     AT  slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:shift_counter_1\/q       macrocell9    1250   1250  42707  RISE       1
+\WS2812driver_1:shift_counter_1\/main_2  macrocell9    2528   3778  42712  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -2048,16 +2049,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:shift_counter_1\/clock_0                  macrocell9                 0      0  RISE       1
 
 
 
 ++++ Path 43 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
 Path Begin     : \WS2812driver_1:shift_counter_1\/q
-Path End       : \WS2812driver_1:shift_counter_1\/main_2
-Capture Clock  : \WS2812driver_1:shift_counter_1\/clock_0
-Path slack     : 42417p
+Path End       : \WS2812driver_1:shift_counter_2\/main_3
+Capture Clock  : \WS2812driver_1:shift_counter_2\/clock_0
+Path slack     : 42712p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -2068,9 +2069,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       4073
++ Data path delay                       3778
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           4073
+End-of-path arrival time (ps)           3778
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -2078,13 +2079,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_1\/clock_0                  macrocell8                 0      0  RISE       1
+\WS2812driver_1:shift_counter_1\/clock_0                  macrocell9                 0      0  RISE       1
 
 Data path
 pin name                                 model name   delay     AT  slack  edge  Fanout
 ---------------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:shift_counter_1\/q       macrocell8    1250   1250  42406  RISE       1
-\WS2812driver_1:shift_counter_1\/main_2  macrocell8    2823   4073  42417  RISE       1
+\WS2812driver_1:shift_counter_1\/q       macrocell9    1250   1250  42707  RISE       1
+\WS2812driver_1:shift_counter_2\/main_3  macrocell10   2528   3778  42712  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -2092,16 +2093,16 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:shift_counter_1\/clock_0                  macrocell8                 0      0  RISE       1
+\WS2812driver_1:shift_counter_2\/clock_0                  macrocell10                0      0  RISE       1
 
 
 
 ++++ Path 44 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 
-Path Begin     : \WS2812driver_1:pg_data_req\/q
-Path End       : Net_188/main_1
-Capture Clock  : Net_188/clock_0
-Path slack     : 42997p
+Path Begin     : \WS2812driver_1:shift_counter_1\/q
+Path End       : \WS2812driver_1:shifter_state_1\/main_3
+Capture Clock  : \WS2812driver_1:shifter_state_1\/clock_0
+Path slack     : 42712p
 
 Capture Clock Arrival Time                         0
 + Clock path delay                                 0
@@ -2112,9 +2113,9 @@ End-of-path required time (ps)                 46490
 
 Launch Clock Arrival Time                      0
 + Clock path delay                         0
-+ Data path delay                       3493
++ Data path delay                       3778
 -------------------------------------   ---- 
-End-of-path arrival time (ps)           3493
+End-of-path arrival time (ps)           3778
  
 Launch Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -2122,13 +2123,13 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-\WS2812driver_1:pg_data_req\/clock_0                      macrocell4                 0      0  RISE       1
+\WS2812driver_1:shift_counter_1\/clock_0                  macrocell9                 0      0  RISE       1
 
 Data path
-pin name                        model name   delay     AT  slack  edge  Fanout
-------------------------------  -----------  -----  -----  -----  ----  ------
-\WS2812driver_1:pg_data_req\/q  macrocell4    1250   1250  42997  RISE       1
-Net_188/main_1                  macrocell2    2243   3493  42997  RISE       1
+pin name                                 model name   delay     AT  slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:shift_counter_1\/q       macrocell9    1250   1250  42707  RISE       1
+\WS2812driver_1:shifter_state_1\/main_3  macrocell12   2528   3778  42712  RISE       1
 
 Capture Clock Path
 pin name                                                  model name             delay     AT  edge  Fanout
@@ -2136,7 +2137,51 @@ pin name                                                  model name            
 ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
 ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
 ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
-Net_188/clock_0                                           macrocell2                 0      0  RISE       1
+\WS2812driver_1:shifter_state_1\/clock_0                  macrocell12                0      0  RISE       1
+
+
+
+++++ Path 45 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \WS2812driver_1:pg_data_req\/q
+Path End       : \WS2812driver_1:shifter_state_0\/main_3
+Capture Clock  : \WS2812driver_1:shifter_state_0\/clock_0
+Path slack     : 42999p
+
+Capture Clock Arrival Time                         0
++ Clock path delay                                 0
++ Cycle adjust (Clock_1:R#1 vs. Clock_1:R#2)   50000
+- Setup time                                   -3510
+--------------------------------------------   ----- 
+End-of-path required time (ps)                 46490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       3491
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           3491
+ 
+Launch Clock Path
+pin name                                                  model name             delay     AT  edge  Fanout
+--------------------------------------------------------  ---------------------  -----  -----  ----  ------
+ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
+ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
+ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
+\WS2812driver_1:pg_data_req\/clock_0                      macrocell5                 0      0  RISE       1
+
+Data path
+pin name                                 model name   delay     AT  slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  -----  ----  ------
+\WS2812driver_1:pg_data_req\/q           macrocell5    1250   1250  42999  RISE       1
+\WS2812driver_1:shifter_state_0\/main_3  macrocell11   2241   3491  42999  RISE       1
+
+Capture Clock Path
+pin name                                                  model name             delay     AT  edge  Fanout
+--------------------------------------------------------  ---------------------  -----  -----  ----  ------
+ClockBlock/udb_div_0                                      m0s8clockblockcell         0      0  RISE       1
+ClockGenBlock/gen_clk_in_0                                m0s8clockgenblockcell      0      0  RISE       1
+ClockGenBlock/gen_clk_out_0                               m0s8clockgenblockcell      0      0  RISE       1
+\WS2812driver_1:shifter_state_0\/clock_0                  macrocell11                0      0  RISE       1
 
 
 ===================================================================== 

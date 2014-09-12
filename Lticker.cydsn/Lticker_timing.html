@@ -539,7 +539,7 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> Lticker</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 09/11/14 00:29:52</td></tr>
+<td class="proptext"> 09/13/14 00:53:15</td></tr>
 <tr> <td class="prop"> Device :</td>
 <td class="proptext"> CY8C4245AXI-483</td></tr>
 <tr> <td class="prop"> Temperature :</td>
@@ -597,7 +597,7 @@ Clock Summary Section</span>
  <td class = "text_info">CyHFCLK</td>
  <td class = "number">20.000&nbsp;MHz</td>
  <td class = "number">20.000&nbsp;MHz</td>
- <td class = "number">48.370&nbsp;MHz</td>
+ <td class = "number">44.621&nbsp;MHz</td>
  <td class = "text_info"></td>
 </tr>
 <tr> 
@@ -676,9 +676,9 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\WS2812driver_1:shifter:u0\/so_comb</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/p_in_4</td>
- <td class = "number">48.370&nbsp;MHz</td>
- <td class = "number">20.674</td>
- <td class = "number">29.326</td>
+ <td class = "number">44.621&nbsp;MHz</td>
+ <td class = "number">22.411</td>
+ <td class = "number">27.589</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -709,13 +709,13 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
  <td class = "text_info">Route</td>
  <td class = "text_info"> </td>
  <td class = "number">1</td>
- <td class = "text_info">Net_189</td>
+ <td class = "text_info">\WS2812driver_1:shift_out\</td>
  <td class = "text_info">\WS2812driver_1:shifter:u0\/so_comb</td>
  <td class = "text_info">\WS2812driver_1:comp_val_4\/main_0</td>
- <td class = "number">2.247</td>
+ <td class = "number">2.244</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell3</td>
+ <td class = "text_info">macrocell4</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\WS2812driver_1:comp_val_4\</td>
@@ -730,7 +730,7 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
  <td class = "text_info">\WS2812driver_1:comp_val_4\</td>
  <td class = "text_info">\WS2812driver_1:comp_val_4\/q</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/p_in_4</td>
- <td class = "number">2.247</td>
+ <td class = "number">3.987</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
@@ -756,10 +756,10 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
 </tr>
 <tr> 
  <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/main_3</td>
- <td class = "number">48.785&nbsp;MHz</td>
- <td class = "number">20.498</td>
- <td class = "number">29.502</td>
+ <td class = "text_info">\WS2812driver_1:pg_data_req\/main_2</td>
+ <td class = "number">46.583&nbsp;MHz</td>
+ <td class = "number">21.467</td>
+ <td class = "number">28.533</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -778,7 +778,7 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell6</td>
+ <td class = "text_info">macrocell7</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
@@ -793,7 +793,7 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
  <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
  <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_1</td>
- <td class = "number">3.454</td>
+ <td class = "number">4.280</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
@@ -810,174 +810,12 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
  <td class = "number">1</td>
  <td class = "text_info">\WS2812driver_1:pg_det_eq\</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/main_3</td>
- <td class = "number">2.544</td>
+ <td class = "text_info">\WS2812driver_1:pg_data_req\/main_2</td>
+ <td class = "number">2.687</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell5</td>
  <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
- <td class = "text_info">Net_187/main_2</td>
- <td class = "number">48.804&nbsp;MHz</td>
- <td class = "number">20.490</td>
- <td class = "number">29.510</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell6</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_1</td>
- <td class = "number">3.454</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_1</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
- <td class = "number">9.740</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_det_eq\</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
- <td class = "text_info">Net_187/main_2</td>
- <td class = "number">2.536</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_187</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
- <td class = "text_info">\WS2812driver_1:pg_data_req\/main_2</td>
- <td class = "number">48.804&nbsp;MHz</td>
- <td class = "number">20.490</td>
- <td class = "number">29.510</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell6</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_1</td>
- <td class = "number">3.454</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_1</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
- <td class = "number">9.740</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_det_eq\</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
- <td class = "text_info">\WS2812driver_1:pg_data_req\/main_2</td>
- <td class = "number">2.536</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\WS2812driver_1:pg_data_req\</td>
  <td class = "text_info"></td>
@@ -998,11 +836,11 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/main_3</td>
- <td class = "number">49.157&nbsp;MHz</td>
- <td class = "number">20.343</td>
- <td class = "number">29.657</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/main_4</td>
+ <td class = "number">46.583&nbsp;MHz</td>
+ <td class = "number">21.467</td>
+ <td class = "number">28.533</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1021,29 +859,29 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell5</td>
+ <td class = "text_info">macrocell7</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_1\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"> </td>
  <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
- <td class = "number">3.299</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_1</td>
+ <td class = "number">4.280</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_1</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
  <td class = "number">9.740</td>
 </tr>
@@ -1053,11 +891,11 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
  <td class = "number">1</td>
  <td class = "text_info">\WS2812driver_1:pg_det_eq\</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/main_3</td>
- <td class = "number">2.544</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/main_4</td>
+ <td class = "number">2.687</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell5</td>
+ <td class = "text_info">macrocell6</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
@@ -1079,11 +917,11 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
  <td class = "text_info">Net_187/main_2</td>
- <td class = "number">49.176&nbsp;MHz</td>
- <td class = "number">20.335</td>
- <td class = "number">29.665</td>
+ <td class = "number">46.624&nbsp;MHz</td>
+ <td class = "number">21.448</td>
+ <td class = "number">28.552</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1102,29 +940,29 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell5</td>
+ <td class = "text_info">macrocell7</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_1\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"> </td>
  <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
- <td class = "number">3.299</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_1</td>
+ <td class = "number">4.280</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_1</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
  <td class = "number">9.740</td>
 </tr>
@@ -1135,11 +973,11 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
  <td class = "text_info">\WS2812driver_1:pg_det_eq\</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
  <td class = "text_info">Net_187/main_2</td>
- <td class = "number">2.536</td>
+ <td class = "number">2.668</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_187</td>
  <td class = "text_info"></td>
@@ -1162,90 +1000,9 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
  <td class = "text_info">\WS2812driver_1:pg_data_req\/main_2</td>
- <td class = "number">49.176&nbsp;MHz</td>
- <td class = "number">20.335</td>
- <td class = "number">29.665</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell5</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
- <td class = "number">3.299</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
- <td class = "number">9.740</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_det_eq\</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
- <td class = "text_info">\WS2812driver_1:pg_data_req\/main_2</td>
- <td class = "number">2.536</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_data_req\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">3.510</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
- <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_1</td>
- <td class = "number">57.690&nbsp;MHz</td>
- <td class = "number">17.334</td>
- <td class = "number">32.666</td>
+ <td class = "number">49.169&nbsp;MHz</td>
+ <td class = "number">20.338</td>
+ <td class = "number">29.662</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1267,6 +1024,249 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
  <td class = "text_info">macrocell6</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
+ <td class = "number">3.151</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
+ <td class = "number">9.740</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pg_det_eq\</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
+ <td class = "text_info">\WS2812driver_1:pg_data_req\/main_2</td>
+ <td class = "number">2.687</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell5</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pg_data_req\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/main_4</td>
+ <td class = "number">49.169&nbsp;MHz</td>
+ <td class = "number">20.338</td>
+ <td class = "number">29.662</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell6</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
+ <td class = "number">3.151</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
+ <td class = "number">9.740</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pg_det_eq\</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/main_4</td>
+ <td class = "number">2.687</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell6</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
+ <td class = "text_info">Net_187/main_2</td>
+ <td class = "number">49.215&nbsp;MHz</td>
+ <td class = "number">20.319</td>
+ <td class = "number">29.681</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell6</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
+ <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
+ <td class = "number">3.151</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
+ <td class = "number">9.740</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:pg_det_eq\</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/ce1_comb</td>
+ <td class = "text_info">Net_187/main_2</td>
+ <td class = "number">2.668</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell1</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_187</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">3.510</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
+ <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_1</td>
+ <td class = "number">55.066&nbsp;MHz</td>
+ <td class = "number">18.160</td>
+ <td class = "number">31.840</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell7</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
  <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
  <td class = "text_info">\WS2812driver_1:pg_state_1\/clock_0</td>
  <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
@@ -1279,7 +1279,7 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
  <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
  <td class = "text_info">\WS2812driver_1:pg_state_1\/q</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_1</td>
- <td class = "number">3.454</td>
+ <td class = "number">4.280</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
@@ -1306,9 +1306,9 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
- <td class = "number">58.211&nbsp;MHz</td>
- <td class = "number">17.179</td>
- <td class = "number">32.821</td>
+ <td class = "number">58.716&nbsp;MHz</td>
+ <td class = "number">17.031</td>
+ <td class = "number">32.969</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1327,7 +1327,7 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell5</td>
+ <td class = "text_info">macrocell6</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
@@ -1342,7 +1342,7 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
  <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
  <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/cs_addr_0</td>
- <td class = "number">3.299</td>
+ <td class = "number">3.151</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
@@ -1369,9 +1369,9 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
 <tr> 
  <td class = "text_info">\WS2812driver_1:shifter:u0\/so_comb</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/p_in_2</td>
- <td class = "number">61.402&nbsp;MHz</td>
- <td class = "number">16.286</td>
- <td class = "number">33.714</td>
+ <td class = "number">66.335&nbsp;MHz</td>
+ <td class = "number">15.075</td>
+ <td class = "number">34.925</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -1402,10 +1402,10 @@ Destination Clock : Clock_1 : Positive edge(Required Frequency 20&nbsp;MHz)</spa
  <td class = "text_info">Route</td>
  <td class = "text_info"> </td>
  <td class = "number">1</td>
- <td class = "text_info">Net_189</td>
+ <td class = "text_info">\WS2812driver_1:shift_out\</td>
  <td class = "text_info">\WS2812driver_1:shifter:u0\/so_comb</td>
  <td class = "text_info">\WS2812driver_1:pulseGen\/p_in_2</td>
- <td class = "number">3.456</td>
+ <td class = "number">2.245</td>
 </tr>
 <tr> 
  <td class = "text_info">datapathcell1</td>
@@ -1467,557 +1467,8 @@ Destination Clock : Clock_1 : Positive edge</span>
 <tbody>
 <tr> 
  <td class = "text_info">\WS2812driver_1:pg_data_req\/q</td>
- <td class = "text_info">Net_188/main_1</td>
- <td class = "number">3.490</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_data_req\</td>
- <td class = "text_info">\WS2812driver_1:pg_data_req\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:pg_data_req\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_data_req\</td>
- <td class = "text_info">\WS2812driver_1:pg_data_req\/q</td>
- <td class = "text_info">Net_188/main_1</td>
- <td class = "number">2.240</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_188</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
- <td class = "text_info">Net_188/main_4</td>
- <td class = "number">4.070</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell8</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
- <td class = "text_info">Net_188/main_4</td>
- <td class = "number">2.820</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_188</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/main_2</td>
- <td class = "number">4.070</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell8</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell8</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/main_2</td>
- <td class = "number">2.820</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell8</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
- <td class = "text_info">\WS2812driver_1:shifter_state_1\/main_3</td>
- <td class = "number">4.078</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell8</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
- <td class = "text_info">\WS2812driver_1:shifter_state_1\/main_3</td>
- <td class = "number">2.828</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shifter_state_1\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/main_3</td>
- <td class = "number">4.080</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell8</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/main_3</td>
- <td class = "number">2.830</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
- <td class = "text_info">Net_188/main_3</td>
- <td class = "number">4.095</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
- <td class = "text_info">Net_188/main_3</td>
- <td class = "number">2.845</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell2</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">Net_188</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\WS2812driver_1:shift_counter_0\/q</td>
- <td class = "text_info">\WS2812driver_1:shifter_state_1\/main_4</td>
- <td class = "number">4.098</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell7</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_0\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_0\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_0\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_0\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_0\/q</td>
- <td class = "text_info">\WS2812driver_1:shifter_state_1\/main_4</td>
- <td class = "number">2.848</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shifter_state_1\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/main_2</td>
- <td class = "number">4.216</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/main_2</td>
- <td class = "number">2.966</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
- <td class = "text_info">\WS2812driver_1:shifter_state_1\/main_2</td>
- <td class = "number">4.219</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="4">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">macrocell9</td>
- <td class = "text_info">U(1,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
- <td class = "number">1.250</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
- <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
- <td class = "text_info">\WS2812driver_1:shifter_state_1\/main_2</td>
- <td class = "number">2.969</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell10</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shifter_state_1\</td>
- <td class = "text_info"> </td>
- <td class = "text_info">HOLD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\/main_1</td>
- <td class = "number">4.240</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\/main_3</td>
+ <td class = "number">3.487</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2039,25 +1490,574 @@ Destination Clock : Clock_1 : Positive edge</span>
  <td class = "text_info">macrocell5</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/clock_0</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
+ <td class = "text_info">\WS2812driver_1:pg_data_req\</td>
+ <td class = "text_info">\WS2812driver_1:pg_data_req\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:pg_data_req\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\</td>
- <td class = "text_info">\WS2812driver_1:pg_state_0\/q</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\/main_1</td>
- <td class = "number">2.990</td>
+ <td class = "text_info">\WS2812driver_1:pg_data_req\</td>
+ <td class = "text_info">\WS2812driver_1:pg_data_req\/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\/main_3</td>
+ <td class = "number">2.237</td>
 </tr>
 <tr> 
- <td class = "text_info">macrocell6</td>
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/main_2</td>
+ <td class = "number">3.775</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/main_2</td>
+ <td class = "number">2.525</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/main_3</td>
+ <td class = "number">3.775</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/main_3</td>
+ <td class = "number">2.525</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_1\/main_3</td>
+ <td class = "number">3.775</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_1\/main_3</td>
+ <td class = "number">2.525</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\/main_5</td>
+ <td class = "number">3.779</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\/main_5</td>
+ <td class = "number">2.529</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\/main_4</td>
+ <td class = "number">3.938</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\/main_4</td>
+ <td class = "number">2.688</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/main_2</td>
+ <td class = "number">3.941</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/main_2</td>
+ <td class = "number">2.691</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_1\/main_2</td>
+ <td class = "number">3.941</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell10</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_2\/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_1\/main_2</td>
+ <td class = "number">2.691</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_1\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:shift_counter_0\/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\/main_6</td>
+ <td class = "number">4.112</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell8</td>
  <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:pg_state_1\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_0\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_0\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_0\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_0\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_0\/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\/main_6</td>
+ <td class = "number">2.862</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell11</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info">HOLD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:shift_counter_0\/q</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/main_3</td>
+ <td class = "number">4.232</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="4">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">macrocell8</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_0\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_0\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_0\/q</td>
+ <td class = "number">1.250</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_0\</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_0\/q</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\/main_3</td>
+ <td class = "number">2.982</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell9</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shift_counter_1\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -2107,78 +2107,9 @@ Clock_1</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">\WS2812driver_1:shifter:u0\/so_comb</td>
- <td class = "text_info">Pin_3(0)_PAD</td>
- <td class = "number">27.535</td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="3">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(0,0)</td>
- <td class = "number">1</td>
- <td class = "text_info">\WS2812driver_1:shifter:u0\</td>
- <td class = "text_info">\WS2812driver_1:shifter:u0\/clock</td>
- <td class = "text_info">\WS2812driver_1:shifter:u0\/so_comb</td>
- <td class = "number">4.550</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Net_189</td>
- <td class = "text_info">\WS2812driver_1:shifter:u0\/so_comb</td>
- <td class = "text_info">Pin_3(0)/pin_input</td>
- <td class = "number">6.035</td>
-</tr>
-<tr> 
- <td class = "text_info">iocell3</td>
- <td class = "text_info">P2[2]</td>
- <td class = "number">1</td>
- <td class = "text_info">Pin_3(0)</td>
- <td class = "text_info">Pin_3(0)/pin_input</td>
- <td class = "text_info">Pin_3(0)/pad_out</td>
- <td class = "number">16.950</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">Pin_3(0)_PAD</td>
- <td class = "text_info">Pin_3(0)/pad_out</td>
- <td class = "text_info">Pin_3(0)_PAD</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Clock path delay</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
- <td class = "text_info">Net_188/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\/q</td>
  <td class = "text_info">Pin_2(0)_PAD</td>
- <td class = "number">25.750</td>
+ <td class = "number">30.734</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2196,22 +2127,40 @@ Clock_1</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell2</td>
+ <td class = "text_info">macrocell11</td>
  <td class = "text_info">U(0,0)</td>
  <td class = "number">1</td>
- <td class = "text_info">Net_188</td>
- <td class = "text_info">Net_188/clock_0</td>
- <td class = "text_info">Net_188/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\/clock_0</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\/q</td>
  <td class = "number">1.250</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">Net_188</td>
- <td class = "text_info">Net_188/q</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\</td>
+ <td class = "text_info">\WS2812driver_1:shifter_state_0\/q</td>
+ <td class = "text_info">Net_231/main_1</td>
+ <td class = "number">3.472</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell3</td>
+ <td class = "text_info">U(1,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_231</td>
+ <td class = "text_info">Net_231/main_1</td>
+ <td class = "text_info">Net_231/q</td>
+ <td class = "number">3.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_231</td>
+ <td class = "text_info">Net_231/q</td>
  <td class = "text_info">Pin_2(0)/pin_input</td>
- <td class = "number">7.590</td>
+ <td class = "number">5.752</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell2</td>
@@ -2245,9 +2194,78 @@ Clock_1</span>
 </td>
 </tr>
 <tr> 
+ <td class = "text_info">\WS2812driver_1:shifter:u0\/f0_blk_stat_comb</td>
+ <td class = "text_info">Pin_4(0)_PAD</td>
+ <td class = "number">30.123</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shifter:u0\</td>
+ <td class = "text_info">\WS2812driver_1:shifter:u0\/clock</td>
+ <td class = "text_info">\WS2812driver_1:shifter:u0\/f0_blk_stat_comb</td>
+ <td class = "number">5.280</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_189</td>
+ <td class = "text_info">\WS2812driver_1:shifter:u0\/f0_blk_stat_comb</td>
+ <td class = "text_info">Pin_4(0)/pin_input</td>
+ <td class = "number">6.253</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell4</td>
+ <td class = "text_info">P2[3]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_4(0)</td>
+ <td class = "text_info">Pin_4(0)/pin_input</td>
+ <td class = "text_info">Pin_4(0)/pad_out</td>
+ <td class = "number">18.590</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_4(0)_PAD</td>
+ <td class = "text_info">Pin_4(0)/pad_out</td>
+ <td class = "text_info">Pin_4(0)_PAD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
  <td class = "text_info">Net_187/q</td>
  <td class = "text_info">Pin_1(0)_PAD</td>
- <td class = "number">25.566</td>
+ <td class = "number">25.568</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -2266,7 +2284,7 @@ Clock_1</span>
 <tbody>
 <tr> 
  <td class = "text_info">macrocell1</td>
- <td class = "text_info">U(0,0)</td>
+ <td class = "text_info">U(1,0)</td>
  <td class = "number">1</td>
  <td class = "text_info">Net_187</td>
  <td class = "text_info">Net_187/clock_0</td>
@@ -2280,7 +2298,7 @@ Clock_1</span>
  <td class = "text_info">Net_187</td>
  <td class = "text_info">Net_187/q</td>
  <td class = "text_info">Pin_1(0)/pin_input</td>
- <td class = "number">5.986</td>
+ <td class = "number">5.988</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell1</td>
@@ -2298,6 +2316,112 @@ Clock_1</span>
  <td class = "text_info">Pin_1(0)_PAD</td>
  <td class = "text_info">Pin_1(0)/pad_out</td>
  <td class = "text_info">Pin_1(0)_PAD</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Clock path delay</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+</tbody>
+ </table> 
+</div>
+</div>
+<div class="sta_sec" >
+<div>
+<a href="#" style="text-decoration: none; color: inherit;">
+<span class="sec_head"><span style="font-family: monospace;">+</span>
+CyHFCLK</span>
+</a>
+</div><div class="sta_secbody"><table class="sta_tscs">
+ <thead> 
+<tr> 
+<th>Source</th>
+<th>Destination</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">\WS2812driver_1:shifter:u0\/f0_bus_stat_comb</td>
+ <td class = "text_info">Pin_3(0)_PAD</td>
+ <td class = "number">35.863</td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="3">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shifter:u0\</td>
+ <td class = "text_info">\WS2812driver_1:shifter:u0\/busclk</td>
+ <td class = "text_info">\WS2812driver_1:shifter:u0\/f0_bus_stat_comb</td>
+ <td class = "number">7.210</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">\WS2812driver_1:shifter_f0_notfull\</td>
+ <td class = "text_info">\WS2812driver_1:shifter:u0\/f0_bus_stat_comb</td>
+ <td class = "text_info">Net_188/main_0</td>
+ <td class = "number">2.256</td>
+</tr>
+<tr> 
+ <td class = "text_info">macrocell2</td>
+ <td class = "text_info">U(0,0)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_188</td>
+ <td class = "text_info">Net_188/main_0</td>
+ <td class = "text_info">Net_188/q</td>
+ <td class = "number">3.350</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Net_188</td>
+ <td class = "text_info">Net_188/q</td>
+ <td class = "text_info">Pin_3(0)/pin_input</td>
+ <td class = "number">6.097</td>
+</tr>
+<tr> 
+ <td class = "text_info">iocell3</td>
+ <td class = "text_info">P2[2]</td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_3(0)</td>
+ <td class = "text_info">Pin_3(0)/pin_input</td>
+ <td class = "text_info">Pin_3(0)/pad_out</td>
+ <td class = "number">16.950</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"></td>
+ <td class = "number">1</td>
+ <td class = "text_info">Pin_3(0)_PAD</td>
+ <td class = "text_info">Pin_3(0)/pad_out</td>
+ <td class = "text_info">Pin_3(0)_PAD</td>
  <td class = "number">0.000</td>
 </tr>
 <tr> 

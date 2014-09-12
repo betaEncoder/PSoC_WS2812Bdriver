@@ -25,6 +25,9 @@
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Pin_3.c" value="ARM_C_FILE;Pin_3" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Pin_3.h" value="NONE;Pin_3" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Pin_3_aliases.h" value="NONE;Pin_3" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Pin_4.c" value="ARM_C_FILE;Pin_4" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Pin_4.h" value="NONE;Pin_4" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Pin_4_aliases.h" value="NONE;Pin_4" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\cm0gcc.ld" value="NONE;cy_boot" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Cm0RealView.scat" value="NONE;cy_boot" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Cm0Start.c" value="ARM_C_FILE;cy_boot" />
