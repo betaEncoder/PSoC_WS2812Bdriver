@@ -1,6 +1,6 @@
 // ======================================================================
 // Lticker.v generated from TopDesign.cysch
-// 09/11/2014 at 00:29
+// 09/12/2014 at 23:35
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -148,7 +148,7 @@ module top ;
 		  .divisor(2),
 		  .period("0"),
 		  .is_direct(0),
-		  .is_digital(1))
+		  .is_digital(0))
 		Clock_1
 		 (.clock_out(Net_186));
 

@@ -21,7 +21,7 @@ int main()
     {
         /* Place your application code here. */
         for(i=0;i<128;i++);
-            CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa2);
+            CY_SET_REG8(WS2812driver_1_shifter_u0__F1_REG, 0xa1);
 /*            CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa1);
             CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa1);
             CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa1);

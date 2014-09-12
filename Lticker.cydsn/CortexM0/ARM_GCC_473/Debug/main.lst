@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXKa5V9.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 1
   16:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
   17:.\main.c      ****     //Clock_1_Start();
   18:.\main.c      ****     /* CyGlobalIntEnable; */ /* Uncomment this line to enable global interrupts. */
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 2
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXKa5V9.s 			page 2
 
 
   19:.\main.c      ****     int i;
@@ -80,10 +80,10 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 1
   51 0012 7B68     		ldr	r3, [r7, #4]
   52 0014 7F2B     		cmp	r3, #127
   53 0016 F9DD     		ble	.L3
-  24:.\main.c      ****             CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa2);
+  24:.\main.c      ****             CY_SET_REG8(WS2812driver_1_shifter_u0__F1_REG, 0xa1);
   54              		.loc 1 24 0 is_stmt 1
   55 0018 014B     		ldr	r3, .L5
-  56 001a A222     		mov	r2, #162
+  56 001a A122     		mov	r2, #161
   57 001c 1A70     		strb	r2, [r3]
   25:.\main.c      **** /*            CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa1);
   26:.\main.c      ****             CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa1);
@@ -103,7 +103,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 1
   60              	.L6:
   61              		.align	2
   62              	.L5:
-  63 0020 43000F40 		.word	1074724931
+  63 0020 53000F40 		.word	1074724947
   64              		.cfi_endproc
   65              	.LFE33:
   66              		.size	main, .-main
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 1
   75 000a 04       		.byte	0x4
   76 000b 01       		.uleb128 0x1
   77 000c 20000000 		.4byte	.LASF15
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 3
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXKa5V9.s 			page 3
 
 
   78 0010 01       		.byte	0x1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 1
  132 007c 04       		.byte	0x4
  133 007d 2B010000 		.4byte	.LASF9
  134 0081 02       		.uleb128 0x2
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 4
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXKa5V9.s 			page 4
 
 
  135 0082 08       		.byte	0x8
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 1
  189 000e 01       		.uleb128 0x1
  190 000f 52       		.uleb128 0x52
  191 0010 01       		.uleb128 0x1
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 5
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXKa5V9.s 			page 5
 
 
  192 0011 10       		.uleb128 0x10
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 1
  246 0047 0B       		.uleb128 0xb
  247 0048 3B       		.uleb128 0x3b
  248 0049 0B       		.uleb128 0xb
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 6
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXKa5V9.s 			page 6
 
 
  249 004a 49       		.uleb128 0x49
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 1
  303 0000 1C000000 		.4byte	0x1c
  304 0004 0200     		.2byte	0x2
  305 0006 00000000 		.4byte	.Ldebug_info0
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 7
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXKa5V9.s 			page 7
 
 
  306 000a 04       		.byte	0x4
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 1
  336              	.LASF7:
  337 0081 6C6F6E67 		.ascii	"long long unsigned int\000"
  337      206C6F6E 
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 8
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXKa5V9.s 			page 8
 
 
  337      6720756E 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 1
  362 013f 73697A65 		.ascii	"sizetype\000"
  362      74797065 
  362      00
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc2IYRu7.s 			page 9
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXKa5V9.s 			page 9
 
 
  363              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
