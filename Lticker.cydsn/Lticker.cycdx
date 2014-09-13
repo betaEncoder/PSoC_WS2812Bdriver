@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="Pin_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="WS2812driver_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Pin_4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="Status_Reg_1" BASE="0x0" SIZE="0x0" desc="" visible="true">
+    <register name="Status_Reg_1_STATUS_REG" address="0x400F0062" bitWidth="8" desc="" />
+    <register name="Status_Reg_1_MASK_REG" address="0x400F0082" bitWidth="8" desc="" />
+    <register name="Status_Reg_1_STATUS_AUX_CTL_REG" address="0x400F0092" bitWidth="8" desc="">
+      <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear">
+        <value name="ENABLED" value="1" desc="Enable counter" />
+        <value name="DISABLED" value="0" desc="Disable counter" />
+      </field>
+      <field name="INTRENBL" from="4" to="4" access="RW" resetVal="" desc="Enables or disables the Interrupt">
+        <value name="ENABLED" value="1" desc="Interrupt enabled" />
+        <value name="DISABLED" value="0" desc="Interrupt disabled" />
+      </field>
+      <field name="FIFO1LEVEL" from="3" to="3" access="RW" resetVal="" desc="FIFO level">
+        <value name="ENABLED" value="1" desc="FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full" />
+        <value name="DISABLED" value="0" desc="FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty" />
+      </field>
+      <field name="FIFO0LEVEL" from="2" to="2" access="RW" resetVal="" desc="FIFO level">
+        <value name="ENABLED" value="1" desc="FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full" />
+        <value name="DISABLED" value="0" desc="FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty" />
+      </field>
+      <field name="FIFO1CLEAR" from="1" to="1" access="RW" resetVal="" desc="FIFO clear">
+        <value name="ENABLED" value="1" desc="Clear FIFO state" />
+        <value name="DISABLED" value="0" desc="Normal FIFO operation" />
+      </field>
+      <field name="FIFO0CLEAR" from="0" to="0" access="RW" resetVal="" desc="FIFO clear">
+        <value name="ENABLED" value="1" desc="Clear FIFO state" />
+        <value name="DISABLED" value="0" desc="Normal FIFO operation" />
+      </field>
+    </register>
+  </block>
+  <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="Pin_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="Clock_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="Pin_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
 </blockRegMap>

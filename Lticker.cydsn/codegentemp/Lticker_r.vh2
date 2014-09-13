@@ -1,13 +1,10 @@
 -- Project:   Lticker
--- Generated: 09/13/2014 00:53:14
+-- Generated: 09/13/2014 17:21:21
 -- 
 
 ENTITY Lticker IS
     PORT(
-        Pin_1(0)_PAD : OUT std_ulogic;
-        Pin_2(0)_PAD : OUT std_ulogic;
-        Pin_3(0)_PAD : OUT std_ulogic;
-        Pin_4(0)_PAD : OUT std_ulogic);
+        Pin_1(0)_PAD : OUT std_ulogic);
     ATTRIBUTE voltage_VDDD OF __DEFAULT__ : ENTITY IS 3.3e0;
     ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 3.3e0;
 END Lticker;
@@ -23,40 +20,37 @@ ARCHITECTURE __DEFAULT__ OF Lticker IS
     SIGNAL Net_186_digital : bit;
     ATTRIBUTE global_signal OF Net_186_digital : SIGNAL IS true;
     SIGNAL Net_187 : bit;
-    ATTRIBUTE placement_force OF Net_187 : SIGNAL IS "U(1,0,B)3";
+    ATTRIBUTE placement_force OF Net_187 : SIGNAL IS "U(0,0,B)3";
     SIGNAL Net_188 : bit;
-    ATTRIBUTE placement_force OF Net_188 : SIGNAL IS "U(0,0,B)1";
+    ATTRIBUTE placement_force OF Net_188 : SIGNAL IS "U(1,0,B)1";
     SIGNAL Net_189 : bit;
     SIGNAL Net_231 : bit;
-    ATTRIBUTE placement_force OF Net_231 : SIGNAL IS "U(1,0,A)3";
+    ATTRIBUTE placement_force OF Net_231 : SIGNAL IS "U(0,0,A)3";
     SIGNAL Pin_1(0)__PA : bit;
-    SIGNAL Pin_2(0)__PA : bit;
-    SIGNAL Pin_3(0)__PA : bit;
-    SIGNAL Pin_4(0)__PA : bit;
     SIGNAL \WS2812driver_1:comp_val_4\ : bit;
-    ATTRIBUTE placement_force OF \WS2812driver_1:comp_val_4\ : SIGNAL IS "U(1,0,B)0";
+    ATTRIBUTE placement_force OF \WS2812driver_1:comp_val_4\ : SIGNAL IS "U(0,0,A)2";
     SIGNAL \WS2812driver_1:pg_data_req\ : bit;
-    ATTRIBUTE placement_force OF \WS2812driver_1:pg_data_req\ : SIGNAL IS "U(1,0,A)2";
+    ATTRIBUTE placement_force OF \WS2812driver_1:pg_data_req\ : SIGNAL IS "U(0,0,B)2";
     SIGNAL \WS2812driver_1:pg_det_eq\ : bit;
     SIGNAL \WS2812driver_1:pg_det_zero\ : bit;
     SIGNAL \WS2812driver_1:pg_state_0\ : bit;
-    ATTRIBUTE placement_force OF \WS2812driver_1:pg_state_0\ : SIGNAL IS "U(1,0,A)0";
+    ATTRIBUTE placement_force OF \WS2812driver_1:pg_state_0\ : SIGNAL IS "U(0,0,A)0";
     SIGNAL \WS2812driver_1:pg_state_1\ : bit;
-    ATTRIBUTE placement_force OF \WS2812driver_1:pg_state_1\ : SIGNAL IS "U(1,0,A)1";
+    ATTRIBUTE placement_force OF \WS2812driver_1:pg_state_1\ : SIGNAL IS "U(0,0,A)1";
     SIGNAL \WS2812driver_1:shift_counter_0\ : bit;
-    ATTRIBUTE placement_force OF \WS2812driver_1:shift_counter_0\ : SIGNAL IS "U(1,0,B)1";
+    ATTRIBUTE placement_force OF \WS2812driver_1:shift_counter_0\ : SIGNAL IS "U(1,0,A)2";
     SIGNAL \WS2812driver_1:shift_counter_1\ : bit;
-    ATTRIBUTE placement_force OF \WS2812driver_1:shift_counter_1\ : SIGNAL IS "U(0,0,A)0";
+    ATTRIBUTE placement_force OF \WS2812driver_1:shift_counter_1\ : SIGNAL IS "U(0,0,B)0";
     SIGNAL \WS2812driver_1:shift_counter_2\ : bit;
-    ATTRIBUTE placement_force OF \WS2812driver_1:shift_counter_2\ : SIGNAL IS "U(0,0,A)1";
+    ATTRIBUTE placement_force OF \WS2812driver_1:shift_counter_2\ : SIGNAL IS "U(1,0,A)1";
     SIGNAL \WS2812driver_1:shift_out\ : bit;
     SIGNAL \WS2812driver_1:shifter_f0_notfull\ : bit;
     SIGNAL \WS2812driver_1:shifter_state_0\ : bit;
-    ATTRIBUTE placement_force OF \WS2812driver_1:shifter_state_0\ : SIGNAL IS "U(0,0,B)0";
+    ATTRIBUTE placement_force OF \WS2812driver_1:shifter_state_0\ : SIGNAL IS "U(1,0,A)0";
     SIGNAL \WS2812driver_1:shifter_state_1\ : bit;
-    ATTRIBUTE placement_force OF \WS2812driver_1:shifter_state_1\ : SIGNAL IS "U(0,0,A)2";
+    ATTRIBUTE placement_force OF \WS2812driver_1:shifter_state_1\ : SIGNAL IS "U(0,0,B)1";
     SIGNAL __ONE__ : bit;
-    ATTRIBUTE placement_force OF __ONE__ : SIGNAL IS "U(0,0,A)3";
+    ATTRIBUTE placement_force OF __ONE__ : SIGNAL IS "U(1,0,B)0";
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
     ATTRIBUTE GROUND OF __ZERO__ : SIGNAL IS true;
@@ -68,43 +62,39 @@ ARCHITECTURE __DEFAULT__ OF Lticker IS
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE Location OF ClockGenBlock : LABEL IS "F(CLK_GEN,0)";
     ATTRIBUTE lib_model OF Net_187 : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF Net_187 : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF Net_187 : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF Net_188 : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF Net_188 : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF Net_188 : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF Net_231 : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF Net_231 : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF Net_231 : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF Pin_1(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF Pin_1(0) : LABEL IS "P2[0]";
-    ATTRIBUTE lib_model OF Pin_2(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF Pin_2(0) : LABEL IS "P2[1]";
-    ATTRIBUTE lib_model OF Pin_3(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF Pin_3(0) : LABEL IS "P2[2]";
-    ATTRIBUTE lib_model OF Pin_4(0) : LABEL IS "iocell4";
-    ATTRIBUTE Location OF Pin_4(0) : LABEL IS "P2[3]";
+    ATTRIBUTE Location OF Pin_1(0) : LABEL IS "P3[4]";
+    ATTRIBUTE lib_model OF \Status_Reg_1:sts:sts_reg\ : LABEL IS "statuscell1";
+    ATTRIBUTE Location OF \Status_Reg_1:sts:sts_reg\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \WS2812driver_1:comp_val_4\ : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF \WS2812driver_1:comp_val_4\ : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \WS2812driver_1:comp_val_4\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \WS2812driver_1:pg_data_req\ : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF \WS2812driver_1:pg_data_req\ : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \WS2812driver_1:pg_data_req\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \WS2812driver_1:pg_state_0\ : LABEL IS "macrocell6";
-    ATTRIBUTE Location OF \WS2812driver_1:pg_state_0\ : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \WS2812driver_1:pg_state_0\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \WS2812driver_1:pg_state_1\ : LABEL IS "macrocell7";
-    ATTRIBUTE Location OF \WS2812driver_1:pg_state_1\ : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \WS2812driver_1:pg_state_1\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \WS2812driver_1:pulseGen\ : LABEL IS "datapathcell1";
-    ATTRIBUTE Location OF \WS2812driver_1:pulseGen\ : LABEL IS "U(1,0)";
+    ATTRIBUTE Location OF \WS2812driver_1:pulseGen\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \WS2812driver_1:shift_counter_0\ : LABEL IS "macrocell8";
     ATTRIBUTE Location OF \WS2812driver_1:shift_counter_0\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \WS2812driver_1:shift_counter_1\ : LABEL IS "macrocell9";
     ATTRIBUTE Location OF \WS2812driver_1:shift_counter_1\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \WS2812driver_1:shift_counter_2\ : LABEL IS "macrocell10";
-    ATTRIBUTE Location OF \WS2812driver_1:shift_counter_2\ : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF \WS2812driver_1:shift_counter_2\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \WS2812driver_1:shifter:u0\ : LABEL IS "datapathcell2";
-    ATTRIBUTE Location OF \WS2812driver_1:shifter:u0\ : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF \WS2812driver_1:shifter:u0\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \WS2812driver_1:shifter_state_0\ : LABEL IS "macrocell11";
-    ATTRIBUTE Location OF \WS2812driver_1:shifter_state_0\ : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF \WS2812driver_1:shifter_state_0\ : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \WS2812driver_1:shifter_state_1\ : LABEL IS "macrocell12";
     ATTRIBUTE Location OF \WS2812driver_1:shifter_state_1\ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF __ONE__ : LABEL IS "U(0,0)";
+    ATTRIBUTE Location OF __ONE__ : LABEL IS "U(1,0)";
     COMPONENT abufcell
     END COMPONENT;
     COMPONENT boostcell
@@ -1141,266 +1131,20 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Pin_2:logicalport
+    \Status_Reg_1:sts:sts_reg\:statuscell
         GENERIC MAP(
-            drive_mode => "110",
-            ibuf_enabled => "1",
-            id => "51010087-04dc-4e24-97b0-b1201a8c8de6",
-            init_dr_st => "1",
-            input_clk_en => 0,
-            input_sync => "1",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "1",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "O",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "",
-            sio_hyst => "0",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "10",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
+            cy_force_order => 1,
+            cy_md_select => "00000000")
         PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    Pin_2(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "Pin_2",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000100000000000000000000000000000000000000001")
-        PORT MAP(
-            pa_out => Pin_2(0)__PA,
-            oe => open,
-            pin_input => Net_231,
-            pad_out => Pin_2(0)_PAD,
-            pad_in => Pin_2(0)_PAD,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
-    Pin_3:logicalport
-        GENERIC MAP(
-            drive_mode => "110",
-            ibuf_enabled => "1",
-            id => "89175cc8-82f4-43f8-81c9-e7745da2d3af",
-            init_dr_st => "1",
-            input_clk_en => 0,
-            input_sync => "1",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "1",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "O",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "",
-            sio_hyst => "0",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "10",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    Pin_3(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "Pin_3",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000100000000000000000000000000000000000000001")
-        PORT MAP(
-            pa_out => Pin_3(0)__PA,
-            oe => open,
-            pin_input => Net_188,
-            pad_out => Pin_3(0)_PAD,
-            pad_in => Pin_3(0)_PAD,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
-    Pin_4:logicalport
-        GENERIC MAP(
-            drive_mode => "110",
-            ibuf_enabled => "1",
-            id => "e7017136-f6d9-4320-aa43-2cd2b30a9020",
-            init_dr_st => "1",
-            input_clk_en => 0,
-            input_sync => "1",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "1",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "O",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "",
-            sio_hyst => "0",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "10",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    Pin_4(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "Pin_4",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000100000000000000000000000000000000000000001")
-        PORT MAP(
-            pa_out => Pin_4(0)__PA,
-            oe => open,
-            pin_input => Net_189,
-            pad_out => Pin_4(0)_PAD,
-            pad_in => Pin_4(0)_PAD,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
+            clock => open,
+            status_7 => open,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => open,
+            status_2 => Net_189,
+            status_1 => Net_188,
+            status_0 => Net_231);
 
     \WS2812driver_1:comp_val_4\:macrocell
         GENERIC MAP(

@@ -6,7 +6,7 @@
 
 #Build Date:         Mar 26 2013 14:54:34
 
-#File Generated:     Sep 13 2014 00:53:13
+#File Generated:     Sep 13 2014 17:21:21
 
 #Purpose:            
 
@@ -48,14 +48,14 @@ Design Statistics after Packing
     Number of Sequential MCs    	:	9
     Number of DPs               	:	2
     Number of Controls          	:	0
-    Number of Status            	:	0
+    Number of Status            	:	1
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
 
 Device Utilization Summary after Packing
     Macrocells                  :	13/32
     UDBS                        :	2/4
-    IOs                         :	4/36
+    IOs                         :	1/36
 
 
 D2088: Phase 3, elapsed time : 0.0 (sec)
@@ -112,14 +112,14 @@ Final Design Statistics
     Number of Sequential MCs    	:	9
     Number of DPs               	:	2
     Number of Controls          	:	0
-    Number of Status            	:	0
+    Number of Status            	:	1
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
-    Number of IOs       	:	4
+    Number of IOs       	:	1
 
 Device Utilization Summary
     Macrocells                  :	13/32
-    IOs                         :	4/36
+    IOs                         :	1/36
 
 
 
@@ -152,5 +152,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.4 sec.
+I2076: Total run-time: 0.5 sec.
 

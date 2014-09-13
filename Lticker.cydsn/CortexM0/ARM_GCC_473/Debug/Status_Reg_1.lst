@@ -1,0 +1,1041 @@
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"Status_Reg_1.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.Status_Reg_1_Read,"ax",%progbits
+  18              		.align	2
+  19              		.global	Status_Reg_1_Read
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	Status_Reg_1_Read, %function
+  23              	Status_Reg_1_Read:
+  24              	.LFB0:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\Status_Reg_1.c"
+   1:.\Generated_Source\PSoC4/Status_Reg_1.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/Status_Reg_1.c **** * File Name: Status_Reg_1.c  
+   3:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Version 1.80
+   4:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+   5:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Description:
+   6:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  This file contains API to enable firmware to read the value of a Status 
+   7:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  Register.
+   8:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+   9:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Note:
+  10:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  11:.\Generated_Source\PSoC4/Status_Reg_1.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC4/Status_Reg_1.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:.\Generated_Source\PSoC4/Status_Reg_1.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:.\Generated_Source\PSoC4/Status_Reg_1.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC4/Status_Reg_1.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC4/Status_Reg_1.c **** 
+  18:.\Generated_Source\PSoC4/Status_Reg_1.c **** #include "Status_Reg_1.h"
+  19:.\Generated_Source\PSoC4/Status_Reg_1.c **** 
+  20:.\Generated_Source\PSoC4/Status_Reg_1.c **** #if !defined(Status_Reg_1_sts_sts_reg__REMOVED) /* Check for removal by optimization */
+  21:.\Generated_Source\PSoC4/Status_Reg_1.c **** 
+  22:.\Generated_Source\PSoC4/Status_Reg_1.c **** 
+  23:.\Generated_Source\PSoC4/Status_Reg_1.c **** /*******************************************************************************
+  24:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Function Name: Status_Reg_1_Read
+  25:.\Generated_Source\PSoC4/Status_Reg_1.c **** ********************************************************************************
+  26:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  27:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Summary:
+  28:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  Reads the current value assigned to the Status Register.
+  29:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  30:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Parameters:
+  31:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  None.
+  32:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Return:
+  34:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  The current value in the Status Register.
+  35:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  36:.\Generated_Source\PSoC4/Status_Reg_1.c **** *******************************************************************************/
+  37:.\Generated_Source\PSoC4/Status_Reg_1.c **** uint8 Status_Reg_1_Read(void) 
+  38:.\Generated_Source\PSoC4/Status_Reg_1.c **** { 
+  26              		.loc 1 38 0
+  27              		.cfi_startproc
+  28 0000 80B5     		push	{r7, lr}
+  29              	.LCFI0:
+  30              		.cfi_def_cfa_offset 8
+  31              		.cfi_offset 7, -8
+  32              		.cfi_offset 14, -4
+  33 0002 00AF     		add	r7, sp, #0
+  34              	.LCFI1:
+  35              		.cfi_def_cfa_register 7
+  39:.\Generated_Source\PSoC4/Status_Reg_1.c ****     return Status_Reg_1_Status;
+  36              		.loc 1 39 0
+  37 0004 024B     		ldr	r3, .L3
+  38 0006 1B78     		ldrb	r3, [r3]
+  39 0008 DBB2     		uxtb	r3, r3
+  40:.\Generated_Source\PSoC4/Status_Reg_1.c **** }
+  40              		.loc 1 40 0
+  41 000a 181C     		mov	r0, r3
+  42 000c BD46     		mov	sp, r7
+  43              		@ sp needed for prologue
+  44 000e 80BD     		pop	{r7, pc}
+  45              	.L4:
+  46              		.align	2
+  47              	.L3:
+  48 0010 62000F40 		.word	1074724962
+  49              		.cfi_endproc
+  50              	.LFE0:
+  51              		.size	Status_Reg_1_Read, .-Status_Reg_1_Read
+  52              		.section	.text.Status_Reg_1_InterruptEnable,"ax",%progbits
+  53              		.align	2
+  54              		.global	Status_Reg_1_InterruptEnable
+  55              		.code	16
+  56              		.thumb_func
+  57              		.type	Status_Reg_1_InterruptEnable, %function
+  58              	Status_Reg_1_InterruptEnable:
+  59              	.LFB1:
+  41:.\Generated_Source\PSoC4/Status_Reg_1.c **** 
+  42:.\Generated_Source\PSoC4/Status_Reg_1.c **** 
+  43:.\Generated_Source\PSoC4/Status_Reg_1.c **** /*******************************************************************************
+  44:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Function Name: Status_Reg_1_InterruptEnable
+  45:.\Generated_Source\PSoC4/Status_Reg_1.c **** ********************************************************************************
+  46:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  47:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Summary:
+  48:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  Enables the Status Register interrupt.
+  49:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  50:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Parameters:
+  51:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  None.
+  52:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  53:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Return:
+  54:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  None.
+  55:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 3
+
+
+  56:.\Generated_Source\PSoC4/Status_Reg_1.c **** *******************************************************************************/
+  57:.\Generated_Source\PSoC4/Status_Reg_1.c **** void Status_Reg_1_InterruptEnable(void) 
+  58:.\Generated_Source\PSoC4/Status_Reg_1.c **** {
+  60              		.loc 1 58 0
+  61              		.cfi_startproc
+  62 0000 90B5     		push	{r4, r7, lr}
+  63              	.LCFI2:
+  64              		.cfi_def_cfa_offset 12
+  65              		.cfi_offset 4, -12
+  66              		.cfi_offset 7, -8
+  67              		.cfi_offset 14, -4
+  68 0002 83B0     		sub	sp, sp, #12
+  69              	.LCFI3:
+  70              		.cfi_def_cfa_offset 24
+  71 0004 00AF     		add	r7, sp, #0
+  72              	.LCFI4:
+  73              		.cfi_def_cfa_register 7
+  59:.\Generated_Source\PSoC4/Status_Reg_1.c ****     uint8 interruptState;
+  60:.\Generated_Source\PSoC4/Status_Reg_1.c ****     interruptState = CyEnterCriticalSection();
+  74              		.loc 1 60 0
+  75 0006 FC1D     		add	r4, r7, #7
+  76 0008 FFF7FEFF 		bl	CyEnterCriticalSection
+  77 000c 031C     		mov	r3, r0
+  78 000e 2370     		strb	r3, [r4]
+  61:.\Generated_Source\PSoC4/Status_Reg_1.c ****     Status_Reg_1_Status_Aux_Ctrl |= Status_Reg_1_STATUS_INTR_ENBL;
+  79              		.loc 1 61 0
+  80 0010 074B     		ldr	r3, .L6
+  81 0012 074A     		ldr	r2, .L6
+  82 0014 1278     		ldrb	r2, [r2]
+  83 0016 D2B2     		uxtb	r2, r2
+  84 0018 1021     		mov	r1, #16
+  85 001a 0A43     		orr	r2, r1
+  86 001c D2B2     		uxtb	r2, r2
+  87 001e 1A70     		strb	r2, [r3]
+  62:.\Generated_Source\PSoC4/Status_Reg_1.c ****     CyExitCriticalSection(interruptState);
+  88              		.loc 1 62 0
+  89 0020 FB1D     		add	r3, r7, #7
+  90 0022 1B78     		ldrb	r3, [r3]
+  91 0024 181C     		mov	r0, r3
+  92 0026 FFF7FEFF 		bl	CyExitCriticalSection
+  63:.\Generated_Source\PSoC4/Status_Reg_1.c **** }
+  93              		.loc 1 63 0
+  94 002a BD46     		mov	sp, r7
+  95 002c 03B0     		add	sp, sp, #12
+  96              		@ sp needed for prologue
+  97 002e 90BD     		pop	{r4, r7, pc}
+  98              	.L7:
+  99              		.align	2
+ 100              	.L6:
+ 101 0030 92000F40 		.word	1074725010
+ 102              		.cfi_endproc
+ 103              	.LFE1:
+ 104              		.size	Status_Reg_1_InterruptEnable, .-Status_Reg_1_InterruptEnable
+ 105              		.section	.text.Status_Reg_1_InterruptDisable,"ax",%progbits
+ 106              		.align	2
+ 107              		.global	Status_Reg_1_InterruptDisable
+ 108              		.code	16
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 4
+
+
+ 109              		.thumb_func
+ 110              		.type	Status_Reg_1_InterruptDisable, %function
+ 111              	Status_Reg_1_InterruptDisable:
+ 112              	.LFB2:
+  64:.\Generated_Source\PSoC4/Status_Reg_1.c **** 
+  65:.\Generated_Source\PSoC4/Status_Reg_1.c **** 
+  66:.\Generated_Source\PSoC4/Status_Reg_1.c **** /*******************************************************************************
+  67:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Function Name: Status_Reg_1_InterruptDisable
+  68:.\Generated_Source\PSoC4/Status_Reg_1.c **** ********************************************************************************
+  69:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  70:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Summary:
+  71:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  Disables the Status Register interrupt.
+  72:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  73:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Parameters:
+  74:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  None.
+  75:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  76:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Return:
+  77:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  None.
+  78:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  79:.\Generated_Source\PSoC4/Status_Reg_1.c **** *******************************************************************************/
+  80:.\Generated_Source\PSoC4/Status_Reg_1.c **** void Status_Reg_1_InterruptDisable(void) 
+  81:.\Generated_Source\PSoC4/Status_Reg_1.c **** {
+ 113              		.loc 1 81 0
+ 114              		.cfi_startproc
+ 115 0000 90B5     		push	{r4, r7, lr}
+ 116              	.LCFI5:
+ 117              		.cfi_def_cfa_offset 12
+ 118              		.cfi_offset 4, -12
+ 119              		.cfi_offset 7, -8
+ 120              		.cfi_offset 14, -4
+ 121 0002 83B0     		sub	sp, sp, #12
+ 122              	.LCFI6:
+ 123              		.cfi_def_cfa_offset 24
+ 124 0004 00AF     		add	r7, sp, #0
+ 125              	.LCFI7:
+ 126              		.cfi_def_cfa_register 7
+  82:.\Generated_Source\PSoC4/Status_Reg_1.c ****     uint8 interruptState;
+  83:.\Generated_Source\PSoC4/Status_Reg_1.c ****     interruptState = CyEnterCriticalSection();
+ 127              		.loc 1 83 0
+ 128 0006 FC1D     		add	r4, r7, #7
+ 129 0008 FFF7FEFF 		bl	CyEnterCriticalSection
+ 130 000c 031C     		mov	r3, r0
+ 131 000e 2370     		strb	r3, [r4]
+  84:.\Generated_Source\PSoC4/Status_Reg_1.c ****     Status_Reg_1_Status_Aux_Ctrl &= (uint8)(~Status_Reg_1_STATUS_INTR_ENBL);
+ 132              		.loc 1 84 0
+ 133 0010 074B     		ldr	r3, .L9
+ 134 0012 074A     		ldr	r2, .L9
+ 135 0014 1278     		ldrb	r2, [r2]
+ 136 0016 D2B2     		uxtb	r2, r2
+ 137 0018 1021     		mov	r1, #16
+ 138 001a 8A43     		bic	r2, r1
+ 139 001c D2B2     		uxtb	r2, r2
+ 140 001e 1A70     		strb	r2, [r3]
+  85:.\Generated_Source\PSoC4/Status_Reg_1.c ****     CyExitCriticalSection(interruptState);
+ 141              		.loc 1 85 0
+ 142 0020 FB1D     		add	r3, r7, #7
+ 143 0022 1B78     		ldrb	r3, [r3]
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 5
+
+
+ 144 0024 181C     		mov	r0, r3
+ 145 0026 FFF7FEFF 		bl	CyExitCriticalSection
+  86:.\Generated_Source\PSoC4/Status_Reg_1.c **** }
+ 146              		.loc 1 86 0
+ 147 002a BD46     		mov	sp, r7
+ 148 002c 03B0     		add	sp, sp, #12
+ 149              		@ sp needed for prologue
+ 150 002e 90BD     		pop	{r4, r7, pc}
+ 151              	.L10:
+ 152              		.align	2
+ 153              	.L9:
+ 154 0030 92000F40 		.word	1074725010
+ 155              		.cfi_endproc
+ 156              	.LFE2:
+ 157              		.size	Status_Reg_1_InterruptDisable, .-Status_Reg_1_InterruptDisable
+ 158              		.section	.text.Status_Reg_1_WriteMask,"ax",%progbits
+ 159              		.align	2
+ 160              		.global	Status_Reg_1_WriteMask
+ 161              		.code	16
+ 162              		.thumb_func
+ 163              		.type	Status_Reg_1_WriteMask, %function
+ 164              	Status_Reg_1_WriteMask:
+ 165              	.LFB3:
+  87:.\Generated_Source\PSoC4/Status_Reg_1.c **** 
+  88:.\Generated_Source\PSoC4/Status_Reg_1.c **** 
+  89:.\Generated_Source\PSoC4/Status_Reg_1.c **** /*******************************************************************************
+  90:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Function Name: Status_Reg_1_WriteMask
+  91:.\Generated_Source\PSoC4/Status_Reg_1.c **** ********************************************************************************
+  92:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  93:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Summary:
+  94:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  Writes the current mask value assigned to the Status Register.
+  95:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  96:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Parameters:
+  97:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  mask:  Value to write into the mask register.
+  98:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+  99:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Return:
+ 100:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  None.
+ 101:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+ 102:.\Generated_Source\PSoC4/Status_Reg_1.c **** *******************************************************************************/
+ 103:.\Generated_Source\PSoC4/Status_Reg_1.c **** void Status_Reg_1_WriteMask(uint8 mask) 
+ 104:.\Generated_Source\PSoC4/Status_Reg_1.c **** {
+ 166              		.loc 1 104 0
+ 167              		.cfi_startproc
+ 168 0000 80B5     		push	{r7, lr}
+ 169              	.LCFI8:
+ 170              		.cfi_def_cfa_offset 8
+ 171              		.cfi_offset 7, -8
+ 172              		.cfi_offset 14, -4
+ 173 0002 82B0     		sub	sp, sp, #8
+ 174              	.LCFI9:
+ 175              		.cfi_def_cfa_offset 16
+ 176 0004 00AF     		add	r7, sp, #0
+ 177              	.LCFI10:
+ 178              		.cfi_def_cfa_register 7
+ 179 0006 021C     		mov	r2, r0
+ 180 0008 FB1D     		add	r3, r7, #7
+ 181 000a 1A70     		strb	r2, [r3]
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 6
+
+
+ 105:.\Generated_Source\PSoC4/Status_Reg_1.c ****     #if(Status_Reg_1_INPUTS < 8u)
+ 106:.\Generated_Source\PSoC4/Status_Reg_1.c ****     	mask &= (uint8)((((uint8)1u) << Status_Reg_1_INPUTS) - 1u);
+ 182              		.loc 1 106 0
+ 183 000c FB1D     		add	r3, r7, #7
+ 184 000e FA1D     		add	r2, r7, #7
+ 185 0010 1178     		ldrb	r1, [r2]
+ 186 0012 0722     		mov	r2, #7
+ 187 0014 0A40     		and	r2, r1
+ 188 0016 1A70     		strb	r2, [r3]
+ 107:.\Generated_Source\PSoC4/Status_Reg_1.c **** 	#endif /* End Status_Reg_1_INPUTS < 8u */
+ 108:.\Generated_Source\PSoC4/Status_Reg_1.c ****     Status_Reg_1_Status_Mask = mask;
+ 189              		.loc 1 108 0
+ 190 0018 034B     		ldr	r3, .L12
+ 191 001a FA1D     		add	r2, r7, #7
+ 192 001c 1278     		ldrb	r2, [r2]
+ 193 001e 1A70     		strb	r2, [r3]
+ 109:.\Generated_Source\PSoC4/Status_Reg_1.c **** }
+ 194              		.loc 1 109 0
+ 195 0020 BD46     		mov	sp, r7
+ 196 0022 02B0     		add	sp, sp, #8
+ 197              		@ sp needed for prologue
+ 198 0024 80BD     		pop	{r7, pc}
+ 199              	.L13:
+ 200 0026 C046     		.align	2
+ 201              	.L12:
+ 202 0028 82000F40 		.word	1074724994
+ 203              		.cfi_endproc
+ 204              	.LFE3:
+ 205              		.size	Status_Reg_1_WriteMask, .-Status_Reg_1_WriteMask
+ 206              		.section	.text.Status_Reg_1_ReadMask,"ax",%progbits
+ 207              		.align	2
+ 208              		.global	Status_Reg_1_ReadMask
+ 209              		.code	16
+ 210              		.thumb_func
+ 211              		.type	Status_Reg_1_ReadMask, %function
+ 212              	Status_Reg_1_ReadMask:
+ 213              	.LFB4:
+ 110:.\Generated_Source\PSoC4/Status_Reg_1.c **** 
+ 111:.\Generated_Source\PSoC4/Status_Reg_1.c **** 
+ 112:.\Generated_Source\PSoC4/Status_Reg_1.c **** /*******************************************************************************
+ 113:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Function Name: Status_Reg_1_ReadMask
+ 114:.\Generated_Source\PSoC4/Status_Reg_1.c **** ********************************************************************************
+ 115:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+ 116:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Summary:
+ 117:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  Reads the current interrupt mask assigned to the Status Register.
+ 118:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+ 119:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Parameters:
+ 120:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  None.
+ 121:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+ 122:.\Generated_Source\PSoC4/Status_Reg_1.c **** * Return:
+ 123:.\Generated_Source\PSoC4/Status_Reg_1.c **** *  The value of the interrupt mask of the Status Register.
+ 124:.\Generated_Source\PSoC4/Status_Reg_1.c **** *
+ 125:.\Generated_Source\PSoC4/Status_Reg_1.c **** *******************************************************************************/
+ 126:.\Generated_Source\PSoC4/Status_Reg_1.c **** uint8 Status_Reg_1_ReadMask(void) 
+ 127:.\Generated_Source\PSoC4/Status_Reg_1.c **** {
+ 214              		.loc 1 127 0
+ 215              		.cfi_startproc
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 7
+
+
+ 216 0000 80B5     		push	{r7, lr}
+ 217              	.LCFI11:
+ 218              		.cfi_def_cfa_offset 8
+ 219              		.cfi_offset 7, -8
+ 220              		.cfi_offset 14, -4
+ 221 0002 00AF     		add	r7, sp, #0
+ 222              	.LCFI12:
+ 223              		.cfi_def_cfa_register 7
+ 128:.\Generated_Source\PSoC4/Status_Reg_1.c ****     return Status_Reg_1_Status_Mask;
+ 224              		.loc 1 128 0
+ 225 0004 024B     		ldr	r3, .L16
+ 226 0006 1B78     		ldrb	r3, [r3]
+ 227 0008 DBB2     		uxtb	r3, r3
+ 129:.\Generated_Source\PSoC4/Status_Reg_1.c **** }
+ 228              		.loc 1 129 0
+ 229 000a 181C     		mov	r0, r3
+ 230 000c BD46     		mov	sp, r7
+ 231              		@ sp needed for prologue
+ 232 000e 80BD     		pop	{r7, pc}
+ 233              	.L17:
+ 234              		.align	2
+ 235              	.L16:
+ 236 0010 82000F40 		.word	1074724994
+ 237              		.cfi_endproc
+ 238              	.LFE4:
+ 239              		.size	Status_Reg_1_ReadMask, .-Status_Reg_1_ReadMask
+ 240              		.text
+ 241              	.Letext0:
+ 242              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 243              		.section	.debug_info,"",%progbits
+ 244              	.Ldebug_info0:
+ 245 0000 52010000 		.4byte	0x152
+ 246 0004 0200     		.2byte	0x2
+ 247 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 248 000a 04       		.byte	0x4
+ 249 000b 01       		.uleb128 0x1
+ 250 000c 9D000000 		.4byte	.LASF21
+ 251 0010 01       		.byte	0x1
+ 252 0011 C8010000 		.4byte	.LASF22
+ 253 0015 56000000 		.4byte	.LASF23
+ 254 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 255 001d 00000000 		.4byte	0
+ 256 0021 00000000 		.4byte	0
+ 257 0025 00000000 		.4byte	.Ldebug_line0
+ 258 0029 02       		.uleb128 0x2
+ 259 002a 01       		.byte	0x1
+ 260 002b 06       		.byte	0x6
+ 261 002c 78010000 		.4byte	.LASF0
+ 262 0030 02       		.uleb128 0x2
+ 263 0031 01       		.byte	0x1
+ 264 0032 08       		.byte	0x8
+ 265 0033 1A010000 		.4byte	.LASF1
+ 266 0037 02       		.uleb128 0x2
+ 267 0038 02       		.byte	0x2
+ 268 0039 05       		.byte	0x5
+ 269 003a A1010000 		.4byte	.LASF2
+ 270 003e 02       		.uleb128 0x2
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 8
+
+
+ 271 003f 02       		.byte	0x2
+ 272 0040 07       		.byte	0x7
+ 273 0041 0E000000 		.4byte	.LASF3
+ 274 0045 02       		.uleb128 0x2
+ 275 0046 04       		.byte	0x4
+ 276 0047 05       		.byte	0x5
+ 277 0048 4B010000 		.4byte	.LASF4
+ 278 004c 02       		.uleb128 0x2
+ 279 004d 04       		.byte	0x4
+ 280 004e 07       		.byte	0x7
+ 281 004f EC000000 		.4byte	.LASF5
+ 282 0053 02       		.uleb128 0x2
+ 283 0054 08       		.byte	0x8
+ 284 0055 05       		.byte	0x5
+ 285 0056 00000000 		.4byte	.LASF6
+ 286 005a 02       		.uleb128 0x2
+ 287 005b 08       		.byte	0x8
+ 288 005c 07       		.byte	0x7
+ 289 005d FE000000 		.4byte	.LASF7
+ 290 0061 03       		.uleb128 0x3
+ 291 0062 04       		.byte	0x4
+ 292 0063 05       		.byte	0x5
+ 293 0064 696E7400 		.ascii	"int\000"
+ 294 0068 02       		.uleb128 0x2
+ 295 0069 04       		.byte	0x4
+ 296 006a 07       		.byte	0x7
+ 297 006b 21000000 		.4byte	.LASF8
+ 298 006f 04       		.uleb128 0x4
+ 299 0070 E6000000 		.4byte	.LASF12
+ 300 0074 02       		.byte	0x2
+ 301 0075 5B       		.byte	0x5b
+ 302 0076 30000000 		.4byte	0x30
+ 303 007a 02       		.uleb128 0x2
+ 304 007b 04       		.byte	0x4
+ 305 007c 04       		.byte	0x4
+ 306 007d 84010000 		.4byte	.LASF9
+ 307 0081 02       		.uleb128 0x2
+ 308 0082 08       		.byte	0x8
+ 309 0083 04       		.byte	0x4
+ 310 0084 54010000 		.4byte	.LASF10
+ 311 0088 02       		.uleb128 0x2
+ 312 0089 01       		.byte	0x1
+ 313 008a 08       		.byte	0x8
+ 314 008b 46010000 		.4byte	.LASF11
+ 315 008f 04       		.uleb128 0x4
+ 316 0090 AB010000 		.4byte	.LASF13
+ 317 0094 02       		.byte	0x2
+ 318 0095 F0       		.byte	0xf0
+ 319 0096 9A000000 		.4byte	0x9a
+ 320 009a 05       		.uleb128 0x5
+ 321 009b 6F000000 		.4byte	0x6f
+ 322 009f 02       		.uleb128 0x2
+ 323 00a0 04       		.byte	0x4
+ 324 00a1 07       		.byte	0x7
+ 325 00a2 B0010000 		.4byte	.LASF14
+ 326 00a6 06       		.uleb128 0x6
+ 327 00a7 01       		.byte	0x1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 9
+
+
+ 328 00a8 44000000 		.4byte	.LASF19
+ 329 00ac 01       		.byte	0x1
+ 330 00ad 25       		.byte	0x25
+ 331 00ae 01       		.byte	0x1
+ 332 00af 6F000000 		.4byte	0x6f
+ 333 00b3 00000000 		.4byte	.LFB0
+ 334 00b7 14000000 		.4byte	.LFE0
+ 335 00bb 00000000 		.4byte	.LLST0
+ 336 00bf 01       		.byte	0x1
+ 337 00c0 07       		.uleb128 0x7
+ 338 00c1 01       		.byte	0x1
+ 339 00c2 5B010000 		.4byte	.LASF15
+ 340 00c6 01       		.byte	0x1
+ 341 00c7 39       		.byte	0x39
+ 342 00c8 01       		.byte	0x1
+ 343 00c9 00000000 		.4byte	.LFB1
+ 344 00cd 34000000 		.4byte	.LFE1
+ 345 00d1 2C000000 		.4byte	.LLST1
+ 346 00d5 01       		.byte	0x1
+ 347 00d6 E9000000 		.4byte	0xe9
+ 348 00da 08       		.uleb128 0x8
+ 349 00db B9010000 		.4byte	.LASF17
+ 350 00df 01       		.byte	0x1
+ 351 00e0 3B       		.byte	0x3b
+ 352 00e1 6F000000 		.4byte	0x6f
+ 353 00e5 02       		.byte	0x2
+ 354 00e6 91       		.byte	0x91
+ 355 00e7 6F       		.sleb128 -17
+ 356 00e8 00       		.byte	0
+ 357 00e9 07       		.uleb128 0x7
+ 358 00ea 01       		.byte	0x1
+ 359 00eb 28010000 		.4byte	.LASF16
+ 360 00ef 01       		.byte	0x1
+ 361 00f0 50       		.byte	0x50
+ 362 00f1 01       		.byte	0x1
+ 363 00f2 00000000 		.4byte	.LFB2
+ 364 00f6 34000000 		.4byte	.LFE2
+ 365 00fa 64000000 		.4byte	.LLST2
+ 366 00fe 01       		.byte	0x1
+ 367 00ff 12010000 		.4byte	0x112
+ 368 0103 08       		.uleb128 0x8
+ 369 0104 B9010000 		.4byte	.LASF17
+ 370 0108 01       		.byte	0x1
+ 371 0109 52       		.byte	0x52
+ 372 010a 6F000000 		.4byte	0x6f
+ 373 010e 02       		.byte	0x2
+ 374 010f 91       		.byte	0x91
+ 375 0110 6F       		.sleb128 -17
+ 376 0111 00       		.byte	0
+ 377 0112 09       		.uleb128 0x9
+ 378 0113 01       		.byte	0x1
+ 379 0114 8A010000 		.4byte	.LASF18
+ 380 0118 01       		.byte	0x1
+ 381 0119 67       		.byte	0x67
+ 382 011a 01       		.byte	0x1
+ 383 011b 00000000 		.4byte	.LFB3
+ 384 011f 2C000000 		.4byte	.LFE3
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 10
+
+
+ 385 0123 9C000000 		.4byte	.LLST3
+ 386 0127 01       		.byte	0x1
+ 387 0128 3B010000 		.4byte	0x13b
+ 388 012c 0A       		.uleb128 0xa
+ 389 012d 15010000 		.4byte	.LASF24
+ 390 0131 01       		.byte	0x1
+ 391 0132 67       		.byte	0x67
+ 392 0133 6F000000 		.4byte	0x6f
+ 393 0137 02       		.byte	0x2
+ 394 0138 91       		.byte	0x91
+ 395 0139 77       		.sleb128 -9
+ 396 013a 00       		.byte	0
+ 397 013b 06       		.uleb128 0x6
+ 398 013c 01       		.byte	0x1
+ 399 013d 2E000000 		.4byte	.LASF20
+ 400 0141 01       		.byte	0x1
+ 401 0142 7E       		.byte	0x7e
+ 402 0143 01       		.byte	0x1
+ 403 0144 6F000000 		.4byte	0x6f
+ 404 0148 00000000 		.4byte	.LFB4
+ 405 014c 14000000 		.4byte	.LFE4
+ 406 0150 D4000000 		.4byte	.LLST4
+ 407 0154 01       		.byte	0x1
+ 408 0155 00       		.byte	0
+ 409              		.section	.debug_abbrev,"",%progbits
+ 410              	.Ldebug_abbrev0:
+ 411 0000 01       		.uleb128 0x1
+ 412 0001 11       		.uleb128 0x11
+ 413 0002 01       		.byte	0x1
+ 414 0003 25       		.uleb128 0x25
+ 415 0004 0E       		.uleb128 0xe
+ 416 0005 13       		.uleb128 0x13
+ 417 0006 0B       		.uleb128 0xb
+ 418 0007 03       		.uleb128 0x3
+ 419 0008 0E       		.uleb128 0xe
+ 420 0009 1B       		.uleb128 0x1b
+ 421 000a 0E       		.uleb128 0xe
+ 422 000b 55       		.uleb128 0x55
+ 423 000c 06       		.uleb128 0x6
+ 424 000d 11       		.uleb128 0x11
+ 425 000e 01       		.uleb128 0x1
+ 426 000f 52       		.uleb128 0x52
+ 427 0010 01       		.uleb128 0x1
+ 428 0011 10       		.uleb128 0x10
+ 429 0012 06       		.uleb128 0x6
+ 430 0013 00       		.byte	0
+ 431 0014 00       		.byte	0
+ 432 0015 02       		.uleb128 0x2
+ 433 0016 24       		.uleb128 0x24
+ 434 0017 00       		.byte	0
+ 435 0018 0B       		.uleb128 0xb
+ 436 0019 0B       		.uleb128 0xb
+ 437 001a 3E       		.uleb128 0x3e
+ 438 001b 0B       		.uleb128 0xb
+ 439 001c 03       		.uleb128 0x3
+ 440 001d 0E       		.uleb128 0xe
+ 441 001e 00       		.byte	0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 11
+
+
+ 442 001f 00       		.byte	0
+ 443 0020 03       		.uleb128 0x3
+ 444 0021 24       		.uleb128 0x24
+ 445 0022 00       		.byte	0
+ 446 0023 0B       		.uleb128 0xb
+ 447 0024 0B       		.uleb128 0xb
+ 448 0025 3E       		.uleb128 0x3e
+ 449 0026 0B       		.uleb128 0xb
+ 450 0027 03       		.uleb128 0x3
+ 451 0028 08       		.uleb128 0x8
+ 452 0029 00       		.byte	0
+ 453 002a 00       		.byte	0
+ 454 002b 04       		.uleb128 0x4
+ 455 002c 16       		.uleb128 0x16
+ 456 002d 00       		.byte	0
+ 457 002e 03       		.uleb128 0x3
+ 458 002f 0E       		.uleb128 0xe
+ 459 0030 3A       		.uleb128 0x3a
+ 460 0031 0B       		.uleb128 0xb
+ 461 0032 3B       		.uleb128 0x3b
+ 462 0033 0B       		.uleb128 0xb
+ 463 0034 49       		.uleb128 0x49
+ 464 0035 13       		.uleb128 0x13
+ 465 0036 00       		.byte	0
+ 466 0037 00       		.byte	0
+ 467 0038 05       		.uleb128 0x5
+ 468 0039 35       		.uleb128 0x35
+ 469 003a 00       		.byte	0
+ 470 003b 49       		.uleb128 0x49
+ 471 003c 13       		.uleb128 0x13
+ 472 003d 00       		.byte	0
+ 473 003e 00       		.byte	0
+ 474 003f 06       		.uleb128 0x6
+ 475 0040 2E       		.uleb128 0x2e
+ 476 0041 00       		.byte	0
+ 477 0042 3F       		.uleb128 0x3f
+ 478 0043 0C       		.uleb128 0xc
+ 479 0044 03       		.uleb128 0x3
+ 480 0045 0E       		.uleb128 0xe
+ 481 0046 3A       		.uleb128 0x3a
+ 482 0047 0B       		.uleb128 0xb
+ 483 0048 3B       		.uleb128 0x3b
+ 484 0049 0B       		.uleb128 0xb
+ 485 004a 27       		.uleb128 0x27
+ 486 004b 0C       		.uleb128 0xc
+ 487 004c 49       		.uleb128 0x49
+ 488 004d 13       		.uleb128 0x13
+ 489 004e 11       		.uleb128 0x11
+ 490 004f 01       		.uleb128 0x1
+ 491 0050 12       		.uleb128 0x12
+ 492 0051 01       		.uleb128 0x1
+ 493 0052 40       		.uleb128 0x40
+ 494 0053 06       		.uleb128 0x6
+ 495 0054 9742     		.uleb128 0x2117
+ 496 0056 0C       		.uleb128 0xc
+ 497 0057 00       		.byte	0
+ 498 0058 00       		.byte	0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 12
+
+
+ 499 0059 07       		.uleb128 0x7
+ 500 005a 2E       		.uleb128 0x2e
+ 501 005b 01       		.byte	0x1
+ 502 005c 3F       		.uleb128 0x3f
+ 503 005d 0C       		.uleb128 0xc
+ 504 005e 03       		.uleb128 0x3
+ 505 005f 0E       		.uleb128 0xe
+ 506 0060 3A       		.uleb128 0x3a
+ 507 0061 0B       		.uleb128 0xb
+ 508 0062 3B       		.uleb128 0x3b
+ 509 0063 0B       		.uleb128 0xb
+ 510 0064 27       		.uleb128 0x27
+ 511 0065 0C       		.uleb128 0xc
+ 512 0066 11       		.uleb128 0x11
+ 513 0067 01       		.uleb128 0x1
+ 514 0068 12       		.uleb128 0x12
+ 515 0069 01       		.uleb128 0x1
+ 516 006a 40       		.uleb128 0x40
+ 517 006b 06       		.uleb128 0x6
+ 518 006c 9642     		.uleb128 0x2116
+ 519 006e 0C       		.uleb128 0xc
+ 520 006f 01       		.uleb128 0x1
+ 521 0070 13       		.uleb128 0x13
+ 522 0071 00       		.byte	0
+ 523 0072 00       		.byte	0
+ 524 0073 08       		.uleb128 0x8
+ 525 0074 34       		.uleb128 0x34
+ 526 0075 00       		.byte	0
+ 527 0076 03       		.uleb128 0x3
+ 528 0077 0E       		.uleb128 0xe
+ 529 0078 3A       		.uleb128 0x3a
+ 530 0079 0B       		.uleb128 0xb
+ 531 007a 3B       		.uleb128 0x3b
+ 532 007b 0B       		.uleb128 0xb
+ 533 007c 49       		.uleb128 0x49
+ 534 007d 13       		.uleb128 0x13
+ 535 007e 02       		.uleb128 0x2
+ 536 007f 0A       		.uleb128 0xa
+ 537 0080 00       		.byte	0
+ 538 0081 00       		.byte	0
+ 539 0082 09       		.uleb128 0x9
+ 540 0083 2E       		.uleb128 0x2e
+ 541 0084 01       		.byte	0x1
+ 542 0085 3F       		.uleb128 0x3f
+ 543 0086 0C       		.uleb128 0xc
+ 544 0087 03       		.uleb128 0x3
+ 545 0088 0E       		.uleb128 0xe
+ 546 0089 3A       		.uleb128 0x3a
+ 547 008a 0B       		.uleb128 0xb
+ 548 008b 3B       		.uleb128 0x3b
+ 549 008c 0B       		.uleb128 0xb
+ 550 008d 27       		.uleb128 0x27
+ 551 008e 0C       		.uleb128 0xc
+ 552 008f 11       		.uleb128 0x11
+ 553 0090 01       		.uleb128 0x1
+ 554 0091 12       		.uleb128 0x12
+ 555 0092 01       		.uleb128 0x1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 13
+
+
+ 556 0093 40       		.uleb128 0x40
+ 557 0094 06       		.uleb128 0x6
+ 558 0095 9742     		.uleb128 0x2117
+ 559 0097 0C       		.uleb128 0xc
+ 560 0098 01       		.uleb128 0x1
+ 561 0099 13       		.uleb128 0x13
+ 562 009a 00       		.byte	0
+ 563 009b 00       		.byte	0
+ 564 009c 0A       		.uleb128 0xa
+ 565 009d 05       		.uleb128 0x5
+ 566 009e 00       		.byte	0
+ 567 009f 03       		.uleb128 0x3
+ 568 00a0 0E       		.uleb128 0xe
+ 569 00a1 3A       		.uleb128 0x3a
+ 570 00a2 0B       		.uleb128 0xb
+ 571 00a3 3B       		.uleb128 0x3b
+ 572 00a4 0B       		.uleb128 0xb
+ 573 00a5 49       		.uleb128 0x49
+ 574 00a6 13       		.uleb128 0x13
+ 575 00a7 02       		.uleb128 0x2
+ 576 00a8 0A       		.uleb128 0xa
+ 577 00a9 00       		.byte	0
+ 578 00aa 00       		.byte	0
+ 579 00ab 00       		.byte	0
+ 580              		.section	.debug_loc,"",%progbits
+ 581              	.Ldebug_loc0:
+ 582              	.LLST0:
+ 583 0000 00000000 		.4byte	.LFB0
+ 584 0004 02000000 		.4byte	.LCFI0
+ 585 0008 0200     		.2byte	0x2
+ 586 000a 7D       		.byte	0x7d
+ 587 000b 00       		.sleb128 0
+ 588 000c 02000000 		.4byte	.LCFI0
+ 589 0010 04000000 		.4byte	.LCFI1
+ 590 0014 0200     		.2byte	0x2
+ 591 0016 7D       		.byte	0x7d
+ 592 0017 08       		.sleb128 8
+ 593 0018 04000000 		.4byte	.LCFI1
+ 594 001c 14000000 		.4byte	.LFE0
+ 595 0020 0200     		.2byte	0x2
+ 596 0022 77       		.byte	0x77
+ 597 0023 08       		.sleb128 8
+ 598 0024 00000000 		.4byte	0
+ 599 0028 00000000 		.4byte	0
+ 600              	.LLST1:
+ 601 002c 00000000 		.4byte	.LFB1
+ 602 0030 02000000 		.4byte	.LCFI2
+ 603 0034 0200     		.2byte	0x2
+ 604 0036 7D       		.byte	0x7d
+ 605 0037 00       		.sleb128 0
+ 606 0038 02000000 		.4byte	.LCFI2
+ 607 003c 04000000 		.4byte	.LCFI3
+ 608 0040 0200     		.2byte	0x2
+ 609 0042 7D       		.byte	0x7d
+ 610 0043 0C       		.sleb128 12
+ 611 0044 04000000 		.4byte	.LCFI3
+ 612 0048 06000000 		.4byte	.LCFI4
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 14
+
+
+ 613 004c 0200     		.2byte	0x2
+ 614 004e 7D       		.byte	0x7d
+ 615 004f 18       		.sleb128 24
+ 616 0050 06000000 		.4byte	.LCFI4
+ 617 0054 34000000 		.4byte	.LFE1
+ 618 0058 0200     		.2byte	0x2
+ 619 005a 77       		.byte	0x77
+ 620 005b 18       		.sleb128 24
+ 621 005c 00000000 		.4byte	0
+ 622 0060 00000000 		.4byte	0
+ 623              	.LLST2:
+ 624 0064 00000000 		.4byte	.LFB2
+ 625 0068 02000000 		.4byte	.LCFI5
+ 626 006c 0200     		.2byte	0x2
+ 627 006e 7D       		.byte	0x7d
+ 628 006f 00       		.sleb128 0
+ 629 0070 02000000 		.4byte	.LCFI5
+ 630 0074 04000000 		.4byte	.LCFI6
+ 631 0078 0200     		.2byte	0x2
+ 632 007a 7D       		.byte	0x7d
+ 633 007b 0C       		.sleb128 12
+ 634 007c 04000000 		.4byte	.LCFI6
+ 635 0080 06000000 		.4byte	.LCFI7
+ 636 0084 0200     		.2byte	0x2
+ 637 0086 7D       		.byte	0x7d
+ 638 0087 18       		.sleb128 24
+ 639 0088 06000000 		.4byte	.LCFI7
+ 640 008c 34000000 		.4byte	.LFE2
+ 641 0090 0200     		.2byte	0x2
+ 642 0092 77       		.byte	0x77
+ 643 0093 18       		.sleb128 24
+ 644 0094 00000000 		.4byte	0
+ 645 0098 00000000 		.4byte	0
+ 646              	.LLST3:
+ 647 009c 00000000 		.4byte	.LFB3
+ 648 00a0 02000000 		.4byte	.LCFI8
+ 649 00a4 0200     		.2byte	0x2
+ 650 00a6 7D       		.byte	0x7d
+ 651 00a7 00       		.sleb128 0
+ 652 00a8 02000000 		.4byte	.LCFI8
+ 653 00ac 04000000 		.4byte	.LCFI9
+ 654 00b0 0200     		.2byte	0x2
+ 655 00b2 7D       		.byte	0x7d
+ 656 00b3 08       		.sleb128 8
+ 657 00b4 04000000 		.4byte	.LCFI9
+ 658 00b8 06000000 		.4byte	.LCFI10
+ 659 00bc 0200     		.2byte	0x2
+ 660 00be 7D       		.byte	0x7d
+ 661 00bf 10       		.sleb128 16
+ 662 00c0 06000000 		.4byte	.LCFI10
+ 663 00c4 2C000000 		.4byte	.LFE3
+ 664 00c8 0200     		.2byte	0x2
+ 665 00ca 77       		.byte	0x77
+ 666 00cb 10       		.sleb128 16
+ 667 00cc 00000000 		.4byte	0
+ 668 00d0 00000000 		.4byte	0
+ 669              	.LLST4:
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 15
+
+
+ 670 00d4 00000000 		.4byte	.LFB4
+ 671 00d8 02000000 		.4byte	.LCFI11
+ 672 00dc 0200     		.2byte	0x2
+ 673 00de 7D       		.byte	0x7d
+ 674 00df 00       		.sleb128 0
+ 675 00e0 02000000 		.4byte	.LCFI11
+ 676 00e4 04000000 		.4byte	.LCFI12
+ 677 00e8 0200     		.2byte	0x2
+ 678 00ea 7D       		.byte	0x7d
+ 679 00eb 08       		.sleb128 8
+ 680 00ec 04000000 		.4byte	.LCFI12
+ 681 00f0 14000000 		.4byte	.LFE4
+ 682 00f4 0200     		.2byte	0x2
+ 683 00f6 77       		.byte	0x77
+ 684 00f7 08       		.sleb128 8
+ 685 00f8 00000000 		.4byte	0
+ 686 00fc 00000000 		.4byte	0
+ 687              		.section	.debug_aranges,"",%progbits
+ 688 0000 3C000000 		.4byte	0x3c
+ 689 0004 0200     		.2byte	0x2
+ 690 0006 00000000 		.4byte	.Ldebug_info0
+ 691 000a 04       		.byte	0x4
+ 692 000b 00       		.byte	0
+ 693 000c 0000     		.2byte	0
+ 694 000e 0000     		.2byte	0
+ 695 0010 00000000 		.4byte	.LFB0
+ 696 0014 14000000 		.4byte	.LFE0-.LFB0
+ 697 0018 00000000 		.4byte	.LFB1
+ 698 001c 34000000 		.4byte	.LFE1-.LFB1
+ 699 0020 00000000 		.4byte	.LFB2
+ 700 0024 34000000 		.4byte	.LFE2-.LFB2
+ 701 0028 00000000 		.4byte	.LFB3
+ 702 002c 2C000000 		.4byte	.LFE3-.LFB3
+ 703 0030 00000000 		.4byte	.LFB4
+ 704 0034 14000000 		.4byte	.LFE4-.LFB4
+ 705 0038 00000000 		.4byte	0
+ 706 003c 00000000 		.4byte	0
+ 707              		.section	.debug_ranges,"",%progbits
+ 708              	.Ldebug_ranges0:
+ 709 0000 00000000 		.4byte	.LFB0
+ 710 0004 14000000 		.4byte	.LFE0
+ 711 0008 00000000 		.4byte	.LFB1
+ 712 000c 34000000 		.4byte	.LFE1
+ 713 0010 00000000 		.4byte	.LFB2
+ 714 0014 34000000 		.4byte	.LFE2
+ 715 0018 00000000 		.4byte	.LFB3
+ 716 001c 2C000000 		.4byte	.LFE3
+ 717 0020 00000000 		.4byte	.LFB4
+ 718 0024 14000000 		.4byte	.LFE4
+ 719 0028 00000000 		.4byte	0
+ 720 002c 00000000 		.4byte	0
+ 721              		.section	.debug_line,"",%progbits
+ 722              	.Ldebug_line0:
+ 723 0000 AE000000 		.section	.debug_str,"MS",%progbits,1
+ 723      02004B00 
+ 723      00000201 
+ 723      FB0E0D00 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 16
+
+
+ 723      01010101 
+ 724              	.LASF6:
+ 725 0000 6C6F6E67 		.ascii	"long long int\000"
+ 725      206C6F6E 
+ 725      6720696E 
+ 725      7400
+ 726              	.LASF3:
+ 727 000e 73686F72 		.ascii	"short unsigned int\000"
+ 727      7420756E 
+ 727      7369676E 
+ 727      65642069 
+ 727      6E7400
+ 728              	.LASF8:
+ 729 0021 756E7369 		.ascii	"unsigned int\000"
+ 729      676E6564 
+ 729      20696E74 
+ 729      00
+ 730              	.LASF20:
+ 731 002e 53746174 		.ascii	"Status_Reg_1_ReadMask\000"
+ 731      75735F52 
+ 731      65675F31 
+ 731      5F526561 
+ 731      644D6173 
+ 732              	.LASF19:
+ 733 0044 53746174 		.ascii	"Status_Reg_1_Read\000"
+ 733      75735F52 
+ 733      65675F31 
+ 733      5F526561 
+ 733      6400
+ 734              	.LASF23:
+ 735 0056 433A5C55 		.ascii	"C:\\Users\\Tsubasa Maruyama\\Documents\\PSoC Creato"
+ 735      73657273 
+ 735      5C547375 
+ 735      62617361 
+ 735      204D6172 
+ 736 0085 725C4C74 		.ascii	"r\\Lticker\\Lticker.cydsn\000"
+ 736      69636B65 
+ 736      725C4C74 
+ 736      69636B65 
+ 736      722E6379 
+ 737              	.LASF21:
+ 738 009d 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 738      4320342E 
+ 738      372E3320 
+ 738      32303133 
+ 738      30333132 
+ 739 00d0 616E6368 		.ascii	"anch revision 196615]\000"
+ 739      20726576 
+ 739      6973696F 
+ 739      6E203139 
+ 739      36363135 
+ 740              	.LASF12:
+ 741 00e6 75696E74 		.ascii	"uint8\000"
+ 741      3800
+ 742              	.LASF5:
+ 743 00ec 6C6F6E67 		.ascii	"long unsigned int\000"
+ 743      20756E73 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 17
+
+
+ 743      69676E65 
+ 743      6420696E 
+ 743      7400
+ 744              	.LASF7:
+ 745 00fe 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 745      206C6F6E 
+ 745      6720756E 
+ 745      7369676E 
+ 745      65642069 
+ 746              	.LASF24:
+ 747 0115 6D61736B 		.ascii	"mask\000"
+ 747      00
+ 748              	.LASF1:
+ 749 011a 756E7369 		.ascii	"unsigned char\000"
+ 749      676E6564 
+ 749      20636861 
+ 749      7200
+ 750              	.LASF16:
+ 751 0128 53746174 		.ascii	"Status_Reg_1_InterruptDisable\000"
+ 751      75735F52 
+ 751      65675F31 
+ 751      5F496E74 
+ 751      65727275 
+ 752              	.LASF11:
+ 753 0146 63686172 		.ascii	"char\000"
+ 753      00
+ 754              	.LASF4:
+ 755 014b 6C6F6E67 		.ascii	"long int\000"
+ 755      20696E74 
+ 755      00
+ 756              	.LASF10:
+ 757 0154 646F7562 		.ascii	"double\000"
+ 757      6C6500
+ 758              	.LASF15:
+ 759 015b 53746174 		.ascii	"Status_Reg_1_InterruptEnable\000"
+ 759      75735F52 
+ 759      65675F31 
+ 759      5F496E74 
+ 759      65727275 
+ 760              	.LASF0:
+ 761 0178 7369676E 		.ascii	"signed char\000"
+ 761      65642063 
+ 761      68617200 
+ 762              	.LASF9:
+ 763 0184 666C6F61 		.ascii	"float\000"
+ 763      7400
+ 764              	.LASF18:
+ 765 018a 53746174 		.ascii	"Status_Reg_1_WriteMask\000"
+ 765      75735F52 
+ 765      65675F31 
+ 765      5F577269 
+ 765      74654D61 
+ 766              	.LASF2:
+ 767 01a1 73686F72 		.ascii	"short int\000"
+ 767      7420696E 
+ 767      7400
+ 768              	.LASF13:
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccKnl0uW.s 			page 18
+
+
+ 769 01ab 72656738 		.ascii	"reg8\000"
+ 769      00
+ 770              	.LASF14:
+ 771 01b0 73697A65 		.ascii	"sizetype\000"
+ 771      74797065 
+ 771      00
+ 772              	.LASF17:
+ 773 01b9 696E7465 		.ascii	"interruptState\000"
+ 773      72727570 
+ 773      74537461 
+ 773      746500
+ 774              	.LASF22:
+ 775 01c8 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Status_Reg_1.c\000"
+ 775      6E657261 
+ 775      7465645F 
+ 775      536F7572 
+ 775      63655C50 
+ 776              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
