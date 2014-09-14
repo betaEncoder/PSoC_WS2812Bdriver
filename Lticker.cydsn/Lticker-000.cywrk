@@ -8,6 +8,7 @@
 <files />
 <projects>
 <name_val_pair name="Lticker" v=".\Lticker.cyprj" />
+<name_val_pair name="CapSense_CSD_P4_Design01" v=".\CapSense_CSD_P4_Design01.cydsn\CapSense_CSD_P4_Design01.cyprj" />
 </projects>
 <workspace_id v="0ec44bc7-173d-4a45-989c-273117c339ca" />
 <WriteAppVersionLastSavedWith v="3.0.0.3023" />

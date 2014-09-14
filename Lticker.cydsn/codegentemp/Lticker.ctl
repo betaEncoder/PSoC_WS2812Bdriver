@@ -1,6 +1,6 @@
 -- ======================================================================
 -- Lticker.ctl generated from Lticker
--- 09/13/2014 at 17:21
+-- 09/14/2014 at 23:37
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 

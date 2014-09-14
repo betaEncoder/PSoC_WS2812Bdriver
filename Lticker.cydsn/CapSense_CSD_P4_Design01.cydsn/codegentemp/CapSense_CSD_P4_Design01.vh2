@@ -1,0 +1,462 @@
+--
+--	Conversion of CapSense_CSD_P4_Design01.v to vh2:
+--
+--	Cypress Semiconductor - WARP Version 6.3 IR 41
+--	Sun Sep 14 21:40:16 2014
+--
+
+USE cypress.cypress.all;
+USE cypress.rtlpkg.all;
+ENTITY top_RTL IS
+ATTRIBUTE part_name of top_RTL:TYPE IS "cpsoc3";
+END top_RTL;
+--------------------------------------------------------
+ARCHITECTURE R_T_L OF top_RTL IS
+SIGNAL tmpOE__LED_GREEN_net_0 : bit;
+SIGNAL Net_64 : bit;
+SIGNAL tmpFB_0__LED_GREEN_net_0 : bit;
+SIGNAL tmpIO_0__LED_GREEN_net_0 : bit;
+TERMINAL tmpSIOVREF__LED_GREEN_net_0 : bit;
+TERMINAL Net_56 : bit;
+SIGNAL zero : bit;
+SIGNAL one : bit;
+SIGNAL tmpINTERRUPT_0__LED_GREEN_net_0 : bit;
+TERMINAL \CapSense_CSD:Net_245_4\ : bit;
+TERMINAL \CapSense_CSD:Net_245_3\ : bit;
+TERMINAL \CapSense_CSD:Net_245_2\ : bit;
+TERMINAL \CapSense_CSD:Net_245_1\ : bit;
+TERMINAL \CapSense_CSD:Net_245_0\ : bit;
+TERMINAL \CapSense_CSD:Net_241\ : bit;
+TERMINAL \CapSense_CSD:Net_270\ : bit;
+TERMINAL \CapSense_CSD:Net_246\ : bit;
+TERMINAL \CapSense_CSD:Net_398\ : bit;
+SIGNAL \CapSense_CSD:Net_329\ : bit;
+SIGNAL \CapSense_CSD:Net_328\ : bit;
+SIGNAL \CapSense_CSD:Net_104\ : bit;
+SIGNAL \CapSense_CSD:Net_429\ : bit;
+SIGNAL \CapSense_CSD:Net_420\ : bit;
+SIGNAL \CapSense_CSD:Net_248\ : bit;
+SIGNAL \CapSense_CSD:Net_312\ : bit;
+SIGNAL \CapSense_CSD:tmpOE__Cmod_net_0\ : bit;
+SIGNAL \CapSense_CSD:tmpFB_0__Cmod_net_0\ : bit;
+SIGNAL \CapSense_CSD:tmpIO_0__Cmod_net_0\ : bit;
+TERMINAL \CapSense_CSD:tmpSIOVREF__Cmod_net_0\ : bit;
+SIGNAL \CapSense_CSD:tmpINTERRUPT_0__Cmod_net_0\ : bit;
+SIGNAL \CapSense_CSD:IDAC2:Net_3\ : bit;
+SIGNAL \CapSense_CSD:tmpOE__Sns_net_4\ : bit;
+SIGNAL \CapSense_CSD:tmpOE__Sns_net_3\ : bit;
+SIGNAL \CapSense_CSD:tmpOE__Sns_net_2\ : bit;
+SIGNAL \CapSense_CSD:tmpOE__Sns_net_1\ : bit;
+SIGNAL \CapSense_CSD:tmpOE__Sns_net_0\ : bit;
+SIGNAL \CapSense_CSD:tmpFB_4__Sns_net_4\ : bit;
+SIGNAL \CapSense_CSD:tmpFB_4__Sns_net_3\ : bit;
+SIGNAL \CapSense_CSD:tmpFB_4__Sns_net_2\ : bit;
+SIGNAL \CapSense_CSD:tmpFB_4__Sns_net_1\ : bit;
+SIGNAL \CapSense_CSD:tmpFB_4__Sns_net_0\ : bit;
+SIGNAL \CapSense_CSD:tmpIO_4__Sns_net_4\ : bit;
+SIGNAL \CapSense_CSD:tmpIO_4__Sns_net_3\ : bit;
+SIGNAL \CapSense_CSD:tmpIO_4__Sns_net_2\ : bit;
+SIGNAL \CapSense_CSD:tmpIO_4__Sns_net_1\ : bit;
+SIGNAL \CapSense_CSD:tmpIO_4__Sns_net_0\ : bit;
+TERMINAL \CapSense_CSD:tmpSIOVREF__Sns_net_0\ : bit;
+SIGNAL \CapSense_CSD:tmpINTERRUPT_0__Sns_net_0\ : bit;
+SIGNAL \CapSense_CSD:IDAC1:Net_3\ : bit;
+SIGNAL Net_162 : bit;
+SIGNAL \CapSense_CSD:Net_474\ : bit;
+SIGNAL tmpOE__LED_RED_net_0 : bit;
+SIGNAL Net_311 : bit;
+SIGNAL tmpFB_0__LED_RED_net_0 : bit;
+SIGNAL tmpIO_0__LED_RED_net_0 : bit;
+TERMINAL tmpSIOVREF__LED_RED_net_0 : bit;
+TERMINAL Net_46 : bit;
+SIGNAL tmpINTERRUPT_0__LED_RED_net_0 : bit;
+SIGNAL Net_225 : bit;
+SIGNAL Net_309 : bit;
+SIGNAL Net_308 : bit;
+SIGNAL Net_310 : bit;
+SIGNAL Net_307 : bit;
+TERMINAL Net_316 : bit;
+TERMINAL Net_49 : bit;
+TERMINAL Net_317 : bit;
+TERMINAL Net_52 : bit;
+BEGIN
+
+zero <=  ('0') ;
+
+tmpOE__LED_GREEN_net_0 <=  ('1') ;
+
+LED_GREEN:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"ed092b9b-d398-4703-be89-cebf998501f6",
+		drive_mode=>"110",
+		ibuf_enabled=>"1",
+		init_dr_st=>"1",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"1",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"O",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"0",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"1",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1)
+	PORT MAP(oe=>(tmpOE__LED_GREEN_net_0),
+		y=>Net_64,
+		fb=>(tmpFB_0__LED_GREEN_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__LED_GREEN_net_0),
+		siovref=>(tmpSIOVREF__LED_GREEN_net_0),
+		annotation=>Net_56,
+		in_clock=>zero,
+		in_clock_en=>tmpOE__LED_GREEN_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__LED_GREEN_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__LED_GREEN_net_0);
+\CapSense_CSD:CSD_FFB\:cy_psoc4_csd_v1_0
+	GENERIC MAP(cy_registers=>"",
+		sensors_count=>5,
+		shield_count=>1,
+		is_mutual=>'0',
+		is_cmod_charge=>'0',
+		is_csh_charge=>'0')
+	PORT MAP(source=>(\CapSense_CSD:Net_245_4\, \CapSense_CSD:Net_245_3\, \CapSense_CSD:Net_245_2\, \CapSense_CSD:Net_245_1\,
+			\CapSense_CSD:Net_245_0\),
+		shield=>\CapSense_CSD:Net_241\,
+		amuxa=>\CapSense_CSD:Net_270\,
+		csh=>\CapSense_CSD:Net_246\,
+		cmod=>\CapSense_CSD:Net_398\,
+		sense_out=>\CapSense_CSD:Net_329\,
+		sample_out=>\CapSense_CSD:Net_328\,
+		sense_in=>zero,
+		clk1=>\CapSense_CSD:Net_429\,
+		clk2=>\CapSense_CSD:Net_420\,
+		irq=>\CapSense_CSD:Net_248\,
+		sample_in=>zero);
+\CapSense_CSD:SampleClk\:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"f11cf583-f169-4b4e-8b05-530256f64bff/74063576-f256-4f8f-8a82-9abdee876261",
+		source_clock_id=>"413DE2EF-D9F2-4233-A808-DFAF137FD877",
+		divisor=>255,
+		period=>"0",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>\CapSense_CSD:Net_420\,
+		dig_domain_out=>open);
+\CapSense_CSD:Cmod\:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"f11cf583-f169-4b4e-8b05-530256f64bff/899719c0-e797-4403-a44f-07a66de2cbeb",
+		drive_mode=>"000",
+		ibuf_enabled=>"0",
+		init_dr_st=>"1",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"Cmod",
+		pin_mode=>"A",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"0",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1)
+	PORT MAP(oe=>(tmpOE__LED_GREEN_net_0),
+		y=>(zero),
+		fb=>(\CapSense_CSD:tmpFB_0__Cmod_net_0\),
+		analog=>\CapSense_CSD:Net_398\,
+		io=>(\CapSense_CSD:tmpIO_0__Cmod_net_0\),
+		siovref=>(\CapSense_CSD:tmpSIOVREF__Cmod_net_0\),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__LED_GREEN_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__LED_GREEN_net_0,
+		out_reset=>zero,
+		interrupt=>\CapSense_CSD:tmpINTERRUPT_0__Cmod_net_0\);
+\CapSense_CSD:ISR\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10")
+	PORT MAP(int_signal=>\CapSense_CSD:Net_248\);
+\CapSense_CSD:IDAC2:cy_psoc4_idac\:cy_psoc4_csidac_v1_0
+	GENERIC MAP(cy_registers=>"",
+		resolution=>7)
+	PORT MAP(iout=>\CapSense_CSD:Net_270\,
+		en=>tmpOE__LED_GREEN_net_0);
+\CapSense_CSD:Sns\:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"f11cf583-f169-4b4e-8b05-530256f64bff/73b612cd-240c-4d8e-8340-ea28aabf4b11",
+		drive_mode=>"000000000000000",
+		ibuf_enabled=>"00000",
+		init_dr_st=>"11111",
+		input_sync=>"11111",
+		input_clk_en=>'0',
+		input_sync_mode=>"00000",
+		intr_mode=>"0000000000",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>",,,,",
+		layout_mode=>"NONCONTIGUOUS",
+		output_conn=>"00000",
+		output_sync=>"00000",
+		output_clk_en=>'0',
+		output_mode=>"00000",
+		output_reset=>'0',
+		output_clock_mode=>"00000",
+		oe_sync=>"00000",
+		oe_conn=>"00000",
+		oe_reset=>'0',
+		pin_aliases=>"LinearSlider0_e0__LS,LinearSlider0_e1__LS,LinearSlider0_e2__LS,LinearSlider0_e3__LS,LinearSlider0_e4__LS",
+		pin_mode=>"AAAAA",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"00000",
+		sio_ibuf=>"00000000",
+		sio_info=>"0000000000",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		slew_rate=>"00000",
+		spanning=>'1',
+		sw_only=>'0',
+		vtrip=>"1010101010",
+		width=>5,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"00000",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1)
+	PORT MAP(oe=>(tmpOE__LED_GREEN_net_0, tmpOE__LED_GREEN_net_0, tmpOE__LED_GREEN_net_0, tmpOE__LED_GREEN_net_0,
+			tmpOE__LED_GREEN_net_0),
+		y=>(zero, zero, zero, zero,
+			zero),
+		fb=>(\CapSense_CSD:tmpFB_4__Sns_net_4\, \CapSense_CSD:tmpFB_4__Sns_net_3\, \CapSense_CSD:tmpFB_4__Sns_net_2\, \CapSense_CSD:tmpFB_4__Sns_net_1\,
+			\CapSense_CSD:tmpFB_4__Sns_net_0\),
+		analog=>(\CapSense_CSD:Net_245_4\, \CapSense_CSD:Net_245_3\, \CapSense_CSD:Net_245_2\, \CapSense_CSD:Net_245_1\,
+			\CapSense_CSD:Net_245_0\),
+		io=>(\CapSense_CSD:tmpIO_4__Sns_net_4\, \CapSense_CSD:tmpIO_4__Sns_net_3\, \CapSense_CSD:tmpIO_4__Sns_net_2\, \CapSense_CSD:tmpIO_4__Sns_net_1\,
+			\CapSense_CSD:tmpIO_4__Sns_net_0\),
+		siovref=>(\CapSense_CSD:tmpSIOVREF__Sns_net_0\),
+		annotation=>(open, open, open, open,
+			open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__LED_GREEN_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__LED_GREEN_net_0,
+		out_reset=>zero,
+		interrupt=>\CapSense_CSD:tmpINTERRUPT_0__Sns_net_0\);
+\CapSense_CSD:IDAC1:cy_psoc4_idac\:cy_psoc4_csidac_v1_0
+	GENERIC MAP(cy_registers=>"",
+		resolution=>8)
+	PORT MAP(iout=>\CapSense_CSD:Net_270\,
+		en=>tmpOE__LED_GREEN_net_0);
+\CapSense_CSD:SenseClk\:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"f11cf583-f169-4b4e-8b05-530256f64bff/9a635726-510c-483c-9c5c-3e233ee2906a",
+		source_clock_id=>"413DE2EF-D9F2-4233-A808-DFAF137FD877",
+		divisor=>255,
+		period=>"0",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>\CapSense_CSD:Net_429\,
+		dig_domain_out=>open);
+LED_RED:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"74cbd069-96d1-46de-b032-5f29e3b18053",
+		drive_mode=>"110",
+		ibuf_enabled=>"1",
+		init_dr_st=>"1",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"1",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"O",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"",
+		sio_hyst=>"0",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"1",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1)
+	PORT MAP(oe=>(tmpOE__LED_GREEN_net_0),
+		y=>Net_311,
+		fb=>(tmpFB_0__LED_RED_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__LED_RED_net_0),
+		siovref=>(tmpSIOVREF__LED_RED_net_0),
+		annotation=>Net_46,
+		in_clock=>zero,
+		in_clock_en=>tmpOE__LED_GREEN_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__LED_GREEN_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__LED_RED_net_0);
+Clock_PWM:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"bded6784-be67-4985-b3f5-c9d64207a569",
+		source_clock_id=>"",
+		divisor=>0,
+		period=>"83333333.3333333",
+		is_direct=>'0',
+		is_digital=>'0')
+	PORT MAP(clock_out=>Net_225,
+		dig_domain_out=>open);
+\LED_CONTROL:cy_m0s8_tcpwm_1\:cy_m0s8_tcpwm_v1_0
+	GENERIC MAP(cy_registers=>"")
+	PORT MAP(clock=>Net_225,
+		capture=>zero,
+		count=>tmpOE__LED_GREEN_net_0,
+		reload=>zero,
+		stop=>zero,
+		start=>zero,
+		underflow=>Net_309,
+		overflow=>Net_308,
+		compare_match=>Net_310,
+		line_out=>Net_64,
+		line_out_compl=>Net_311,
+		interrupt=>Net_307);
+D_2:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"LED_v1_0",
+		port_names=>"A, K",
+		width=>2)
+	PORT MAP(connect=>(Net_316, Net_46));
+Resistor_Green:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_49, Net_316));
+VDD_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Power_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_49);
+D_3:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"LED_v1_0",
+		port_names=>"A, K",
+		width=>2)
+	PORT MAP(connect=>(Net_317, Net_56));
+Resistor_Red:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_52, Net_317));
+VDD_2:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Power_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_52);
+
+END R_T_L;

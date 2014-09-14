@@ -21,6 +21,45 @@
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Clock_1.h" value="NONE;Clock_1" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Status_Reg_1.c" value="ARM_C_FILE;Status_Reg_1" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Status_Reg_1.h" value="NONE;Status_Reg_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1.c" value="ARM_C_FILE;CapSense_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1.h" value="NONE;CapSense_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_PM.c" value="ARM_C_FILE;CapSense_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_CSHL.c" value="ARM_C_FILE;CapSense_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_CSHL.h" value="NONE;CapSense_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_INT.c" value="ARM_C_FILE;CapSense_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_TunerHelper.c" value="ARM_C_FILE;CapSense_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_TunerHelper.h" value="NONE;CapSense_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_SMS.c" value="ARM_C_FILE;CapSense_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_SMS.h" value="NONE;CapSense_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_PVT.h" value="NONE;CapSense_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_IP.h" value="NONE;CapSense_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\PWM_1.c" value="ARM_C_FILE;PWM_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\PWM_1.h" value="NONE;PWM_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\PWM_1_PM.c" value="ARM_C_FILE;PWM_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Clock_3.c" value="ARM_C_FILE;Clock_3" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Clock_3.h" value="NONE;Clock_3" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\LED_G.c" value="ARM_C_FILE;LED_G" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\LED_G.h" value="NONE;LED_G" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\LED_G_aliases.h" value="NONE;LED_G" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Pin_SW.c" value="ARM_C_FILE;Pin_SW" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Pin_SW.h" value="NONE;Pin_SW" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Pin_SW_aliases.h" value="NONE;Pin_SW" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\LED_R.c" value="ARM_C_FILE;LED_R" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\LED_R.h" value="NONE;LED_R" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\LED_R_aliases.h" value="NONE;LED_R" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\PWM_2.c" value="ARM_C_FILE;PWM_2" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\PWM_2.h" value="NONE;PWM_2" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\PWM_2_PM.c" value="ARM_C_FILE;PWM_2" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Clock_4.c" value="ARM_C_FILE;Clock_4" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Clock_4.h" value="NONE;Clock_4" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\LED_B.c" value="ARM_C_FILE;LED_B" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\LED_B.h" value="NONE;LED_B" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\LED_B_aliases.h" value="NONE;LED_B" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_SampleClk.c" value="ARM_C_FILE;CapSense_1_SampleClk" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_SampleClk.h" value="NONE;CapSense_1_SampleClk" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_Sns_aliases.h" value="NONE;CapSense_1_Sns" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_SenseClk.c" value="ARM_C_FILE;CapSense_1_SenseClk" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\CapSense_1_SenseClk.h" value="NONE;CapSense_1_SenseClk" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\cm0gcc.ld" value="NONE;cy_boot" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Cm0RealView.scat" value="NONE;cy_boot" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Cm0Start.c" value="ARM_C_FILE;cy_boot" />

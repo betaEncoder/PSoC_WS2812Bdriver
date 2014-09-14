@@ -69,8 +69,47 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\core_cmInstr.h</File>
           <File BuildType="BUILD" Toolchain="IAR EWARM">.\Generated_Source\PSoC4\CyBootAsmIar.s</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\project.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\PWM_1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\PWM_1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\PWM_1_PM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Status_Reg_1.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Status_Reg_1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_CSHL.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_CSHL.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_TunerHelper.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_TunerHelper.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_SMS.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_SMS.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_IP.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_SampleClk.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_SampleClk.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_Sns_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_SenseClk.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CapSense_1_SenseClk.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_G.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_G.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_G_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Pin_SW.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Pin_SW.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Pin_SW_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_R.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_R.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_R_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\PWM_2.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\PWM_2.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\PWM_2_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_B.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_B.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\LED_B_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Clock_3.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Clock_3.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Clock_4.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Clock_4.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\prebuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\postbuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyElfTool.exe</File>

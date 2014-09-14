@@ -51,7 +51,7 @@ assign PulseOut = pg_out;
 assign BUSY = |{shifter_state, pg_state};
 assign FIFO_EMPTY = shifter_f0_empty;
 assign FIFO_FULL = !shifter_f0_notfull;
-assign comp_val = shift_out?8'd5:8'd17;
+assign comp_val = shift_out?8'd8:8'd16;
 
 // pulseGen state machine
 always @ (posedge CLK) begin

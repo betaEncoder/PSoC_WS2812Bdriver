@@ -1,0 +1,8 @@
+--------------- Build Started: 09/14/2014 21:49:44 Project: CapSense_CSD_P4_Design01, Configuration: ARM GCC 4.7.3 Debug ---------------
+The code generation step is up to date.
+The compile step is up to date, no work needs to be done.
+The link step is up to date, no work needs to be done.
+cyelftool.exe -S "C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\CapSense_CSD_P4_Design01.cydsn\CortexM0\ARM_GCC_473\Debug\CapSense_CSD_P4_Design01.elf"
+Flash used: 9054 of 32768 bytes (27.6%).
+SRAM used: 1820 of 4096 bytes (44.4%).
+--------------- Build Succeeded: 09/14/2014 21:49:45 ---------------

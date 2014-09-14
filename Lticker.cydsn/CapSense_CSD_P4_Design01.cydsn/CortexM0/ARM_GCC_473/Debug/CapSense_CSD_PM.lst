@@ -1,0 +1,943 @@
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"CapSense_CSD_PM.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.bss
+  18              		.align	2
+  19              	CapSense_CSD_backup:
+  20 0000 00       		.space	1
+  21 0001 000000   		.section	.text.CapSense_CSD_SaveConfig,"ax",%progbits
+  22              		.align	2
+  23              		.global	CapSense_CSD_SaveConfig
+  24              		.code	16
+  25              		.thumb_func
+  26              		.type	CapSense_CSD_SaveConfig, %function
+  27              	CapSense_CSD_SaveConfig:
+  28              	.LFB33:
+  29              		.file 1 ".\\Generated_Source\\PSoC4\\CapSense_CSD_PM.c"
+   1:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * File Name: CapSense_CSD_PM.c
+   3:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Version 2.0
+   4:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+   5:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Description:
+   6:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  This file provides Sleep APIs for CapSense CSD Component.
+   7:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+   8:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Note:
+   9:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  10:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** ********************************************************************************
+  11:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Copyright 2014, Cypress Semiconductor Corporation.  All rights reserved.
+  12:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * the software package with which this file was provided.
+  15:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *******************************************************************************/
+  16:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 
+  17:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** #include "CapSense_CSD.h"
+  18:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 
+  19:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** static CapSense_CSD_BACKUP_STRUCT CapSense_CSD_backup =
+  20:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** {   
+  21:.\Generated_Source\PSoC4/CapSense_CSD_PM.c ****     0x00u, /* enableState; */
+  22:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** };
+  23:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 
+  24:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 
+  25:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** /*******************************************************************************
+  26:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Function Name: CapSense_CSD_SaveConfig
+  27:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** ********************************************************************************
+  28:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 2
+
+
+  29:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Summary:
+  30:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  Saves the customer configuration of CapSense.
+  31:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  32:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Parameters:
+  33:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  None
+  34:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  35:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Return:
+  36:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  None
+  37:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  38:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Global Variables:
+  39:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  CapSense_CSD_backup - used to save the component state before entering the  sleep 
+  40:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  mode and none-retention registers.
+  41:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  42:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Side Effects:
+  43:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  None
+  44:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  45:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *******************************************************************************/
+  46:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** void CapSense_CSD_SaveConfig(void)
+  47:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** {
+  30              		.loc 1 47 0
+  31              		.cfi_startproc
+  32 0000 80B5     		push	{r7, lr}
+  33              	.LCFI0:
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 7, -8
+  36              		.cfi_offset 14, -4
+  37 0002 00AF     		add	r7, sp, #0
+  38              	.LCFI1:
+  39              		.cfi_def_cfa_register 7
+  48:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	if ((CapSense_CSD_CSD_CFG_REG & CapSense_CSD_CSD_CFG_ENABLE) != 0u)
+  40              		.loc 1 48 0
+  41 0004 044B     		ldr	r3, .L3
+  42 0006 1B68     		ldr	r3, [r3]
+  43 0008 002B     		cmp	r3, #0
+  44 000a 02DA     		bge	.L1
+  49:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	{
+  50:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 		CapSense_CSD_backup.enableState = 1u;
+  45              		.loc 1 50 0
+  46 000c 034B     		ldr	r3, .L3+4
+  47 000e 0122     		mov	r2, #1
+  48 0010 1A70     		strb	r2, [r3]
+  49              	.L1:
+  51:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	}
+  52:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** }
+  50              		.loc 1 52 0
+  51 0012 BD46     		mov	sp, r7
+  52              		@ sp needed for prologue
+  53 0014 80BD     		pop	{r7, pc}
+  54              	.L4:
+  55 0016 C046     		.align	2
+  56              	.L3:
+  57 0018 04000840 		.word	1074266116
+  58 001c 00000000 		.word	CapSense_CSD_backup
+  59              		.cfi_endproc
+  60              	.LFE33:
+  61              		.size	CapSense_CSD_SaveConfig, .-CapSense_CSD_SaveConfig
+  62              		.section	.text.CapSense_CSD_Sleep,"ax",%progbits
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 3
+
+
+  63              		.align	2
+  64              		.global	CapSense_CSD_Sleep
+  65              		.code	16
+  66              		.thumb_func
+  67              		.type	CapSense_CSD_Sleep, %function
+  68              	CapSense_CSD_Sleep:
+  69              	.LFB34:
+  53:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 
+  54:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 
+  55:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** /*******************************************************************************
+  56:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Function Name: CapSense_CSD_Sleep
+  57:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** ********************************************************************************
+  58:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  59:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Summary:
+  60:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  Disables the Active mode power.
+  61:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  62:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Parameters:
+  63:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  None
+  64:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  65:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Return:
+  66:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  None
+  67:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  68:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Global Variables:
+  69:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  CapSense_CSD_backup - used to save the component state before entering the sleep 
+  70:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  mode.
+  71:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  72:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *******************************************************************************/
+  73:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** void CapSense_CSD_Sleep(void)
+  74:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** {
+  70              		.loc 1 74 0
+  71              		.cfi_startproc
+  72 0000 80B5     		push	{r7, lr}
+  73              	.LCFI2:
+  74              		.cfi_def_cfa_offset 8
+  75              		.cfi_offset 7, -8
+  76              		.cfi_offset 14, -4
+  77 0002 00AF     		add	r7, sp, #0
+  78              	.LCFI3:
+  79              		.cfi_def_cfa_register 7
+  75:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	CapSense_CSD_SaveConfig();
+  80              		.loc 1 75 0
+  81 0004 FFF7FEFF 		bl	CapSense_CSD_SaveConfig
+  76:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 		
+  77:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	/* Disable interrupt */
+  78:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	CyIntDisable(CapSense_CSD_ISR_NUMBER);
+  82              		.loc 1 78 0
+  83 0008 0F20     		mov	r0, #15
+  84 000a FFF7FEFF 		bl	CyIntDisable
+  79:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	
+  80:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	CapSense_CSD_CSD_CFG_REG &= ~(CapSense_CSD_CSD_CFG_SENSE_COMP_EN | CapSense_CSD_CSD_CFG_SENSE_EN);
+  85              		.loc 1 80 0
+  86 000e 094B     		ldr	r3, .L6
+  87 0010 084A     		ldr	r2, .L6
+  88 0012 1168     		ldr	r1, [r2]
+  89 0014 084A     		ldr	r2, .L6+4
+  90 0016 0A40     		and	r2, r1
+  91 0018 1A60     		str	r2, [r3]
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 4
+
+
+  81:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	
+  82:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	#if(CapSense_CSD_IDAC_CNT == 2u)
+  83:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 		CapSense_CSD_CSD_CFG_REG &= ~(CapSense_CSD_CSD_CFG_ENABLE);
+  92              		.loc 1 83 0
+  93 001a 064B     		ldr	r3, .L6
+  94 001c 054A     		ldr	r2, .L6
+  95 001e 1268     		ldr	r2, [r2]
+  96 0020 5200     		lsl	r2, r2, #1
+  97 0022 5208     		lsr	r2, r2, #1
+  98 0024 1A60     		str	r2, [r3]
+  84:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	#endif /* (CapSense_CSD_IDAC_CNT == 2u) */
+  85:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	
+  86:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	/* Disable Clocks */
+  87:.\Generated_Source\PSoC4/CapSense_CSD_PM.c ****     CapSense_CSD_SenseClk_Stop();
+  99              		.loc 1 87 0
+ 100 0026 FFF7FEFF 		bl	CapSense_CSD_SenseClk_Stop
+  88:.\Generated_Source\PSoC4/CapSense_CSD_PM.c ****     CapSense_CSD_SampleClk_Stop();
+ 101              		.loc 1 88 0
+ 102 002a FFF7FEFF 		bl	CapSense_CSD_SampleClk_Stop
+  89:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** }
+ 103              		.loc 1 89 0
+ 104 002e BD46     		mov	sp, r7
+ 105              		@ sp needed for prologue
+ 106 0030 80BD     		pop	{r7, pc}
+ 107              	.L7:
+ 108 0032 C046     		.align	2
+ 109              	.L6:
+ 110 0034 04000840 		.word	1074266116
+ 111 0038 FFEFF7FF 		.word	-528385
+ 112              		.cfi_endproc
+ 113              	.LFE34:
+ 114              		.size	CapSense_CSD_Sleep, .-CapSense_CSD_Sleep
+ 115              		.section	.text.CapSense_CSD_RestoreConfig,"ax",%progbits
+ 116              		.align	2
+ 117              		.global	CapSense_CSD_RestoreConfig
+ 118              		.code	16
+ 119              		.thumb_func
+ 120              		.type	CapSense_CSD_RestoreConfig, %function
+ 121              	CapSense_CSD_RestoreConfig:
+ 122              	.LFB35:
+  90:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 
+  91:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 
+  92:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** /*******************************************************************************
+  93:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Function Name: CapSense_CSD_RestoreConfig
+  94:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** ********************************************************************************
+  95:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  96:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Summary:
+  97:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  Restores the CapSense configuration.
+  98:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+  99:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Parameters:
+ 100:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  None
+ 101:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+ 102:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Return:
+ 103:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  None
+ 104:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+ 105:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Side Effects:
+ 106:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  Must be called only after CapSense_CSD_SaveConfig() routine. Otherwise 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 5
+
+
+ 107:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  the component configuration will be overwritten with its initial setting.  
+ 108:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+ 109:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Global Variables:
+ 110:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  CapSense_CSD_backup - used to save the component state before entering the sleep 
+ 111:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  mode and none-retention registers.
+ 112:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+ 113:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *******************************************************************************/
+ 114:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** void CapSense_CSD_RestoreConfig(void)
+ 115:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** {
+ 123              		.loc 1 115 0
+ 124              		.cfi_startproc
+ 125 0000 80B5     		push	{r7, lr}
+ 126              	.LCFI4:
+ 127              		.cfi_def_cfa_offset 8
+ 128              		.cfi_offset 7, -8
+ 129              		.cfi_offset 14, -4
+ 130 0002 00AF     		add	r7, sp, #0
+ 131              	.LCFI5:
+ 132              		.cfi_def_cfa_register 7
+ 116:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 
+ 117:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** }
+ 133              		.loc 1 117 0
+ 134 0004 BD46     		mov	sp, r7
+ 135              		@ sp needed for prologue
+ 136 0006 80BD     		pop	{r7, pc}
+ 137              		.cfi_endproc
+ 138              	.LFE35:
+ 139              		.size	CapSense_CSD_RestoreConfig, .-CapSense_CSD_RestoreConfig
+ 140              		.section	.text.CapSense_CSD_Wakeup,"ax",%progbits
+ 141              		.align	2
+ 142              		.global	CapSense_CSD_Wakeup
+ 143              		.code	16
+ 144              		.thumb_func
+ 145              		.type	CapSense_CSD_Wakeup, %function
+ 146              	CapSense_CSD_Wakeup:
+ 147              	.LFB36:
+ 118:.\Generated_Source\PSoC4/CapSense_CSD_PM.c ****  
+ 119:.\Generated_Source\PSoC4/CapSense_CSD_PM.c ****  
+ 120:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** /*******************************************************************************
+ 121:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Function Name: CapSense_CSD_Wakeup
+ 122:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** ********************************************************************************
+ 123:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+ 124:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Summary:
+ 125:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  Restores the CapSense configuration and non-retention register values. 
+ 126:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  Restores the enabled state of the component by setting the Active mode power template 
+ 127:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  bits for a number of components used within CapSense.
+ 128:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+ 129:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Parameters:
+ 130:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  None
+ 131:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+ 132:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Return:
+ 133:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  None
+ 134:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+ 135:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** * Global Variables:
+ 136:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  CapSense_CSD_backup - used to save the component state before entering the sleep 
+ 137:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *  mode and none-retention registers.
+ 138:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 6
+
+
+ 139:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** *******************************************************************************/
+ 140:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** void CapSense_CSD_Wakeup(void)
+ 141:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** {
+ 148              		.loc 1 141 0
+ 149              		.cfi_startproc
+ 150 0000 80B5     		push	{r7, lr}
+ 151              	.LCFI6:
+ 152              		.cfi_def_cfa_offset 8
+ 153              		.cfi_offset 7, -8
+ 154              		.cfi_offset 14, -4
+ 155 0002 00AF     		add	r7, sp, #0
+ 156              	.LCFI7:
+ 157              		.cfi_def_cfa_register 7
+ 142:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	/* Enable the Clocks */
+ 143:.\Generated_Source\PSoC4/CapSense_CSD_PM.c ****     CapSense_CSD_SenseClk_Start();
+ 158              		.loc 1 143 0
+ 159 0004 FFF7FEFF 		bl	CapSense_CSD_SenseClk_Start
+ 144:.\Generated_Source\PSoC4/CapSense_CSD_PM.c ****     CapSense_CSD_SampleClk_Start();
+ 160              		.loc 1 144 0
+ 161 0008 FFF7FEFF 		bl	CapSense_CSD_SampleClk_Start
+ 145:.\Generated_Source\PSoC4/CapSense_CSD_PM.c ****     
+ 146:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** 	/* Restore CapSense Enable state */
+ 147:.\Generated_Source\PSoC4/CapSense_CSD_PM.c ****     if (CapSense_CSD_backup.enableState != 0u)
+ 162              		.loc 1 147 0
+ 163 000c 034B     		ldr	r3, .L11
+ 164 000e 1B78     		ldrb	r3, [r3]
+ 165 0010 002B     		cmp	r3, #0
+ 166 0012 01D0     		beq	.L9
+ 148:.\Generated_Source\PSoC4/CapSense_CSD_PM.c ****     {
+ 149:.\Generated_Source\PSoC4/CapSense_CSD_PM.c ****         CapSense_CSD_Enable();
+ 167              		.loc 1 149 0
+ 168 0014 FFF7FEFF 		bl	CapSense_CSD_Enable
+ 169              	.L9:
+ 150:.\Generated_Source\PSoC4/CapSense_CSD_PM.c ****     }
+ 151:.\Generated_Source\PSoC4/CapSense_CSD_PM.c **** }
+ 170              		.loc 1 151 0
+ 171 0018 BD46     		mov	sp, r7
+ 172              		@ sp needed for prologue
+ 173 001a 80BD     		pop	{r7, pc}
+ 174              	.L12:
+ 175              		.align	2
+ 176              	.L11:
+ 177 001c 00000000 		.word	CapSense_CSD_backup
+ 178              		.cfi_endproc
+ 179              	.LFE36:
+ 180              		.size	CapSense_CSD_Wakeup, .-CapSense_CSD_Wakeup
+ 181              		.text
+ 182              	.Letext0:
+ 183              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 184              		.file 3 ".\\Generated_Source\\PSoC4\\CapSense_CSD.h"
+ 185              		.section	.debug_info,"",%progbits
+ 186              	.Ldebug_info0:
+ 187 0000 39010000 		.4byte	0x139
+ 188 0004 0200     		.2byte	0x2
+ 189 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 190 000a 04       		.byte	0x4
+ 191 000b 01       		.uleb128 0x1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 7
+
+
+ 192 000c 63010000 		.4byte	.LASF21
+ 193 0010 01       		.byte	0x1
+ 194 0011 2E000000 		.4byte	.LASF22
+ 195 0015 BB000000 		.4byte	.LASF23
+ 196 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 197 001d 00000000 		.4byte	0
+ 198 0021 00000000 		.4byte	0
+ 199 0025 00000000 		.4byte	.Ldebug_line0
+ 200 0029 02       		.uleb128 0x2
+ 201 002a 01       		.byte	0x1
+ 202 002b 06       		.byte	0x6
+ 203 002c D5010000 		.4byte	.LASF0
+ 204 0030 02       		.uleb128 0x2
+ 205 0031 01       		.byte	0x1
+ 206 0032 08       		.byte	0x8
+ 207 0033 3C010000 		.4byte	.LASF1
+ 208 0037 02       		.uleb128 0x2
+ 209 0038 02       		.byte	0x2
+ 210 0039 05       		.byte	0x5
+ 211 003a 0E020000 		.4byte	.LASF2
+ 212 003e 02       		.uleb128 0x2
+ 213 003f 02       		.byte	0x2
+ 214 0040 07       		.byte	0x7
+ 215 0041 C2010000 		.4byte	.LASF3
+ 216 0045 02       		.uleb128 0x2
+ 217 0046 04       		.byte	0x4
+ 218 0047 05       		.byte	0x5
+ 219 0048 AC010000 		.4byte	.LASF4
+ 220 004c 02       		.uleb128 0x2
+ 221 004d 04       		.byte	0x4
+ 222 004e 07       		.byte	0x7
+ 223 004f 5F000000 		.4byte	.LASF5
+ 224 0053 02       		.uleb128 0x2
+ 225 0054 08       		.byte	0x8
+ 226 0055 05       		.byte	0x5
+ 227 0056 00000000 		.4byte	.LASF6
+ 228 005a 02       		.uleb128 0x2
+ 229 005b 08       		.byte	0x8
+ 230 005c 07       		.byte	0x7
+ 231 005d 71000000 		.4byte	.LASF7
+ 232 0061 03       		.uleb128 0x3
+ 233 0062 04       		.byte	0x4
+ 234 0063 05       		.byte	0x5
+ 235 0064 696E7400 		.ascii	"int\000"
+ 236 0068 02       		.uleb128 0x2
+ 237 0069 04       		.byte	0x4
+ 238 006a 07       		.byte	0x7
+ 239 006b 21000000 		.4byte	.LASF8
+ 240 006f 04       		.uleb128 0x4
+ 241 0070 59000000 		.4byte	.LASF9
+ 242 0074 02       		.byte	0x2
+ 243 0075 5B       		.byte	0x5b
+ 244 0076 30000000 		.4byte	0x30
+ 245 007a 04       		.uleb128 0x4
+ 246 007b 0E000000 		.4byte	.LASF10
+ 247 007f 02       		.byte	0x2
+ 248 0080 5D       		.byte	0x5d
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 8
+
+
+ 249 0081 4C000000 		.4byte	0x4c
+ 250 0085 02       		.uleb128 0x2
+ 251 0086 04       		.byte	0x4
+ 252 0087 04       		.byte	0x4
+ 253 0088 F4010000 		.4byte	.LASF11
+ 254 008c 02       		.uleb128 0x2
+ 255 008d 08       		.byte	0x8
+ 256 008e 04       		.byte	0x4
+ 257 008f B5010000 		.4byte	.LASF12
+ 258 0093 02       		.uleb128 0x2
+ 259 0094 01       		.byte	0x1
+ 260 0095 08       		.byte	0x8
+ 261 0096 5E010000 		.4byte	.LASF13
+ 262 009a 04       		.uleb128 0x4
+ 263 009b BC010000 		.4byte	.LASF14
+ 264 009f 02       		.byte	0x2
+ 265 00a0 F2       		.byte	0xf2
+ 266 00a1 A5000000 		.4byte	0xa5
+ 267 00a5 05       		.uleb128 0x5
+ 268 00a6 7A000000 		.4byte	0x7a
+ 269 00aa 02       		.uleb128 0x2
+ 270 00ab 04       		.byte	0x4
+ 271 00ac 07       		.byte	0x7
+ 272 00ad 18020000 		.4byte	.LASF15
+ 273 00b1 06       		.uleb128 0x6
+ 274 00b2 01       		.byte	0x1
+ 275 00b3 03       		.byte	0x3
+ 276 00b4 91       		.byte	0x91
+ 277 00b5 C8000000 		.4byte	0xc8
+ 278 00b9 07       		.uleb128 0x7
+ 279 00ba 15000000 		.4byte	.LASF24
+ 280 00be 03       		.byte	0x3
+ 281 00bf 93       		.byte	0x93
+ 282 00c0 6F000000 		.4byte	0x6f
+ 283 00c4 02       		.byte	0x2
+ 284 00c5 23       		.byte	0x23
+ 285 00c6 00       		.uleb128 0
+ 286 00c7 00       		.byte	0
+ 287 00c8 04       		.uleb128 0x4
+ 288 00c9 21010000 		.4byte	.LASF16
+ 289 00cd 03       		.byte	0x3
+ 290 00ce 94       		.byte	0x94
+ 291 00cf B1000000 		.4byte	0xb1
+ 292 00d3 08       		.uleb128 0x8
+ 293 00d4 01       		.byte	0x1
+ 294 00d5 A3000000 		.4byte	.LASF17
+ 295 00d9 01       		.byte	0x1
+ 296 00da 2E       		.byte	0x2e
+ 297 00db 01       		.byte	0x1
+ 298 00dc 00000000 		.4byte	.LFB33
+ 299 00e0 20000000 		.4byte	.LFE33
+ 300 00e4 00000000 		.4byte	.LLST0
+ 301 00e8 01       		.byte	0x1
+ 302 00e9 09       		.uleb128 0x9
+ 303 00ea 01       		.byte	0x1
+ 304 00eb E1010000 		.4byte	.LASF18
+ 305 00ef 01       		.byte	0x1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 9
+
+
+ 306 00f0 49       		.byte	0x49
+ 307 00f1 01       		.byte	0x1
+ 308 00f2 00000000 		.4byte	.LFB34
+ 309 00f6 3C000000 		.4byte	.LFE34
+ 310 00fa 2C000000 		.4byte	.LLST1
+ 311 00fe 01       		.byte	0x1
+ 312 00ff 08       		.uleb128 0x8
+ 313 0100 01       		.byte	0x1
+ 314 0101 88000000 		.4byte	.LASF19
+ 315 0105 01       		.byte	0x1
+ 316 0106 72       		.byte	0x72
+ 317 0107 01       		.byte	0x1
+ 318 0108 00000000 		.4byte	.LFB35
+ 319 010c 08000000 		.4byte	.LFE35
+ 320 0110 58000000 		.4byte	.LLST2
+ 321 0114 01       		.byte	0x1
+ 322 0115 09       		.uleb128 0x9
+ 323 0116 01       		.byte	0x1
+ 324 0117 FA010000 		.4byte	.LASF20
+ 325 011b 01       		.byte	0x1
+ 326 011c 8C       		.byte	0x8c
+ 327 011d 01       		.byte	0x1
+ 328 011e 00000000 		.4byte	.LFB36
+ 329 0122 20000000 		.4byte	.LFE36
+ 330 0126 84000000 		.4byte	.LLST3
+ 331 012a 01       		.byte	0x1
+ 332 012b 0A       		.uleb128 0xa
+ 333 012c 4A010000 		.4byte	.LASF25
+ 334 0130 01       		.byte	0x1
+ 335 0131 13       		.byte	0x13
+ 336 0132 C8000000 		.4byte	0xc8
+ 337 0136 05       		.byte	0x5
+ 338 0137 03       		.byte	0x3
+ 339 0138 00000000 		.4byte	CapSense_CSD_backup
+ 340 013c 00       		.byte	0
+ 341              		.section	.debug_abbrev,"",%progbits
+ 342              	.Ldebug_abbrev0:
+ 343 0000 01       		.uleb128 0x1
+ 344 0001 11       		.uleb128 0x11
+ 345 0002 01       		.byte	0x1
+ 346 0003 25       		.uleb128 0x25
+ 347 0004 0E       		.uleb128 0xe
+ 348 0005 13       		.uleb128 0x13
+ 349 0006 0B       		.uleb128 0xb
+ 350 0007 03       		.uleb128 0x3
+ 351 0008 0E       		.uleb128 0xe
+ 352 0009 1B       		.uleb128 0x1b
+ 353 000a 0E       		.uleb128 0xe
+ 354 000b 55       		.uleb128 0x55
+ 355 000c 06       		.uleb128 0x6
+ 356 000d 11       		.uleb128 0x11
+ 357 000e 01       		.uleb128 0x1
+ 358 000f 52       		.uleb128 0x52
+ 359 0010 01       		.uleb128 0x1
+ 360 0011 10       		.uleb128 0x10
+ 361 0012 06       		.uleb128 0x6
+ 362 0013 00       		.byte	0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 10
+
+
+ 363 0014 00       		.byte	0
+ 364 0015 02       		.uleb128 0x2
+ 365 0016 24       		.uleb128 0x24
+ 366 0017 00       		.byte	0
+ 367 0018 0B       		.uleb128 0xb
+ 368 0019 0B       		.uleb128 0xb
+ 369 001a 3E       		.uleb128 0x3e
+ 370 001b 0B       		.uleb128 0xb
+ 371 001c 03       		.uleb128 0x3
+ 372 001d 0E       		.uleb128 0xe
+ 373 001e 00       		.byte	0
+ 374 001f 00       		.byte	0
+ 375 0020 03       		.uleb128 0x3
+ 376 0021 24       		.uleb128 0x24
+ 377 0022 00       		.byte	0
+ 378 0023 0B       		.uleb128 0xb
+ 379 0024 0B       		.uleb128 0xb
+ 380 0025 3E       		.uleb128 0x3e
+ 381 0026 0B       		.uleb128 0xb
+ 382 0027 03       		.uleb128 0x3
+ 383 0028 08       		.uleb128 0x8
+ 384 0029 00       		.byte	0
+ 385 002a 00       		.byte	0
+ 386 002b 04       		.uleb128 0x4
+ 387 002c 16       		.uleb128 0x16
+ 388 002d 00       		.byte	0
+ 389 002e 03       		.uleb128 0x3
+ 390 002f 0E       		.uleb128 0xe
+ 391 0030 3A       		.uleb128 0x3a
+ 392 0031 0B       		.uleb128 0xb
+ 393 0032 3B       		.uleb128 0x3b
+ 394 0033 0B       		.uleb128 0xb
+ 395 0034 49       		.uleb128 0x49
+ 396 0035 13       		.uleb128 0x13
+ 397 0036 00       		.byte	0
+ 398 0037 00       		.byte	0
+ 399 0038 05       		.uleb128 0x5
+ 400 0039 35       		.uleb128 0x35
+ 401 003a 00       		.byte	0
+ 402 003b 49       		.uleb128 0x49
+ 403 003c 13       		.uleb128 0x13
+ 404 003d 00       		.byte	0
+ 405 003e 00       		.byte	0
+ 406 003f 06       		.uleb128 0x6
+ 407 0040 13       		.uleb128 0x13
+ 408 0041 01       		.byte	0x1
+ 409 0042 0B       		.uleb128 0xb
+ 410 0043 0B       		.uleb128 0xb
+ 411 0044 3A       		.uleb128 0x3a
+ 412 0045 0B       		.uleb128 0xb
+ 413 0046 3B       		.uleb128 0x3b
+ 414 0047 0B       		.uleb128 0xb
+ 415 0048 01       		.uleb128 0x1
+ 416 0049 13       		.uleb128 0x13
+ 417 004a 00       		.byte	0
+ 418 004b 00       		.byte	0
+ 419 004c 07       		.uleb128 0x7
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 11
+
+
+ 420 004d 0D       		.uleb128 0xd
+ 421 004e 00       		.byte	0
+ 422 004f 03       		.uleb128 0x3
+ 423 0050 0E       		.uleb128 0xe
+ 424 0051 3A       		.uleb128 0x3a
+ 425 0052 0B       		.uleb128 0xb
+ 426 0053 3B       		.uleb128 0x3b
+ 427 0054 0B       		.uleb128 0xb
+ 428 0055 49       		.uleb128 0x49
+ 429 0056 13       		.uleb128 0x13
+ 430 0057 38       		.uleb128 0x38
+ 431 0058 0A       		.uleb128 0xa
+ 432 0059 00       		.byte	0
+ 433 005a 00       		.byte	0
+ 434 005b 08       		.uleb128 0x8
+ 435 005c 2E       		.uleb128 0x2e
+ 436 005d 00       		.byte	0
+ 437 005e 3F       		.uleb128 0x3f
+ 438 005f 0C       		.uleb128 0xc
+ 439 0060 03       		.uleb128 0x3
+ 440 0061 0E       		.uleb128 0xe
+ 441 0062 3A       		.uleb128 0x3a
+ 442 0063 0B       		.uleb128 0xb
+ 443 0064 3B       		.uleb128 0x3b
+ 444 0065 0B       		.uleb128 0xb
+ 445 0066 27       		.uleb128 0x27
+ 446 0067 0C       		.uleb128 0xc
+ 447 0068 11       		.uleb128 0x11
+ 448 0069 01       		.uleb128 0x1
+ 449 006a 12       		.uleb128 0x12
+ 450 006b 01       		.uleb128 0x1
+ 451 006c 40       		.uleb128 0x40
+ 452 006d 06       		.uleb128 0x6
+ 453 006e 9742     		.uleb128 0x2117
+ 454 0070 0C       		.uleb128 0xc
+ 455 0071 00       		.byte	0
+ 456 0072 00       		.byte	0
+ 457 0073 09       		.uleb128 0x9
+ 458 0074 2E       		.uleb128 0x2e
+ 459 0075 00       		.byte	0
+ 460 0076 3F       		.uleb128 0x3f
+ 461 0077 0C       		.uleb128 0xc
+ 462 0078 03       		.uleb128 0x3
+ 463 0079 0E       		.uleb128 0xe
+ 464 007a 3A       		.uleb128 0x3a
+ 465 007b 0B       		.uleb128 0xb
+ 466 007c 3B       		.uleb128 0x3b
+ 467 007d 0B       		.uleb128 0xb
+ 468 007e 27       		.uleb128 0x27
+ 469 007f 0C       		.uleb128 0xc
+ 470 0080 11       		.uleb128 0x11
+ 471 0081 01       		.uleb128 0x1
+ 472 0082 12       		.uleb128 0x12
+ 473 0083 01       		.uleb128 0x1
+ 474 0084 40       		.uleb128 0x40
+ 475 0085 06       		.uleb128 0x6
+ 476 0086 9642     		.uleb128 0x2116
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 12
+
+
+ 477 0088 0C       		.uleb128 0xc
+ 478 0089 00       		.byte	0
+ 479 008a 00       		.byte	0
+ 480 008b 0A       		.uleb128 0xa
+ 481 008c 34       		.uleb128 0x34
+ 482 008d 00       		.byte	0
+ 483 008e 03       		.uleb128 0x3
+ 484 008f 0E       		.uleb128 0xe
+ 485 0090 3A       		.uleb128 0x3a
+ 486 0091 0B       		.uleb128 0xb
+ 487 0092 3B       		.uleb128 0x3b
+ 488 0093 0B       		.uleb128 0xb
+ 489 0094 49       		.uleb128 0x49
+ 490 0095 13       		.uleb128 0x13
+ 491 0096 02       		.uleb128 0x2
+ 492 0097 0A       		.uleb128 0xa
+ 493 0098 00       		.byte	0
+ 494 0099 00       		.byte	0
+ 495 009a 00       		.byte	0
+ 496              		.section	.debug_loc,"",%progbits
+ 497              	.Ldebug_loc0:
+ 498              	.LLST0:
+ 499 0000 00000000 		.4byte	.LFB33
+ 500 0004 02000000 		.4byte	.LCFI0
+ 501 0008 0200     		.2byte	0x2
+ 502 000a 7D       		.byte	0x7d
+ 503 000b 00       		.sleb128 0
+ 504 000c 02000000 		.4byte	.LCFI0
+ 505 0010 04000000 		.4byte	.LCFI1
+ 506 0014 0200     		.2byte	0x2
+ 507 0016 7D       		.byte	0x7d
+ 508 0017 08       		.sleb128 8
+ 509 0018 04000000 		.4byte	.LCFI1
+ 510 001c 20000000 		.4byte	.LFE33
+ 511 0020 0200     		.2byte	0x2
+ 512 0022 77       		.byte	0x77
+ 513 0023 08       		.sleb128 8
+ 514 0024 00000000 		.4byte	0
+ 515 0028 00000000 		.4byte	0
+ 516              	.LLST1:
+ 517 002c 00000000 		.4byte	.LFB34
+ 518 0030 02000000 		.4byte	.LCFI2
+ 519 0034 0200     		.2byte	0x2
+ 520 0036 7D       		.byte	0x7d
+ 521 0037 00       		.sleb128 0
+ 522 0038 02000000 		.4byte	.LCFI2
+ 523 003c 04000000 		.4byte	.LCFI3
+ 524 0040 0200     		.2byte	0x2
+ 525 0042 7D       		.byte	0x7d
+ 526 0043 08       		.sleb128 8
+ 527 0044 04000000 		.4byte	.LCFI3
+ 528 0048 3C000000 		.4byte	.LFE34
+ 529 004c 0200     		.2byte	0x2
+ 530 004e 77       		.byte	0x77
+ 531 004f 08       		.sleb128 8
+ 532 0050 00000000 		.4byte	0
+ 533 0054 00000000 		.4byte	0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 13
+
+
+ 534              	.LLST2:
+ 535 0058 00000000 		.4byte	.LFB35
+ 536 005c 02000000 		.4byte	.LCFI4
+ 537 0060 0200     		.2byte	0x2
+ 538 0062 7D       		.byte	0x7d
+ 539 0063 00       		.sleb128 0
+ 540 0064 02000000 		.4byte	.LCFI4
+ 541 0068 04000000 		.4byte	.LCFI5
+ 542 006c 0200     		.2byte	0x2
+ 543 006e 7D       		.byte	0x7d
+ 544 006f 08       		.sleb128 8
+ 545 0070 04000000 		.4byte	.LCFI5
+ 546 0074 08000000 		.4byte	.LFE35
+ 547 0078 0200     		.2byte	0x2
+ 548 007a 77       		.byte	0x77
+ 549 007b 08       		.sleb128 8
+ 550 007c 00000000 		.4byte	0
+ 551 0080 00000000 		.4byte	0
+ 552              	.LLST3:
+ 553 0084 00000000 		.4byte	.LFB36
+ 554 0088 02000000 		.4byte	.LCFI6
+ 555 008c 0200     		.2byte	0x2
+ 556 008e 7D       		.byte	0x7d
+ 557 008f 00       		.sleb128 0
+ 558 0090 02000000 		.4byte	.LCFI6
+ 559 0094 04000000 		.4byte	.LCFI7
+ 560 0098 0200     		.2byte	0x2
+ 561 009a 7D       		.byte	0x7d
+ 562 009b 08       		.sleb128 8
+ 563 009c 04000000 		.4byte	.LCFI7
+ 564 00a0 20000000 		.4byte	.LFE36
+ 565 00a4 0200     		.2byte	0x2
+ 566 00a6 77       		.byte	0x77
+ 567 00a7 08       		.sleb128 8
+ 568 00a8 00000000 		.4byte	0
+ 569 00ac 00000000 		.4byte	0
+ 570              		.section	.debug_aranges,"",%progbits
+ 571 0000 34000000 		.4byte	0x34
+ 572 0004 0200     		.2byte	0x2
+ 573 0006 00000000 		.4byte	.Ldebug_info0
+ 574 000a 04       		.byte	0x4
+ 575 000b 00       		.byte	0
+ 576 000c 0000     		.2byte	0
+ 577 000e 0000     		.2byte	0
+ 578 0010 00000000 		.4byte	.LFB33
+ 579 0014 20000000 		.4byte	.LFE33-.LFB33
+ 580 0018 00000000 		.4byte	.LFB34
+ 581 001c 3C000000 		.4byte	.LFE34-.LFB34
+ 582 0020 00000000 		.4byte	.LFB35
+ 583 0024 08000000 		.4byte	.LFE35-.LFB35
+ 584 0028 00000000 		.4byte	.LFB36
+ 585 002c 20000000 		.4byte	.LFE36-.LFB36
+ 586 0030 00000000 		.4byte	0
+ 587 0034 00000000 		.4byte	0
+ 588              		.section	.debug_ranges,"",%progbits
+ 589              	.Ldebug_ranges0:
+ 590 0000 00000000 		.4byte	.LFB33
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 14
+
+
+ 591 0004 20000000 		.4byte	.LFE33
+ 592 0008 00000000 		.4byte	.LFB34
+ 593 000c 3C000000 		.4byte	.LFE34
+ 594 0010 00000000 		.4byte	.LFB35
+ 595 0014 08000000 		.4byte	.LFE35
+ 596 0018 00000000 		.4byte	.LFB36
+ 597 001c 20000000 		.4byte	.LFE36
+ 598 0020 00000000 		.4byte	0
+ 599 0024 00000000 		.4byte	0
+ 600              		.section	.debug_line,"",%progbits
+ 601              	.Ldebug_line0:
+ 602 0000 B5000000 		.section	.debug_str,"MS",%progbits,1
+ 602      02006000 
+ 602      00000201 
+ 602      FB0E0D00 
+ 602      01010101 
+ 603              	.LASF6:
+ 604 0000 6C6F6E67 		.ascii	"long long int\000"
+ 604      206C6F6E 
+ 604      6720696E 
+ 604      7400
+ 605              	.LASF10:
+ 606 000e 75696E74 		.ascii	"uint32\000"
+ 606      333200
+ 607              	.LASF24:
+ 608 0015 656E6162 		.ascii	"enableState\000"
+ 608      6C655374 
+ 608      61746500 
+ 609              	.LASF8:
+ 610 0021 756E7369 		.ascii	"unsigned int\000"
+ 610      676E6564 
+ 610      20696E74 
+ 610      00
+ 611              	.LASF22:
+ 612 002e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CapSense_CSD_PM.c\000"
+ 612      6E657261 
+ 612      7465645F 
+ 612      536F7572 
+ 612      63655C50 
+ 613              	.LASF9:
+ 614 0059 75696E74 		.ascii	"uint8\000"
+ 614      3800
+ 615              	.LASF5:
+ 616 005f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 616      20756E73 
+ 616      69676E65 
+ 616      6420696E 
+ 616      7400
+ 617              	.LASF7:
+ 618 0071 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 618      206C6F6E 
+ 618      6720756E 
+ 618      7369676E 
+ 618      65642069 
+ 619              	.LASF19:
+ 620 0088 43617053 		.ascii	"CapSense_CSD_RestoreConfig\000"
+ 620      656E7365 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 15
+
+
+ 620      5F435344 
+ 620      5F526573 
+ 620      746F7265 
+ 621              	.LASF17:
+ 622 00a3 43617053 		.ascii	"CapSense_CSD_SaveConfig\000"
+ 622      656E7365 
+ 622      5F435344 
+ 622      5F536176 
+ 622      65436F6E 
+ 623              	.LASF23:
+ 624 00bb 433A5C55 		.ascii	"C:\\Users\\Tsubasa Maruyama\\Documents\\PSoC Creato"
+ 624      73657273 
+ 624      5C547375 
+ 624      62617361 
+ 624      204D6172 
+ 625 00ea 725C4C74 		.ascii	"r\\Lticker\\Lticker.cydsn\\CapSense_CSD_P4_Design01"
+ 625      69636B65 
+ 625      725C4C74 
+ 625      69636B65 
+ 625      722E6379 
+ 626 011a 2E637964 		.ascii	".cydsn\000"
+ 626      736E00
+ 627              	.LASF16:
+ 628 0121 43617053 		.ascii	"CapSense_CSD_BACKUP_STRUCT\000"
+ 628      656E7365 
+ 628      5F435344 
+ 628      5F424143 
+ 628      4B55505F 
+ 629              	.LASF1:
+ 630 013c 756E7369 		.ascii	"unsigned char\000"
+ 630      676E6564 
+ 630      20636861 
+ 630      7200
+ 631              	.LASF25:
+ 632 014a 43617053 		.ascii	"CapSense_CSD_backup\000"
+ 632      656E7365 
+ 632      5F435344 
+ 632      5F626163 
+ 632      6B757000 
+ 633              	.LASF13:
+ 634 015e 63686172 		.ascii	"char\000"
+ 634      00
+ 635              	.LASF21:
+ 636 0163 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 636      4320342E 
+ 636      372E3320 
+ 636      32303133 
+ 636      30333132 
+ 637 0196 616E6368 		.ascii	"anch revision 196615]\000"
+ 637      20726576 
+ 637      6973696F 
+ 637      6E203139 
+ 637      36363135 
+ 638              	.LASF4:
+ 639 01ac 6C6F6E67 		.ascii	"long int\000"
+ 639      20696E74 
+ 639      00
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccJpUpa5.s 			page 16
+
+
+ 640              	.LASF12:
+ 641 01b5 646F7562 		.ascii	"double\000"
+ 641      6C6500
+ 642              	.LASF14:
+ 643 01bc 72656733 		.ascii	"reg32\000"
+ 643      3200
+ 644              	.LASF3:
+ 645 01c2 73686F72 		.ascii	"short unsigned int\000"
+ 645      7420756E 
+ 645      7369676E 
+ 645      65642069 
+ 645      6E7400
+ 646              	.LASF0:
+ 647 01d5 7369676E 		.ascii	"signed char\000"
+ 647      65642063 
+ 647      68617200 
+ 648              	.LASF18:
+ 649 01e1 43617053 		.ascii	"CapSense_CSD_Sleep\000"
+ 649      656E7365 
+ 649      5F435344 
+ 649      5F536C65 
+ 649      657000
+ 650              	.LASF11:
+ 651 01f4 666C6F61 		.ascii	"float\000"
+ 651      7400
+ 652              	.LASF20:
+ 653 01fa 43617053 		.ascii	"CapSense_CSD_Wakeup\000"
+ 653      656E7365 
+ 653      5F435344 
+ 653      5F57616B 
+ 653      65757000 
+ 654              	.LASF2:
+ 655 020e 73686F72 		.ascii	"short int\000"
+ 655      7420696E 
+ 655      7400
+ 656              	.LASF15:
+ 657 0218 73697A65 		.ascii	"sizetype\000"
+ 657      74797065 
+ 657      00
+ 658              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

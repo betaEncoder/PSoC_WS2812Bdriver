@@ -1,0 +1,708 @@
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccQhEYpL.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.comm	curPos,2,2
+  18              		.comm	oldPos,2,2
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB33:
+  27              		.file 1 ".\\main.c"
+   1:.\main.c      **** /*******************************************************************************
+   2:.\main.c      **** * File Name: main.c
+   3:.\main.c      **** *
+   4:.\main.c      **** * Version: 1.10
+   5:.\main.c      **** *
+   6:.\main.c      **** * Description:
+   7:.\main.c      **** *  The project explains the usage of CapSense CSD component. The 2 buttons and
+   8:.\main.c      **** *  linear sliders are used as sensing elements. LED displays buttons active 
+   9:.\main.c      **** *  state and slider position is shown on LCD.
+  10:.\main.c      **** *
+  11:.\main.c      **** ********************************************************************************
+  12:.\main.c      **** * Copyright 2013, Cypress Semiconductor Corporation. All rights reserved.
+  13:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation and is protected
+  14:.\main.c      **** * by and subject to worldwide patent and copyright laws and treaties.
+  15:.\main.c      **** * Therefore, you may use this software only as provided in the license agreement
+  16:.\main.c      **** * accompanying the software package from which you obtained this software.
+  17:.\main.c      **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  18:.\main.c      **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
+  19:.\main.c      **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  20:.\main.c      **** *******************************************************************************/
+  21:.\main.c      **** 
+  22:.\main.c      **** #include <device.h>
+  23:.\main.c      **** 
+  24:.\main.c      **** /* CapSense Slider resoluton is set to 127 (7 bits).
+  25:.\main.c      **** *  Since PWM has 16 bit resolution, slider position value should be shifted left
+  26:.\main.c      **** *  by 9 bits.
+  27:.\main.c      **** */
+  28:.\main.c      **** #define SLIDER_POS_TO_COMPARE_SHIFT    (9u)
+  29:.\main.c      **** 
+  30:.\main.c      **** uint16 curPos, oldPos;
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccQhEYpL.s 			page 2
+
+
+  31:.\main.c      **** 
+  32:.\main.c      **** /*******************************************************************************
+  33:.\main.c      **** * Function Name: main
+  34:.\main.c      **** ********************************************************************************
+  35:.\main.c      **** * Summary:
+  36:.\main.c      **** *  Main function performs following functions:
+  37:.\main.c      **** *   1. Enable global interrupts.
+  38:.\main.c      **** *   2. Initialize CapSense CSD and Start the sensor scanning loop.
+  39:.\main.c      **** *   3. Process scanning results and display it on with LEDs.
+  40:.\main.c      **** *
+  41:.\main.c      **** * Parameters:
+  42:.\main.c      **** *  None
+  43:.\main.c      **** *
+  44:.\main.c      **** * Return:
+  45:.\main.c      **** *  None
+  46:.\main.c      **** *
+  47:.\main.c      **** *******************************************************************************/
+  48:.\main.c      **** int main()
+  49:.\main.c      **** {
+  28              		.loc 1 49 0
+  29              		.cfi_startproc
+  30 0000 80B5     		push	{r7, lr}
+  31              	.LCFI0:
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              	.LCFI1:
+  37              		.cfi_def_cfa_register 7
+  50:.\main.c      ****     /* Enable global interrupts */
+  51:.\main.c      ****     CyGlobalIntEnable;
+  38              		.loc 1 51 0
+  39              	@ 51 ".\main.c" 1
+  40 0004 62B6     		CPSIE   i
+  41              	@ 0 "" 2
+  52:.\main.c      ****     
+  53:.\main.c      ****     /* Start PWM and CapSense components */
+  54:.\main.c      ****     LED_CONTROL_Start();
+  42              		.loc 1 54 0
+  43              		.code	16
+  44 0006 FFF7FEFF 		bl	LED_CONTROL_Start
+  55:.\main.c      **** 
+  56:.\main.c      ****     CapSense_CSD_Start();	
+  45              		.loc 1 56 0
+  46 000a FFF7FEFF 		bl	CapSense_CSD_Start
+  57:.\main.c      **** 
+  58:.\main.c      ****     /* Initialize baselines */ 
+  59:.\main.c      ****     CapSense_CSD_InitializeAllBaselines();
+  47              		.loc 1 59 0
+  48 000e FFF7FEFF 		bl	CapSense_CSD_InitializeAllBaselines
+  49              	.L3:
+  60:.\main.c      ****     
+  61:.\main.c      ****     while(1u)
+  62:.\main.c      ****     {
+  63:.\main.c      ****         /* Update all baselines */
+  64:.\main.c      ****         CapSense_CSD_UpdateEnabledBaselines();
+  50              		.loc 1 64 0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccQhEYpL.s 			page 3
+
+
+  51 0012 FFF7FEFF 		bl	CapSense_CSD_UpdateEnabledBaselines
+  65:.\main.c      ****         
+  66:.\main.c      ****    		/* Start scanning all enabled sensors */
+  67:.\main.c      ****     	CapSense_CSD_ScanEnabledWidgets();
+  52              		.loc 1 67 0
+  53 0016 FFF7FEFF 		bl	CapSense_CSD_ScanEnabledWidgets
+  68:.\main.c      ****     
+  69:.\main.c      ****         /* Wait for scanning to complete */
+  70:.\main.c      **** 		while(CapSense_CSD_IsBusy() != 0);
+  54              		.loc 1 70 0
+  55 001a C046     		mov	r8, r8
+  56              	.L2:
+  57              		.loc 1 70 0 is_stmt 0 discriminator 1
+  58 001c FFF7FEFF 		bl	CapSense_CSD_IsBusy
+  59 0020 031C     		mov	r3, r0
+  60 0022 002B     		cmp	r3, #0
+  61 0024 FAD1     		bne	.L2
+  71:.\main.c      **** 
+  72:.\main.c      **** 		/* Display CapSense state using LEDs */
+  73:.\main.c      ****         CapSense_DisplayState();
+  62              		.loc 1 73 0 is_stmt 1
+  63 0026 FFF7FEFF 		bl	CapSense_DisplayState
+  74:.\main.c      ****     }
+  64              		.loc 1 74 0
+  65 002a F2E7     		b	.L3
+  66              		.cfi_endproc
+  67              	.LFE33:
+  68              		.size	main, .-main
+  69              		.section	.text.CapSense_DisplayState,"ax",%progbits
+  70              		.align	2
+  71              		.global	CapSense_DisplayState
+  72              		.code	16
+  73              		.thumb_func
+  74              		.type	CapSense_DisplayState, %function
+  75              	CapSense_DisplayState:
+  76              	.LFB34:
+  75:.\main.c      **** }
+  76:.\main.c      **** 
+  77:.\main.c      **** /*******************************************************************************
+  78:.\main.c      **** * Function Name: CapSense_DisplayState
+  79:.\main.c      **** ********************************************************************************
+  80:.\main.c      **** * Summary:
+  81:.\main.c      **** *  Changes LEDs brightness by changing the duty cycle of PWM signals.
+  82:.\main.c      **** *
+  83:.\main.c      **** * Parameters:
+  84:.\main.c      **** *  None
+  85:.\main.c      **** *
+  86:.\main.c      **** * Return:
+  87:.\main.c      **** *  None
+  88:.\main.c      **** *
+  89:.\main.c      **** *******************************************************************************/
+  90:.\main.c      **** void CapSense_DisplayState(void)
+  91:.\main.c      **** {
+  77              		.loc 1 91 0
+  78              		.cfi_startproc
+  79 0000 80B5     		push	{r7, lr}
+  80              	.LCFI2:
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccQhEYpL.s 			page 4
+
+
+  81              		.cfi_def_cfa_offset 8
+  82              		.cfi_offset 7, -8
+  83              		.cfi_offset 14, -4
+  84 0002 00AF     		add	r7, sp, #0
+  85              	.LCFI3:
+  86              		.cfi_def_cfa_register 7
+  92:.\main.c      ****     /* Find Slider Position */
+  93:.\main.c      ****     curPos = CapSense_CSD_GetCentroidPos(CapSense_CSD_LINEARSLIDER0__LS);    
+  87              		.loc 1 93 0
+  88 0004 0020     		mov	r0, #0
+  89 0006 FFF7FEFF 		bl	CapSense_CSD_GetCentroidPos
+  90 000a 031C     		mov	r3, r0
+  91 000c 1A1C     		mov	r2, r3
+  92 000e 104B     		ldr	r3, .L7
+  93 0010 1A80     		strh	r2, [r3]
+  94:.\main.c      ****     
+  95:.\main.c      ****     /* Reset position */
+  96:.\main.c      ****     if(curPos == 0xFFFFu)
+  94              		.loc 1 96 0
+  95 0012 0F4B     		ldr	r3, .L7
+  96 0014 1A88     		ldrh	r2, [r3]
+  97 0016 0F4B     		ldr	r3, .L7+4
+  98 0018 9A42     		cmp	r2, r3
+  99 001a 02D1     		bne	.L5
+  97:.\main.c      ****     {
+  98:.\main.c      ****         curPos = 0u;
+ 100              		.loc 1 98 0
+ 101 001c 0C4B     		ldr	r3, .L7
+ 102 001e 0022     		mov	r2, #0
+ 103 0020 1A80     		strh	r2, [r3]
+ 104              	.L5:
+  99:.\main.c      ****     }
+ 100:.\main.c      ****                 
+ 101:.\main.c      ****     /* Move bargraph */
+ 102:.\main.c      ****     if (curPos != oldPos)
+ 105              		.loc 1 102 0
+ 106 0022 0B4B     		ldr	r3, .L7
+ 107 0024 1A88     		ldrh	r2, [r3]
+ 108 0026 0C4B     		ldr	r3, .L7+8
+ 109 0028 1B88     		ldrh	r3, [r3]
+ 110 002a 9A42     		cmp	r2, r3
+ 111 002c 0DD0     		beq	.L4
+ 103:.\main.c      ****     {
+ 104:.\main.c      ****         oldPos = curPos;
+ 112              		.loc 1 104 0
+ 113 002e 084B     		ldr	r3, .L7
+ 114 0030 1A88     		ldrh	r2, [r3]
+ 115 0032 094B     		ldr	r3, .L7+8
+ 116 0034 1A80     		strh	r2, [r3]
+ 105:.\main.c      ****         /* Display Slider bargraph */
+ 106:.\main.c      ****         if (curPos != 0u)
+ 117              		.loc 1 106 0
+ 118 0036 064B     		ldr	r3, .L7
+ 119 0038 1B88     		ldrh	r3, [r3]
+ 120 003a 002B     		cmp	r3, #0
+ 121 003c 05D0     		beq	.L4
+ 107:.\main.c      ****         {
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccQhEYpL.s 			page 5
+
+
+ 108:.\main.c      ****             LED_CONTROL_WriteCompare((uint32)curPos << SLIDER_POS_TO_COMPARE_SHIFT);
+ 122              		.loc 1 108 0
+ 123 003e 044B     		ldr	r3, .L7
+ 124 0040 1B88     		ldrh	r3, [r3]
+ 125 0042 5B02     		lsl	r3, r3, #9
+ 126 0044 181C     		mov	r0, r3
+ 127 0046 FFF7FEFF 		bl	LED_CONTROL_WriteCompare
+ 128              	.L4:
+ 109:.\main.c      ****         }        
+ 110:.\main.c      ****     }
+ 111:.\main.c      **** }
+ 129              		.loc 1 111 0
+ 130 004a BD46     		mov	sp, r7
+ 131              		@ sp needed for prologue
+ 132 004c 80BD     		pop	{r7, pc}
+ 133              	.L8:
+ 134 004e C046     		.align	2
+ 135              	.L7:
+ 136 0050 00000000 		.word	curPos
+ 137 0054 FFFF0000 		.word	65535
+ 138 0058 00000000 		.word	oldPos
+ 139              		.cfi_endproc
+ 140              	.LFE34:
+ 141              		.size	CapSense_DisplayState, .-CapSense_DisplayState
+ 142              		.text
+ 143              	.Letext0:
+ 144              		.file 2 "./Generated_Source/PSoC4/cytypes.h"
+ 145              		.section	.debug_info,"",%progbits
+ 146              	.Ldebug_info0:
+ 147 0000 F1000000 		.4byte	0xf1
+ 148 0004 0200     		.2byte	0x2
+ 149 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 150 000a 04       		.byte	0x4
+ 151 000b 01       		.uleb128 0x1
+ 152 000c 35000000 		.4byte	.LASF19
+ 153 0010 01       		.byte	0x1
+ 154 0011 5F010000 		.4byte	.LASF20
+ 155 0015 A7000000 		.4byte	.LASF21
+ 156 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 157 001d 00000000 		.4byte	0
+ 158 0021 00000000 		.4byte	0
+ 159 0025 00000000 		.4byte	.Ldebug_line0
+ 160 0029 02       		.uleb128 0x2
+ 161 002a 01       		.byte	0x1
+ 162 002b 06       		.byte	0x6
+ 163 002c 4D010000 		.4byte	.LASF0
+ 164 0030 02       		.uleb128 0x2
+ 165 0031 01       		.byte	0x1
+ 166 0032 08       		.byte	0x8
+ 167 0033 0D010000 		.4byte	.LASF1
+ 168 0037 02       		.uleb128 0x2
+ 169 0038 02       		.byte	0x2
+ 170 0039 05       		.byte	0x5
+ 171 003a 29010000 		.4byte	.LASF2
+ 172 003e 02       		.uleb128 0x2
+ 173 003f 02       		.byte	0x2
+ 174 0040 07       		.byte	0x7
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccQhEYpL.s 			page 6
+
+
+ 175 0041 3A010000 		.4byte	.LASF3
+ 176 0045 02       		.uleb128 0x2
+ 177 0046 04       		.byte	0x4
+ 178 0047 05       		.byte	0x5
+ 179 0048 20010000 		.4byte	.LASF4
+ 180 004c 02       		.uleb128 0x2
+ 181 004d 04       		.byte	0x4
+ 182 004e 07       		.byte	0x7
+ 183 004f 7E000000 		.4byte	.LASF5
+ 184 0053 02       		.uleb128 0x2
+ 185 0054 08       		.byte	0x8
+ 186 0055 05       		.byte	0x5
+ 187 0056 00000000 		.4byte	.LASF6
+ 188 005a 02       		.uleb128 0x2
+ 189 005b 08       		.byte	0x8
+ 190 005c 07       		.byte	0x7
+ 191 005d 90000000 		.4byte	.LASF7
+ 192 0061 03       		.uleb128 0x3
+ 193 0062 04       		.byte	0x4
+ 194 0063 05       		.byte	0x5
+ 195 0064 696E7400 		.ascii	"int\000"
+ 196 0068 02       		.uleb128 0x2
+ 197 0069 04       		.byte	0x4
+ 198 006a 07       		.byte	0x7
+ 199 006b 15000000 		.4byte	.LASF8
+ 200 006f 04       		.uleb128 0x4
+ 201 0070 68010000 		.4byte	.LASF9
+ 202 0074 02       		.byte	0x2
+ 203 0075 5C       		.byte	0x5c
+ 204 0076 3E000000 		.4byte	0x3e
+ 205 007a 04       		.uleb128 0x4
+ 206 007b 0E000000 		.4byte	.LASF10
+ 207 007f 02       		.byte	0x2
+ 208 0080 5D       		.byte	0x5d
+ 209 0081 4C000000 		.4byte	0x4c
+ 210 0085 02       		.uleb128 0x2
+ 211 0086 04       		.byte	0x4
+ 212 0087 04       		.byte	0x4
+ 213 0088 59010000 		.4byte	.LASF11
+ 214 008c 02       		.uleb128 0x2
+ 215 008d 08       		.byte	0x8
+ 216 008e 04       		.byte	0x4
+ 217 008f 33010000 		.4byte	.LASF12
+ 218 0093 02       		.uleb128 0x2
+ 219 0094 01       		.byte	0x1
+ 220 0095 08       		.byte	0x8
+ 221 0096 1B010000 		.4byte	.LASF13
+ 222 009a 02       		.uleb128 0x2
+ 223 009b 04       		.byte	0x4
+ 224 009c 07       		.byte	0x7
+ 225 009d 85010000 		.4byte	.LASF14
+ 226 00a1 05       		.uleb128 0x5
+ 227 00a2 01       		.byte	0x1
+ 228 00a3 30000000 		.4byte	.LASF15
+ 229 00a7 01       		.byte	0x1
+ 230 00a8 30       		.byte	0x30
+ 231 00a9 61000000 		.4byte	0x61
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccQhEYpL.s 			page 7
+
+
+ 232 00ad 00000000 		.4byte	.LFB33
+ 233 00b1 2C000000 		.4byte	.LFE33
+ 234 00b5 00000000 		.4byte	.LLST0
+ 235 00b9 01       		.byte	0x1
+ 236 00ba 06       		.uleb128 0x6
+ 237 00bb 01       		.byte	0x1
+ 238 00bc 6F010000 		.4byte	.LASF16
+ 239 00c0 01       		.byte	0x1
+ 240 00c1 5A       		.byte	0x5a
+ 241 00c2 01       		.byte	0x1
+ 242 00c3 00000000 		.4byte	.LFB34
+ 243 00c7 5C000000 		.4byte	.LFE34
+ 244 00cb 2C000000 		.4byte	.LLST1
+ 245 00cf 01       		.byte	0x1
+ 246 00d0 07       		.uleb128 0x7
+ 247 00d1 29000000 		.4byte	.LASF17
+ 248 00d5 01       		.byte	0x1
+ 249 00d6 1E       		.byte	0x1e
+ 250 00d7 6F000000 		.4byte	0x6f
+ 251 00db 01       		.byte	0x1
+ 252 00dc 05       		.byte	0x5
+ 253 00dd 03       		.byte	0x3
+ 254 00de 00000000 		.4byte	curPos
+ 255 00e2 07       		.uleb128 0x7
+ 256 00e3 22000000 		.4byte	.LASF18
+ 257 00e7 01       		.byte	0x1
+ 258 00e8 1E       		.byte	0x1e
+ 259 00e9 6F000000 		.4byte	0x6f
+ 260 00ed 01       		.byte	0x1
+ 261 00ee 05       		.byte	0x5
+ 262 00ef 03       		.byte	0x3
+ 263 00f0 00000000 		.4byte	oldPos
+ 264 00f4 00       		.byte	0
+ 265              		.section	.debug_abbrev,"",%progbits
+ 266              	.Ldebug_abbrev0:
+ 267 0000 01       		.uleb128 0x1
+ 268 0001 11       		.uleb128 0x11
+ 269 0002 01       		.byte	0x1
+ 270 0003 25       		.uleb128 0x25
+ 271 0004 0E       		.uleb128 0xe
+ 272 0005 13       		.uleb128 0x13
+ 273 0006 0B       		.uleb128 0xb
+ 274 0007 03       		.uleb128 0x3
+ 275 0008 0E       		.uleb128 0xe
+ 276 0009 1B       		.uleb128 0x1b
+ 277 000a 0E       		.uleb128 0xe
+ 278 000b 55       		.uleb128 0x55
+ 279 000c 06       		.uleb128 0x6
+ 280 000d 11       		.uleb128 0x11
+ 281 000e 01       		.uleb128 0x1
+ 282 000f 52       		.uleb128 0x52
+ 283 0010 01       		.uleb128 0x1
+ 284 0011 10       		.uleb128 0x10
+ 285 0012 06       		.uleb128 0x6
+ 286 0013 00       		.byte	0
+ 287 0014 00       		.byte	0
+ 288 0015 02       		.uleb128 0x2
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccQhEYpL.s 			page 8
+
+
+ 289 0016 24       		.uleb128 0x24
+ 290 0017 00       		.byte	0
+ 291 0018 0B       		.uleb128 0xb
+ 292 0019 0B       		.uleb128 0xb
+ 293 001a 3E       		.uleb128 0x3e
+ 294 001b 0B       		.uleb128 0xb
+ 295 001c 03       		.uleb128 0x3
+ 296 001d 0E       		.uleb128 0xe
+ 297 001e 00       		.byte	0
+ 298 001f 00       		.byte	0
+ 299 0020 03       		.uleb128 0x3
+ 300 0021 24       		.uleb128 0x24
+ 301 0022 00       		.byte	0
+ 302 0023 0B       		.uleb128 0xb
+ 303 0024 0B       		.uleb128 0xb
+ 304 0025 3E       		.uleb128 0x3e
+ 305 0026 0B       		.uleb128 0xb
+ 306 0027 03       		.uleb128 0x3
+ 307 0028 08       		.uleb128 0x8
+ 308 0029 00       		.byte	0
+ 309 002a 00       		.byte	0
+ 310 002b 04       		.uleb128 0x4
+ 311 002c 16       		.uleb128 0x16
+ 312 002d 00       		.byte	0
+ 313 002e 03       		.uleb128 0x3
+ 314 002f 0E       		.uleb128 0xe
+ 315 0030 3A       		.uleb128 0x3a
+ 316 0031 0B       		.uleb128 0xb
+ 317 0032 3B       		.uleb128 0x3b
+ 318 0033 0B       		.uleb128 0xb
+ 319 0034 49       		.uleb128 0x49
+ 320 0035 13       		.uleb128 0x13
+ 321 0036 00       		.byte	0
+ 322 0037 00       		.byte	0
+ 323 0038 05       		.uleb128 0x5
+ 324 0039 2E       		.uleb128 0x2e
+ 325 003a 00       		.byte	0
+ 326 003b 3F       		.uleb128 0x3f
+ 327 003c 0C       		.uleb128 0xc
+ 328 003d 03       		.uleb128 0x3
+ 329 003e 0E       		.uleb128 0xe
+ 330 003f 3A       		.uleb128 0x3a
+ 331 0040 0B       		.uleb128 0xb
+ 332 0041 3B       		.uleb128 0x3b
+ 333 0042 0B       		.uleb128 0xb
+ 334 0043 49       		.uleb128 0x49
+ 335 0044 13       		.uleb128 0x13
+ 336 0045 11       		.uleb128 0x11
+ 337 0046 01       		.uleb128 0x1
+ 338 0047 12       		.uleb128 0x12
+ 339 0048 01       		.uleb128 0x1
+ 340 0049 40       		.uleb128 0x40
+ 341 004a 06       		.uleb128 0x6
+ 342 004b 9642     		.uleb128 0x2116
+ 343 004d 0C       		.uleb128 0xc
+ 344 004e 00       		.byte	0
+ 345 004f 00       		.byte	0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccQhEYpL.s 			page 9
+
+
+ 346 0050 06       		.uleb128 0x6
+ 347 0051 2E       		.uleb128 0x2e
+ 348 0052 00       		.byte	0
+ 349 0053 3F       		.uleb128 0x3f
+ 350 0054 0C       		.uleb128 0xc
+ 351 0055 03       		.uleb128 0x3
+ 352 0056 0E       		.uleb128 0xe
+ 353 0057 3A       		.uleb128 0x3a
+ 354 0058 0B       		.uleb128 0xb
+ 355 0059 3B       		.uleb128 0x3b
+ 356 005a 0B       		.uleb128 0xb
+ 357 005b 27       		.uleb128 0x27
+ 358 005c 0C       		.uleb128 0xc
+ 359 005d 11       		.uleb128 0x11
+ 360 005e 01       		.uleb128 0x1
+ 361 005f 12       		.uleb128 0x12
+ 362 0060 01       		.uleb128 0x1
+ 363 0061 40       		.uleb128 0x40
+ 364 0062 06       		.uleb128 0x6
+ 365 0063 9642     		.uleb128 0x2116
+ 366 0065 0C       		.uleb128 0xc
+ 367 0066 00       		.byte	0
+ 368 0067 00       		.byte	0
+ 369 0068 07       		.uleb128 0x7
+ 370 0069 34       		.uleb128 0x34
+ 371 006a 00       		.byte	0
+ 372 006b 03       		.uleb128 0x3
+ 373 006c 0E       		.uleb128 0xe
+ 374 006d 3A       		.uleb128 0x3a
+ 375 006e 0B       		.uleb128 0xb
+ 376 006f 3B       		.uleb128 0x3b
+ 377 0070 0B       		.uleb128 0xb
+ 378 0071 49       		.uleb128 0x49
+ 379 0072 13       		.uleb128 0x13
+ 380 0073 3F       		.uleb128 0x3f
+ 381 0074 0C       		.uleb128 0xc
+ 382 0075 02       		.uleb128 0x2
+ 383 0076 0A       		.uleb128 0xa
+ 384 0077 00       		.byte	0
+ 385 0078 00       		.byte	0
+ 386 0079 00       		.byte	0
+ 387              		.section	.debug_loc,"",%progbits
+ 388              	.Ldebug_loc0:
+ 389              	.LLST0:
+ 390 0000 00000000 		.4byte	.LFB33
+ 391 0004 02000000 		.4byte	.LCFI0
+ 392 0008 0200     		.2byte	0x2
+ 393 000a 7D       		.byte	0x7d
+ 394 000b 00       		.sleb128 0
+ 395 000c 02000000 		.4byte	.LCFI0
+ 396 0010 04000000 		.4byte	.LCFI1
+ 397 0014 0200     		.2byte	0x2
+ 398 0016 7D       		.byte	0x7d
+ 399 0017 08       		.sleb128 8
+ 400 0018 04000000 		.4byte	.LCFI1
+ 401 001c 2C000000 		.4byte	.LFE33
+ 402 0020 0200     		.2byte	0x2
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccQhEYpL.s 			page 10
+
+
+ 403 0022 77       		.byte	0x77
+ 404 0023 08       		.sleb128 8
+ 405 0024 00000000 		.4byte	0
+ 406 0028 00000000 		.4byte	0
+ 407              	.LLST1:
+ 408 002c 00000000 		.4byte	.LFB34
+ 409 0030 02000000 		.4byte	.LCFI2
+ 410 0034 0200     		.2byte	0x2
+ 411 0036 7D       		.byte	0x7d
+ 412 0037 00       		.sleb128 0
+ 413 0038 02000000 		.4byte	.LCFI2
+ 414 003c 04000000 		.4byte	.LCFI3
+ 415 0040 0200     		.2byte	0x2
+ 416 0042 7D       		.byte	0x7d
+ 417 0043 08       		.sleb128 8
+ 418 0044 04000000 		.4byte	.LCFI3
+ 419 0048 5C000000 		.4byte	.LFE34
+ 420 004c 0200     		.2byte	0x2
+ 421 004e 77       		.byte	0x77
+ 422 004f 08       		.sleb128 8
+ 423 0050 00000000 		.4byte	0
+ 424 0054 00000000 		.4byte	0
+ 425              		.section	.debug_aranges,"",%progbits
+ 426 0000 24000000 		.4byte	0x24
+ 427 0004 0200     		.2byte	0x2
+ 428 0006 00000000 		.4byte	.Ldebug_info0
+ 429 000a 04       		.byte	0x4
+ 430 000b 00       		.byte	0
+ 431 000c 0000     		.2byte	0
+ 432 000e 0000     		.2byte	0
+ 433 0010 00000000 		.4byte	.LFB33
+ 434 0014 2C000000 		.4byte	.LFE33-.LFB33
+ 435 0018 00000000 		.4byte	.LFB34
+ 436 001c 5C000000 		.4byte	.LFE34-.LFB34
+ 437 0020 00000000 		.4byte	0
+ 438 0024 00000000 		.4byte	0
+ 439              		.section	.debug_ranges,"",%progbits
+ 440              	.Ldebug_ranges0:
+ 441 0000 00000000 		.4byte	.LFB33
+ 442 0004 2C000000 		.4byte	.LFE33
+ 443 0008 00000000 		.4byte	.LFB34
+ 444 000c 5C000000 		.4byte	.LFE34
+ 445 0010 00000000 		.4byte	0
+ 446 0014 00000000 		.4byte	0
+ 447              		.section	.debug_line,"",%progbits
+ 448              	.Ldebug_line0:
+ 449 0000 82000000 		.section	.debug_str,"MS",%progbits,1
+ 449      02004500 
+ 449      00000201 
+ 449      FB0E0D00 
+ 449      01010101 
+ 450              	.LASF6:
+ 451 0000 6C6F6E67 		.ascii	"long long int\000"
+ 451      206C6F6E 
+ 451      6720696E 
+ 451      7400
+ 452              	.LASF10:
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccQhEYpL.s 			page 11
+
+
+ 453 000e 75696E74 		.ascii	"uint32\000"
+ 453      333200
+ 454              	.LASF8:
+ 455 0015 756E7369 		.ascii	"unsigned int\000"
+ 455      676E6564 
+ 455      20696E74 
+ 455      00
+ 456              	.LASF18:
+ 457 0022 6F6C6450 		.ascii	"oldPos\000"
+ 457      6F7300
+ 458              	.LASF17:
+ 459 0029 63757250 		.ascii	"curPos\000"
+ 459      6F7300
+ 460              	.LASF15:
+ 461 0030 6D61696E 		.ascii	"main\000"
+ 461      00
+ 462              	.LASF19:
+ 463 0035 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 463      4320342E 
+ 463      372E3320 
+ 463      32303133 
+ 463      30333132 
+ 464 0068 616E6368 		.ascii	"anch revision 196615]\000"
+ 464      20726576 
+ 464      6973696F 
+ 464      6E203139 
+ 464      36363135 
+ 465              	.LASF5:
+ 466 007e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 466      20756E73 
+ 466      69676E65 
+ 466      6420696E 
+ 466      7400
+ 467              	.LASF7:
+ 468 0090 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 468      206C6F6E 
+ 468      6720756E 
+ 468      7369676E 
+ 468      65642069 
+ 469              	.LASF21:
+ 470 00a7 433A5C55 		.ascii	"C:\\Users\\Tsubasa Maruyama\\Documents\\PSoC Creato"
+ 470      73657273 
+ 470      5C547375 
+ 470      62617361 
+ 470      204D6172 
+ 471 00d6 725C4C74 		.ascii	"r\\Lticker\\Lticker.cydsn\\CapSense_CSD_P4_Design01"
+ 471      69636B65 
+ 471      725C4C74 
+ 471      69636B65 
+ 471      722E6379 
+ 472 0106 2E637964 		.ascii	".cydsn\000"
+ 472      736E00
+ 473              	.LASF1:
+ 474 010d 756E7369 		.ascii	"unsigned char\000"
+ 474      676E6564 
+ 474      20636861 
+ 474      7200
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccQhEYpL.s 			page 12
+
+
+ 475              	.LASF13:
+ 476 011b 63686172 		.ascii	"char\000"
+ 476      00
+ 477              	.LASF4:
+ 478 0120 6C6F6E67 		.ascii	"long int\000"
+ 478      20696E74 
+ 478      00
+ 479              	.LASF2:
+ 480 0129 73686F72 		.ascii	"short int\000"
+ 480      7420696E 
+ 480      7400
+ 481              	.LASF12:
+ 482 0133 646F7562 		.ascii	"double\000"
+ 482      6C6500
+ 483              	.LASF3:
+ 484 013a 73686F72 		.ascii	"short unsigned int\000"
+ 484      7420756E 
+ 484      7369676E 
+ 484      65642069 
+ 484      6E7400
+ 485              	.LASF0:
+ 486 014d 7369676E 		.ascii	"signed char\000"
+ 486      65642063 
+ 486      68617200 
+ 487              	.LASF11:
+ 488 0159 666C6F61 		.ascii	"float\000"
+ 488      7400
+ 489              	.LASF20:
+ 490 015f 2E5C6D61 		.ascii	".\\main.c\000"
+ 490      696E2E63 
+ 490      00
+ 491              	.LASF9:
+ 492 0168 75696E74 		.ascii	"uint16\000"
+ 492      313600
+ 493              	.LASF16:
+ 494 016f 43617053 		.ascii	"CapSense_DisplayState\000"
+ 494      656E7365 
+ 494      5F446973 
+ 494      706C6179 
+ 494      53746174 
+ 495              	.LASF14:
+ 496 0185 73697A65 		.ascii	"sizetype\000"
+ 496      74797065 
+ 496      00
+ 497              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

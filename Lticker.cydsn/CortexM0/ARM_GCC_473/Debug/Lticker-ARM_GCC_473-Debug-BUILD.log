@@ -1,11 +1,11 @@
---------------- Build Started: 09/13/2014 19:07:23 Project: Lticker, Configuration: ARM GCC 4.7.3 Debug ---------------
+--------------- Build Started: 09/15/2014 00:11:37 Project: Lticker, Configuration: ARM GCC 4.7.3 Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -I. -I./Generated_Source/PSoC4 -Wno-main -mcpu=cortex-m0 -mthumb -Wall -g -D DEBUG -Wa,-alh=.\CortexM0\ARM_GCC_473\Debug\main.lst -ffunction-sections -c .\main.c -o .\CortexM0\ARM_GCC_473\Debug\main.o
-arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_473\Debug\Lticker.a .\CortexM0\ARM_GCC_473\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_473\Debug\Pin_1.o .\CortexM0\ARM_GCC_473\Debug\Clock_1.o .\CortexM0\ARM_GCC_473\Debug\CyBootAsmGnu.o .\CortexM0\ARM_GCC_473\Debug\CyFlash.o .\CortexM0\ARM_GCC_473\Debug\CyLib.o .\CortexM0\ARM_GCC_473\Debug\cyPm.o .\CortexM0\ARM_GCC_473\Debug\cyutils.o .\CortexM0\ARM_GCC_473\Debug\Status_Reg_1.o
+arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_473\Debug\Lticker.a .\CortexM0\ARM_GCC_473\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_473\Debug\Pin_1.o .\CortexM0\ARM_GCC_473\Debug\Clock_1.o .\CortexM0\ARM_GCC_473\Debug\CyBootAsmGnu.o .\CortexM0\ARM_GCC_473\Debug\CyFlash.o .\CortexM0\ARM_GCC_473\Debug\CyLib.o .\CortexM0\ARM_GCC_473\Debug\cyPm.o .\CortexM0\ARM_GCC_473\Debug\cyutils.o .\CortexM0\ARM_GCC_473\Debug\PWM_1.o .\CortexM0\ARM_GCC_473\Debug\PWM_1_PM.o .\CortexM0\ARM_GCC_473\Debug\Status_Reg_1.o .\CortexM0\ARM_GCC_473\Debug\CapSense_1.o .\CortexM0\ARM_GCC_473\Debug\CapSense_1_PM.o .\CortexM0\ARM_GCC_473\Debug\CapSense_1_CSHL.o .\CortexM0\ARM_GCC_473\Debug\CapSense_1_INT.o .\CortexM0\ARM_GCC_473\Debug\CapSense_1_TunerHelper.o .\CortexM0\ARM_GCC_473\Debug\CapSense_1_SMS.o .\CortexM0\ARM_GCC_473\Debug\CapSense_1_SampleClk.o .\CortexM0\ARM_GCC_473\Debug\CapSense_1_SenseClk.o .\CortexM0\ARM_GCC_473\Debug\LED_G.o .\CortexM0\ARM_GCC_473\Debug\Pin_SW.o .\CortexM0\ARM_GCC_473\Debug\LED_R.o .\CortexM0\ARM_GCC_473\Debug\PWM_2.o .\CortexM0\ARM_GCC_473\Debug\PWM_2_PM.o .\CortexM0\ARM_GCC_473\Debug\LED_B.o .\CortexM0\ARM_GCC_473\Debug\Clock_3.o .\CortexM0\ARM_GCC_473\Debug\Clock_4.o
 arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_473\Debug\Lticker.a
 arm-none-eabi-gcc.exe -mthumb -march=armv6-m -T .\Generated_Source\PSoC4\cm0gcc.ld -g -Wl,-Map,.\CortexM0\ARM_GCC_473\Debug\Lticker.map -specs=nano.specs -Wl,--gc-sections -Wl,--start-group -o .\CortexM0\ARM_GCC_473\Debug\Lticker.elf .\CortexM0\ARM_GCC_473\Debug\main.o .\CortexM0\ARM_GCC_473\Debug\cymetadata.o .\CortexM0\ARM_GCC_473\Debug\Cm0Start.o .\CortexM0\ARM_GCC_473\Debug\Lticker.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_473\Debug\CyComponentLibrary.a" -Wl,--end-group
 cyelftool.exe -C "C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\CortexM0\ARM_GCC_473\Debug\Lticker.elf" --flash_size 32768 --flash_row_size 128
 cyelftool.exe -S "C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\CortexM0\ARM_GCC_473\Debug\Lticker.elf"
-Flash used: 1960 of 32768 bytes (6.0%).
-SRAM used: 1532 of 4096 bytes (37.4%).
---------------- Build Succeeded: 09/13/2014 19:07:24 ---------------
+Flash used: 11280 of 32768 bytes (34.4%).
+SRAM used: 1892 of 4096 bytes (46.2%).
+--------------- Build Succeeded: 09/15/2014 00:11:39 ---------------

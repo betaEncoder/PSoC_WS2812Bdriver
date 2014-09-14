@@ -6,7 +6,7 @@
 
 #Build Date:         Mar 26 2013 14:54:34
 
-#File Generated:     Sep 13 2014 17:21:21
+#File Generated:     Sep 14 2014 23:37:29
 
 #Purpose:            
 
@@ -44,18 +44,18 @@ Phase 2
 Phase 3
 
 Design Statistics after Packing
-    Number of Combinational MCs 	:	4
-    Number of Sequential MCs    	:	9
-    Number of DPs               	:	2
-    Number of Controls          	:	0
-    Number of Status            	:	1
+    Number of Combinational MCs 	:	6
+    Number of Sequential MCs    	:	22
+    Number of DPs               	:	4
+    Number of Controls          	:	2
+    Number of Status            	:	3
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
 
 Device Utilization Summary after Packing
-    Macrocells                  :	13/32
-    UDBS                        :	2/4
-    IOs                         :	1/36
+    Macrocells                  :	28/32
+    UDBS                        :	4/4
+    IOs                         :	11/36
 
 
 D2088: Phase 3, elapsed time : 0.0 (sec)
@@ -76,8 +76,14 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 6
+Number of clocks: 12
+Clock: CapSense_1_SampleClk | Frequency: N/A       | Target:   0.2 MHz
+Clock: CapSense_1_SampleClk(FFB) | Frequency: N/A       | Target:   0.2 MHz
+Clock: CapSense_1_SenseClk  | Frequency: N/A       | Target:   0.2 MHz
+Clock: CapSense_1_SenseClk(FFB) | Frequency: N/A       | Target:   0.2 MHz
 Clock: Clock_1              | Frequency:  44.9 MHz | Target:  20.0 MHz
+Clock: Clock_3              | Frequency:  53.4 MHz | Target:   0.6 MHz
+Clock: Clock_4              | Frequency:  53.4 MHz | Target:   0.6 MHz
 Clock: CyHFCLK              | Frequency: N/A       | Target:  40.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  40.0 MHz
@@ -94,8 +100,14 @@ Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 6
+Number of clocks: 12
+Clock: CapSense_1_SampleClk | Frequency: N/A       | Target:   0.2 MHz
+Clock: CapSense_1_SampleClk(FFB) | Frequency: N/A       | Target:   0.2 MHz
+Clock: CapSense_1_SenseClk  | Frequency: N/A       | Target:   0.2 MHz
+Clock: CapSense_1_SenseClk(FFB) | Frequency: N/A       | Target:   0.2 MHz
 Clock: Clock_1              | Frequency:  44.9 MHz | Target:  20.0 MHz
+Clock: Clock_3              | Frequency:  53.4 MHz | Target:   0.6 MHz
+Clock: Clock_4              | Frequency:  53.4 MHz | Target:   0.6 MHz
 Clock: CyHFCLK              | Frequency: N/A       | Target:  40.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  40.0 MHz
@@ -108,18 +120,18 @@ Clock: CySYSCLK             | Frequency: N/A       | Target:  40.0 MHz
 D2088: Phase 7, elapsed time : 0.1 (sec)
 
 Final Design Statistics
-    Number of Combinational MCs 	:	4
-    Number of Sequential MCs    	:	9
-    Number of DPs               	:	2
-    Number of Controls          	:	0
-    Number of Status            	:	1
+    Number of Combinational MCs 	:	6
+    Number of Sequential MCs    	:	22
+    Number of DPs               	:	4
+    Number of Controls          	:	2
+    Number of Status            	:	3
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
-    Number of IOs       	:	1
+    Number of IOs       	:	11
 
 Device Utilization Summary
-    Macrocells                  :	13/32
-    IOs                         :	1/36
+    Macrocells                  :	28/32
+    IOs                         :	11/36
 
 
 
@@ -135,8 +147,14 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 6
+Number of clocks: 12
+Clock: CapSense_1_SampleClk | Frequency: N/A       | Target:   0.2 MHz
+Clock: CapSense_1_SampleClk(FFB) | Frequency: N/A       | Target:   0.2 MHz
+Clock: CapSense_1_SenseClk  | Frequency: N/A       | Target:   0.2 MHz
+Clock: CapSense_1_SenseClk(FFB) | Frequency: N/A       | Target:   0.2 MHz
 Clock: Clock_1              | Frequency:  45.9 MHz | Target:  21.7 MHz
+Clock: Clock_3              | Frequency:  53.4 MHz | Target:   0.7 MHz
+Clock: Clock_4              | Frequency:  53.4 MHz | Target:   0.7 MHz
 Clock: CyHFCLK              | Frequency: N/A       | Target:  40.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  40.0 MHz
