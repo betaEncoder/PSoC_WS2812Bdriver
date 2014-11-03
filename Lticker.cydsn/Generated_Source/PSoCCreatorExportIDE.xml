@@ -18,7 +18,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="Lticker" Path="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn" Version="4.10" Type="Normal">
+  <Project Name="Lticker" Path="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn" Version="4.11" Type="Normal">
     <CMSIS_SVD_File>Lticker.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>

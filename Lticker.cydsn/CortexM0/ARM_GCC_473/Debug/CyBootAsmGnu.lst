@@ -3,7 +3,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
 
    1              	/*******************************************************************************
    2              	* File Name: CyBootAsmGnu.s
-   3              	* Version 4.10
+   3              	* Version 4.11
    4              	*
    5              	*  Description:
    6              	*   Assembly routines for GNU as.

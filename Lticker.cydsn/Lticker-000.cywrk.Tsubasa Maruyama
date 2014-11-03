@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Lticker-000\Lticker">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Lticker-000\Lticker\Lticker.cydwr">
 <ExpandedNodeIds>
 <v>Lticker-000</v>
 <v>Lticker-000\Lticker</v>
@@ -176,18 +176,18 @@
 <v>Lticker-000\Lticker</v>
 <v>Lticker-000\Lticker\PSoC 4 Architecture TRM</v>
 <v>Lticker-000\Lticker\PSoC 4200 Family Datasheet</v>
-<v>Lticker-000\Lticker\System Reference Guide v4_10</v>
+<v>Lticker-000\Lticker\System Reference Guide v4_11</v>
 <v>Lticker-000\Lticker\cy_clock_v2_20</v>
-<v>Lticker-000\Lticker\cy_pins_v2_0</v>
+<v>Lticker-000\Lticker\cy_pins_v2_5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Lticker-000</v>
 <v>Lticker-000\Lticker</v>
 <v>Lticker-000\Lticker\PSoC 4 Architecture TRM</v>
 <v>Lticker-000\Lticker\PSoC 4200 Family Datasheet</v>
-<v>Lticker-000\Lticker\System Reference Guide v4_10</v>
+<v>Lticker-000\Lticker\System Reference Guide v4_11</v>
 <v>Lticker-000\Lticker\cy_clock_v2_20</v>
-<v>Lticker-000\Lticker\cy_pins_v2_0</v>
+<v>Lticker-000\Lticker\cy_pins_v2_5</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -28,7 +28,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
   25              		.file 1 ".\\Generated_Source\\PSoC4\\Pin_3.c"
    1:.\Generated_Source\PSoC4/Pin_3.c **** /*******************************************************************************
    2:.\Generated_Source\PSoC4/Pin_3.c **** * File Name: Pin_3.c  
-   3:.\Generated_Source\PSoC4/Pin_3.c **** * Version 2.0
+   3:.\Generated_Source\PSoC4/Pin_3.c **** * Version 2.5
    4:.\Generated_Source\PSoC4/Pin_3.c **** *
    5:.\Generated_Source\PSoC4/Pin_3.c **** * Description:
    6:.\Generated_Source\PSoC4/Pin_3.c **** *  This file contains API to enable firmware control of a Pins component.
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
   30:.\Generated_Source\PSoC4/Pin_3.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/Pin_3.c **** *
   32:.\Generated_Source\PSoC4/Pin_3.c **** * Summary:
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 2
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Pin_3.c **** *  Assign a new value to the digital port's data output register.  
@@ -95,16 +95,16 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
   45 0010 DAB2     		uxtb	r2, r3
   46 0012 3B1C     		mov	r3, r7
   47 0014 0F33     		add	r3, r3, #15
-  48 0016 0421     		mov	r1, #4
+  48 0016 4021     		mov	r1, #64
   49 0018 8A43     		bic	r2, r1
   50 001a 1A70     		strb	r2, [r3]
   45:.\Generated_Source\PSoC4/Pin_3.c ****     drVal = (drVal | ((uint8)(value << Pin_3_SHIFT) & Pin_3_MASK));
   51              		.loc 1 45 0
   52 001c FB1D     		add	r3, r7, #7
   53 001e 1B78     		ldrb	r3, [r3]
-  54 0020 9B00     		lsl	r3, r3, #2
+  54 0020 9B01     		lsl	r3, r3, #6
   55 0022 DAB2     		uxtb	r2, r3
-  56 0024 0423     		mov	r3, #4
+  56 0024 4023     		mov	r3, #64
   57 0026 1340     		and	r3, r2
   58 0028 D9B2     		uxtb	r1, r3
   59 002a 3B1C     		mov	r3, r7
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
   66              		.loc 1 46 0
   67 0038 034B     		ldr	r3, .L2
   68 003a 3A1C     		mov	r2, r7
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 3
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 3
 
 
   69 003c 0F32     		add	r2, r2, #15
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
   95              	.LCFI3:
   96              		.cfi_def_cfa_offset 8
   97              		.cfi_offset 7, -8
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 4
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 4
 
 
   98              		.cfi_offset 14, -4
@@ -200,7 +200,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  113 0014 1140     		and	r1, r2
  114 0016 FA1D     		add	r2, r7, #7
  115 0018 1278     		ldrb	r2, [r2]
- 116 001a 9201     		lsl	r2, r2, #6
+ 116 001a 9204     		lsl	r2, r2, #18
  117 001c 0A43     		orr	r2, r1
  118 001e 1A60     		str	r2, [r3]
   76:.\Generated_Source\PSoC4/Pin_3.c **** }
@@ -213,7 +213,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  125 0026 C046     		.align	2
  126              	.L5:
  127 0028 08020440 		.word	1074004488
- 128 002c 3FFEFFFF 		.word	-449
+ 128 002c FFFFE3FF 		.word	-1835009
  129              		.cfi_endproc
  130              	.LFE1:
  131              		.size	Pin_3_SetDriveMode, .-Pin_3_SetDriveMode
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
   87:.\Generated_Source\PSoC4/Pin_3.c **** * Parameters:  
   88:.\Generated_Source\PSoC4/Pin_3.c **** *  None 
   89:.\Generated_Source\PSoC4/Pin_3.c **** *
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 5
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 5
 
 
   90:.\Generated_Source\PSoC4/Pin_3.c **** * Return: 
@@ -264,9 +264,9 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  150              		.loc 1 99 0
  151 0004 044B     		ldr	r3, .L9
  152 0006 1A68     		ldr	r2, [r3]
- 153 0008 0423     		mov	r3, #4
+ 153 0008 4023     		mov	r3, #64
  154 000a 1340     		and	r3, r2
- 155 000c 9B08     		lsr	r3, r3, #2
+ 155 000c 9B09     		lsr	r3, r3, #6
  156 000e DBB2     		uxtb	r3, r3
  100:.\Generated_Source\PSoC4/Pin_3.c **** }
  157              		.loc 1 100 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  107:.\Generated_Source\PSoC4/Pin_3.c **** * Summary:
  108:.\Generated_Source\PSoC4/Pin_3.c **** *  Read the current value assigned to a Digital Port's data output register
  109:.\Generated_Source\PSoC4/Pin_3.c **** *
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 6
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 6
 
 
  110:.\Generated_Source\PSoC4/Pin_3.c **** * Parameters:  
@@ -324,9 +324,9 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  187              		.loc 1 119 0
  188 0004 044B     		ldr	r3, .L13
  189 0006 1A68     		ldr	r2, [r3]
- 190 0008 0423     		mov	r3, #4
+ 190 0008 4023     		mov	r3, #64
  191 000a 1340     		and	r3, r2
- 192 000c 9B08     		lsr	r3, r3, #2
+ 192 000c 9B09     		lsr	r3, r3, #6
  193 000e DBB2     		uxtb	r3, r3
  120:.\Generated_Source\PSoC4/Pin_3.c **** }
  194              		.loc 1 120 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  127:.\Generated_Source\PSoC4/Pin_3.c ****     * Function Name: Pin_3_ClearInterrupt
  128:.\Generated_Source\PSoC4/Pin_3.c ****     ********************************************************************************
  129:.\Generated_Source\PSoC4/Pin_3.c ****     *
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 7
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 7
 
 
  130:.\Generated_Source\PSoC4/Pin_3.c ****     * Summary:
@@ -393,7 +393,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  229 0008 1B68     		ldr	r3, [r3]
  230 000a D9B2     		uxtb	r1, r3
  231 000c FB1D     		add	r3, r7, #7
- 232 000e 0422     		mov	r2, #4
+ 232 000e 4022     		mov	r2, #64
  233 0010 0A40     		and	r2, r1
  234 0012 1A70     		strb	r2, [r3]
  144:.\Generated_Source\PSoC4/Pin_3.c **** 		Pin_3_INTSTAT = maskedStatus;
@@ -406,7 +406,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  240              		.loc 1 145 0
  241 001c FB1D     		add	r3, r7, #7
  242 001e 1B78     		ldrb	r3, [r3]
- 243 0020 9B08     		lsr	r3, r3, #2
+ 243 0020 9B09     		lsr	r3, r3, #6
  244 0022 DBB2     		uxtb	r3, r3
  146:.\Generated_Source\PSoC4/Pin_3.c ****     }
  245              		.loc 1 146 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  251              	.L18:
  252              		.align	2
  253              	.L17:
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 8
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 8
 
 
  254 002c 10020440 		.word	1074004496
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  308 0061 03       		.uleb128 0x3
  309 0062 04       		.byte	0x4
  310 0063 05       		.byte	0x5
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 9
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 9
 
 
  311 0064 696E7400 		.ascii	"int\000"
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  365 00d3 A6000000 		.4byte	.LASF22
  366 00d7 01       		.byte	0x1
  367 00d8 2C       		.byte	0x2c
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 10
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 10
 
 
  368 00d9 6F000000 		.4byte	0x6f
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  422 014b 00000000 		.4byte	.LFB4
  423 014f 30000000 		.4byte	.LFE4
  424 0153 C8000000 		.4byte	.LLST4
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 11
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 11
 
 
  425 0157 01       		.byte	0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  479 0029 00       		.byte	0
  480 002a 00       		.byte	0
  481 002b 04       		.uleb128 0x4
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 12
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 12
 
 
  482 002c 16       		.uleb128 0x16
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  536 0063 13       		.uleb128 0x13
  537 0064 02       		.uleb128 0x2
  538 0065 0A       		.uleb128 0xa
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 13
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 13
 
 
  539 0066 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  593 009d 0C       		.uleb128 0xc
  594 009e 49       		.uleb128 0x49
  595 009f 13       		.uleb128 0x13
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 14
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 14
 
 
  596 00a0 11       		.uleb128 0x11
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  650 0064 0200     		.2byte	0x2
  651 0066 77       		.byte	0x77
  652 0067 10       		.sleb128 16
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 15
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 15
 
 
  653 0068 00000000 		.4byte	0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  707 00ec 06000000 		.4byte	.LCFI12
  708 00f0 30000000 		.4byte	.LFE4
  709 00f4 0200     		.2byte	0x2
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 16
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 16
 
 
  710 00f6 77       		.byte	0x77
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  756      69746500 
  757              	.LASF25:
  758 0018 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Pin_3.c\000"
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 17
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 17
 
 
  758      6E657261 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  778              	.LASF12:
  779 00f1 646F7562 		.ascii	"double\000"
  779      6C6500
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 18
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 18
 
 
  780              	.LASF10:
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 1
  803              	.LASF4:
  804 01b4 6C6F6E67 		.ascii	"long int\000"
  804      20696E74 
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\cc0eFZwG.s 			page 19
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccn9E7GP.s 			page 19
 
 
  804      00

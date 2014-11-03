@@ -1,6 +1,6 @@
 // ======================================================================
 // Lticker.v generated from TopDesign.cysch
-// 09/12/2014 at 23:35
+// 11/03/2014 at 23:18
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -148,7 +148,7 @@ module top ;
 		  .divisor(2),
 		  .period("0"),
 		  .is_direct(0),
-		  .is_digital(0))
+		  .is_digital(1))
 		Clock_1
 		 (.clock_out(Net_186));
 
@@ -294,7 +294,7 @@ module top ;
     WS2812driver WS2812driver_1 (
         .CLK(Net_186),
         .PulseOut(Net_187),
-        .FIFO_FULL(Net_188),
+        .BUSY(Net_188),
         .FIFO_EMPTY(Net_189));
 
 

@@ -16,7 +16,7 @@
 // Component: WS2812driver
 module WS2812driver (
 	output  PulseOut,
-    output  FIFO_FULL,
+    output  BUSY,
     output  FIFO_EMPTY,
 	input   CLK
 );
@@ -34,55 +34,50 @@ reg pg_data_req;
 wire pg_det_eq;
 wire pg_det_zero;
 
-localparam SHIFTER_IDLE = 2'd0;
-localparam SHIFTER_LOAD = 2'd1;
-localparam SHIFTER_WAIT = 2'd2;
-localparam SHIFTER_SHIFT = 2'd3;
-reg [1:0] shifter_state;
+localparam SHIFTER_IDLE = 3'd0;
+localparam SHIFTER_LOAD_0 = 3'd1;
+localparam SHIFTER_WAIT_0 = 3'd2;
+localparam SHIFTER_SHIFT_0 = 3'd3;
+localparam SHIFTER_LOAD_1 = 3'd4;
+localparam SHIFTER_WAIT_1 = 3'd5;
+localparam SHIFTER_SHIFT_1 = 3'd6;
+reg [2:0] shifter_state;
 reg [2:0] shift_counter;
 wire[7:0] comp_val;
 wire shift_out;
-wire shifter_f0_notempty;
-wire shifter_f0_full;
-wire shifter_f1_empty;
+wire shifter_f0_notfull;
+wire shifter_f0_empty;
 wire shifter_f1_notfull;
+wire shifter_f1_empty;
 
-localparam FIFO_IDLE = 2'd0;
-localparam FIFO_FEED = 2'd1;
-localparam FIFO_WAIT = 2'd2;
-localparam FIFO_LOAD = 2'd3;
-reg[1:0] fifo_state;
-wire f1_feed = (fifo_state==FIFO_FEED)?1'b1:1'b0;
-wire f0_load = (fifo_state==FIFO_LOAD)?1'b1:1'b0;
-wire d0_load;
-
-//        Your code goes here
+// Your code goes here
 assign PulseOut = pg_out;
-assign FIFO_EMPTY = f0_load;
-assign d0_load = !f0_load;
-assign FIFO_FULL = f1_feed;
+assign FIFO_EMPTY = shifter_f0_empty & shifter_f1_empty;
+assign BUSY = |pg_state;
 assign comp_val = shift_out?8'd5:8'd17;
 
 // pulseGen state machine
 always @ (posedge CLK) begin
-    case(pg_state) 
+    case(pg_state)
         PG_IDLE:begin
             pg_out <= 1'b0;
             pg_data_req <= 1'b0;
-            if(!shifter_state[0])
-                begin
-                pg_state <= PG_IDLE;
-                end
-            else
+            if(|shifter_state)
                 begin
                 pg_state <= PG_LOAD;
                 end
+            else
+                begin
+                pg_state <= PG_IDLE;
+                end
         end
+        
         PG_LOAD:begin
             pg_out <= 1'b1;
             pg_data_req <= 1'b0;
             pg_state <= PG_DEC_A;
         end
+        
         PG_DEC_A:begin
             pg_data_req <= 1'b0;
             if(pg_det_eq)
@@ -96,17 +91,18 @@ always @ (posedge CLK) begin
                 pg_state <= PG_DEC_A;
                 end
         end
+        
         PG_DEC_B:begin
             pg_out <= 1'b0;
             if(pg_det_zero)
                 begin
-                if(!shifter_state[0])
+                if(|shifter_state)
                     begin
-                    pg_state <= PG_IDLE;
+                    pg_state <= PG_LOAD;
                     end
                 else
                     begin
-                    pg_state <= PG_LOAD;
+                    pg_state <= PG_IDLE;
                     end
                 end
             else
@@ -121,102 +117,121 @@ always @ (posedge CLK) begin
                 begin
                 pg_data_req <= 1'b0;
                 end
-        end
+            end
+            
         default:begin
             pg_state <= PG_IDLE;
         end
+        
     endcase
 end
 
 // shifter state machine
 always @ (posedge CLK) begin
-    case(shifter_state) 
+    case(shifter_state)
         SHIFTER_IDLE:begin
             shift_counter <= shift_counter;
-            if(!shifter_f0_notempty)
+            if(shifter_f0_empty)
                 begin
                 shifter_state <= SHIFTER_IDLE;
                 end
             else
                 begin
-                shifter_state <= SHIFTER_LOAD;
+                shifter_state <= SHIFTER_LOAD_0;
                 end
         end
-        SHIFTER_LOAD:begin
-            shifter_state <= SHIFTER_WAIT;
-            shift_counter <= 3'd6;
+        
+        SHIFTER_LOAD_0:begin
+            shifter_state <= SHIFTER_WAIT_0;
+            shift_counter <= 3'd7;
         end
-        SHIFTER_WAIT:begin
+        
+        SHIFTER_WAIT_0:begin
             shift_counter <= shift_counter;
             if(pg_data_req)
                 begin
-                shifter_state <= SHIFTER_SHIFT;
+                shifter_state <= SHIFTER_SHIFT_0;
                 end
             else
                 begin
-                shifter_state <= SHIFTER_WAIT;
+                shifter_state <= SHIFTER_WAIT_0;
                 end
         end
-        SHIFTER_SHIFT:begin
+        
+        SHIFTER_SHIFT_0:begin
             shift_counter <= shift_counter - 1;
             if(shift_counter==3'd0)
                 begin
-                if(!shifter_f0_notempty)
+                if(shifter_f0_empty)
                     begin
-                    shifter_state <= SHIFTER_IDLE;
+                    if(shifter_f1_empty)
+                        begin
+                        shifter_state <= SHIFTER_IDLE;
+                        end
+                    else
+                        begin
+                        shifter_state <= SHIFTER_LOAD_1;
+                        end
                     end
                 else
                     begin
-                    shifter_state <= SHIFTER_LOAD;
+                    shifter_state <= SHIFTER_LOAD_0;
                     end
                 end
             else
                 begin
-                shifter_state <= SHIFTER_WAIT;
+                shifter_state <= SHIFTER_WAIT_0;
                 end
         end
+        
+        SHIFTER_LOAD_1:begin
+            shifter_state <= SHIFTER_WAIT_1;
+            shift_counter <= 3'd7;
+        end
+        
+        SHIFTER_WAIT_1:begin
+            shift_counter <= shift_counter;
+            if(pg_data_req)
+                begin
+                shifter_state <= SHIFTER_SHIFT_1;
+                end
+            else
+                begin
+                shifter_state <= SHIFTER_WAIT_1;
+                end
+        end
+        
+        SHIFTER_SHIFT_1:begin
+            shift_counter <= shift_counter - 1;
+            if(shift_counter==3'd0)
+                begin
+                if(shifter_f1_empty)
+                    begin
+                    if(shifter_f0_empty)
+                        begin
+                        shifter_state <= SHIFTER_IDLE;
+                        end
+                    else
+                        begin
+                        shifter_state <= SHIFTER_LOAD_0;
+                        end
+                    end
+                else
+                    begin
+                    shifter_state <= SHIFTER_LOAD_1;
+                    end
+                end
+            else
+                begin
+                shifter_state <= SHIFTER_WAIT_1;
+                end
+        end
+        
         default:begin
+            shift_counter <= 3'd7;
             shifter_state <= SHIFTER_IDLE;
         end
-    endcase
-end
-
-// fifo state machine
-always @ (posedge CLK) begin
-    case(fifo_state) 
-        FIFO_IDLE:begin
-            if(!shifter_f1_empty)
-                begin
-                fifo_state <= FIFO_FEED;
-                end
-        end
-        FIFO_FEED:begin
-/*            if(shifter_f0_full)
-                begin*/
-                fifo_state <= FIFO_WAIT;
-/*                end
-            else
-                begin
-                fifo_state <= FIFO_LOAD;
-                end*/
-        end
-        FIFO_WAIT:begin
-            if(shifter_f0_full)
-                begin
-                fifo_state <= FIFO_WAIT;
-                end
-            else
-                begin
-                fifo_state <= FIFO_LOAD;
-                end
-        end
-        FIFO_LOAD:begin
-            fifo_state <= FIFO_IDLE;
-            end
-        default:
-            begin
-            fifo_state <= FIFO_IDLE;
-        end
+        
     endcase
 end
 
@@ -225,59 +240,59 @@ cy_psoc3_dp8 #(.cy_dpconfig_a(
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM0:   Idle*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM0:    Idle*/
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP___SL, `CS_A0_SRC___F0, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM1:   Load*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM1:    Load_0*/
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP___SL, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM2:   Wait*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM2:    Wait_0*/
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP___SL, `CS_A0_SRC__ALU, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM3:   Shift*/
-    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
-    `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC___F1,
-    `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM4:   IdleWithFeed*/
-    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
-    `CS_SHFT_OP___SL, `CS_A0_SRC___F0, `CS_A1_SRC___F1,
-    `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM5:   LoadWithFeed*/
-    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
+    `CS_CMP_SEL_CFGA, /*CFGRAM3:    Shift_0*/
+    `CS_ALU_OP_PASS, `CS_SRCA_A1, `CS_SRCB_D0,
     `CS_SHFT_OP___SL, `CS_A0_SRC_NONE, `CS_A1_SRC___F1,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM6:   WaitWithFeed*/
-    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
-    `CS_SHFT_OP___SL, `CS_A0_SRC__ALU, `CS_A1_SRC___F1,
+    `CS_CMP_SEL_CFGA, /*CFGRAM4:    Load_1*/
+    `CS_ALU_OP_PASS, `CS_SRCA_A1, `CS_SRCB_D0,
+    `CS_SHFT_OP___SL, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM7:   ShiftWithFeed*/
-    8'hFF, 8'h00,  /*CFG9:       */
-    8'hFF, 8'hFF,  /*CFG11-10:       */
+    `CS_CMP_SEL_CFGA, /*CFGRAM5:    Wait_1*/
+    `CS_ALU_OP_PASS, `CS_SRCA_A1, `CS_SRCB_D0,
+    `CS_SHFT_OP___SL, `CS_A0_SRC_NONE, `CS_A1_SRC__ALU,
+    `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
+    `CS_CMP_SEL_CFGA, /*CFGRAM6:    Shift_1*/
+    `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
+    `CS_SHFT_OP___SL, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
+    `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
+    `CS_CMP_SEL_CFGA, /*CFGRAM7:    */
+    8'hFF, 8'h00,  /*CFG9:            */
+    8'hFF, 8'hFF,  /*CFG11-10:            */
     `SC_CMPB_A1_D1, `SC_CMPA_A1_D1, `SC_CI_B_ARITH,
     `SC_CI_A_ARITH, `SC_C1_MASK_DSBL, `SC_C0_MASK_DSBL,
     `SC_A_MASK_DSBL, `SC_DEF_SI_0, `SC_SI_B_DEFSI,
-    `SC_SI_A_DEFSI, /*CFG13-12:       */
+    `SC_SI_A_DEFSI, /*CFG13-12:            */
     `SC_A0_SRC_ACC, `SC_SHIFT_SL, 1'h0,
-    1'h0, `SC_FIFO1_BUS, `SC_FIFO0__A1,
+    1'h0, `SC_FIFO1_BUS, `SC_FIFO0_BUS,
     `SC_MSB_DSBL, `SC_MSB_BIT7, `SC_MSB_NOCHN,
     `SC_FB_NOCHN, `SC_CMP1_NOCHN,
-    `SC_CMP0_NOCHN, /*CFG15-14:       */
-    7'h00, `SC_FIFO0_DYN_ON,2'h00,
+    `SC_CMP0_NOCHN, /*CFG15-14:            */
+    10'h00,
     `SC_FIFO_CLK__DP,`SC_FIFO_CAP_FX,`SC_FIFO_LEVEL,
-    `SC_FIFO_ASYNC /*CFG17-16:       */
+    `SC_FIFO_ASYNC /*CFG17-16:            */
 ,`SC_EXTCRC_DSBL,`SC_WRK16CAT_DSBL}
 )) shifter(
         /*  input                   */  .reset(1'b0),
         /*  input                   */  .clk(CLK),
-        /*  input   [02:00]         */  .cs_addr({f1_feed, shifter_state}),
+        /*  input   [02:00]         */  .cs_addr(shifter_state),
         /*  input                   */  .route_si(1'b0),
         /*  input                   */  .route_ci(1'b0),
-        /*  input                   */  .f0_load(f0_load),
+        /*  input                   */  .f0_load(1'b0),
         /*  input                   */  .f1_load(1'b0),
-        /*  input                   */  .d0_load(d0_load),
+        /*  input                   */  .d0_load(1'b0),
         /*  input                   */  .d1_load(1'b0),
         /*  output                  */  .ce0(),
         /*  output                  */  .cl0(),
@@ -291,65 +306,61 @@ cy_psoc3_dp8 #(.cy_dpconfig_a(
         /*  output                  */  .co_msb(),
         /*  output                  */  .cmsb(),
         /*  output                  */  .so(shift_out),
-        /*  output                  */  .f0_bus_stat(shifter_f0_notempty),
-        /*  output                  */  .f0_blk_stat(shifter_f0_full),
+        /*  output                  */  .f0_bus_stat(shifter_f0_notfull),
+        /*  output                  */  .f0_blk_stat(shifter_f0_empty),
         /*  output                  */  .f1_bus_stat(shifter_f1_notfull),
         /*  output                  */  .f1_blk_stat(shifter_f1_empty)
-        /*  output                  */  //.f0_bus_stat(shifter_f0_empty),
-        /*  output                  */  //.f0_blk_stat(shifter_f0_full),
-        /*  output                  */  //.f1_bus_stat(shifter_f1_full),
-        /*  output                  */  //.f1_blk_stat(shifter_f1_empty)
 );
 cy_psoc3_dp #(.a0_init(23), .a1_init(5), .d0_init(23), 
-.d1_init(1), 
+.d1_init(3), 
 .cy_dpconfig(
 {
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM0:      Idle*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM0:           Idle*/
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC___D0, `CS_A1_SRC__ALU,
     `CS_FEEDBACK_ENBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM1:      Load*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM1:           Load*/
     `CS_ALU_OP__DEC, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC__ALU, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM2:      DecA*/
+    `CS_CMP_SEL_CFGA, /*CFGRAM2:           DecA*/
     `CS_ALU_OP__DEC, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC__ALU, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGB, /*CFGRAM3:      DecB*/
+    `CS_CMP_SEL_CFGB, /*CFGRAM3:           DecB*/
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM4:      */
+    `CS_CMP_SEL_CFGA, /*CFGRAM4:           */
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM5:      */
+    `CS_CMP_SEL_CFGA, /*CFGRAM5:           */
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM6:      */
+    `CS_CMP_SEL_CFGA, /*CFGRAM6:           */
     `CS_ALU_OP_PASS, `CS_SRCA_A0, `CS_SRCB_D0,
     `CS_SHFT_OP_PASS, `CS_A0_SRC_NONE, `CS_A1_SRC_NONE,
     `CS_FEEDBACK_DSBL, `CS_CI_SEL_CFGA, `CS_SI_SEL_CFGA,
-    `CS_CMP_SEL_CFGA, /*CFGRAM7:      */
-    8'hFF, 8'h00,  /*CFG9:      */
-    8'hFF, 8'hFF,  /*CFG11-10:      */
+    `CS_CMP_SEL_CFGA, /*CFGRAM7:           */
+    8'hFF, 8'h00,  /*CFG9:           */
+    8'hFF, 8'hFF,  /*CFG11-10:           */
     `SC_CMPB_A0_D1, `SC_CMPA_A1_A0, `SC_CI_B_ARITH,
     `SC_CI_A_ARITH, `SC_C1_MASK_DSBL, `SC_C0_MASK_DSBL,
     `SC_A_MASK_DSBL, `SC_DEF_SI_0, `SC_SI_B_DEFSI,
-    `SC_SI_A_DEFSI, /*CFG13-12:      */
+    `SC_SI_A_DEFSI, /*CFG13-12:           */
     `SC_A0_SRC_ACC, `SC_SHIFT_SL, `SC_PI_DYN_EN,
     1'h0, `SC_FIFO1_BUS, `SC_FIFO0_BUS,
     `SC_MSB_DSBL, `SC_MSB_BIT0, `SC_MSB_NOCHN,
     `SC_FB_NOCHN, `SC_CMP1_NOCHN,
-    `SC_CMP0_NOCHN, /*CFG15-14:      */
-    10'h00, `SC_FIFO_CLK__DP,`SC_FIFO_CAP_AX,
+    `SC_CMP0_NOCHN, /*CFG15-14:           */
+    10'h00, `SC_FIFO_CLK__DP,`SC_FIFO_CAP_FX,
     `SC_FIFO_LEVEL,`SC_FIFO_ASYNC,`SC_EXTCRC_DSBL,
-    `SC_WRK16CAT_DSBL /*CFG17-16:      */
+    `SC_WRK16CAT_DSBL /*CFG17-16:           */
 }
 )) pulseGen(
         /*  input                   */  .reset(1'b0),
@@ -405,6 +416,11 @@ cy_psoc3_dp #(.a0_init(23), .a1_init(5), .d0_init(23),
 endmodule
 //`#start footer` -- edit after this line, do not edit this line
 //`#end` -- edit above this line, do not edit this line
+
+
+
+
+
 
 
 

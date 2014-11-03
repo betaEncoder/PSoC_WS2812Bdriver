@@ -20,20 +20,16 @@ int main()
     for(;;)
     {
         /* Place your application code here. */
-        for(i=0;i<128;i++);
-            CY_SET_REG8(WS2812driver_1_shifter_u0__F1_REG, 0xa1);
-/*            CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa1);
-            CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa1);
-            CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0xa1);
-            CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,5);  // pulse 1
-            CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,17); // pulse 0
-            CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,5);
-            CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,17);
-            CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,5);  // pulse 1
-            CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,17); // pulse 0
-            CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,5);
-            CY_SET_REG8(WS2812driver_1_pulseGen_u0__F1_REG,17);*/
-            
+        CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0x1);
+        CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0x1);
+        CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0x0);
+        CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0x1);
+        CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0x0);
+        CY_SET_REG8(WS2812driver_1_shifter_u0__F1_REG, 0x1);
+        CY_SET_REG8(WS2812driver_1_shifter_u0__F1_REG, 0x0);
+        CY_SET_REG8(WS2812driver_1_shifter_u0__F1_REG, 0x1);
+        CY_SET_REG8(WS2812driver_1_shifter_u0__F1_REG, 0x1);
+        for(i=0;i<4096;i++);
     }
 }
 

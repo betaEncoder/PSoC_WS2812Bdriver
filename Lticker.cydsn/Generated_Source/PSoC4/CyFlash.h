@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: CyFlash.h
-* Version 4.10
+* Version 4.11
 *
 *  Description:
 *   Provides the function definitions for the FLASH.
@@ -38,13 +38,17 @@ void     CySysFlashSetWaitCycles        (uint32 freq);
 
 #define CY_FLASH_SROM_CMD_RETURN_MASK   (0xF0000000u)                      /* SROM command return value mask          */
 #define CY_FLASH_SROM_CMD_RETURN_SUCC   (0xA0000000u)                      /* SROM command success                    */
-#define CY_FLASH_SROM_KEY1              (( uint32 )0xB6u)                  /* SROM key for FLASH command              */
-#define CY_FLASH_SROM_KEY2_LOAD         (( uint32 )0xD7u)                  /* SROM key for FLASH load command         */
-#define CY_FLASH_SROM_KEY2_WRITE        (( uint32 )0xD8u)                  /* SROM key for FLASH write command        */
+#define CY_FLASH_SROM_KEY1              0xB6u                              /* SROM key for FLASH command              */
+#define CY_FLASH_SROM_KEY2              0xD3u                              /* SROM key for FLASH command              */
+#define CY_FLASH_SROM_KEY2_LOAD         0xD7u                              /* SROM key for FLASH load command         */
+#define CY_FLASH_SROM_KEY2_WRITE        0xD8u                              /* SROM key for FLASH write command        */
+#define CY_FLASH_SROM_SILICON_ID_CMD    0xD3B6u                            /* SROM key for silicon ID command         */
 #define CY_FLASH_SROM_LOAD_CMD          ((CY_FLASH_SROM_KEY2_LOAD << 8u) | CY_FLASH_SROM_KEY1)
                                                                            /* SROM key for FLASH commands             */
-#define CY_FLASH_LOAD_BYTE_OPCODE       (( uint32 )0x04u)                  /* Load byte SROM opcode                   */
-#define CY_FLASH_WRITE_ROW_OPCODE       (( uint32 )0x05u)                  /* Row write SROM opcode                   */
+#define CY_FLASH_SILICON_ID_OPCODE      0x00u                              /* Get silicon ID opcode                   */
+#define CY_FLASH_LOAD_BYTE_OPCODE       0x04u                              /* Load byte SROM opcode                   */
+#define CY_FLASH_WRITE_ROW_OPCODE       0x05u                              /* Row write SROM opcode                   */
+#define CY_FLASH_PROGRAM_ROW_OPCODE     0x06u                              /* Row program SROM opcode                   */
 #define CY_FLASH_CPUSS_REQ_START        (( uint32 )(( uint32 )0x1u << 31u))/* Request CPU to execute the special code */
 
 #define CY_FLASH_NUMBER_ROWS            (CYDEV_FLASH_SIZE / CYDEV_FLS_ROW_SIZE)

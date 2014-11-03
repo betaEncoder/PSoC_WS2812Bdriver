@@ -2,7 +2,7 @@
 --	Conversion of Lticker.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Sep 12 23:35:13 2014
+--	Mon Nov 03 23:18:53 2014
 --
 
 USE cypress.cypress.all;
@@ -33,12 +33,11 @@ SIGNAL tmpFB_0__Pin_3_net_0 : bit;
 SIGNAL tmpIO_0__Pin_3_net_0 : bit;
 TERMINAL tmpSIOVREF__Pin_3_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Pin_3_net_0 : bit;
-SIGNAL \WS2812driver_1:f1_feed\ : bit;
-SIGNAL \WS2812driver_1:fifo_state_1\ : bit;
-SIGNAL \WS2812driver_1:fifo_state_0\ : bit;
-SIGNAL \WS2812driver_1:f0_load\ : bit;
 SIGNAL \WS2812driver_1:pg_out\ : bit;
-SIGNAL \WS2812driver_1:d0_load\ : bit;
+SIGNAL \WS2812driver_1:shifter_f0_empty\ : bit;
+SIGNAL \WS2812driver_1:shifter_f1_empty\ : bit;
+SIGNAL \WS2812driver_1:pg_state_1\ : bit;
+SIGNAL \WS2812driver_1:pg_state_0\ : bit;
 SIGNAL \WS2812driver_1:comp_val_7\ : bit;
 SIGNAL \WS2812driver_1:comp_val_6\ : bit;
 SIGNAL \WS2812driver_1:comp_val_5\ : bit;
@@ -48,22 +47,18 @@ SIGNAL \WS2812driver_1:comp_val_3\ : bit;
 SIGNAL \WS2812driver_1:comp_val_2\ : bit;
 SIGNAL \WS2812driver_1:comp_val_1\ : bit;
 SIGNAL \WS2812driver_1:comp_val_0\ : bit;
-SIGNAL \WS2812driver_1:pg_state_1\ : bit;
-SIGNAL \WS2812driver_1:pg_state_0\ : bit;
 SIGNAL \WS2812driver_1:pg_det_eq\ : bit;
 SIGNAL \WS2812driver_1:pg_data_req\ : bit;
 SIGNAL \WS2812driver_1:pg_det_zero\ : bit;
+SIGNAL \WS2812driver_1:shifter_state_2\ : bit;
+SIGNAL \WS2812driver_1:shifter_state_1\ : bit;
 SIGNAL \WS2812driver_1:shifter_state_0\ : bit;
 SIGNAL \WS2812driver_1:shift_counter_2\ : bit;
-SIGNAL \WS2812driver_1:shifter_state_1\ : bit;
 SIGNAL \WS2812driver_1:sub_vi_vv_MODGEN_1_2\ : bit;
 SIGNAL \WS2812driver_1:shift_counter_1\ : bit;
 SIGNAL \WS2812driver_1:sub_vi_vv_MODGEN_1_1\ : bit;
 SIGNAL \WS2812driver_1:shift_counter_0\ : bit;
 SIGNAL \WS2812driver_1:sub_vi_vv_MODGEN_1_0\ : bit;
-SIGNAL \WS2812driver_1:shifter_f0_notempty\ : bit;
-SIGNAL \WS2812driver_1:shifter_f1_empty\ : bit;
-SIGNAL \WS2812driver_1:shifter_f0_full\ : bit;
 SIGNAL \WS2812driver_1:shifter:ce0\ : bit;
 ATTRIBUTE port_state_att of \WS2812driver_1:shifter:ce0\:SIGNAL IS 2;
 SIGNAL \WS2812driver_1:shifter:cl0\ : bit;
@@ -86,6 +81,7 @@ SIGNAL \WS2812driver_1:shifter:co_msb\ : bit;
 ATTRIBUTE port_state_att of \WS2812driver_1:shifter:co_msb\:SIGNAL IS 2;
 SIGNAL \WS2812driver_1:shifter:cmsb\ : bit;
 ATTRIBUTE port_state_att of \WS2812driver_1:shifter:cmsb\:SIGNAL IS 2;
+SIGNAL \WS2812driver_1:shifter_f0_notfull\ : bit;
 SIGNAL \WS2812driver_1:shifter_f1_notfull\ : bit;
 SIGNAL \WS2812driver_1:shifter:ce0_reg\ : bit;
 ATTRIBUTE port_state_att of \WS2812driver_1:shifter:ce0_reg\:SIGNAL IS 2;
@@ -315,15 +311,14 @@ SIGNAL \WS2812driver_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_2\ : bit;
 SIGNAL \WS2812driver_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
 SIGNAL \WS2812driver_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
 SIGNAL \WS2812driver_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
-SIGNAL \WS2812driver_1:fifo_state_1\\D\ : bit;
-SIGNAL \WS2812driver_1:fifo_state_0\\D\ : bit;
 SIGNAL \WS2812driver_1:pg_out\\D\ : bit;
 SIGNAL \WS2812driver_1:pg_state_1\\D\ : bit;
 SIGNAL \WS2812driver_1:pg_state_0\\D\ : bit;
 SIGNAL \WS2812driver_1:pg_data_req\\D\ : bit;
+SIGNAL \WS2812driver_1:shifter_state_2\\D\ : bit;
+SIGNAL \WS2812driver_1:shifter_state_1\\D\ : bit;
 SIGNAL \WS2812driver_1:shifter_state_0\\D\ : bit;
 SIGNAL \WS2812driver_1:shift_counter_2\\D\ : bit;
-SIGNAL \WS2812driver_1:shifter_state_1\\D\ : bit;
 SIGNAL \WS2812driver_1:shift_counter_1\\D\ : bit;
 SIGNAL \WS2812driver_1:shift_counter_0\\D\ : bit;
 BEGIN
@@ -332,12 +327,10 @@ zero <=  ('0') ;
 
 tmpOE__Pin_1_net_0 <=  ('1') ;
 
-Net_189 <= ((\WS2812driver_1:fifo_state_1\ and \WS2812driver_1:fifo_state_0\));
+Net_189 <= ((\WS2812driver_1:shifter_f0_empty\ and \WS2812driver_1:shifter_f1_empty\));
 
-\WS2812driver_1:d0_load\ <= (not \WS2812driver_1:fifo_state_0\
-	OR not \WS2812driver_1:fifo_state_1\);
-
-Net_188 <= ((not \WS2812driver_1:fifo_state_1\ and \WS2812driver_1:fifo_state_0\));
+Net_188 <= (\WS2812driver_1:pg_state_0\
+	OR \WS2812driver_1:pg_state_1\);
 
 \WS2812driver_1:comp_val_4\ <= (not \WS2812driver_1:shift_out\);
 
@@ -351,39 +344,63 @@ Net_188 <= ((not \WS2812driver_1:fifo_state_1\ and \WS2812driver_1:fifo_state_0\
 	OR (not \WS2812driver_1:pg_state_0\ and \WS2812driver_1:pg_state_1\));
 
 \WS2812driver_1:pg_state_0\\D\ <= ((not \WS2812driver_1:pg_state_1\ and not \WS2812driver_1:pg_state_0\ and \WS2812driver_1:shifter_state_0\)
+	OR (not \WS2812driver_1:pg_state_1\ and not \WS2812driver_1:pg_state_0\ and \WS2812driver_1:shifter_state_1\)
+	OR (not \WS2812driver_1:pg_state_1\ and not \WS2812driver_1:pg_state_0\ and \WS2812driver_1:shifter_state_2\)
 	OR (not \WS2812driver_1:pg_det_zero\ and \WS2812driver_1:pg_state_1\ and \WS2812driver_1:pg_state_0\)
 	OR (not \WS2812driver_1:pg_state_0\ and \WS2812driver_1:pg_state_1\ and \WS2812driver_1:pg_det_eq\)
-	OR (\WS2812driver_1:pg_state_1\ and \WS2812driver_1:pg_state_0\ and \WS2812driver_1:shifter_state_0\));
+	OR (\WS2812driver_1:pg_state_1\ and \WS2812driver_1:pg_state_0\ and \WS2812driver_1:shifter_state_0\)
+	OR (\WS2812driver_1:pg_state_1\ and \WS2812driver_1:pg_state_0\ and \WS2812driver_1:shifter_state_1\)
+	OR (\WS2812driver_1:pg_state_1\ and \WS2812driver_1:pg_state_0\ and \WS2812driver_1:shifter_state_2\));
 
-\WS2812driver_1:shift_counter_2\\D\ <= ((not \WS2812driver_1:shift_counter_2\ and not \WS2812driver_1:shift_counter_1\ and not \WS2812driver_1:shift_counter_0\ and \WS2812driver_1:shifter_state_0\)
-	OR (not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
+\WS2812driver_1:shift_counter_2\\D\ <= ((not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shift_counter_2\)
+	OR (not \WS2812driver_1:shifter_state_0\ and not \WS2812driver_1:shift_counter_2\ and not \WS2812driver_1:shift_counter_1\ and not \WS2812driver_1:shift_counter_0\ and \WS2812driver_1:shifter_state_2\)
+	OR (not \WS2812driver_1:shift_counter_2\ and not \WS2812driver_1:shift_counter_1\ and not \WS2812driver_1:shift_counter_0\ and \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
+	OR (not \WS2812driver_1:shifter_state_2\ and not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
+	OR (\WS2812driver_1:shifter_state_2\ and \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
+	OR (not \WS2812driver_1:shifter_state_2\ and not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shift_counter_2\)
+	OR (not \WS2812driver_1:shifter_state_1\ and not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_2\)
 	OR (\WS2812driver_1:shift_counter_2\ and \WS2812driver_1:shift_counter_0\)
-	OR (\WS2812driver_1:shift_counter_2\ and \WS2812driver_1:shift_counter_1\)
-	OR (not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shift_counter_2\));
+	OR (\WS2812driver_1:shift_counter_2\ and \WS2812driver_1:shift_counter_1\));
 
-\WS2812driver_1:shift_counter_1\\D\ <= ((not \WS2812driver_1:shift_counter_1\ and not \WS2812driver_1:shift_counter_0\ and \WS2812driver_1:shifter_state_0\)
-	OR (\WS2812driver_1:shift_counter_1\ and \WS2812driver_1:shift_counter_0\)
-	OR (not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shift_counter_1\)
-	OR (not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\));
+\WS2812driver_1:shift_counter_1\\D\ <= ((not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shift_counter_1\)
+	OR (not \WS2812driver_1:shifter_state_0\ and not \WS2812driver_1:shift_counter_1\ and not \WS2812driver_1:shift_counter_0\ and \WS2812driver_1:shifter_state_2\)
+	OR (not \WS2812driver_1:shift_counter_1\ and not \WS2812driver_1:shift_counter_0\ and \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
+	OR (not \WS2812driver_1:shifter_state_2\ and not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shift_counter_1\)
+	OR (not \WS2812driver_1:shifter_state_2\ and not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
+	OR (\WS2812driver_1:shifter_state_2\ and \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
+	OR (not \WS2812driver_1:shifter_state_1\ and not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_2\)
+	OR (\WS2812driver_1:shift_counter_1\ and \WS2812driver_1:shift_counter_0\));
 
-\WS2812driver_1:shift_counter_0\\D\ <= ((not \WS2812driver_1:shift_counter_0\ and \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_1\)
-	OR (not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shift_counter_0\));
+\WS2812driver_1:shift_counter_0\\D\ <= ((\WS2812driver_1:shifter_state_2\ and \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shift_counter_0\)
+	OR (not \WS2812driver_1:shifter_state_0\ and not \WS2812driver_1:shift_counter_0\ and \WS2812driver_1:shifter_state_2\)
+	OR (not \WS2812driver_1:shifter_state_2\ and not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
+	OR (not \WS2812driver_1:shift_counter_0\ and \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
+	OR (not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shift_counter_0\)
+	OR (not \WS2812driver_1:shifter_state_2\ and not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shift_counter_0\));
 
-\WS2812driver_1:shifter_state_1\\D\ <= ((\WS2812driver_1:shift_counter_2\ and \WS2812driver_1:shifter_state_1\)
-	OR (\WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shift_counter_1\)
-	OR (\WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shift_counter_0\)
-	OR (not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
-	OR (not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_1\));
+\WS2812driver_1:shifter_state_2\\D\ <= ((not \WS2812driver_1:shifter_f1_empty\ and not \WS2812driver_1:shifter_state_2\ and not \WS2812driver_1:shift_counter_2\ and not \WS2812driver_1:shift_counter_1\ and not \WS2812driver_1:shift_counter_0\ and \WS2812driver_1:shifter_f0_empty\ and \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
+	OR (not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_2\ and \WS2812driver_1:shift_counter_0\)
+	OR (not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_2\ and \WS2812driver_1:shift_counter_1\)
+	OR (not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_2\ and \WS2812driver_1:shift_counter_2\)
+	OR (not \WS2812driver_1:shifter_f1_empty\ and not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_2\)
+	OR (not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_2\));
 
-\WS2812driver_1:shifter_state_0\\D\ <= ((not \WS2812driver_1:shift_counter_2\ and not \WS2812driver_1:shift_counter_1\ and not \WS2812driver_1:shift_counter_0\ and \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_f0_notempty\)
-	OR (not \WS2812driver_1:shifter_state_0\ and not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_f0_notempty\)
-	OR (not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:pg_data_req\ and \WS2812driver_1:shifter_state_1\));
+\WS2812driver_1:shifter_state_1\\D\ <= ((not \WS2812driver_1:shifter_state_2\ and \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shift_counter_2\)
+	OR (not \WS2812driver_1:shifter_state_2\ and \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shift_counter_1\)
+	OR (not \WS2812driver_1:shifter_state_2\ and \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shift_counter_0\)
+	OR (not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:pg_data_req\ and \WS2812driver_1:shifter_state_0\)
+	OR (not \WS2812driver_1:shifter_state_2\ and not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
+	OR (not \WS2812driver_1:shifter_state_2\ and not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_1\));
 
-\WS2812driver_1:fifo_state_1\\D\ <= ((not \WS2812driver_1:fifo_state_0\ and \WS2812driver_1:fifo_state_1\)
-	OR (not \WS2812driver_1:fifo_state_1\ and \WS2812driver_1:fifo_state_0\));
-
-\WS2812driver_1:fifo_state_0\\D\ <= ((not \WS2812driver_1:fifo_state_0\ and not \WS2812driver_1:shifter_f0_full\ and \WS2812driver_1:fifo_state_1\)
-	OR (not \WS2812driver_1:fifo_state_1\ and not \WS2812driver_1:fifo_state_0\ and not \WS2812driver_1:shifter_f1_empty\));
+\WS2812driver_1:shifter_state_0\\D\ <= ((not \WS2812driver_1:shifter_f0_empty\ and not \WS2812driver_1:shifter_state_2\ and not \WS2812driver_1:shift_counter_2\ and not \WS2812driver_1:shift_counter_1\ and not \WS2812driver_1:shift_counter_0\ and \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_0\)
+	OR (not \WS2812driver_1:shifter_state_2\ and not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:pg_data_req\ and \WS2812driver_1:shifter_state_1\)
+	OR (not \WS2812driver_1:shifter_f0_empty\ and not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_f1_empty\ and \WS2812driver_1:shifter_state_2\)
+	OR (not \WS2812driver_1:pg_data_req\ and not \WS2812driver_1:shifter_state_1\ and \WS2812driver_1:shifter_state_2\)
+	OR (not \WS2812driver_1:shifter_f0_empty\ and not \WS2812driver_1:shifter_state_1\ and not \WS2812driver_1:shifter_state_0\)
+	OR (not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_2\ and \WS2812driver_1:shift_counter_0\)
+	OR (not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_2\ and \WS2812driver_1:shift_counter_1\)
+	OR (not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_2\ and \WS2812driver_1:shift_counter_2\)
+	OR (not \WS2812driver_1:shifter_state_1\ and not \WS2812driver_1:shifter_state_0\ and \WS2812driver_1:shifter_state_2\));
 
 \WS2812driver_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ <= ((not \WS2812driver_1:shift_counter_2\ and not \WS2812driver_1:shift_counter_1\ and not \WS2812driver_1:shift_counter_0\));
 
@@ -459,7 +476,7 @@ Clock_1:cy_clock_v1_0
 		divisor=>2,
 		period=>"0",
 		is_direct=>'0',
-		is_digital=>'0')
+		is_digital=>'1')
 	PORT MAP(clock_out=>Net_186,
 		dig_domain_out=>open);
 Pin_2:cy_psoc3_pins_v1_10
@@ -593,7 +610,7 @@ Pin_3:cy_psoc3_pins_v1_10
 		out_reset=>zero,
 		interrupt=>tmpINTERRUPT_0__Pin_3_net_0);
 \WS2812driver_1:shifter:u0\:cy_psoc3_dp
-	GENERIC MAP(cy_dpconfig=>"0000000000000000000000011100000000000001000000000000000101000000000000000011000000000001111100000000000100110000000000010111000011111111000000001111111111111111000000000000000000000010011100000000000100010100",
+	GENERIC MAP(cy_dpconfig=>"0000000000000000000000011100000000000001000000000000000101000000000100010011000000010001000000000001000100010000000000010000000011111111000000001111111111111111000000000000000000000000011100000000000000010100",
 		d0_init=>"00000000",
 		d1_init=>"00000000",
 		a0_init=>"00000000",
@@ -616,12 +633,12 @@ Pin_3:cy_psoc3_pins_v1_10
 		f1_blk_sync=>'1')
 	PORT MAP(reset=>zero,
 		clk=>Net_186,
-		cs_addr=>(Net_188, \WS2812driver_1:shifter_state_1\, \WS2812driver_1:shifter_state_0\),
+		cs_addr=>(\WS2812driver_1:shifter_state_2\, \WS2812driver_1:shifter_state_1\, \WS2812driver_1:shifter_state_0\),
 		route_si=>zero,
 		route_ci=>zero,
-		f0_load=>Net_189,
+		f0_load=>zero,
 		f1_load=>zero,
-		d0_load=>\WS2812driver_1:d0_load\,
+		d0_load=>zero,
 		d1_load=>zero,
 		ce0=>open,
 		cl0=>open,
@@ -635,8 +652,8 @@ Pin_3:cy_psoc3_pins_v1_10
 		co_msb=>open,
 		cmsb=>open,
 		so=>\WS2812driver_1:shift_out\,
-		f0_bus_stat=>\WS2812driver_1:shifter_f0_notempty\,
-		f0_blk_stat=>\WS2812driver_1:shifter_f0_full\,
+		f0_bus_stat=>\WS2812driver_1:shifter_f0_notfull\,
+		f0_blk_stat=>\WS2812driver_1:shifter_f0_empty\,
 		f1_bus_stat=>\WS2812driver_1:shifter_f1_notfull\,
 		f1_blk_stat=>\WS2812driver_1:shifter_f1_empty\,
 		ce0_reg=>open,
@@ -679,9 +696,9 @@ Pin_3:cy_psoc3_pins_v1_10
 			zero, zero, zero, zero),
 		po=>open);
 \WS2812driver_1:pulseGen\:cy_psoc3_dp
-	GENERIC MAP(cy_dpconfig=>"0000000000000000000000001001100001000000010000000100000001000001000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111100100000000000000100000000000000000000000000100",
+	GENERIC MAP(cy_dpconfig=>"0000000000000000000000001001100001000000010000000100000001000001000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111100100000000000000100000000000000000000000010100",
 		d0_init=>"00010111",
-		d1_init=>"00000001",
+		d1_init=>"00000011",
 		a0_init=>"00010111",
 		a1_init=>"00000101",
 		ce0_sync=>'1',
@@ -773,14 +790,6 @@ Pin_3:cy_psoc3_pins_v1_10
 \WS2812driver_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(8):g2:g3:ub\:cy_buf
 	PORT MAP(x=>\WS2812driver_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\,
 		y=>\WS2812driver_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\);
-\WS2812driver_1:fifo_state_1\:cy_dff
-	PORT MAP(d=>\WS2812driver_1:fifo_state_1\\D\,
-		clk=>Net_186,
-		q=>\WS2812driver_1:fifo_state_1\);
-\WS2812driver_1:fifo_state_0\:cy_dff
-	PORT MAP(d=>\WS2812driver_1:fifo_state_0\\D\,
-		clk=>Net_186,
-		q=>\WS2812driver_1:fifo_state_0\);
 \WS2812driver_1:pg_out\:cy_dff
 	PORT MAP(d=>\WS2812driver_1:pg_out\\D\,
 		clk=>Net_186,
@@ -797,6 +806,14 @@ Pin_3:cy_psoc3_pins_v1_10
 	PORT MAP(d=>\WS2812driver_1:pg_data_req\\D\,
 		clk=>Net_186,
 		q=>\WS2812driver_1:pg_data_req\);
+\WS2812driver_1:shifter_state_2\:cy_dff
+	PORT MAP(d=>\WS2812driver_1:shifter_state_2\\D\,
+		clk=>Net_186,
+		q=>\WS2812driver_1:shifter_state_2\);
+\WS2812driver_1:shifter_state_1\:cy_dff
+	PORT MAP(d=>\WS2812driver_1:shifter_state_1\\D\,
+		clk=>Net_186,
+		q=>\WS2812driver_1:shifter_state_1\);
 \WS2812driver_1:shifter_state_0\:cy_dff
 	PORT MAP(d=>\WS2812driver_1:shifter_state_0\\D\,
 		clk=>Net_186,
@@ -805,10 +822,6 @@ Pin_3:cy_psoc3_pins_v1_10
 	PORT MAP(d=>\WS2812driver_1:shift_counter_2\\D\,
 		clk=>Net_186,
 		q=>\WS2812driver_1:shift_counter_2\);
-\WS2812driver_1:shifter_state_1\:cy_dff
-	PORT MAP(d=>\WS2812driver_1:shifter_state_1\\D\,
-		clk=>Net_186,
-		q=>\WS2812driver_1:shifter_state_1\);
 \WS2812driver_1:shift_counter_1\:cy_dff
 	PORT MAP(d=>\WS2812driver_1:shift_counter_1\\D\,
 		clk=>Net_186,
