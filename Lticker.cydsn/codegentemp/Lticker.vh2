@@ -2,7 +2,7 @@
 --	Conversion of Lticker.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Nov 03 23:18:53 2014
+--	Tue Nov 04 01:32:04 2014
 --
 
 USE cypress.cypress.all;

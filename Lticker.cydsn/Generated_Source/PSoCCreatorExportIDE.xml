@@ -75,10 +75,18 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Pin_3.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Pin_3.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Pin_3_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\WS2812driver_1_WS2812driver.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\WS2812driver_1_WS2812driver.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\prebuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\postbuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyElfTool.exe</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\libelf.dll</File>
+        </Files>
+      </Folder>
+      <Folder BuildType="BUILD" Path="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\WS2812driver\API">
+        <Files Root="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn">
+          <File BuildType="BUILD" Toolchain="">.\WS2812driver\API\WS2812driver.h</File>
+          <File BuildType="BUILD" Toolchain="">.\WS2812driver\API\WS2812driver.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\Generated_Source\PSoC4\ARM_GCC">

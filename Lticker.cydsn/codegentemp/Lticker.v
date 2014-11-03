@@ -1,6 +1,6 @@
 // ======================================================================
 // Lticker.v generated from TopDesign.cysch
-// 11/03/2014 at 23:18
+// 11/04/2014 at 01:32
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
