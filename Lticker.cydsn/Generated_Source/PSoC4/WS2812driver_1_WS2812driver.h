@@ -12,6 +12,10 @@
 
 #include <cytypes.h>
 
+#define FIFO_F0 0;
+#define FIFO_F1 1;
+
+void WS2812driver_1_write_byte(unsigned char buff);
 void WS2812driver_1_write2fifo(unsigned char* buff, unsigned char len);
 
 /* [] END OF FILE */

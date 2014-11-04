@@ -1,5 +1,5 @@
 -- Project:   Lticker
--- Generated: 11/04/2014 01:32:05
+-- Generated: 11/05/2014 00:11:41
 -- 
 
 ENTITY Lticker IS
@@ -1041,11 +1041,17 @@ BEGIN
 
     Net_189:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * main_1)")
+            eqn_main => "(main_0 * !main_1 * !main_3) + (main_0 * main_1 * main_3) + (main_0 * !main_2) + (!main_1 * main_2 * main_3 * main_4 * main_5) + (main_1 * main_2 * !main_3 * main_4 * main_5)",
+            clk_inv => '0')
         PORT MAP(
             q => Net_189,
-            main_0 => \WS2812driver_1:shifter_f0_empty\,
-            main_1 => \WS2812driver_1:shifter_f1_empty\);
+            clock_0 => Net_186_digital,
+            main_0 => Net_189,
+            main_1 => \WS2812driver_1:shifter_state_2\,
+            main_2 => \WS2812driver_1:shifter_state_1\,
+            main_3 => \WS2812driver_1:shifter_state_0\,
+            main_4 => \WS2812driver_1:shifter_f0_empty\,
+            main_5 => \WS2812driver_1:shifter_f1_empty\);
 
     Pin_1:logicalport
         GENERIC MAP(
@@ -1466,20 +1472,20 @@ BEGIN
 
     \WS2812driver_1:shifter_state_0\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_3 * main_4 * main_5 * !main_6 * !main_7 * !main_8) + (main_0 * !main_3 * !main_4 * !main_5) + (main_0 * main_3 * main_4 * !main_5 * !main_6 * !main_7 * !main_8) + (!main_1 * main_3 * main_4 * !main_5 * !main_6 * !main_7 * !main_8) + (!main_2 * !main_3 * main_4 * !main_5) + (!main_2 * main_3 * !main_4 * main_5)",
+            eqn_main => "(!main_0 * !main_1 * main_2 * !main_3) + (!main_0 * main_1 * !main_2 * main_3) + (!main_1 * !main_2 * !main_3 * main_7) + (!main_1 * main_2 * main_3 * !main_4 * !main_5 * !main_6 * !main_7) + (main_1 * main_2 * !main_3 * !main_4 * !main_5 * !main_6 * main_7) + (main_1 * main_2 * !main_3 * !main_4 * !main_5 * !main_6 * !main_8)",
             clk_inv => '0')
         PORT MAP(
             q => \WS2812driver_1:shifter_state_0\,
             clock_0 => Net_186_digital,
-            main_0 => \WS2812driver_1:shifter_f0_empty\,
-            main_1 => \WS2812driver_1:shifter_f1_empty\,
-            main_2 => \WS2812driver_1:pg_data_req\,
-            main_3 => \WS2812driver_1:shifter_state_2\,
-            main_4 => \WS2812driver_1:shifter_state_1\,
-            main_5 => \WS2812driver_1:shifter_state_0\,
-            main_6 => \WS2812driver_1:shift_counter_2\,
-            main_7 => \WS2812driver_1:shift_counter_1\,
-            main_8 => \WS2812driver_1:shift_counter_0\);
+            main_0 => \WS2812driver_1:pg_data_req\,
+            main_1 => \WS2812driver_1:shifter_state_2\,
+            main_2 => \WS2812driver_1:shifter_state_1\,
+            main_3 => \WS2812driver_1:shifter_state_0\,
+            main_4 => \WS2812driver_1:shift_counter_2\,
+            main_5 => \WS2812driver_1:shift_counter_1\,
+            main_6 => \WS2812driver_1:shift_counter_0\,
+            main_7 => \WS2812driver_1:shifter_f0_empty\,
+            main_8 => \WS2812driver_1:shifter_f1_empty\);
 
     \WS2812driver_1:shifter_state_1\:macrocell
         GENERIC MAP(
@@ -1498,19 +1504,19 @@ BEGIN
 
     \WS2812driver_1:shifter_state_2\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0 * !main_1 * main_3 * main_4 * !main_5 * !main_6 * !main_7) + (main_1 * main_2 * main_3 * !main_5 * !main_6 * !main_7) + (main_2 * main_3 * main_4)",
+            eqn_main => "(main_0 * main_1 * main_2) + (main_0 * main_1 * !main_3 * !main_4 * !main_5 * main_7) + (main_1 * main_2 * !main_3 * !main_4 * !main_5 * main_6 * !main_7)",
             clk_inv => '0')
         PORT MAP(
             q => \WS2812driver_1:shifter_state_2\,
             clock_0 => Net_186_digital,
-            main_0 => \WS2812driver_1:shifter_f0_empty\,
-            main_1 => \WS2812driver_1:shifter_f1_empty\,
-            main_2 => \WS2812driver_1:shifter_state_2\,
-            main_3 => \WS2812driver_1:shifter_state_1\,
-            main_4 => \WS2812driver_1:shifter_state_0\,
-            main_5 => \WS2812driver_1:shift_counter_2\,
-            main_6 => \WS2812driver_1:shift_counter_1\,
-            main_7 => \WS2812driver_1:shift_counter_0\);
+            main_0 => \WS2812driver_1:shifter_state_2\,
+            main_1 => \WS2812driver_1:shifter_state_1\,
+            main_2 => \WS2812driver_1:shifter_state_0\,
+            main_3 => \WS2812driver_1:shift_counter_2\,
+            main_4 => \WS2812driver_1:shift_counter_1\,
+            main_5 => \WS2812driver_1:shift_counter_0\,
+            main_6 => \WS2812driver_1:shifter_f0_empty\,
+            main_7 => \WS2812driver_1:shifter_f1_empty\);
 
     __ONE__:macrocell
         GENERIC MAP(

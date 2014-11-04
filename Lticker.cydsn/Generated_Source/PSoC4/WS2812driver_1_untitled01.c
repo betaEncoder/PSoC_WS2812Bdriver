@@ -10,8 +10,4 @@
  * ========================================
 */
 
-#include <cytypes.h>
-
-void WS2812driver_1_write2fifo(unsigned char* buff, unsigned char len);
-
 /* [] END OF FILE */

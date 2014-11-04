@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
   30:.\Generated_Source\PSoC4/Clock_1.c **** *
   31:.\Generated_Source\PSoC4/Clock_1.c **** * Parameters:
   32:.\Generated_Source\PSoC4/Clock_1.c **** *  alignClkDiv:  The divider to which phase alignment is performed when the
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 2
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/Clock_1.c **** *    clock is started.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
   39 0008 1268     		ldr	r2, [r2]
   40 000a 8021     		mov	r1, #128
   41 000c 0906     		lsl	r1, r1, #24
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 3
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 3
 
 
   42 000e 0A43     		orr	r2, r1
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
   97:.\Generated_Source\PSoC4/Clock_1.c **** #if defined CYREG_PERI_DIV_CMD
   98:.\Generated_Source\PSoC4/Clock_1.c **** 
   99:.\Generated_Source\PSoC4/Clock_1.c ****     /* Make sure any previous start command has finished. */
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 4
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 4
 
 
  100:.\Generated_Source\PSoC4/Clock_1.c ****     while((Clock_1_CMD_REG & Clock_1_CMD_ENABLE_MASK) != 0u)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  128:.\Generated_Source\PSoC4/Clock_1.c **** *    to divide the clock by 2, this parameter should be set to 1.
  129:.\Generated_Source\PSoC4/Clock_1.c **** *  fracDivider:  Fractional Divider register value (0-31).
  130:.\Generated_Source\PSoC4/Clock_1.c **** * Returns:
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 5
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 5
 
 
  131:.\Generated_Source\PSoC4/Clock_1.c **** *  None
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  154:.\Generated_Source\PSoC4/Clock_1.c ****     
  155:.\Generated_Source\PSoC4/Clock_1.c **** #endif /* Clock_1__FRAC_MASK || CYREG_PERI_DIV_CMD */
  156:.\Generated_Source\PSoC4/Clock_1.c **** 
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 6
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 6
 
 
  157:.\Generated_Source\PSoC4/Clock_1.c ****     Clock_1_DIV_REG = regVal;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  163              		.cfi_def_cfa_register 7
  178:.\Generated_Source\PSoC4/Clock_1.c ****     return (uint16)((Clock_1_DIV_REG & Clock_1_DIV_INT_MASK)
  164              		.loc 1 178 0
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 7
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 7
 
 
  165 0004 024B     		ldr	r3, .L12
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  200:.\Generated_Source\PSoC4/Clock_1.c **** #if defined (Clock_1__FRAC_MASK)
  201:.\Generated_Source\PSoC4/Clock_1.c ****     /* return fractional divider bits */
  202:.\Generated_Source\PSoC4/Clock_1.c ****     return (uint8)((Clock_1_DIV_REG & Clock_1_DIV_FRAC_MASK)
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 8
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 8
 
 
  203:.\Generated_Source\PSoC4/Clock_1.c ****         >> Clock_1_DIV_FRAC_SHIFT);
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  247 004d 04       		.byte	0x4
  248 004e 07       		.byte	0x7
  249 004f 84000000 		.4byte	.LASF5
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 9
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 9
 
 
  250 0053 02       		.uleb128 0x2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  304 00bc 46       		.byte	0x46
  305 00bd 01       		.byte	0x1
  306 00be 00000000 		.4byte	.LFB0
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 10
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 10
 
 
  307 00c2 1C000000 		.4byte	.LFE0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  361 0131 91       		.byte	0x91
  362 0132 70       		.sleb128 -16
  363 0133 00       		.byte	0
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 11
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 11
 
 
  364 0134 0A       		.uleb128 0xa
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  418 001d 0E       		.uleb128 0xe
  419 001e 00       		.byte	0
  420 001f 00       		.byte	0
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 12
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 12
 
 
  421 0020 03       		.uleb128 0x3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  475 0057 07       		.uleb128 0x7
  476 0058 2E       		.uleb128 0x2e
  477 0059 01       		.byte	0x1
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 13
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 13
 
 
  478 005a 3F       		.uleb128 0x3f
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  532 0091 00       		.byte	0
  533 0092 3F       		.uleb128 0x3f
  534 0093 0C       		.uleb128 0xc
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 14
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 14
 
 
  535 0094 03       		.uleb128 0x3
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  589 004c 0200     		.2byte	0x2
  590 004e 77       		.byte	0x77
  591 004f 08       		.sleb128 8
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 15
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 15
 
 
  592 0050 00000000 		.4byte	0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  646 00d4 04000000 		.4byte	.LCFI10
  647 00d8 0C000000 		.4byte	.LFE4
  648 00dc 0200     		.2byte	0x2
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 16
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 16
 
 
  649 00de 77       		.byte	0x77
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  695      5C547375 
  695      62617361 
  695      204D6172 
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 17
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 17
 
 
  696 003d 725C4C74 		.ascii	"r\\Lticker\\Lticker.cydsn\000"
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  718      696F6E61 
  718      6C00
  719              	.LASF10:
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 18
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 18
 
 
  720 00f3 75696E74 		.ascii	"uint16\000"
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 1
  742              	.LASF4:
  743 01db 6C6F6E67 		.ascii	"long int\000"
  743      20696E74 
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccXanDje.s 			page 19
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccBzP6L2.s 			page 19
 
 
  743      00

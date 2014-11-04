@@ -25,7 +25,7 @@
 #include <Pin_2_aliases.h>
 #include <Pin_3.h>
 #include <Pin_3_aliases.h>
-#include <WS2812driver_1_WS2812driver.h>
+#include <WS2812driver_1.h>
 #include <core_cm0_psoc4.h>
 #include <core_cm0.h>
 #include <CyFlash.h>

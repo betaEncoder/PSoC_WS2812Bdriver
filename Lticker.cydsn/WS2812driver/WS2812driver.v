@@ -28,6 +28,7 @@ localparam  PG_LOAD = 2'd1;
 localparam  PG_DEC_A = 2'd2;
 localparam  PG_DEC_B = 2'd3;
 
+reg empty_flag;
 reg [1:0] pg_state;
 reg pg_out;
 reg pg_data_req;
@@ -52,7 +53,7 @@ wire shifter_f1_empty;
 
 // Your code goes here
 assign PulseOut = pg_out;
-assign FIFO_EMPTY = shifter_f0_empty & shifter_f1_empty;
+assign FIFO_EMPTY = empty_flag;
 assign BUSY = |pg_state;
 assign comp_val = shift_out?8'd5:8'd17;
 
@@ -131,6 +132,7 @@ always @ (posedge CLK) begin
     case(shifter_state)
         SHIFTER_IDLE:begin
             shift_counter <= shift_counter;
+            empty_flag <= empty_flag;
             if(shifter_f0_empty)
                 begin
                 shifter_state <= SHIFTER_IDLE;
@@ -144,10 +146,12 @@ always @ (posedge CLK) begin
         SHIFTER_LOAD_0:begin
             shifter_state <= SHIFTER_WAIT_0;
             shift_counter <= 3'd7;
+            empty_flag <= empty_flag;
         end
         
         SHIFTER_WAIT_0:begin
             shift_counter <= shift_counter;
+            empty_flag <= empty_flag;
             if(pg_data_req)
                 begin
                 shifter_state <= SHIFTER_SHIFT_0;
@@ -160,6 +164,7 @@ always @ (posedge CLK) begin
         
         SHIFTER_SHIFT_0:begin
             shift_counter <= shift_counter - 1;
+            empty_flag <= shifter_f0_empty & shifter_f1_empty;
             if(shift_counter==3'd0)
                 begin
                 if(shifter_f0_empty)
@@ -187,10 +192,12 @@ always @ (posedge CLK) begin
         SHIFTER_LOAD_1:begin
             shifter_state <= SHIFTER_WAIT_1;
             shift_counter <= 3'd7;
+            empty_flag <= empty_flag;
         end
         
         SHIFTER_WAIT_1:begin
             shift_counter <= shift_counter;
+            empty_flag <= empty_flag;
             if(pg_data_req)
                 begin
                 shifter_state <= SHIFTER_SHIFT_1;
@@ -203,6 +210,7 @@ always @ (posedge CLK) begin
         
         SHIFTER_SHIFT_1:begin
             shift_counter <= shift_counter - 1;
+            empty_flag <= shifter_f0_empty & shifter_f1_empty;
             if(shift_counter==3'd0)
                 begin
                 if(shifter_f1_empty)
@@ -230,6 +238,7 @@ always @ (posedge CLK) begin
         default:begin
             shift_counter <= 3'd7;
             shifter_state <= SHIFTER_IDLE;
+            empty_flag <= empty_flag;
         end
         
     endcase
