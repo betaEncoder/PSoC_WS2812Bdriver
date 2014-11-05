@@ -1,141 +1,0 @@
-Dependencies for Project 'Lticker', Target 'Lticker': (DO NOT MODIFY !)
-F (./Generated_Source/PSoC4/Clock_1.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/CyFlash.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/CyLib.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/Pin_1.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/Pin_1_aliases.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/Pin_2.h)(0x54071300)()
-F (./Generated_Source/PSoC4/Pin_2_aliases.h)(0x54071300)()
-F (./Generated_Source/PSoC4/Pin_3.h)(0x54071300)()
-F (./Generated_Source/PSoC4/Pin_3_aliases.h)(0x54071300)()
-F (./Generated_Source/PSoC4/core_cm0.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/core_cm0_psoc4.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/core_cmFunc.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/core_cmInstr.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/cyPm.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/cydevice_trm.h)(0x54049E1D)()
-F (./Generated_Source/PSoC4/cydevicegnu_trm.inc)(0x54049E1D)()
-F (./Generated_Source/PSoC4/cydeviceiar_trm.inc)(0x54049E1D)()
-F (./Generated_Source/PSoC4/cydevicerv_trm.inc)(0x54049E1D)()
-F (./Generated_Source/PSoC4/cydisabledsheets.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/cyfitter.h)(0x540C51DD)()
-F (./Generated_Source/PSoC4/cyfitter_cfg.h)(0x54049E1D)()
-F (./Generated_Source/PSoC4/cyfittergnu.inc)(0x540C51DD)()
-F (./Generated_Source/PSoC4/cyfitteriar.inc)(0x540C51DD)()
-F (./Generated_Source/PSoC4/cyfitterrv.inc)(0x540C51DD)()
-F (./Generated_Source/PSoC4/cypins.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/cytypes.h)(0x54049E1E)()
-F (./Generated_Source/PSoC4/project.h)(0x540C51DE)()
-F (./Generated_Source/PSoC4/Clock_1.c)(0x54049E1E)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-DNDEBUG-o .\uvbuild\clock_1.o --depend .\uvbuild\clock_1.d)
-I (.\Generated_Source\PSoC4\cydevice_trm.h)(0x54049E1D)
-I (./Generated_Source/PSoC4/Clock_1.h)(0x54049E1E)
-I (.\Generated_Source\PSoC4\cytypes.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53462C34)
-I (.\Generated_Source\PSoC4\cyfitter.h)(0x540C51DD)
-F (./Generated_Source/PSoC4/Cm0Start.c)(0x54049E1E)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-DNDEBUG-o .\uvbuild\cm0start.o --depend .\uvbuild\cm0start.d)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x53462C34)
-I (./Generated_Source/PSoC4/cydevice_trm.h)(0x54049E1D)
-I (./Generated_Source/PSoC4/cytypes.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53462C34)
-I (./Generated_Source/PSoC4/cyfitter.h)(0x540C51DD)
-I (./Generated_Source/PSoC4/cyfitter_cfg.h)(0x54049E1D)
-I (./Generated_Source/PSoC4/CyLib.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x53462C34)
-I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x53462C34)
-F (./Generated_Source/PSoC4/CyFlash.c)(0x54049E1E)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-DNDEBUG-o .\uvbuild\cyflash.o --depend .\uvbuild\cyflash.d)
-I (./Generated_Source/PSoC4/CyFlash.h)(0x54049E1E)
-I (./Generated_Source/PSoC4/CyLib.h)(0x54049E1E)
-I (./Generated_Source/PSoC4/cytypes.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53462C34)
-I (./Generated_Source/PSoC4/cyfitter.h)(0x540C51DD)
-I (.\Generated_Source\PSoC4\cydevice_trm.h)(0x54049E1D)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x53462C34)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x53462C34)
-I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x53462C34)
-F (./Generated_Source/PSoC4/CyLib.c)(0x54049E1E)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-DNDEBUG-o .\uvbuild\cylib.o --depend .\uvbuild\cylib.d)
-I (./Generated_Source/PSoC4/CyLib.h)(0x54049E1E)
-I (./Generated_Source/PSoC4/cytypes.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53462C34)
-I (./Generated_Source/PSoC4/cyfitter.h)(0x540C51DD)
-I (.\Generated_Source\PSoC4\cydevice_trm.h)(0x54049E1D)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x53462C34)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x53462C34)
-I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x53462C34)
-F (./Generated_Source/PSoC4/Pin_1.c)(0x54049E1E)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-DNDEBUG-o .\uvbuild\pin_1.o --depend .\uvbuild\pin_1.d)
-I (./Generated_Source/PSoC4/cytypes.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53462C34)
-I (./Generated_Source/PSoC4/cyfitter.h)(0x540C51DD)
-I (.\Generated_Source\PSoC4\cydevice_trm.h)(0x54049E1D)
-I (./Generated_Source/PSoC4/Pin_1.h)(0x54049E1E)
-I (./Generated_Source/PSoC4/Pin_1_aliases.h)(0x54049E1E)
-F (./Generated_Source/PSoC4/Pin_2.c)(0x54071300)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-DNDEBUG-o .\uvbuild\pin_2.o --depend .\uvbuild\pin_2.d)
-I (./Generated_Source/PSoC4/cytypes.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53462C34)
-I (./Generated_Source/PSoC4/cyfitter.h)(0x540C51DD)
-I (.\Generated_Source\PSoC4\cydevice_trm.h)(0x54049E1D)
-I (./Generated_Source/PSoC4/Pin_2.h)(0x54071300)
-I (./Generated_Source/PSoC4/Pin_2_aliases.h)(0x54071300)
-F (./Generated_Source/PSoC4/Pin_3.c)(0x54071300)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-DNDEBUG-o .\uvbuild\pin_3.o --depend .\uvbuild\pin_3.d)
-I (./Generated_Source/PSoC4/cytypes.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53462C34)
-I (./Generated_Source/PSoC4/cyfitter.h)(0x540C51DD)
-I (.\Generated_Source\PSoC4\cydevice_trm.h)(0x54049E1D)
-I (./Generated_Source/PSoC4/Pin_3.h)(0x54071300)
-I (./Generated_Source/PSoC4/Pin_3_aliases.h)(0x54071300)
-F (./Generated_Source/PSoC4/cyPm.c)(0x54049E1E)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-DNDEBUG-o .\uvbuild\cypm.o --depend .\uvbuild\cypm.d)
-I (./Generated_Source/PSoC4/cyPm.h)(0x54049E1E)
-I (./Generated_Source/PSoC4/cytypes.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53462C34)
-I (./Generated_Source/PSoC4/cyfitter.h)(0x540C51DD)
-I (.\Generated_Source\PSoC4\cydevice_trm.h)(0x54049E1D)
-I (./Generated_Source/PSoC4/CyLib.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x53462C34)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x53462C34)
-I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x53462C34)
-F (./Generated_Source/PSoC4/cyfitter_cfg.c)(0x540C51DD)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-DNDEBUG-o .\uvbuild\cyfitter_cfg.o --depend .\uvbuild\cyfitter_cfg.d)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x53462C34)
-I (.\Generated_Source\PSoC4\cytypes.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53462C34)
-I (.\Generated_Source\PSoC4\cyfitter.h)(0x540C51DD)
-I (.\Generated_Source\PSoC4\cydevice_trm.h)(0x54049E1D)
-I (.\Generated_Source\PSoC4\CyLib.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x53462C34)
-I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x53462C34)
-I (.\Generated_Source\PSoC4\cyfitter_cfg.h)(0x54049E1D)
-F (./Generated_Source/PSoC4/cymetadata.c)(0x540C517F)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-DNDEBUG-o .\uvbuild\cymetadata.o --depend .\uvbuild\cymetadata.d)
-I (./Generated_Source/PSoC4/cytypes.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53462C34)
-I (./Generated_Source/PSoC4/cyfitter.h)(0x540C51DD)
-I (.\Generated_Source\PSoC4\cydevice_trm.h)(0x54049E1D)
-F (./Generated_Source/PSoC4/cyutils.c)(0x54049E1E)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-DNDEBUG-o .\uvbuild\cyutils.o --depend .\uvbuild\cyutils.d)
-I (./Generated_Source/PSoC4/cytypes.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53462C34)
-I (./Generated_Source/PSoC4/cyfitter.h)(0x540C51DD)
-I (.\Generated_Source\PSoC4\cydevice_trm.h)(0x54049E1D)
-F (./Generated_Source/PSoC4/CyBootAsmRv.s)(0x54049E1E)(--cpu Cortex-M0 --li --pd "__EVAL SETA 1" -g --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include--pd "NDEBUG SETA 1"--list .\cybootasmrv.lst --xref -o .\uvbuild\cybootasmrv.o --depend .\uvbuild\cybootasmrv.d)
-F (./main.c)(0x540B1E1A)(-c --cpu Cortex-M0 -D__EVAL --li -g -O0 --apcs=interwork -I. -I.\Generated_Source\PSoC4-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.1.0\CMSIS\Include-DNDEBUG-o .\uvbuild\main.o --depend .\uvbuild\main.d)
-I (.\Generated_Source\PSoC4\project.h)(0x540C51DE)
-I (.\Generated_Source\PSoC4\cyfitter_cfg.h)(0x54049E1D)
-I (.\Generated_Source\PSoC4\cytypes.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x53462C34)
-I (.\Generated_Source\PSoC4\cyfitter.h)(0x540C51DD)
-I (.\Generated_Source\PSoC4\cydevice_trm.h)(0x54049E1D)
-I (.\Generated_Source\PSoC4\cydisabledsheets.h)(0x54049E1E)
-I (.\Generated_Source\PSoC4\Pin_1.h)(0x54049E1E)
-I (.\Generated_Source\PSoC4\Pin_1_aliases.h)(0x54049E1E)
-I (.\Generated_Source\PSoC4\Clock_1.h)(0x54049E1E)
-I (.\Generated_Source\PSoC4\Pin_2.h)(0x54071300)
-I (.\Generated_Source\PSoC4\Pin_2_aliases.h)(0x54071300)
-I (.\Generated_Source\PSoC4\Pin_3.h)(0x54071300)
-I (.\Generated_Source\PSoC4\Pin_3_aliases.h)(0x54071300)
-I (.\Generated_Source\PSoC4\core_cm0_psoc4.h)(0x54049E1E)
-I (.\Generated_Source\PSoC4\core_cm0.h)(0x54049E1E)
-I (.\Generated_Source\PSoC4\core_cmInstr.h)(0x54049E1E)
-I (.\Generated_Source\PSoC4\core_cmFunc.h)(0x54049E1E)
-I (.\Generated_Source\PSoC4\CyFlash.h)(0x54049E1E)
-I (.\Generated_Source\PSoC4\CyLib.h)(0x54049E1E)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x53462C34)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x53462C34)
-I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x53462C34)
-I (.\Generated_Source\PSoC4\cyPm.h)(0x54049E1E)
-I (.\Generated_Source\PSoC4\cypins.h)(0x54049E1E)

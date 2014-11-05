@@ -1,9 +1,0 @@
-.\uvbuild\cylib.o: ./Generated_Source/PSoC4/CyLib.c
-.\uvbuild\cylib.o: ./Generated_Source/PSoC4/CyLib.h
-.\uvbuild\cylib.o: ./Generated_Source/PSoC4/cytypes.h
-.\uvbuild\cylib.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
-.\uvbuild\cylib.o: ./Generated_Source/PSoC4/cyfitter.h
-.\uvbuild\cylib.o: .\Generated_Source\PSoC4\cydevice_trm.h
-.\uvbuild\cylib.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
-.\uvbuild\cylib.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\limits.h
-.\uvbuild\cylib.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\ctype.h
