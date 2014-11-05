@@ -16,7 +16,7 @@
     <div class="wrapper">
       <header>
         <h1>PSoC WS2812B driver Component</h1>
-        <p>Neo Pixel LED WS2812 を駆動するためのUDBを使ったPSoCコンポーネントの使い方<br>
+        <p>Neo Pixel LED WS2812 を駆動するためのUDBを使ったPSoCコンポーネントの使い方について．<br>
 		(PSoC4で動作を確認していますが，3や5でも動くと思います．)<br>
 		<img src="img/instance.png"></p>
 
@@ -72,8 +72,8 @@ Period=249で50usになります．<br>
 そこで，構造体を利用してドライバを叩くことでコードがすっきりします．</p>
 <pre><code>typedef struct _RGB_tag{
 	unsigned char g;
-	unsigned char b;
 	unsigned char r;
+	unsigned char b;
 } rgb_tag;
 
 void hoge(){
