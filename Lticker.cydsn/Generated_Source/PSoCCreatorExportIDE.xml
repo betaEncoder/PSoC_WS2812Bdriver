@@ -77,6 +77,15 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Pin_3_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\WS2812driver_1.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\WS2812driver_1.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Clock_2.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Clock_2.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\isr_fifo_empty.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\isr_fifo_empty.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\isr_reset_done.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\isr_reset_done.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Counter_reset_gen.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Counter_reset_gen.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\Counter_reset_gen_PM.c</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\prebuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\postbuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyElfTool.exe</File>

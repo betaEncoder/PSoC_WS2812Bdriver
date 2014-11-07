@@ -6,7 +6,7 @@
 
 #Build Date:         Mar 26 2013 14:54:34
 
-#File Generated:     Nov 5 2014 00:11:41
+#File Generated:     Nov 7 2014 22:00:13
 
 #Purpose:            
 
@@ -44,16 +44,16 @@ Phase 2
 Phase 3
 
 Design Statistics after Packing
-    Number of Combinational MCs 	:	3
-    Number of Sequential MCs    	:	11
-    Number of DPs               	:	2
+    Number of Combinational MCs 	:	6
+    Number of Sequential MCs    	:	15
+    Number of DPs               	:	3
     Number of Controls          	:	0
-    Number of Status            	:	0
+    Number of Status            	:	1
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
 
 Device Utilization Summary after Packing
-    Macrocells                  :	14/32
+    Macrocells                  :	21/32
     UDBS                        :	4/4
     IOs                         :	3/36
 
@@ -76,9 +76,10 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 6
-Clock: Clock_1              | Frequency:  45.6 MHz | Target:  20.0 MHz
-Clock: CyHFCLK              | Frequency: N/A       | Target:  40.0 MHz
+Number of clocks: 7
+Clock: Clock_1              | Frequency:  40.8 MHz | Target:  20.0 MHz
+Clock: Clock_2              | Frequency:  40.8 MHz | Target:   5.0 MHz
+Clock: CyHFCLK              | Frequency:  40.8 MHz | Target:  40.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  40.0 MHz
 Clock: CyLFCLK              | Frequency: N/A       | Target:   0.0 MHz
@@ -94,9 +95,10 @@ Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 6
-Clock: Clock_1              | Frequency:  45.6 MHz | Target:  20.0 MHz
-Clock: CyHFCLK              | Frequency: N/A       | Target:  40.0 MHz
+Number of clocks: 7
+Clock: Clock_1              | Frequency:  40.8 MHz | Target:  20.0 MHz
+Clock: Clock_2              | Frequency:  40.8 MHz | Target:   5.0 MHz
+Clock: CyHFCLK              | Frequency:  40.8 MHz | Target:  40.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  40.0 MHz
 Clock: CyLFCLK              | Frequency: N/A       | Target:   0.0 MHz
@@ -105,20 +107,20 @@ Clock: CySYSCLK             | Frequency: N/A       | Target:  40.0 MHz
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.2 (sec)
+D2088: Phase 7, elapsed time : 0.1 (sec)
 
 Final Design Statistics
-    Number of Combinational MCs 	:	3
-    Number of Sequential MCs    	:	11
-    Number of DPs               	:	2
+    Number of Combinational MCs 	:	6
+    Number of Sequential MCs    	:	15
+    Number of DPs               	:	3
     Number of Controls          	:	0
-    Number of Status            	:	0
+    Number of Status            	:	1
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
     Number of IOs       	:	3
 
 Device Utilization Summary
-    Macrocells                  :	14/32
+    Macrocells                  :	21/32
     IOs                         :	3/36
 
 
@@ -135,9 +137,10 @@ analysis after routing.
 ######################################################################
                      Clock Summary 
 ======================================================================
-Number of clocks: 6
-Clock: Clock_1              | Frequency:  45.6 MHz | Target:  21.7 MHz
-Clock: CyHFCLK              | Frequency: N/A       | Target:  40.0 MHz
+Number of clocks: 7
+Clock: Clock_1              | Frequency:  41.7 MHz | Target:  21.7 MHz
+Clock: Clock_2              | Frequency:  41.7 MHz | Target:   5.5 MHz
+Clock: CyHFCLK              | Frequency:  41.7 MHz | Target:  43.5 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  40.0 MHz
 Clock: CyLFCLK              | Frequency: N/A       | Target:   0.0 MHz

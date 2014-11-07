@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNhIVry.s 			page 1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -17,17 +17,950 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNhIVry.s 			page 1
   14              		.text
   15              	.Ltext0:
   16              		.cfi_sections	.debug_frame
-  17              		.section	.text.main,"ax",%progbits
+  17              		.section	.text.NVIC_SetPriority,"ax",%progbits
   18              		.align	2
-  19              		.global	main
-  20              		.code	16
-  21              		.thumb_func
-  22              		.type	main, %function
-  23              	main:
-  24              	.LFB33:
-  25              		.file 1 ".\\main.c"
+  19              		.code	16
+  20              		.thumb_func
+  21              		.type	NVIC_SetPriority, %function
+  22              	NVIC_SetPriority:
+  23              	.LFB29:
+  24              		.file 1 "./Generated_Source/PSoC4/core_cm0.h"
+   1:./Generated_Source/PSoC4/core_cm0.h **** /**************************************************************************//**
+   2:./Generated_Source/PSoC4/core_cm0.h ****  * @file     core_cm0.h
+   3:./Generated_Source/PSoC4/core_cm0.h ****  * @brief    CMSIS Cortex-M0 Core Peripheral Access Layer Header File
+   4:./Generated_Source/PSoC4/core_cm0.h ****  * @version  V3.20
+   5:./Generated_Source/PSoC4/core_cm0.h ****  * @date     25. February 2013
+   6:./Generated_Source/PSoC4/core_cm0.h ****  *
+   7:./Generated_Source/PSoC4/core_cm0.h ****  * @note
+   8:./Generated_Source/PSoC4/core_cm0.h ****  *
+   9:./Generated_Source/PSoC4/core_cm0.h ****  ******************************************************************************/
+  10:./Generated_Source/PSoC4/core_cm0.h **** /* Copyright (c) 2009 - 2013 ARM LIMITED
+  11:./Generated_Source/PSoC4/core_cm0.h **** 
+  12:./Generated_Source/PSoC4/core_cm0.h ****    All rights reserved.
+  13:./Generated_Source/PSoC4/core_cm0.h ****    Redistribution and use in source and binary forms, with or without
+  14:./Generated_Source/PSoC4/core_cm0.h ****    modification, are permitted provided that the following conditions are met:
+  15:./Generated_Source/PSoC4/core_cm0.h ****    - Redistributions of source code must retain the above copyright
+  16:./Generated_Source/PSoC4/core_cm0.h ****      notice, this list of conditions and the following disclaimer.
+  17:./Generated_Source/PSoC4/core_cm0.h ****    - Redistributions in binary form must reproduce the above copyright
+  18:./Generated_Source/PSoC4/core_cm0.h ****      notice, this list of conditions and the following disclaimer in the
+  19:./Generated_Source/PSoC4/core_cm0.h ****      documentation and/or other materials provided with the distribution.
+  20:./Generated_Source/PSoC4/core_cm0.h ****    - Neither the name of ARM nor the names of its contributors may be used
+  21:./Generated_Source/PSoC4/core_cm0.h ****      to endorse or promote products derived from this software without
+  22:./Generated_Source/PSoC4/core_cm0.h ****      specific prior written permission.
+  23:./Generated_Source/PSoC4/core_cm0.h ****    *
+  24:./Generated_Source/PSoC4/core_cm0.h ****    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  25:./Generated_Source/PSoC4/core_cm0.h ****    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  26:./Generated_Source/PSoC4/core_cm0.h ****    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  27:./Generated_Source/PSoC4/core_cm0.h ****    ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE
+  28:./Generated_Source/PSoC4/core_cm0.h ****    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  29:./Generated_Source/PSoC4/core_cm0.h ****    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  30:./Generated_Source/PSoC4/core_cm0.h ****    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  31:./Generated_Source/PSoC4/core_cm0.h ****    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  32:./Generated_Source/PSoC4/core_cm0.h ****    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  33:./Generated_Source/PSoC4/core_cm0.h ****    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 2
+
+
+  34:./Generated_Source/PSoC4/core_cm0.h ****    POSSIBILITY OF SUCH DAMAGE.
+  35:./Generated_Source/PSoC4/core_cm0.h ****    ---------------------------------------------------------------------------*/
+  36:./Generated_Source/PSoC4/core_cm0.h **** 
+  37:./Generated_Source/PSoC4/core_cm0.h **** 
+  38:./Generated_Source/PSoC4/core_cm0.h **** #if defined ( __ICCARM__ )
+  39:./Generated_Source/PSoC4/core_cm0.h ****  #pragma system_include  /* treat file as system include file for MISRA check */
+  40:./Generated_Source/PSoC4/core_cm0.h **** #endif
+  41:./Generated_Source/PSoC4/core_cm0.h **** 
+  42:./Generated_Source/PSoC4/core_cm0.h **** #ifdef __cplusplus
+  43:./Generated_Source/PSoC4/core_cm0.h ****  extern "C" {
+  44:./Generated_Source/PSoC4/core_cm0.h **** #endif
+  45:./Generated_Source/PSoC4/core_cm0.h **** 
+  46:./Generated_Source/PSoC4/core_cm0.h **** #ifndef __CORE_CM0_H_GENERIC
+  47:./Generated_Source/PSoC4/core_cm0.h **** #define __CORE_CM0_H_GENERIC
+  48:./Generated_Source/PSoC4/core_cm0.h **** 
+  49:./Generated_Source/PSoC4/core_cm0.h **** /** \page CMSIS_MISRA_Exceptions  MISRA-C:2004 Compliance Exceptions
+  50:./Generated_Source/PSoC4/core_cm0.h ****   CMSIS violates the following MISRA-C:2004 rules:
+  51:./Generated_Source/PSoC4/core_cm0.h **** 
+  52:./Generated_Source/PSoC4/core_cm0.h ****    \li Required Rule 8.5, object/function definition in header file.<br>
+  53:./Generated_Source/PSoC4/core_cm0.h ****      Function definitions in header files are used to allow 'inlining'.
+  54:./Generated_Source/PSoC4/core_cm0.h **** 
+  55:./Generated_Source/PSoC4/core_cm0.h ****    \li Required Rule 18.4, declaration of union type or object of union type: '{...}'.<br>
+  56:./Generated_Source/PSoC4/core_cm0.h ****      Unions are used for effective representation of core registers.
+  57:./Generated_Source/PSoC4/core_cm0.h **** 
+  58:./Generated_Source/PSoC4/core_cm0.h ****    \li Advisory Rule 19.7, Function-like macro defined.<br>
+  59:./Generated_Source/PSoC4/core_cm0.h ****      Function-like macros are used to allow more efficient code.
+  60:./Generated_Source/PSoC4/core_cm0.h ****  */
+  61:./Generated_Source/PSoC4/core_cm0.h **** 
+  62:./Generated_Source/PSoC4/core_cm0.h **** 
+  63:./Generated_Source/PSoC4/core_cm0.h **** /*******************************************************************************
+  64:./Generated_Source/PSoC4/core_cm0.h ****  *                 CMSIS definitions
+  65:./Generated_Source/PSoC4/core_cm0.h ****  ******************************************************************************/
+  66:./Generated_Source/PSoC4/core_cm0.h **** /** \ingroup Cortex_M0
+  67:./Generated_Source/PSoC4/core_cm0.h ****   @{
+  68:./Generated_Source/PSoC4/core_cm0.h ****  */
+  69:./Generated_Source/PSoC4/core_cm0.h **** 
+  70:./Generated_Source/PSoC4/core_cm0.h **** /*  CMSIS CM0 definitions */
+  71:./Generated_Source/PSoC4/core_cm0.h **** #define __CM0_CMSIS_VERSION_MAIN  (0x03)                                   /*!< [31:16] CMSIS HAL m
+  72:./Generated_Source/PSoC4/core_cm0.h **** #define __CM0_CMSIS_VERSION_SUB   (0x20)                                   /*!< [15:0]  CMSIS HAL s
+  73:./Generated_Source/PSoC4/core_cm0.h **** #define __CM0_CMSIS_VERSION       ((__CM0_CMSIS_VERSION_MAIN << 16) | \
+  74:./Generated_Source/PSoC4/core_cm0.h ****                                     __CM0_CMSIS_VERSION_SUB          )     /*!< CMSIS HAL version n
+  75:./Generated_Source/PSoC4/core_cm0.h **** 
+  76:./Generated_Source/PSoC4/core_cm0.h **** #define __CORTEX_M                (0x00)                                   /*!< Cortex-M Core      
+  77:./Generated_Source/PSoC4/core_cm0.h **** 
+  78:./Generated_Source/PSoC4/core_cm0.h **** 
+  79:./Generated_Source/PSoC4/core_cm0.h **** #if   defined ( __CC_ARM )
+  80:./Generated_Source/PSoC4/core_cm0.h ****   #define __ASM            __asm                                      /*!< asm keyword for ARM Comp
+  81:./Generated_Source/PSoC4/core_cm0.h ****   #define __INLINE         __inline                                   /*!< inline keyword for ARM C
+  82:./Generated_Source/PSoC4/core_cm0.h ****   #define __STATIC_INLINE  static __inline
+  83:./Generated_Source/PSoC4/core_cm0.h **** 
+  84:./Generated_Source/PSoC4/core_cm0.h **** #elif defined ( __ICCARM__ )
+  85:./Generated_Source/PSoC4/core_cm0.h ****   #define __ASM            __asm                                      /*!< asm keyword for IAR Comp
+  86:./Generated_Source/PSoC4/core_cm0.h ****   #define __INLINE         inline                                     /*!< inline keyword for IAR C
+  87:./Generated_Source/PSoC4/core_cm0.h ****   #define __STATIC_INLINE  static inline
+  88:./Generated_Source/PSoC4/core_cm0.h **** 
+  89:./Generated_Source/PSoC4/core_cm0.h **** #elif defined ( __GNUC__ )
+  90:./Generated_Source/PSoC4/core_cm0.h ****   #define __ASM            __asm                                      /*!< asm keyword for GNU Comp
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 3
+
+
+  91:./Generated_Source/PSoC4/core_cm0.h ****   #define __INLINE         inline                                     /*!< inline keyword for GNU C
+  92:./Generated_Source/PSoC4/core_cm0.h ****   #define __STATIC_INLINE  static inline
+  93:./Generated_Source/PSoC4/core_cm0.h **** 
+  94:./Generated_Source/PSoC4/core_cm0.h **** #elif defined ( __TASKING__ )
+  95:./Generated_Source/PSoC4/core_cm0.h ****   #define __ASM            __asm                                      /*!< asm keyword for TASKING 
+  96:./Generated_Source/PSoC4/core_cm0.h ****   #define __INLINE         inline                                     /*!< inline keyword for TASKI
+  97:./Generated_Source/PSoC4/core_cm0.h ****   #define __STATIC_INLINE  static inline
+  98:./Generated_Source/PSoC4/core_cm0.h **** 
+  99:./Generated_Source/PSoC4/core_cm0.h **** #endif
+ 100:./Generated_Source/PSoC4/core_cm0.h **** 
+ 101:./Generated_Source/PSoC4/core_cm0.h **** /** __FPU_USED indicates whether an FPU is used or not. This core does not support an FPU at all
+ 102:./Generated_Source/PSoC4/core_cm0.h **** */
+ 103:./Generated_Source/PSoC4/core_cm0.h **** #define __FPU_USED       0
+ 104:./Generated_Source/PSoC4/core_cm0.h **** 
+ 105:./Generated_Source/PSoC4/core_cm0.h **** #if defined ( __CC_ARM )
+ 106:./Generated_Source/PSoC4/core_cm0.h ****   #if defined __TARGET_FPU_VFP
+ 107:./Generated_Source/PSoC4/core_cm0.h ****     #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)
+ 108:./Generated_Source/PSoC4/core_cm0.h ****   #endif
+ 109:./Generated_Source/PSoC4/core_cm0.h **** 
+ 110:./Generated_Source/PSoC4/core_cm0.h **** #elif defined ( __ICCARM__ )
+ 111:./Generated_Source/PSoC4/core_cm0.h ****   #if defined __ARMVFP__
+ 112:./Generated_Source/PSoC4/core_cm0.h ****     #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)
+ 113:./Generated_Source/PSoC4/core_cm0.h ****   #endif
+ 114:./Generated_Source/PSoC4/core_cm0.h **** 
+ 115:./Generated_Source/PSoC4/core_cm0.h **** #elif defined ( __GNUC__ )
+ 116:./Generated_Source/PSoC4/core_cm0.h ****   #if defined (__VFP_FP__) && !defined(__SOFTFP__)
+ 117:./Generated_Source/PSoC4/core_cm0.h ****     #warning "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)
+ 118:./Generated_Source/PSoC4/core_cm0.h ****   #endif
+ 119:./Generated_Source/PSoC4/core_cm0.h **** 
+ 120:./Generated_Source/PSoC4/core_cm0.h **** #elif defined ( __TASKING__ )
+ 121:./Generated_Source/PSoC4/core_cm0.h ****   #if defined __FPU_VFP__
+ 122:./Generated_Source/PSoC4/core_cm0.h ****     #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+ 123:./Generated_Source/PSoC4/core_cm0.h ****   #endif
+ 124:./Generated_Source/PSoC4/core_cm0.h **** #endif
+ 125:./Generated_Source/PSoC4/core_cm0.h **** 
+ 126:./Generated_Source/PSoC4/core_cm0.h **** #include <stdint.h>                      /* standard types definitions                      */
+ 127:./Generated_Source/PSoC4/core_cm0.h **** #include <core_cmInstr.h>                /* Core Instruction Access                         */
+ 128:./Generated_Source/PSoC4/core_cm0.h **** #include <core_cmFunc.h>                 /* Core Function Access                            */
+ 129:./Generated_Source/PSoC4/core_cm0.h **** 
+ 130:./Generated_Source/PSoC4/core_cm0.h **** #endif /* __CORE_CM0_H_GENERIC */
+ 131:./Generated_Source/PSoC4/core_cm0.h **** 
+ 132:./Generated_Source/PSoC4/core_cm0.h **** #ifndef __CMSIS_GENERIC
+ 133:./Generated_Source/PSoC4/core_cm0.h **** 
+ 134:./Generated_Source/PSoC4/core_cm0.h **** #ifndef __CORE_CM0_H_DEPENDANT
+ 135:./Generated_Source/PSoC4/core_cm0.h **** #define __CORE_CM0_H_DEPENDANT
+ 136:./Generated_Source/PSoC4/core_cm0.h **** 
+ 137:./Generated_Source/PSoC4/core_cm0.h **** /* check device defines and use defaults */
+ 138:./Generated_Source/PSoC4/core_cm0.h **** #if defined __CHECK_DEVICE_DEFINES
+ 139:./Generated_Source/PSoC4/core_cm0.h ****   #ifndef __CM0_REV
+ 140:./Generated_Source/PSoC4/core_cm0.h ****     #define __CM0_REV               0x0000
+ 141:./Generated_Source/PSoC4/core_cm0.h ****     #warning "__CM0_REV not defined in device header file; using default!"
+ 142:./Generated_Source/PSoC4/core_cm0.h ****   #endif
+ 143:./Generated_Source/PSoC4/core_cm0.h **** 
+ 144:./Generated_Source/PSoC4/core_cm0.h ****   #ifndef __NVIC_PRIO_BITS
+ 145:./Generated_Source/PSoC4/core_cm0.h ****     #define __NVIC_PRIO_BITS          2
+ 146:./Generated_Source/PSoC4/core_cm0.h ****     #warning "__NVIC_PRIO_BITS not defined in device header file; using default!"
+ 147:./Generated_Source/PSoC4/core_cm0.h ****   #endif
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 4
+
+
+ 148:./Generated_Source/PSoC4/core_cm0.h **** 
+ 149:./Generated_Source/PSoC4/core_cm0.h ****   #ifndef __Vendor_SysTickConfig
+ 150:./Generated_Source/PSoC4/core_cm0.h ****     #define __Vendor_SysTickConfig    0
+ 151:./Generated_Source/PSoC4/core_cm0.h ****     #warning "__Vendor_SysTickConfig not defined in device header file; using default!"
+ 152:./Generated_Source/PSoC4/core_cm0.h ****   #endif
+ 153:./Generated_Source/PSoC4/core_cm0.h **** #endif
+ 154:./Generated_Source/PSoC4/core_cm0.h **** 
+ 155:./Generated_Source/PSoC4/core_cm0.h **** /* IO definitions (access restrictions to peripheral registers) */
+ 156:./Generated_Source/PSoC4/core_cm0.h **** /**
+ 157:./Generated_Source/PSoC4/core_cm0.h ****     \defgroup CMSIS_glob_defs CMSIS Global Defines
+ 158:./Generated_Source/PSoC4/core_cm0.h **** 
+ 159:./Generated_Source/PSoC4/core_cm0.h ****     <strong>IO Type Qualifiers</strong> are used
+ 160:./Generated_Source/PSoC4/core_cm0.h ****     \li to specify the access to peripheral variables.
+ 161:./Generated_Source/PSoC4/core_cm0.h ****     \li for automatic generation of peripheral register debug information.
+ 162:./Generated_Source/PSoC4/core_cm0.h **** */
+ 163:./Generated_Source/PSoC4/core_cm0.h **** #ifdef __cplusplus
+ 164:./Generated_Source/PSoC4/core_cm0.h ****   #define   __I     volatile             /*!< Defines 'read only' permissions                 */
+ 165:./Generated_Source/PSoC4/core_cm0.h **** #else
+ 166:./Generated_Source/PSoC4/core_cm0.h ****   #define   __I     volatile const       /*!< Defines 'read only' permissions                 */
+ 167:./Generated_Source/PSoC4/core_cm0.h **** #endif
+ 168:./Generated_Source/PSoC4/core_cm0.h **** #define     __O     volatile             /*!< Defines 'write only' permissions                */
+ 169:./Generated_Source/PSoC4/core_cm0.h **** #define     __IO    volatile             /*!< Defines 'read / write' permissions              */
+ 170:./Generated_Source/PSoC4/core_cm0.h **** 
+ 171:./Generated_Source/PSoC4/core_cm0.h **** /*@} end of group Cortex_M0 */
+ 172:./Generated_Source/PSoC4/core_cm0.h **** 
+ 173:./Generated_Source/PSoC4/core_cm0.h **** 
+ 174:./Generated_Source/PSoC4/core_cm0.h **** 
+ 175:./Generated_Source/PSoC4/core_cm0.h **** /*******************************************************************************
+ 176:./Generated_Source/PSoC4/core_cm0.h ****  *                 Register Abstraction
+ 177:./Generated_Source/PSoC4/core_cm0.h ****   Core Register contain:
+ 178:./Generated_Source/PSoC4/core_cm0.h ****   - Core Register
+ 179:./Generated_Source/PSoC4/core_cm0.h ****   - Core NVIC Register
+ 180:./Generated_Source/PSoC4/core_cm0.h ****   - Core SCB Register
+ 181:./Generated_Source/PSoC4/core_cm0.h ****   - Core SysTick Register
+ 182:./Generated_Source/PSoC4/core_cm0.h ****  ******************************************************************************/
+ 183:./Generated_Source/PSoC4/core_cm0.h **** /** \defgroup CMSIS_core_register Defines and Type Definitions
+ 184:./Generated_Source/PSoC4/core_cm0.h ****     \brief Type definitions and defines for Cortex-M processor based devices.
+ 185:./Generated_Source/PSoC4/core_cm0.h **** */
+ 186:./Generated_Source/PSoC4/core_cm0.h **** 
+ 187:./Generated_Source/PSoC4/core_cm0.h **** /** \ingroup    CMSIS_core_register
+ 188:./Generated_Source/PSoC4/core_cm0.h ****     \defgroup   CMSIS_CORE  Status and Control Registers
+ 189:./Generated_Source/PSoC4/core_cm0.h ****     \brief  Core Register type definitions.
+ 190:./Generated_Source/PSoC4/core_cm0.h ****   @{
+ 191:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 192:./Generated_Source/PSoC4/core_cm0.h **** 
+ 193:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Union type to access the Application Program Status Register (APSR).
+ 194:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 195:./Generated_Source/PSoC4/core_cm0.h **** typedef union
+ 196:./Generated_Source/PSoC4/core_cm0.h **** {
+ 197:./Generated_Source/PSoC4/core_cm0.h ****   struct
+ 198:./Generated_Source/PSoC4/core_cm0.h ****   {
+ 199:./Generated_Source/PSoC4/core_cm0.h **** #if (__CORTEX_M != 0x04)
+ 200:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t _reserved0:27;              /*!< bit:  0..26  Reserved                           */
+ 201:./Generated_Source/PSoC4/core_cm0.h **** #else
+ 202:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t _reserved0:16;              /*!< bit:  0..15  Reserved                           */
+ 203:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t GE:4;                       /*!< bit: 16..19  Greater than or Equal flags        */
+ 204:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t _reserved1:7;               /*!< bit: 20..26  Reserved                           */
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 5
+
+
+ 205:./Generated_Source/PSoC4/core_cm0.h **** #endif
+ 206:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t Q:1;                        /*!< bit:     27  Saturation condition flag          */
+ 207:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t V:1;                        /*!< bit:     28  Overflow condition code flag       */
+ 208:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t C:1;                        /*!< bit:     29  Carry condition code flag          */
+ 209:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t Z:1;                        /*!< bit:     30  Zero condition code flag           */
+ 210:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t N:1;                        /*!< bit:     31  Negative condition code flag       */
+ 211:./Generated_Source/PSoC4/core_cm0.h ****   } b;                                   /*!< Structure used for bit  access                  */
+ 212:./Generated_Source/PSoC4/core_cm0.h ****   uint32_t w;                            /*!< Type      used for word access                  */
+ 213:./Generated_Source/PSoC4/core_cm0.h **** } APSR_Type;
+ 214:./Generated_Source/PSoC4/core_cm0.h **** 
+ 215:./Generated_Source/PSoC4/core_cm0.h **** 
+ 216:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Union type to access the Interrupt Program Status Register (IPSR).
+ 217:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 218:./Generated_Source/PSoC4/core_cm0.h **** typedef union
+ 219:./Generated_Source/PSoC4/core_cm0.h **** {
+ 220:./Generated_Source/PSoC4/core_cm0.h ****   struct
+ 221:./Generated_Source/PSoC4/core_cm0.h ****   {
+ 222:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t ISR:9;                      /*!< bit:  0.. 8  Exception number                   */
+ 223:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t _reserved0:23;              /*!< bit:  9..31  Reserved                           */
+ 224:./Generated_Source/PSoC4/core_cm0.h ****   } b;                                   /*!< Structure used for bit  access                  */
+ 225:./Generated_Source/PSoC4/core_cm0.h ****   uint32_t w;                            /*!< Type      used for word access                  */
+ 226:./Generated_Source/PSoC4/core_cm0.h **** } IPSR_Type;
+ 227:./Generated_Source/PSoC4/core_cm0.h **** 
+ 228:./Generated_Source/PSoC4/core_cm0.h **** 
+ 229:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Union type to access the Special-Purpose Program Status Registers (xPSR).
+ 230:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 231:./Generated_Source/PSoC4/core_cm0.h **** typedef union
+ 232:./Generated_Source/PSoC4/core_cm0.h **** {
+ 233:./Generated_Source/PSoC4/core_cm0.h ****   struct
+ 234:./Generated_Source/PSoC4/core_cm0.h ****   {
+ 235:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t ISR:9;                      /*!< bit:  0.. 8  Exception number                   */
+ 236:./Generated_Source/PSoC4/core_cm0.h **** #if (__CORTEX_M != 0x04)
+ 237:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t _reserved0:15;              /*!< bit:  9..23  Reserved                           */
+ 238:./Generated_Source/PSoC4/core_cm0.h **** #else
+ 239:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t _reserved0:7;               /*!< bit:  9..15  Reserved                           */
+ 240:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t GE:4;                       /*!< bit: 16..19  Greater than or Equal flags        */
+ 241:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t _reserved1:4;               /*!< bit: 20..23  Reserved                           */
+ 242:./Generated_Source/PSoC4/core_cm0.h **** #endif
+ 243:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t T:1;                        /*!< bit:     24  Thumb bit        (read 0)          */
+ 244:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t IT:2;                       /*!< bit: 25..26  saved IT state   (read 0)          */
+ 245:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t Q:1;                        /*!< bit:     27  Saturation condition flag          */
+ 246:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t V:1;                        /*!< bit:     28  Overflow condition code flag       */
+ 247:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t C:1;                        /*!< bit:     29  Carry condition code flag          */
+ 248:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t Z:1;                        /*!< bit:     30  Zero condition code flag           */
+ 249:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t N:1;                        /*!< bit:     31  Negative condition code flag       */
+ 250:./Generated_Source/PSoC4/core_cm0.h ****   } b;                                   /*!< Structure used for bit  access                  */
+ 251:./Generated_Source/PSoC4/core_cm0.h ****   uint32_t w;                            /*!< Type      used for word access                  */
+ 252:./Generated_Source/PSoC4/core_cm0.h **** } xPSR_Type;
+ 253:./Generated_Source/PSoC4/core_cm0.h **** 
+ 254:./Generated_Source/PSoC4/core_cm0.h **** 
+ 255:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Union type to access the Control Registers (CONTROL).
+ 256:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 257:./Generated_Source/PSoC4/core_cm0.h **** typedef union
+ 258:./Generated_Source/PSoC4/core_cm0.h **** {
+ 259:./Generated_Source/PSoC4/core_cm0.h ****   struct
+ 260:./Generated_Source/PSoC4/core_cm0.h ****   {
+ 261:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t nPRIV:1;                    /*!< bit:      0  Execution privilege in Thread mode */
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 6
+
+
+ 262:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t SPSEL:1;                    /*!< bit:      1  Stack to be used                   */
+ 263:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t FPCA:1;                     /*!< bit:      2  FP extension active flag           */
+ 264:./Generated_Source/PSoC4/core_cm0.h ****     uint32_t _reserved0:29;              /*!< bit:  3..31  Reserved                           */
+ 265:./Generated_Source/PSoC4/core_cm0.h ****   } b;                                   /*!< Structure used for bit  access                  */
+ 266:./Generated_Source/PSoC4/core_cm0.h ****   uint32_t w;                            /*!< Type      used for word access                  */
+ 267:./Generated_Source/PSoC4/core_cm0.h **** } CONTROL_Type;
+ 268:./Generated_Source/PSoC4/core_cm0.h **** 
+ 269:./Generated_Source/PSoC4/core_cm0.h **** /*@} end of group CMSIS_CORE */
+ 270:./Generated_Source/PSoC4/core_cm0.h **** 
+ 271:./Generated_Source/PSoC4/core_cm0.h **** 
+ 272:./Generated_Source/PSoC4/core_cm0.h **** /** \ingroup    CMSIS_core_register
+ 273:./Generated_Source/PSoC4/core_cm0.h ****     \defgroup   CMSIS_NVIC  Nested Vectored Interrupt Controller (NVIC)
+ 274:./Generated_Source/PSoC4/core_cm0.h ****     \brief      Type definitions for the NVIC Registers
+ 275:./Generated_Source/PSoC4/core_cm0.h ****   @{
+ 276:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 277:./Generated_Source/PSoC4/core_cm0.h **** 
+ 278:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Structure type to access the Nested Vectored Interrupt Controller (NVIC).
+ 279:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 280:./Generated_Source/PSoC4/core_cm0.h **** typedef struct
+ 281:./Generated_Source/PSoC4/core_cm0.h **** {
+ 282:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t ISER[1];                 /*!< Offset: 0x000 (R/W)  Interrupt Set Enable Register   
+ 283:./Generated_Source/PSoC4/core_cm0.h ****        uint32_t RESERVED0[31];
+ 284:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t ICER[1];                 /*!< Offset: 0x080 (R/W)  Interrupt Clear Enable Register 
+ 285:./Generated_Source/PSoC4/core_cm0.h ****        uint32_t RSERVED1[31];
+ 286:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t ISPR[1];                 /*!< Offset: 0x100 (R/W)  Interrupt Set Pending Register  
+ 287:./Generated_Source/PSoC4/core_cm0.h ****        uint32_t RESERVED2[31];
+ 288:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t ICPR[1];                 /*!< Offset: 0x180 (R/W)  Interrupt Clear Pending Register
+ 289:./Generated_Source/PSoC4/core_cm0.h ****        uint32_t RESERVED3[31];
+ 290:./Generated_Source/PSoC4/core_cm0.h ****        uint32_t RESERVED4[64];
+ 291:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t IP[8];                   /*!< Offset: 0x300 (R/W)  Interrupt Priority Register     
+ 292:./Generated_Source/PSoC4/core_cm0.h **** }  NVIC_Type;
+ 293:./Generated_Source/PSoC4/core_cm0.h **** 
+ 294:./Generated_Source/PSoC4/core_cm0.h **** /*@} end of group CMSIS_NVIC */
+ 295:./Generated_Source/PSoC4/core_cm0.h **** 
+ 296:./Generated_Source/PSoC4/core_cm0.h **** 
+ 297:./Generated_Source/PSoC4/core_cm0.h **** /** \ingroup  CMSIS_core_register
+ 298:./Generated_Source/PSoC4/core_cm0.h ****     \defgroup CMSIS_SCB     System Control Block (SCB)
+ 299:./Generated_Source/PSoC4/core_cm0.h ****     \brief      Type definitions for the System Control Block Registers
+ 300:./Generated_Source/PSoC4/core_cm0.h ****   @{
+ 301:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 302:./Generated_Source/PSoC4/core_cm0.h **** 
+ 303:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Structure type to access the System Control Block (SCB).
+ 304:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 305:./Generated_Source/PSoC4/core_cm0.h **** typedef struct
+ 306:./Generated_Source/PSoC4/core_cm0.h **** {
+ 307:./Generated_Source/PSoC4/core_cm0.h ****   __I  uint32_t CPUID;                   /*!< Offset: 0x000 (R/ )  CPUID Base Register             
+ 308:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t ICSR;                    /*!< Offset: 0x004 (R/W)  Interrupt Control and State Regi
+ 309:./Generated_Source/PSoC4/core_cm0.h ****        uint32_t RESERVED0;
+ 310:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t AIRCR;                   /*!< Offset: 0x00C (R/W)  Application Interrupt and Reset 
+ 311:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t SCR;                     /*!< Offset: 0x010 (R/W)  System Control Register         
+ 312:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t CCR;                     /*!< Offset: 0x014 (R/W)  Configuration Control Register  
+ 313:./Generated_Source/PSoC4/core_cm0.h ****        uint32_t RESERVED1;
+ 314:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t SHP[2];                  /*!< Offset: 0x01C (R/W)  System Handlers Priority Registe
+ 315:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t SHCSR;                   /*!< Offset: 0x024 (R/W)  System Handler Control and State
+ 316:./Generated_Source/PSoC4/core_cm0.h **** } SCB_Type;
+ 317:./Generated_Source/PSoC4/core_cm0.h **** 
+ 318:./Generated_Source/PSoC4/core_cm0.h **** /* SCB CPUID Register Definitions */
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 7
+
+
+ 319:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CPUID_IMPLEMENTER_Pos          24                                             /*!< SCB 
+ 320:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CPUID_IMPLEMENTER_Msk          (0xFFUL << SCB_CPUID_IMPLEMENTER_Pos)          /*!< SCB 
+ 321:./Generated_Source/PSoC4/core_cm0.h **** 
+ 322:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CPUID_VARIANT_Pos              20                                             /*!< SCB 
+ 323:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CPUID_VARIANT_Msk              (0xFUL << SCB_CPUID_VARIANT_Pos)               /*!< SCB 
+ 324:./Generated_Source/PSoC4/core_cm0.h **** 
+ 325:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CPUID_ARCHITECTURE_Pos         16                                             /*!< SCB 
+ 326:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CPUID_ARCHITECTURE_Msk         (0xFUL << SCB_CPUID_ARCHITECTURE_Pos)          /*!< SCB 
+ 327:./Generated_Source/PSoC4/core_cm0.h **** 
+ 328:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CPUID_PARTNO_Pos                4                                             /*!< SCB 
+ 329:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CPUID_PARTNO_Msk               (0xFFFUL << SCB_CPUID_PARTNO_Pos)              /*!< SCB 
+ 330:./Generated_Source/PSoC4/core_cm0.h **** 
+ 331:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CPUID_REVISION_Pos              0                                             /*!< SCB 
+ 332:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CPUID_REVISION_Msk             (0xFUL << SCB_CPUID_REVISION_Pos)              /*!< SCB 
+ 333:./Generated_Source/PSoC4/core_cm0.h **** 
+ 334:./Generated_Source/PSoC4/core_cm0.h **** /* SCB Interrupt Control State Register Definitions */
+ 335:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_NMIPENDSET_Pos            31                                             /*!< SCB 
+ 336:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_NMIPENDSET_Msk            (1UL << SCB_ICSR_NMIPENDSET_Pos)               /*!< SCB 
+ 337:./Generated_Source/PSoC4/core_cm0.h **** 
+ 338:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_PENDSVSET_Pos             28                                             /*!< SCB 
+ 339:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_PENDSVSET_Msk             (1UL << SCB_ICSR_PENDSVSET_Pos)                /*!< SCB 
+ 340:./Generated_Source/PSoC4/core_cm0.h **** 
+ 341:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_PENDSVCLR_Pos             27                                             /*!< SCB 
+ 342:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_PENDSVCLR_Msk             (1UL << SCB_ICSR_PENDSVCLR_Pos)                /*!< SCB 
+ 343:./Generated_Source/PSoC4/core_cm0.h **** 
+ 344:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_PENDSTSET_Pos             26                                             /*!< SCB 
+ 345:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_PENDSTSET_Msk             (1UL << SCB_ICSR_PENDSTSET_Pos)                /*!< SCB 
+ 346:./Generated_Source/PSoC4/core_cm0.h **** 
+ 347:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_PENDSTCLR_Pos             25                                             /*!< SCB 
+ 348:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_PENDSTCLR_Msk             (1UL << SCB_ICSR_PENDSTCLR_Pos)                /*!< SCB 
+ 349:./Generated_Source/PSoC4/core_cm0.h **** 
+ 350:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_ISRPREEMPT_Pos            23                                             /*!< SCB 
+ 351:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_ISRPREEMPT_Msk            (1UL << SCB_ICSR_ISRPREEMPT_Pos)               /*!< SCB 
+ 352:./Generated_Source/PSoC4/core_cm0.h **** 
+ 353:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_ISRPENDING_Pos            22                                             /*!< SCB 
+ 354:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_ISRPENDING_Msk            (1UL << SCB_ICSR_ISRPENDING_Pos)               /*!< SCB 
+ 355:./Generated_Source/PSoC4/core_cm0.h **** 
+ 356:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_VECTPENDING_Pos           12                                             /*!< SCB 
+ 357:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_VECTPENDING_Msk           (0x1FFUL << SCB_ICSR_VECTPENDING_Pos)          /*!< SCB 
+ 358:./Generated_Source/PSoC4/core_cm0.h **** 
+ 359:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_VECTACTIVE_Pos             0                                             /*!< SCB 
+ 360:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_ICSR_VECTACTIVE_Msk            (0x1FFUL << SCB_ICSR_VECTACTIVE_Pos)           /*!< SCB 
+ 361:./Generated_Source/PSoC4/core_cm0.h **** 
+ 362:./Generated_Source/PSoC4/core_cm0.h **** /* SCB Application Interrupt and Reset Control Register Definitions */
+ 363:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_AIRCR_VECTKEY_Pos              16                                             /*!< SCB 
+ 364:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_AIRCR_VECTKEY_Msk              (0xFFFFUL << SCB_AIRCR_VECTKEY_Pos)            /*!< SCB 
+ 365:./Generated_Source/PSoC4/core_cm0.h **** 
+ 366:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_AIRCR_VECTKEYSTAT_Pos          16                                             /*!< SCB 
+ 367:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_AIRCR_VECTKEYSTAT_Msk          (0xFFFFUL << SCB_AIRCR_VECTKEYSTAT_Pos)        /*!< SCB 
+ 368:./Generated_Source/PSoC4/core_cm0.h **** 
+ 369:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_AIRCR_ENDIANESS_Pos            15                                             /*!< SCB 
+ 370:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_AIRCR_ENDIANESS_Msk            (1UL << SCB_AIRCR_ENDIANESS_Pos)               /*!< SCB 
+ 371:./Generated_Source/PSoC4/core_cm0.h **** 
+ 372:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_AIRCR_SYSRESETREQ_Pos           2                                             /*!< SCB 
+ 373:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_AIRCR_SYSRESETREQ_Msk          (1UL << SCB_AIRCR_SYSRESETREQ_Pos)             /*!< SCB 
+ 374:./Generated_Source/PSoC4/core_cm0.h **** 
+ 375:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_AIRCR_VECTCLRACTIVE_Pos         1                                             /*!< SCB 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 8
+
+
+ 376:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_AIRCR_VECTCLRACTIVE_Msk        (1UL << SCB_AIRCR_VECTCLRACTIVE_Pos)           /*!< SCB 
+ 377:./Generated_Source/PSoC4/core_cm0.h **** 
+ 378:./Generated_Source/PSoC4/core_cm0.h **** /* SCB System Control Register Definitions */
+ 379:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_SCR_SEVONPEND_Pos               4                                             /*!< SCB 
+ 380:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_SCR_SEVONPEND_Msk              (1UL << SCB_SCR_SEVONPEND_Pos)                 /*!< SCB 
+ 381:./Generated_Source/PSoC4/core_cm0.h **** 
+ 382:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_SCR_SLEEPDEEP_Pos               2                                             /*!< SCB 
+ 383:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_SCR_SLEEPDEEP_Msk              (1UL << SCB_SCR_SLEEPDEEP_Pos)                 /*!< SCB 
+ 384:./Generated_Source/PSoC4/core_cm0.h **** 
+ 385:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_SCR_SLEEPONEXIT_Pos             1                                             /*!< SCB 
+ 386:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_SCR_SLEEPONEXIT_Msk            (1UL << SCB_SCR_SLEEPONEXIT_Pos)               /*!< SCB 
+ 387:./Generated_Source/PSoC4/core_cm0.h **** 
+ 388:./Generated_Source/PSoC4/core_cm0.h **** /* SCB Configuration Control Register Definitions */
+ 389:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CCR_STKALIGN_Pos                9                                             /*!< SCB 
+ 390:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CCR_STKALIGN_Msk               (1UL << SCB_CCR_STKALIGN_Pos)                  /*!< SCB 
+ 391:./Generated_Source/PSoC4/core_cm0.h **** 
+ 392:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CCR_UNALIGN_TRP_Pos             3                                             /*!< SCB 
+ 393:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_CCR_UNALIGN_TRP_Msk            (1UL << SCB_CCR_UNALIGN_TRP_Pos)               /*!< SCB 
+ 394:./Generated_Source/PSoC4/core_cm0.h **** 
+ 395:./Generated_Source/PSoC4/core_cm0.h **** /* SCB System Handler Control and State Register Definitions */
+ 396:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_SHCSR_SVCALLPENDED_Pos         15                                             /*!< SCB 
+ 397:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_SHCSR_SVCALLPENDED_Msk         (1UL << SCB_SHCSR_SVCALLPENDED_Pos)            /*!< SCB 
+ 398:./Generated_Source/PSoC4/core_cm0.h **** 
+ 399:./Generated_Source/PSoC4/core_cm0.h **** /*@} end of group CMSIS_SCB */
+ 400:./Generated_Source/PSoC4/core_cm0.h **** 
+ 401:./Generated_Source/PSoC4/core_cm0.h **** 
+ 402:./Generated_Source/PSoC4/core_cm0.h **** /** \ingroup  CMSIS_core_register
+ 403:./Generated_Source/PSoC4/core_cm0.h ****     \defgroup CMSIS_SysTick     System Tick Timer (SysTick)
+ 404:./Generated_Source/PSoC4/core_cm0.h ****     \brief      Type definitions for the System Timer Registers.
+ 405:./Generated_Source/PSoC4/core_cm0.h ****   @{
+ 406:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 407:./Generated_Source/PSoC4/core_cm0.h **** 
+ 408:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Structure type to access the System Timer (SysTick).
+ 409:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 410:./Generated_Source/PSoC4/core_cm0.h **** typedef struct
+ 411:./Generated_Source/PSoC4/core_cm0.h **** {
+ 412:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t CTRL;                    /*!< Offset: 0x000 (R/W)  SysTick Control and Status Regis
+ 413:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t LOAD;                    /*!< Offset: 0x004 (R/W)  SysTick Reload Value Register   
+ 414:./Generated_Source/PSoC4/core_cm0.h ****   __IO uint32_t VAL;                     /*!< Offset: 0x008 (R/W)  SysTick Current Value Register  
+ 415:./Generated_Source/PSoC4/core_cm0.h ****   __I  uint32_t CALIB;                   /*!< Offset: 0x00C (R/ )  SysTick Calibration Register    
+ 416:./Generated_Source/PSoC4/core_cm0.h **** } SysTick_Type;
+ 417:./Generated_Source/PSoC4/core_cm0.h **** 
+ 418:./Generated_Source/PSoC4/core_cm0.h **** /* SysTick Control / Status Register Definitions */
+ 419:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CTRL_COUNTFLAG_Pos         16                                             /*!< SysT
+ 420:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CTRL_COUNTFLAG_Msk         (1UL << SysTick_CTRL_COUNTFLAG_Pos)            /*!< SysT
+ 421:./Generated_Source/PSoC4/core_cm0.h **** 
+ 422:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CTRL_CLKSOURCE_Pos          2                                             /*!< SysT
+ 423:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CTRL_CLKSOURCE_Msk         (1UL << SysTick_CTRL_CLKSOURCE_Pos)            /*!< SysT
+ 424:./Generated_Source/PSoC4/core_cm0.h **** 
+ 425:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CTRL_TICKINT_Pos            1                                             /*!< SysT
+ 426:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CTRL_TICKINT_Msk           (1UL << SysTick_CTRL_TICKINT_Pos)              /*!< SysT
+ 427:./Generated_Source/PSoC4/core_cm0.h **** 
+ 428:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CTRL_ENABLE_Pos             0                                             /*!< SysT
+ 429:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CTRL_ENABLE_Msk            (1UL << SysTick_CTRL_ENABLE_Pos)               /*!< SysT
+ 430:./Generated_Source/PSoC4/core_cm0.h **** 
+ 431:./Generated_Source/PSoC4/core_cm0.h **** /* SysTick Reload Register Definitions */
+ 432:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_LOAD_RELOAD_Pos             0                                             /*!< SysT
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 9
+
+
+ 433:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_LOAD_RELOAD_Msk            (0xFFFFFFUL << SysTick_LOAD_RELOAD_Pos)        /*!< SysT
+ 434:./Generated_Source/PSoC4/core_cm0.h **** 
+ 435:./Generated_Source/PSoC4/core_cm0.h **** /* SysTick Current Register Definitions */
+ 436:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_VAL_CURRENT_Pos             0                                             /*!< SysT
+ 437:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_VAL_CURRENT_Msk            (0xFFFFFFUL << SysTick_VAL_CURRENT_Pos)        /*!< SysT
+ 438:./Generated_Source/PSoC4/core_cm0.h **** 
+ 439:./Generated_Source/PSoC4/core_cm0.h **** /* SysTick Calibration Register Definitions */
+ 440:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CALIB_NOREF_Pos            31                                             /*!< SysT
+ 441:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CALIB_NOREF_Msk            (1UL << SysTick_CALIB_NOREF_Pos)               /*!< SysT
+ 442:./Generated_Source/PSoC4/core_cm0.h **** 
+ 443:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CALIB_SKEW_Pos             30                                             /*!< SysT
+ 444:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CALIB_SKEW_Msk             (1UL << SysTick_CALIB_SKEW_Pos)                /*!< SysT
+ 445:./Generated_Source/PSoC4/core_cm0.h **** 
+ 446:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CALIB_TENMS_Pos             0                                             /*!< SysT
+ 447:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_CALIB_TENMS_Msk            (0xFFFFFFUL << SysTick_VAL_CURRENT_Pos)        /*!< SysT
+ 448:./Generated_Source/PSoC4/core_cm0.h **** 
+ 449:./Generated_Source/PSoC4/core_cm0.h **** /*@} end of group CMSIS_SysTick */
+ 450:./Generated_Source/PSoC4/core_cm0.h **** 
+ 451:./Generated_Source/PSoC4/core_cm0.h **** 
+ 452:./Generated_Source/PSoC4/core_cm0.h **** /** \ingroup  CMSIS_core_register
+ 453:./Generated_Source/PSoC4/core_cm0.h ****     \defgroup CMSIS_CoreDebug       Core Debug Registers (CoreDebug)
+ 454:./Generated_Source/PSoC4/core_cm0.h ****     \brief      Cortex-M0 Core Debug Registers (DCB registers, SHCSR, and DFSR)
+ 455:./Generated_Source/PSoC4/core_cm0.h ****                 are only accessible over DAP and not via processor. Therefore
+ 456:./Generated_Source/PSoC4/core_cm0.h ****                 they are not covered by the Cortex-M0 header file.
+ 457:./Generated_Source/PSoC4/core_cm0.h ****   @{
+ 458:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 459:./Generated_Source/PSoC4/core_cm0.h **** /*@} end of group CMSIS_CoreDebug */
+ 460:./Generated_Source/PSoC4/core_cm0.h **** 
+ 461:./Generated_Source/PSoC4/core_cm0.h **** 
+ 462:./Generated_Source/PSoC4/core_cm0.h **** /** \ingroup    CMSIS_core_register
+ 463:./Generated_Source/PSoC4/core_cm0.h ****     \defgroup   CMSIS_core_base     Core Definitions
+ 464:./Generated_Source/PSoC4/core_cm0.h ****     \brief      Definitions for base addresses, unions, and structures.
+ 465:./Generated_Source/PSoC4/core_cm0.h ****   @{
+ 466:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 467:./Generated_Source/PSoC4/core_cm0.h **** 
+ 468:./Generated_Source/PSoC4/core_cm0.h **** /* Memory mapping of Cortex-M0 Hardware */
+ 469:./Generated_Source/PSoC4/core_cm0.h **** #define SCS_BASE            (0xE000E000UL)                            /*!< System Control Space Bas
+ 470:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick_BASE        (SCS_BASE +  0x0010UL)                    /*!< SysTick Base Address    
+ 471:./Generated_Source/PSoC4/core_cm0.h **** #define NVIC_BASE           (SCS_BASE +  0x0100UL)                    /*!< NVIC Base Address       
+ 472:./Generated_Source/PSoC4/core_cm0.h **** #define SCB_BASE            (SCS_BASE +  0x0D00UL)                    /*!< System Control Block Bas
+ 473:./Generated_Source/PSoC4/core_cm0.h **** 
+ 474:./Generated_Source/PSoC4/core_cm0.h **** #define SCB                 ((SCB_Type       *)     SCB_BASE      )   /*!< SCB configuration struct
+ 475:./Generated_Source/PSoC4/core_cm0.h **** #define SysTick             ((SysTick_Type   *)     SysTick_BASE  )   /*!< SysTick configuration st
+ 476:./Generated_Source/PSoC4/core_cm0.h **** #define NVIC                ((NVIC_Type      *)     NVIC_BASE     )   /*!< NVIC configuration struc
+ 477:./Generated_Source/PSoC4/core_cm0.h **** 
+ 478:./Generated_Source/PSoC4/core_cm0.h **** 
+ 479:./Generated_Source/PSoC4/core_cm0.h **** /*@} */
+ 480:./Generated_Source/PSoC4/core_cm0.h **** 
+ 481:./Generated_Source/PSoC4/core_cm0.h **** 
+ 482:./Generated_Source/PSoC4/core_cm0.h **** 
+ 483:./Generated_Source/PSoC4/core_cm0.h **** /*******************************************************************************
+ 484:./Generated_Source/PSoC4/core_cm0.h ****  *                Hardware Abstraction Layer
+ 485:./Generated_Source/PSoC4/core_cm0.h ****   Core Function Interface contains:
+ 486:./Generated_Source/PSoC4/core_cm0.h ****   - Core NVIC Functions
+ 487:./Generated_Source/PSoC4/core_cm0.h ****   - Core SysTick Functions
+ 488:./Generated_Source/PSoC4/core_cm0.h ****   - Core Register Access Functions
+ 489:./Generated_Source/PSoC4/core_cm0.h ****  ******************************************************************************/
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 10
+
+
+ 490:./Generated_Source/PSoC4/core_cm0.h **** /** \defgroup CMSIS_Core_FunctionInterface Functions and Instructions Reference
+ 491:./Generated_Source/PSoC4/core_cm0.h **** */
+ 492:./Generated_Source/PSoC4/core_cm0.h **** 
+ 493:./Generated_Source/PSoC4/core_cm0.h **** 
+ 494:./Generated_Source/PSoC4/core_cm0.h **** 
+ 495:./Generated_Source/PSoC4/core_cm0.h **** /* ##########################   NVIC functions  #################################### */
+ 496:./Generated_Source/PSoC4/core_cm0.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+ 497:./Generated_Source/PSoC4/core_cm0.h ****     \defgroup CMSIS_Core_NVICFunctions NVIC Functions
+ 498:./Generated_Source/PSoC4/core_cm0.h ****     \brief      Functions that manage interrupts and exceptions via the NVIC.
+ 499:./Generated_Source/PSoC4/core_cm0.h ****     @{
+ 500:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 501:./Generated_Source/PSoC4/core_cm0.h **** 
+ 502:./Generated_Source/PSoC4/core_cm0.h **** /* Interrupt Priorities are WORD accessible only under ARMv6M                   */
+ 503:./Generated_Source/PSoC4/core_cm0.h **** /* The following MACROS handle generation of the register offset and byte masks */
+ 504:./Generated_Source/PSoC4/core_cm0.h **** #define _BIT_SHIFT(IRQn)         (  (((uint32_t)(IRQn)       )    &  0x03) * 8 )
+ 505:./Generated_Source/PSoC4/core_cm0.h **** #define _SHP_IDX(IRQn)           ( ((((uint32_t)(IRQn) & 0x0F)-8) >>    2)     )
+ 506:./Generated_Source/PSoC4/core_cm0.h **** #define _IP_IDX(IRQn)            (   ((uint32_t)(IRQn)            >>    2)     )
+ 507:./Generated_Source/PSoC4/core_cm0.h **** 
+ 508:./Generated_Source/PSoC4/core_cm0.h **** 
+ 509:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Enable External Interrupt
+ 510:./Generated_Source/PSoC4/core_cm0.h **** 
+ 511:./Generated_Source/PSoC4/core_cm0.h ****     The function enables a device-specific interrupt in the NVIC interrupt controller.
+ 512:./Generated_Source/PSoC4/core_cm0.h **** 
+ 513:./Generated_Source/PSoC4/core_cm0.h ****     \param [in]      IRQn  External interrupt number. Value cannot be negative.
+ 514:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 515:./Generated_Source/PSoC4/core_cm0.h **** __STATIC_INLINE void NVIC_EnableIRQ(IRQn_Type IRQn)
+ 516:./Generated_Source/PSoC4/core_cm0.h **** {
+ 517:./Generated_Source/PSoC4/core_cm0.h ****   NVIC->ISER[0] = (1 << ((uint32_t)(IRQn) & 0x1F));
+ 518:./Generated_Source/PSoC4/core_cm0.h **** }
+ 519:./Generated_Source/PSoC4/core_cm0.h **** 
+ 520:./Generated_Source/PSoC4/core_cm0.h **** 
+ 521:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Disable External Interrupt
+ 522:./Generated_Source/PSoC4/core_cm0.h **** 
+ 523:./Generated_Source/PSoC4/core_cm0.h ****     The function disables a device-specific interrupt in the NVIC interrupt controller.
+ 524:./Generated_Source/PSoC4/core_cm0.h **** 
+ 525:./Generated_Source/PSoC4/core_cm0.h ****     \param [in]      IRQn  External interrupt number. Value cannot be negative.
+ 526:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 527:./Generated_Source/PSoC4/core_cm0.h **** __STATIC_INLINE void NVIC_DisableIRQ(IRQn_Type IRQn)
+ 528:./Generated_Source/PSoC4/core_cm0.h **** {
+ 529:./Generated_Source/PSoC4/core_cm0.h ****   NVIC->ICER[0] = (1 << ((uint32_t)(IRQn) & 0x1F));
+ 530:./Generated_Source/PSoC4/core_cm0.h **** }
+ 531:./Generated_Source/PSoC4/core_cm0.h **** 
+ 532:./Generated_Source/PSoC4/core_cm0.h **** 
+ 533:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Get Pending Interrupt
+ 534:./Generated_Source/PSoC4/core_cm0.h **** 
+ 535:./Generated_Source/PSoC4/core_cm0.h ****     The function reads the pending register in the NVIC and returns the pending bit
+ 536:./Generated_Source/PSoC4/core_cm0.h ****     for the specified interrupt.
+ 537:./Generated_Source/PSoC4/core_cm0.h **** 
+ 538:./Generated_Source/PSoC4/core_cm0.h ****     \param [in]      IRQn  Interrupt number.
+ 539:./Generated_Source/PSoC4/core_cm0.h **** 
+ 540:./Generated_Source/PSoC4/core_cm0.h ****     \return             0  Interrupt status is not pending.
+ 541:./Generated_Source/PSoC4/core_cm0.h ****     \return             1  Interrupt status is pending.
+ 542:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 543:./Generated_Source/PSoC4/core_cm0.h **** __STATIC_INLINE uint32_t NVIC_GetPendingIRQ(IRQn_Type IRQn)
+ 544:./Generated_Source/PSoC4/core_cm0.h **** {
+ 545:./Generated_Source/PSoC4/core_cm0.h ****   return((uint32_t) ((NVIC->ISPR[0] & (1 << ((uint32_t)(IRQn) & 0x1F)))?1:0));
+ 546:./Generated_Source/PSoC4/core_cm0.h **** }
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 11
+
+
+ 547:./Generated_Source/PSoC4/core_cm0.h **** 
+ 548:./Generated_Source/PSoC4/core_cm0.h **** 
+ 549:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Set Pending Interrupt
+ 550:./Generated_Source/PSoC4/core_cm0.h **** 
+ 551:./Generated_Source/PSoC4/core_cm0.h ****     The function sets the pending bit of an external interrupt.
+ 552:./Generated_Source/PSoC4/core_cm0.h **** 
+ 553:./Generated_Source/PSoC4/core_cm0.h ****     \param [in]      IRQn  Interrupt number. Value cannot be negative.
+ 554:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 555:./Generated_Source/PSoC4/core_cm0.h **** __STATIC_INLINE void NVIC_SetPendingIRQ(IRQn_Type IRQn)
+ 556:./Generated_Source/PSoC4/core_cm0.h **** {
+ 557:./Generated_Source/PSoC4/core_cm0.h ****   NVIC->ISPR[0] = (1 << ((uint32_t)(IRQn) & 0x1F));
+ 558:./Generated_Source/PSoC4/core_cm0.h **** }
+ 559:./Generated_Source/PSoC4/core_cm0.h **** 
+ 560:./Generated_Source/PSoC4/core_cm0.h **** 
+ 561:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Clear Pending Interrupt
+ 562:./Generated_Source/PSoC4/core_cm0.h **** 
+ 563:./Generated_Source/PSoC4/core_cm0.h ****     The function clears the pending bit of an external interrupt.
+ 564:./Generated_Source/PSoC4/core_cm0.h **** 
+ 565:./Generated_Source/PSoC4/core_cm0.h ****     \param [in]      IRQn  External interrupt number. Value cannot be negative.
+ 566:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 567:./Generated_Source/PSoC4/core_cm0.h **** __STATIC_INLINE void NVIC_ClearPendingIRQ(IRQn_Type IRQn)
+ 568:./Generated_Source/PSoC4/core_cm0.h **** {
+ 569:./Generated_Source/PSoC4/core_cm0.h ****   NVIC->ICPR[0] = (1 << ((uint32_t)(IRQn) & 0x1F)); /* Clear pending interrupt */
+ 570:./Generated_Source/PSoC4/core_cm0.h **** }
+ 571:./Generated_Source/PSoC4/core_cm0.h **** 
+ 572:./Generated_Source/PSoC4/core_cm0.h **** 
+ 573:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Set Interrupt Priority
+ 574:./Generated_Source/PSoC4/core_cm0.h **** 
+ 575:./Generated_Source/PSoC4/core_cm0.h ****     The function sets the priority of an interrupt.
+ 576:./Generated_Source/PSoC4/core_cm0.h **** 
+ 577:./Generated_Source/PSoC4/core_cm0.h ****     \note The priority cannot be set for every core interrupt.
+ 578:./Generated_Source/PSoC4/core_cm0.h **** 
+ 579:./Generated_Source/PSoC4/core_cm0.h ****     \param [in]      IRQn  Interrupt number.
+ 580:./Generated_Source/PSoC4/core_cm0.h ****     \param [in]  priority  Priority to set.
+ 581:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 582:./Generated_Source/PSoC4/core_cm0.h **** __STATIC_INLINE void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+ 583:./Generated_Source/PSoC4/core_cm0.h **** {
+  25              		.loc 1 583 0
+  26              		.cfi_startproc
+  27 0000 B0B5     		push	{r4, r5, r7, lr}
+  28              	.LCFI0:
+  29              		.cfi_def_cfa_offset 16
+  30              		.cfi_offset 4, -16
+  31              		.cfi_offset 5, -12
+  32              		.cfi_offset 7, -8
+  33              		.cfi_offset 14, -4
+  34 0002 82B0     		sub	sp, sp, #8
+  35              	.LCFI1:
+  36              		.cfi_def_cfa_offset 24
+  37 0004 00AF     		add	r7, sp, #0
+  38              	.LCFI2:
+  39              		.cfi_def_cfa_register 7
+  40 0006 021C     		mov	r2, r0
+  41 0008 3960     		str	r1, [r7]
+  42 000a FB1D     		add	r3, r7, #7
+  43 000c 1A70     		strb	r2, [r3]
+ 584:./Generated_Source/PSoC4/core_cm0.h ****   if(IRQn < 0) {
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 12
+
+
+  44              		.loc 1 584 0
+  45 000e FB1D     		add	r3, r7, #7
+  46 0010 1B78     		ldrb	r3, [r3]
+  47 0012 7F2B     		cmp	r3, #127
+  48 0014 32D9     		bls	.L2
+ 585:./Generated_Source/PSoC4/core_cm0.h ****     SCB->SHP[_SHP_IDX(IRQn)] = (SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFF << _BIT_SHIFT(IRQn))) |
+  49              		.loc 1 585 0
+  50 0016 3049     		ldr	r1, .L4
+  51 0018 FB1D     		add	r3, r7, #7
+  52 001a 1B78     		ldrb	r3, [r3]
+  53 001c 1A1C     		mov	r2, r3
+  54 001e 0F23     		mov	r3, #15
+  55 0020 1340     		and	r3, r2
+  56 0022 083B     		sub	r3, r3, #8
+  57 0024 9808     		lsr	r0, r3, #2
+  58 0026 2C4A     		ldr	r2, .L4
+  59 0028 FB1D     		add	r3, r7, #7
+  60 002a 1B78     		ldrb	r3, [r3]
+  61 002c 1C1C     		mov	r4, r3
+  62 002e 0F23     		mov	r3, #15
+  63 0030 2340     		and	r3, r4
+  64 0032 083B     		sub	r3, r3, #8
+  65 0034 9B08     		lsr	r3, r3, #2
+  66 0036 0633     		add	r3, r3, #6
+  67 0038 9B00     		lsl	r3, r3, #2
+  68 003a D318     		add	r3, r2, r3
+  69 003c 5B68     		ldr	r3, [r3, #4]
+  70 003e FA1D     		add	r2, r7, #7
+  71 0040 1278     		ldrb	r2, [r2]
+  72 0042 141C     		mov	r4, r2
+  73 0044 0322     		mov	r2, #3
+  74 0046 2240     		and	r2, r4
+  75 0048 D200     		lsl	r2, r2, #3
+  76 004a FF24     		mov	r4, #255
+  77 004c 251C     		mov	r5, r4
+  78 004e 9540     		lsl	r5, r5, r2
+  79 0050 2A1C     		mov	r2, r5
+  80 0052 D243     		mvn	r2, r2
+  81 0054 1A40     		and	r2, r3
+ 586:./Generated_Source/PSoC4/core_cm0.h ****         (((priority << (8 - __NVIC_PRIO_BITS)) & 0xFF) << _BIT_SHIFT(IRQn)); }
+  82              		.loc 1 586 0
+  83 0056 3B68     		ldr	r3, [r7]
+  84 0058 9C01     		lsl	r4, r3, #6
+  85 005a FF23     		mov	r3, #255
+  86 005c 1C40     		and	r4, r3
+  87 005e FB1D     		add	r3, r7, #7
+  88 0060 1B78     		ldrb	r3, [r3]
+  89 0062 1D1C     		mov	r5, r3
+  90 0064 0323     		mov	r3, #3
+  91 0066 2B40     		and	r3, r5
+  92 0068 DB00     		lsl	r3, r3, #3
+  93 006a 251C     		mov	r5, r4
+  94 006c 9D40     		lsl	r5, r5, r3
+  95 006e 2B1C     		mov	r3, r5
+ 585:./Generated_Source/PSoC4/core_cm0.h ****     SCB->SHP[_SHP_IDX(IRQn)] = (SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFF << _BIT_SHIFT(IRQn))) |
+  96              		.loc 1 585 0
+  97 0070 1A43     		orr	r2, r3
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 13
+
+
+  98 0072 831D     		add	r3, r0, #6
+  99 0074 9B00     		lsl	r3, r3, #2
+ 100 0076 CB18     		add	r3, r1, r3
+ 101 0078 5A60     		str	r2, [r3, #4]
+ 102 007a 29E0     		b	.L1
+ 103              	.L2:
+ 587:./Generated_Source/PSoC4/core_cm0.h ****   else {
+ 588:./Generated_Source/PSoC4/core_cm0.h ****     NVIC->IP[_IP_IDX(IRQn)] = (NVIC->IP[_IP_IDX(IRQn)] & ~(0xFF << _BIT_SHIFT(IRQn))) |
+ 104              		.loc 1 588 0
+ 105 007c 174B     		ldr	r3, .L4+4
+ 106 007e FA1D     		add	r2, r7, #7
+ 107 0080 1278     		ldrb	r2, [r2]
+ 108 0082 52B2     		sxtb	r2, r2
+ 109 0084 9208     		lsr	r2, r2, #2
+ 110 0086 1549     		ldr	r1, .L4+4
+ 111 0088 F81D     		add	r0, r7, #7
+ 112 008a 0078     		ldrb	r0, [r0]
+ 113 008c 40B2     		sxtb	r0, r0
+ 114 008e 8008     		lsr	r0, r0, #2
+ 115 0090 C030     		add	r0, r0, #192
+ 116 0092 8000     		lsl	r0, r0, #2
+ 117 0094 4158     		ldr	r1, [r0, r1]
+ 118 0096 F81D     		add	r0, r7, #7
+ 119 0098 0078     		ldrb	r0, [r0]
+ 120 009a 041C     		mov	r4, r0
+ 121 009c 0320     		mov	r0, #3
+ 122 009e 2040     		and	r0, r4
+ 123 00a0 C000     		lsl	r0, r0, #3
+ 124 00a2 FF24     		mov	r4, #255
+ 125 00a4 251C     		mov	r5, r4
+ 126 00a6 8540     		lsl	r5, r5, r0
+ 127 00a8 281C     		mov	r0, r5
+ 128 00aa C043     		mvn	r0, r0
+ 129 00ac 0840     		and	r0, r1
+ 589:./Generated_Source/PSoC4/core_cm0.h ****         (((priority << (8 - __NVIC_PRIO_BITS)) & 0xFF) << _BIT_SHIFT(IRQn)); }
+ 130              		.loc 1 589 0
+ 131 00ae 3968     		ldr	r1, [r7]
+ 132 00b0 8C01     		lsl	r4, r1, #6
+ 133 00b2 FF21     		mov	r1, #255
+ 134 00b4 0C40     		and	r4, r1
+ 135 00b6 F91D     		add	r1, r7, #7
+ 136 00b8 0978     		ldrb	r1, [r1]
+ 137 00ba 0D1C     		mov	r5, r1
+ 138 00bc 0321     		mov	r1, #3
+ 139 00be 2940     		and	r1, r5
+ 140 00c0 C900     		lsl	r1, r1, #3
+ 141 00c2 251C     		mov	r5, r4
+ 142 00c4 8D40     		lsl	r5, r5, r1
+ 143 00c6 291C     		mov	r1, r5
+ 588:./Generated_Source/PSoC4/core_cm0.h ****     NVIC->IP[_IP_IDX(IRQn)] = (NVIC->IP[_IP_IDX(IRQn)] & ~(0xFF << _BIT_SHIFT(IRQn))) |
+ 144              		.loc 1 588 0
+ 145 00c8 0143     		orr	r1, r0
+ 146 00ca C032     		add	r2, r2, #192
+ 147 00cc 9200     		lsl	r2, r2, #2
+ 148 00ce D150     		str	r1, [r2, r3]
+ 149              	.L1:
+ 590:./Generated_Source/PSoC4/core_cm0.h **** }
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 14
+
+
+ 150              		.loc 1 590 0
+ 151 00d0 BD46     		mov	sp, r7
+ 152 00d2 02B0     		add	sp, sp, #8
+ 153              		@ sp needed for prologue
+ 154 00d4 B0BD     		pop	{r4, r5, r7, pc}
+ 155              	.L5:
+ 156 00d6 C046     		.align	2
+ 157              	.L4:
+ 158 00d8 00ED00E0 		.word	-536810240
+ 159 00dc 00E100E0 		.word	-536813312
+ 160              		.cfi_endproc
+ 161              	.LFE29:
+ 162              		.size	NVIC_SetPriority, .-NVIC_SetPriority
+ 163              		.section	.text.SysTick_Config,"ax",%progbits
+ 164              		.align	2
+ 165              		.code	16
+ 166              		.thumb_func
+ 167              		.type	SysTick_Config, %function
+ 168              	SysTick_Config:
+ 169              	.LFB32:
+ 591:./Generated_Source/PSoC4/core_cm0.h **** 
+ 592:./Generated_Source/PSoC4/core_cm0.h **** 
+ 593:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  Get Interrupt Priority
+ 594:./Generated_Source/PSoC4/core_cm0.h **** 
+ 595:./Generated_Source/PSoC4/core_cm0.h ****     The function reads the priority of an interrupt. The interrupt
+ 596:./Generated_Source/PSoC4/core_cm0.h ****     number can be positive to specify an external (device specific)
+ 597:./Generated_Source/PSoC4/core_cm0.h ****     interrupt, or negative to specify an internal (core) interrupt.
+ 598:./Generated_Source/PSoC4/core_cm0.h **** 
+ 599:./Generated_Source/PSoC4/core_cm0.h **** 
+ 600:./Generated_Source/PSoC4/core_cm0.h ****     \param [in]   IRQn  Interrupt number.
+ 601:./Generated_Source/PSoC4/core_cm0.h ****     \return             Interrupt Priority. Value is aligned automatically to the implemented
+ 602:./Generated_Source/PSoC4/core_cm0.h ****                         priority bits of the microcontroller.
+ 603:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 604:./Generated_Source/PSoC4/core_cm0.h **** __STATIC_INLINE uint32_t NVIC_GetPriority(IRQn_Type IRQn)
+ 605:./Generated_Source/PSoC4/core_cm0.h **** {
+ 606:./Generated_Source/PSoC4/core_cm0.h **** 
+ 607:./Generated_Source/PSoC4/core_cm0.h ****   if(IRQn < 0) {
+ 608:./Generated_Source/PSoC4/core_cm0.h ****     return((uint32_t)(((SCB->SHP[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & 0xFF) >> (8 - __NVIC_PRIO_
+ 609:./Generated_Source/PSoC4/core_cm0.h ****   else {
+ 610:./Generated_Source/PSoC4/core_cm0.h ****     return((uint32_t)(((NVIC->IP[ _IP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & 0xFF) >> (8 - __NVIC_PRIO_
+ 611:./Generated_Source/PSoC4/core_cm0.h **** }
+ 612:./Generated_Source/PSoC4/core_cm0.h **** 
+ 613:./Generated_Source/PSoC4/core_cm0.h **** 
+ 614:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  System Reset
+ 615:./Generated_Source/PSoC4/core_cm0.h **** 
+ 616:./Generated_Source/PSoC4/core_cm0.h ****     The function initiates a system reset request to reset the MCU.
+ 617:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 618:./Generated_Source/PSoC4/core_cm0.h **** __STATIC_INLINE void NVIC_SystemReset(void)
+ 619:./Generated_Source/PSoC4/core_cm0.h **** {
+ 620:./Generated_Source/PSoC4/core_cm0.h ****   __DSB();                                                     /* Ensure all outstanding memory acc
+ 621:./Generated_Source/PSoC4/core_cm0.h ****                                                                   buffered write are completed befo
+ 622:./Generated_Source/PSoC4/core_cm0.h ****   SCB->AIRCR  = ((0x5FA << SCB_AIRCR_VECTKEY_Pos)      |
+ 623:./Generated_Source/PSoC4/core_cm0.h ****                  SCB_AIRCR_SYSRESETREQ_Msk);
+ 624:./Generated_Source/PSoC4/core_cm0.h ****   __DSB();                                                     /* Ensure completion of memory acces
+ 625:./Generated_Source/PSoC4/core_cm0.h ****   while(1);                                                    /* wait until reset */
+ 626:./Generated_Source/PSoC4/core_cm0.h **** }
+ 627:./Generated_Source/PSoC4/core_cm0.h **** 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 15
+
+
+ 628:./Generated_Source/PSoC4/core_cm0.h **** /*@} end of CMSIS_Core_NVICFunctions */
+ 629:./Generated_Source/PSoC4/core_cm0.h **** 
+ 630:./Generated_Source/PSoC4/core_cm0.h **** 
+ 631:./Generated_Source/PSoC4/core_cm0.h **** 
+ 632:./Generated_Source/PSoC4/core_cm0.h **** /* ##################################    SysTick function  ########################################
+ 633:./Generated_Source/PSoC4/core_cm0.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+ 634:./Generated_Source/PSoC4/core_cm0.h ****     \defgroup CMSIS_Core_SysTickFunctions SysTick Functions
+ 635:./Generated_Source/PSoC4/core_cm0.h ****     \brief      Functions that configure the System.
+ 636:./Generated_Source/PSoC4/core_cm0.h ****   @{
+ 637:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 638:./Generated_Source/PSoC4/core_cm0.h **** 
+ 639:./Generated_Source/PSoC4/core_cm0.h **** #if (__Vendor_SysTickConfig == 0)
+ 640:./Generated_Source/PSoC4/core_cm0.h **** 
+ 641:./Generated_Source/PSoC4/core_cm0.h **** /** \brief  System Tick Configuration
+ 642:./Generated_Source/PSoC4/core_cm0.h **** 
+ 643:./Generated_Source/PSoC4/core_cm0.h ****     The function initializes the System Timer and its interrupt, and starts the System Tick Timer.
+ 644:./Generated_Source/PSoC4/core_cm0.h ****     Counter is in free running mode to generate periodic interrupts.
+ 645:./Generated_Source/PSoC4/core_cm0.h **** 
+ 646:./Generated_Source/PSoC4/core_cm0.h ****     \param [in]  ticks  Number of ticks between two interrupts.
+ 647:./Generated_Source/PSoC4/core_cm0.h **** 
+ 648:./Generated_Source/PSoC4/core_cm0.h ****     \return          0  Function succeeded.
+ 649:./Generated_Source/PSoC4/core_cm0.h ****     \return          1  Function failed.
+ 650:./Generated_Source/PSoC4/core_cm0.h **** 
+ 651:./Generated_Source/PSoC4/core_cm0.h ****     \note     When the variable <b>__Vendor_SysTickConfig</b> is set to 1, then the
+ 652:./Generated_Source/PSoC4/core_cm0.h ****     function <b>SysTick_Config</b> is not included. In this case, the file <b><i>device</i>.h</b>
+ 653:./Generated_Source/PSoC4/core_cm0.h ****     must contain a vendor-specific implementation of this function.
+ 654:./Generated_Source/PSoC4/core_cm0.h **** 
+ 655:./Generated_Source/PSoC4/core_cm0.h ****  */
+ 656:./Generated_Source/PSoC4/core_cm0.h **** __STATIC_INLINE uint32_t SysTick_Config(uint32_t ticks)
+ 657:./Generated_Source/PSoC4/core_cm0.h **** {
+ 170              		.loc 1 657 0
+ 171              		.cfi_startproc
+ 172 0000 80B5     		push	{r7, lr}
+ 173              	.LCFI3:
+ 174              		.cfi_def_cfa_offset 8
+ 175              		.cfi_offset 7, -8
+ 176              		.cfi_offset 14, -4
+ 177 0002 82B0     		sub	sp, sp, #8
+ 178              	.LCFI4:
+ 179              		.cfi_def_cfa_offset 16
+ 180 0004 00AF     		add	r7, sp, #0
+ 181              	.LCFI5:
+ 182              		.cfi_def_cfa_register 7
+ 183 0006 7860     		str	r0, [r7, #4]
+ 658:./Generated_Source/PSoC4/core_cm0.h ****   if ((ticks - 1) > SysTick_LOAD_RELOAD_Msk)  return (1);      /* Reload value impossible */
+ 184              		.loc 1 658 0
+ 185 0008 7B68     		ldr	r3, [r7, #4]
+ 186 000a 5A1E     		sub	r2, r3, #1
+ 187 000c 0C4B     		ldr	r3, .L9
+ 188 000e 9A42     		cmp	r2, r3
+ 189 0010 01D9     		bls	.L7
+ 190              		.loc 1 658 0 is_stmt 0 discriminator 1
+ 191 0012 0123     		mov	r3, #1
+ 192 0014 10E0     		b	.L8
+ 193              	.L7:
+ 659:./Generated_Source/PSoC4/core_cm0.h **** 
+ 660:./Generated_Source/PSoC4/core_cm0.h ****   SysTick->LOAD  = ticks - 1;                                  /* set reload register */
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 16
+
+
+ 194              		.loc 1 660 0 is_stmt 1
+ 195 0016 0B4B     		ldr	r3, .L9+4
+ 196 0018 7A68     		ldr	r2, [r7, #4]
+ 197 001a 013A     		sub	r2, r2, #1
+ 198 001c 5A60     		str	r2, [r3, #4]
+ 661:./Generated_Source/PSoC4/core_cm0.h ****   NVIC_SetPriority (SysTick_IRQn, (1<<__NVIC_PRIO_BITS) - 1);  /* set Priority for Systick Interrup
+ 199              		.loc 1 661 0
+ 200 001e 0123     		mov	r3, #1
+ 201 0020 5B42     		neg	r3, r3
+ 202 0022 181C     		mov	r0, r3
+ 203 0024 0321     		mov	r1, #3
+ 204 0026 FFF7FEFF 		bl	NVIC_SetPriority
+ 662:./Generated_Source/PSoC4/core_cm0.h ****   SysTick->VAL   = 0;                                          /* Load the SysTick Counter Value */
+ 205              		.loc 1 662 0
+ 206 002a 064B     		ldr	r3, .L9+4
+ 207 002c 0022     		mov	r2, #0
+ 208 002e 9A60     		str	r2, [r3, #8]
+ 663:./Generated_Source/PSoC4/core_cm0.h ****   SysTick->CTRL  = SysTick_CTRL_CLKSOURCE_Msk |
+ 209              		.loc 1 663 0
+ 210 0030 044B     		ldr	r3, .L9+4
+ 211 0032 0722     		mov	r2, #7
+ 212 0034 1A60     		str	r2, [r3]
+ 664:./Generated_Source/PSoC4/core_cm0.h ****                    SysTick_CTRL_TICKINT_Msk   |
+ 665:./Generated_Source/PSoC4/core_cm0.h ****                    SysTick_CTRL_ENABLE_Msk;                    /* Enable SysTick IRQ and SysTick Ti
+ 666:./Generated_Source/PSoC4/core_cm0.h ****   return (0);                                                  /* Function successful */
+ 213              		.loc 1 666 0
+ 214 0036 0023     		mov	r3, #0
+ 215              	.L8:
+ 667:./Generated_Source/PSoC4/core_cm0.h **** }
+ 216              		.loc 1 667 0
+ 217 0038 181C     		mov	r0, r3
+ 218 003a BD46     		mov	sp, r7
+ 219 003c 02B0     		add	sp, sp, #8
+ 220              		@ sp needed for prologue
+ 221 003e 80BD     		pop	{r7, pc}
+ 222              	.L10:
+ 223              		.align	2
+ 224              	.L9:
+ 225 0040 FFFFFF00 		.word	16777215
+ 226 0044 10E000E0 		.word	-536813552
+ 227              		.cfi_endproc
+ 228              	.LFE32:
+ 229              		.size	SysTick_Config, .-SysTick_Config
+ 230              		.comm	rgb,768,4
+ 231              		.comm	tick,4,4
+ 232              		.comm	current_led,4,4
+ 233              		.section	.text.main,"ax",%progbits
+ 234              		.align	2
+ 235              		.global	main
+ 236              		.code	16
+ 237              		.thumb_func
+ 238              		.type	main, %function
+ 239              	main:
+ 240              	.LFB33:
+ 241              		.file 2 ".\\main.c"
    1:.\main.c      **** /* ========================================
    2:.\main.c      ****  *
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 17
+
+
    3:.\main.c      ****  * Copyright YOUR COMPANY, THE YEAR
    4:.\main.c      ****  * All Rights Reserved
    5:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
@@ -39,477 +972,2128 @@ ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNhIVry.s 			page 1
   11:.\main.c      **** */
   12:.\main.c      **** #include <project.h>
   13:.\main.c      **** 
-  14:.\main.c      **** int main()
-  15:.\main.c      **** {
-  26              		.loc 1 15 0
-  27              		.cfi_startproc
-  28 0000 80B5     		push	{r7, lr}
-  29              	.LCFI0:
-  30              		.cfi_def_cfa_offset 8
-  31              		.cfi_offset 7, -8
-  32              		.cfi_offset 14, -4
-  33 0002 82B0     		sub	sp, sp, #8
-  34              	.LCFI1:
-  35              		.cfi_def_cfa_offset 16
-  36 0004 00AF     		add	r7, sp, #0
-  37              	.LCFI2:
-  38              		.cfi_def_cfa_register 7
-  39              	.L4:
-  16:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-  17:.\main.c      ****     //Clock_1_Start();
-  18:.\main.c      ****     /* CyGlobalIntEnable; */ /* Uncomment this line to enable global interrupts. */
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNhIVry.s 			page 2
+  14:.\main.c      **** #define LED_LENGTH 256
+  15:.\main.c      **** 
+  16:.\main.c      **** typedef struct _RGB_tag{
+  17:.\main.c      **** 	unsigned char g;
+  18:.\main.c      **** 	unsigned char r;
+  19:.\main.c      **** 	unsigned char b;
+  20:.\main.c      **** } rgb_tag;
+  21:.\main.c      **** 
+  22:.\main.c      **** rgb_tag rgb[LED_LENGTH];
+  23:.\main.c      **** unsigned int tick, current_led;
+  24:.\main.c      **** 
+  25:.\main.c      **** void isr_systick();
+  26:.\main.c      **** void isr_reset();
+  27:.\main.c      **** void isr_fifo_empty();
+  28:.\main.c      **** void transfer_LEDdriver();
+  29:.\main.c      **** void set_next_color();
+  30:.\main.c      **** 
+  31:.\main.c      **** int main()
+  32:.\main.c      **** {
+ 242              		.loc 2 32 0
+ 243              		.cfi_startproc
+ 244 0000 80B5     		push	{r7, lr}
+ 245              	.LCFI6:
+ 246              		.cfi_def_cfa_offset 8
+ 247              		.cfi_offset 7, -8
+ 248              		.cfi_offset 14, -4
+ 249 0002 00AF     		add	r7, sp, #0
+ 250              	.LCFI7:
+ 251              		.cfi_def_cfa_register 7
+  33:.\main.c      ****     // init isr
+  34:.\main.c      ****     isr_fifo_empty_StartEx(isr_fifo_empty);
+ 252              		.loc 2 34 0
+ 253 0004 104B     		ldr	r3, .L16
+ 254 0006 181C     		mov	r0, r3
+ 255 0008 FFF7FEFF 		bl	isr_fifo_empty_StartEx
+  35:.\main.c      ****     isr_reset_done_StartEx(isr_reset);
+ 256              		.loc 2 35 0
+ 257 000c 0F4B     		ldr	r3, .L16+4
+ 258 000e 181C     		mov	r0, r3
+ 259 0010 FFF7FEFF 		bl	isr_reset_done_StartEx
+  36:.\main.c      ****     
+  37:.\main.c      ****     // configure systick for interrupt each 1ms
+  38:.\main.c      ****     CyIntSetSysVector(15,isr_systick);
+ 260              		.loc 2 38 0
+ 261 0014 0E4B     		ldr	r3, .L16+8
+ 262 0016 0F20     		mov	r0, #15
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 18
 
 
-  19:.\main.c      ****     int i;
-  20:.\main.c      ****     for(;;)
-  21:.\main.c      ****     {
-  22:.\main.c      ****         /* Place your application code here. */
-  23:.\main.c      ****         CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0x1);
-  40              		.loc 1 23 0
-  41 0006 134B     		ldr	r3, .L5
-  42 0008 0122     		mov	r2, #1
-  43 000a 1A70     		strb	r2, [r3]
-  24:.\main.c      ****         CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0x1);
-  44              		.loc 1 24 0
-  45 000c 114B     		ldr	r3, .L5
-  46 000e 0122     		mov	r2, #1
-  47 0010 1A70     		strb	r2, [r3]
-  25:.\main.c      ****         CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0x0);
-  48              		.loc 1 25 0
-  49 0012 104B     		ldr	r3, .L5
-  50 0014 0022     		mov	r2, #0
-  51 0016 1A70     		strb	r2, [r3]
-  26:.\main.c      ****         CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0x1);
-  52              		.loc 1 26 0
-  53 0018 0E4B     		ldr	r3, .L5
-  54 001a 0122     		mov	r2, #1
-  55 001c 1A70     		strb	r2, [r3]
-  27:.\main.c      ****         CY_SET_REG8(WS2812driver_1_shifter_u0__F0_REG, 0x0);
-  56              		.loc 1 27 0
-  57 001e 0D4B     		ldr	r3, .L5
-  58 0020 0022     		mov	r2, #0
-  59 0022 1A70     		strb	r2, [r3]
-  28:.\main.c      ****         CY_SET_REG8(WS2812driver_1_shifter_u0__F1_REG, 0x1);
-  60              		.loc 1 28 0
-  61 0024 0C4B     		ldr	r3, .L5+4
-  62 0026 0122     		mov	r2, #1
-  63 0028 1A70     		strb	r2, [r3]
-  29:.\main.c      ****         CY_SET_REG8(WS2812driver_1_shifter_u0__F1_REG, 0x0);
-  64              		.loc 1 29 0
-  65 002a 0B4B     		ldr	r3, .L5+4
-  66 002c 0022     		mov	r2, #0
-  67 002e 1A70     		strb	r2, [r3]
-  30:.\main.c      ****         CY_SET_REG8(WS2812driver_1_shifter_u0__F1_REG, 0x1);
-  68              		.loc 1 30 0
-  69 0030 094B     		ldr	r3, .L5+4
-  70 0032 0122     		mov	r2, #1
-  71 0034 1A70     		strb	r2, [r3]
-  31:.\main.c      ****         CY_SET_REG8(WS2812driver_1_shifter_u0__F1_REG, 0x1);
-  72              		.loc 1 31 0
-  73 0036 084B     		ldr	r3, .L5+4
-  74 0038 0122     		mov	r2, #1
-  75 003a 1A70     		strb	r2, [r3]
-  32:.\main.c      ****         for(i=0;i<4096;i++);
-  76              		.loc 1 32 0
-  77 003c 0023     		mov	r3, #0
-  78 003e 7B60     		str	r3, [r7, #4]
-  79 0040 02E0     		b	.L2
-  80              	.L3:
-  81              		.loc 1 32 0 is_stmt 0 discriminator 2
-  82 0042 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNhIVry.s 			page 3
+ 263 0018 191C     		mov	r1, r3
+ 264 001a FFF7FEFF 		bl	CyIntSetSysVector
+  39:.\main.c      ****     if (SysTick_Config( (40000000) / 1000)) { 
+ 265              		.loc 2 39 0
+ 266 001e 0D4B     		ldr	r3, .L16+12
+ 267 0020 181C     		mov	r0, r3
+ 268 0022 FFF7FEFF 		bl	SysTick_Config
+ 269 0026 031C     		mov	r3, r0
+ 270 0028 002B     		cmp	r3, #0
+ 271 002a 00D0     		beq	.L12
+ 272              	.L13:
+  40:.\main.c      ****             while (1);  //Capture error
+ 273              		.loc 2 40 0 discriminator 1
+ 274 002c FEE7     		b	.L13
+ 275              	.L12:
+  41:.\main.c      ****     }
+  42:.\main.c      ****     
+  43:.\main.c      ****     // start component
+  44:.\main.c      ****     Counter_reset_gen_Start() ;
+ 276              		.loc 2 44 0
+ 277 002e FFF7FEFF 		bl	Counter_reset_gen_Start
+  45:.\main.c      ****     
+  46:.\main.c      ****     CyGlobalIntEnable;
+ 278              		.loc 2 46 0
+ 279              	@ 46 ".\main.c" 1
+ 280 0032 62B6     		CPSIE   i
+ 281              	@ 0 "" 2
+  47:.\main.c      ****     
+  48:.\main.c      ****     // wait for dummy interrupt is triggered.
+  49:.\main.c      ****     while(!isr_reset_done_GetState());
+ 282              		.loc 2 49 0
+ 283              		.code	16
+ 284 0034 C046     		mov	r8, r8
+ 285              	.L14:
+ 286              		.loc 2 49 0 is_stmt 0 discriminator 1
+ 287 0036 FFF7FEFF 		bl	isr_reset_done_GetState
+ 288 003a 031C     		mov	r3, r0
+ 289 003c 002B     		cmp	r3, #0
+ 290 003e FAD0     		beq	.L14
+  50:.\main.c      ****     isr_reset_done_ClearPending();      // clear dummy interrupt
+ 291              		.loc 2 50 0 is_stmt 1
+ 292 0040 FFF7FEFF 		bl	isr_reset_done_ClearPending
+ 293              	.L15:
+  51:.\main.c      ****     
+  52:.\main.c      ****     for(;;)
+  53:.\main.c      ****     {
+  54:.\main.c      ****         /* nothing to do */
+  55:.\main.c      ****         ;
+  56:.\main.c      ****     }
+ 294              		.loc 2 56 0 discriminator 1
+ 295 0044 FEE7     		b	.L15
+ 296              	.L17:
+ 297 0046 C046     		.align	2
+ 298              	.L16:
+ 299 0048 00000000 		.word	isr_fifo_empty
+ 300 004c 00000000 		.word	isr_reset
+ 301 0050 00000000 		.word	isr_systick
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 19
 
 
-  83 0044 0133     		add	r3, r3, #1
-  84 0046 7B60     		str	r3, [r7, #4]
-  85              	.L2:
-  86              		.loc 1 32 0 discriminator 1
-  87 0048 7A68     		ldr	r2, [r7, #4]
-  88 004a 044B     		ldr	r3, .L5+8
-  89 004c 9A42     		cmp	r2, r3
-  90 004e F8DD     		ble	.L3
-  33:.\main.c      ****     }
-  91              		.loc 1 33 0 is_stmt 1
-  92 0050 D9E7     		b	.L4
-  93              	.L6:
-  94 0052 C046     		.align	2
-  95              	.L5:
-  96 0054 43000F40 		.word	1074724931
-  97 0058 53000F40 		.word	1074724947
-  98 005c FF0F0000 		.word	4095
-  99              		.cfi_endproc
- 100              	.LFE33:
- 101              		.size	main, .-main
- 102              		.text
- 103              	.Letext0:
- 104              		.file 2 "./Generated_Source/PSoC4/cytypes.h"
- 105              		.section	.debug_info,"",%progbits
- 106              	.Ldebug_info0:
- 107 0000 C9000000 		.4byte	0xc9
- 108 0004 0200     		.2byte	0x2
- 109 0006 00000000 		.4byte	.Ldebug_abbrev0
- 110 000a 04       		.byte	0x4
- 111 000b 01       		.uleb128 0x1
- 112 000c 20000000 		.4byte	.LASF15
- 113 0010 01       		.byte	0x1
- 114 0011 31010000 		.4byte	.LASF16
- 115 0015 A6000000 		.4byte	.LASF17
- 116 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 117 001d 00000000 		.4byte	0
- 118 0021 00000000 		.4byte	0
- 119 0025 00000000 		.4byte	.Ldebug_line0
- 120 0029 02       		.uleb128 0x2
- 121 002a 01       		.byte	0x1
- 122 002b 06       		.byte	0x6
- 123 002c 1F010000 		.4byte	.LASF0
- 124 0030 02       		.uleb128 0x2
- 125 0031 01       		.byte	0x1
- 126 0032 08       		.byte	0x8
- 127 0033 98000000 		.4byte	.LASF1
- 128 0037 02       		.uleb128 0x2
- 129 0038 02       		.byte	0x2
- 130 0039 05       		.byte	0x5
- 131 003a FB000000 		.4byte	.LASF2
- 132 003e 02       		.uleb128 0x2
- 133 003f 02       		.byte	0x2
- 134 0040 07       		.byte	0x7
- 135 0041 0C010000 		.4byte	.LASF3
- 136 0045 02       		.uleb128 0x2
- 137 0046 04       		.byte	0x4
- 138 0047 05       		.byte	0x5
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNhIVry.s 			page 4
+ 302 0054 409C0000 		.word	40000
+ 303              		.cfi_endproc
+ 304              	.LFE33:
+ 305              		.size	main, .-main
+ 306              		.section	.text.isr_systick,"ax",%progbits
+ 307              		.align	2
+ 308              		.global	isr_systick
+ 309              		.code	16
+ 310              		.thumb_func
+ 311              		.type	isr_systick, %function
+ 312              	isr_systick:
+ 313              	.LFB34:
+  57:.\main.c      **** }
+  58:.\main.c      **** 
+  59:.\main.c      **** void isr_systick(){
+ 314              		.loc 2 59 0
+ 315              		.cfi_startproc
+ 316 0000 80B5     		push	{r7, lr}
+ 317              	.LCFI8:
+ 318              		.cfi_def_cfa_offset 8
+ 319              		.cfi_offset 7, -8
+ 320              		.cfi_offset 14, -4
+ 321 0002 00AF     		add	r7, sp, #0
+ 322              	.LCFI9:
+ 323              		.cfi_def_cfa_register 7
+  60:.\main.c      ****     tick++;
+ 324              		.loc 2 60 0
+ 325 0004 064B     		ldr	r3, .L20
+ 326 0006 1B68     		ldr	r3, [r3]
+ 327 0008 5A1C     		add	r2, r3, #1
+ 328 000a 054B     		ldr	r3, .L20
+ 329 000c 1A60     		str	r2, [r3]
+  61:.\main.c      ****     if( (tick&0xf) == 0 ){
+ 330              		.loc 2 61 0
+ 331 000e 044B     		ldr	r3, .L20
+ 332 0010 1A68     		ldr	r2, [r3]
+ 333 0012 0F23     		mov	r3, #15
+ 334 0014 1340     		and	r3, r2
+ 335 0016 01D1     		bne	.L18
+  62:.\main.c      ****         set_next_color();   // exec each 16ms
+ 336              		.loc 2 62 0
+ 337 0018 FFF7FEFF 		bl	set_next_color
+ 338              	.L18:
+  63:.\main.c      ****     }
+  64:.\main.c      **** }
+ 339              		.loc 2 64 0
+ 340 001c BD46     		mov	sp, r7
+ 341              		@ sp needed for prologue
+ 342 001e 80BD     		pop	{r7, pc}
+ 343              	.L21:
+ 344              		.align	2
+ 345              	.L20:
+ 346 0020 00000000 		.word	tick
+ 347              		.cfi_endproc
+ 348              	.LFE34:
+ 349              		.size	isr_systick, .-isr_systick
+ 350              		.section	.text.isr_reset,"ax",%progbits
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 20
 
 
- 139 0048 F2000000 		.4byte	.LASF4
- 140 004c 02       		.uleb128 0x2
- 141 004d 04       		.byte	0x4
- 142 004e 07       		.byte	0x7
- 143 004f 6F000000 		.4byte	.LASF5
- 144 0053 02       		.uleb128 0x2
- 145 0054 08       		.byte	0x8
- 146 0055 05       		.byte	0x5
- 147 0056 00000000 		.4byte	.LASF6
- 148 005a 02       		.uleb128 0x2
- 149 005b 08       		.byte	0x8
- 150 005c 07       		.byte	0x7
- 151 005d 81000000 		.4byte	.LASF7
- 152 0061 03       		.uleb128 0x3
- 153 0062 04       		.byte	0x4
- 154 0063 05       		.byte	0x5
- 155 0064 696E7400 		.ascii	"int\000"
- 156 0068 02       		.uleb128 0x2
- 157 0069 04       		.byte	0x4
- 158 006a 07       		.byte	0x7
- 159 006b 0E000000 		.4byte	.LASF8
- 160 006f 04       		.uleb128 0x4
- 161 0070 69000000 		.4byte	.LASF12
- 162 0074 02       		.byte	0x2
- 163 0075 5B       		.byte	0x5b
- 164 0076 30000000 		.4byte	0x30
- 165 007a 02       		.uleb128 0x2
- 166 007b 04       		.byte	0x4
- 167 007c 04       		.byte	0x4
- 168 007d 2B010000 		.4byte	.LASF9
- 169 0081 02       		.uleb128 0x2
- 170 0082 08       		.byte	0x8
- 171 0083 04       		.byte	0x4
- 172 0084 05010000 		.4byte	.LASF10
- 173 0088 02       		.uleb128 0x2
- 174 0089 01       		.byte	0x1
- 175 008a 08       		.byte	0x8
- 176 008b ED000000 		.4byte	.LASF11
- 177 008f 04       		.uleb128 0x4
- 178 0090 3A010000 		.4byte	.LASF13
- 179 0094 02       		.byte	0x2
- 180 0095 F0       		.byte	0xf0
- 181 0096 9A000000 		.4byte	0x9a
- 182 009a 05       		.uleb128 0x5
- 183 009b 6F000000 		.4byte	0x6f
- 184 009f 02       		.uleb128 0x2
- 185 00a0 04       		.byte	0x4
- 186 00a1 07       		.byte	0x7
- 187 00a2 3F010000 		.4byte	.LASF14
- 188 00a6 06       		.uleb128 0x6
- 189 00a7 01       		.byte	0x1
- 190 00a8 1B000000 		.4byte	.LASF18
- 191 00ac 01       		.byte	0x1
- 192 00ad 0E       		.byte	0xe
- 193 00ae 61000000 		.4byte	0x61
- 194 00b2 00000000 		.4byte	.LFB33
- 195 00b6 60000000 		.4byte	.LFE33
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNhIVry.s 			page 5
+ 351              		.align	2
+ 352              		.global	isr_reset
+ 353              		.code	16
+ 354              		.thumb_func
+ 355              		.type	isr_reset, %function
+ 356              	isr_reset:
+ 357              	.LFB35:
+  65:.\main.c      **** 
+  66:.\main.c      **** // transfer & reset done
+  67:.\main.c      **** void isr_reset(){
+ 358              		.loc 2 67 0
+ 359              		.cfi_startproc
+ 360 0000 80B5     		push	{r7, lr}
+ 361              	.LCFI10:
+ 362              		.cfi_def_cfa_offset 8
+ 363              		.cfi_offset 7, -8
+ 364              		.cfi_offset 14, -4
+ 365 0002 00AF     		add	r7, sp, #0
+ 366              	.LCFI11:
+ 367              		.cfi_def_cfa_register 7
+  68:.\main.c      ****     //transfer_LEDdriver();
+  69:.\main.c      **** }
+ 368              		.loc 2 69 0
+ 369 0004 BD46     		mov	sp, r7
+ 370              		@ sp needed for prologue
+ 371 0006 80BD     		pop	{r7, pc}
+ 372              		.cfi_endproc
+ 373              	.LFE35:
+ 374              		.size	isr_reset, .-isr_reset
+ 375              		.section	.text.isr_fifo_empty,"ax",%progbits
+ 376              		.align	2
+ 377              		.global	isr_fifo_empty
+ 378              		.code	16
+ 379              		.thumb_func
+ 380              		.type	isr_fifo_empty, %function
+ 381              	isr_fifo_empty:
+ 382              	.LFB36:
+  70:.\main.c      **** 
+  71:.\main.c      **** // fifo empty. fill fifo.
+  72:.\main.c      **** void isr_fifo_empty(){
+ 383              		.loc 2 72 0
+ 384              		.cfi_startproc
+ 385 0000 80B5     		push	{r7, lr}
+ 386              	.LCFI12:
+ 387              		.cfi_def_cfa_offset 8
+ 388              		.cfi_offset 7, -8
+ 389              		.cfi_offset 14, -4
+ 390 0002 00AF     		add	r7, sp, #0
+ 391              	.LCFI13:
+ 392              		.cfi_def_cfa_register 7
+  73:.\main.c      ****     if(current_led){
+ 393              		.loc 2 73 0
+ 394 0004 034B     		ldr	r3, .L25
+ 395 0006 1B68     		ldr	r3, [r3]
+ 396 0008 002B     		cmp	r3, #0
+ 397 000a 01D0     		beq	.L23
+  74:.\main.c      ****         transfer_LEDdriver();
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 21
 
 
- 196 00ba 00000000 		.4byte	.LLST0
- 197 00be 01       		.byte	0x1
- 198 00bf 07       		.uleb128 0x7
- 199 00c0 6900     		.ascii	"i\000"
- 200 00c2 01       		.byte	0x1
- 201 00c3 13       		.byte	0x13
- 202 00c4 61000000 		.4byte	0x61
- 203 00c8 02       		.byte	0x2
- 204 00c9 91       		.byte	0x91
- 205 00ca 74       		.sleb128 -12
- 206 00cb 00       		.byte	0
- 207 00cc 00       		.byte	0
- 208              		.section	.debug_abbrev,"",%progbits
- 209              	.Ldebug_abbrev0:
- 210 0000 01       		.uleb128 0x1
- 211 0001 11       		.uleb128 0x11
- 212 0002 01       		.byte	0x1
- 213 0003 25       		.uleb128 0x25
- 214 0004 0E       		.uleb128 0xe
- 215 0005 13       		.uleb128 0x13
- 216 0006 0B       		.uleb128 0xb
- 217 0007 03       		.uleb128 0x3
- 218 0008 0E       		.uleb128 0xe
- 219 0009 1B       		.uleb128 0x1b
- 220 000a 0E       		.uleb128 0xe
- 221 000b 55       		.uleb128 0x55
- 222 000c 06       		.uleb128 0x6
- 223 000d 11       		.uleb128 0x11
- 224 000e 01       		.uleb128 0x1
- 225 000f 52       		.uleb128 0x52
- 226 0010 01       		.uleb128 0x1
- 227 0011 10       		.uleb128 0x10
- 228 0012 06       		.uleb128 0x6
- 229 0013 00       		.byte	0
- 230 0014 00       		.byte	0
- 231 0015 02       		.uleb128 0x2
- 232 0016 24       		.uleb128 0x24
- 233 0017 00       		.byte	0
- 234 0018 0B       		.uleb128 0xb
- 235 0019 0B       		.uleb128 0xb
- 236 001a 3E       		.uleb128 0x3e
- 237 001b 0B       		.uleb128 0xb
- 238 001c 03       		.uleb128 0x3
- 239 001d 0E       		.uleb128 0xe
- 240 001e 00       		.byte	0
- 241 001f 00       		.byte	0
- 242 0020 03       		.uleb128 0x3
- 243 0021 24       		.uleb128 0x24
- 244 0022 00       		.byte	0
- 245 0023 0B       		.uleb128 0xb
- 246 0024 0B       		.uleb128 0xb
- 247 0025 3E       		.uleb128 0x3e
- 248 0026 0B       		.uleb128 0xb
- 249 0027 03       		.uleb128 0x3
- 250 0028 08       		.uleb128 0x8
- 251 0029 00       		.byte	0
- 252 002a 00       		.byte	0
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNhIVry.s 			page 6
+ 398              		.loc 2 74 0
+ 399 000c FFF7FEFF 		bl	transfer_LEDdriver
+ 400              	.L23:
+  75:.\main.c      ****     }
+  76:.\main.c      **** }
+ 401              		.loc 2 76 0
+ 402 0010 BD46     		mov	sp, r7
+ 403              		@ sp needed for prologue
+ 404 0012 80BD     		pop	{r7, pc}
+ 405              	.L26:
+ 406              		.align	2
+ 407              	.L25:
+ 408 0014 00000000 		.word	current_led
+ 409              		.cfi_endproc
+ 410              	.LFE36:
+ 411              		.size	isr_fifo_empty, .-isr_fifo_empty
+ 412              		.section	.text.transfer_LEDdriver,"ax",%progbits
+ 413              		.align	2
+ 414              		.global	transfer_LEDdriver
+ 415              		.code	16
+ 416              		.thumb_func
+ 417              		.type	transfer_LEDdriver, %function
+ 418              	transfer_LEDdriver:
+ 419              	.LFB37:
+  77:.\main.c      **** 
+  78:.\main.c      **** // start transfer
+  79:.\main.c      **** void transfer_LEDdriver(){
+ 420              		.loc 2 79 0
+ 421              		.cfi_startproc
+ 422 0000 80B5     		push	{r7, lr}
+ 423              	.LCFI14:
+ 424              		.cfi_def_cfa_offset 8
+ 425              		.cfi_offset 7, -8
+ 426              		.cfi_offset 14, -4
+ 427 0002 82B0     		sub	sp, sp, #8
+ 428              	.LCFI15:
+ 429              		.cfi_def_cfa_offset 16
+ 430 0004 00AF     		add	r7, sp, #0
+ 431              	.LCFI16:
+ 432              		.cfi_def_cfa_register 7
+  80:.\main.c      ****     unsigned char len;
+  81:.\main.c      ****     if(current_led+3<LED_LENGTH){
+ 433              		.loc 2 81 0
+ 434 0006 194B     		ldr	r3, .L30
+ 435 0008 1B68     		ldr	r3, [r3]
+ 436 000a 0333     		add	r3, r3, #3
+ 437 000c FF2B     		cmp	r3, #255
+ 438 000e 10D8     		bhi	.L28
+  82:.\main.c      ****         WS2812driver_1_write2fifo((unsigned char*)&rgb[current_led], 9);
+ 439              		.loc 2 82 0
+ 440 0010 164B     		ldr	r3, .L30
+ 441 0012 1A68     		ldr	r2, [r3]
+ 442 0014 131C     		mov	r3, r2
+ 443 0016 5B00     		lsl	r3, r3, #1
+ 444 0018 9B18     		add	r3, r3, r2
+ 445 001a 154A     		ldr	r2, .L30+4
+ 446 001c 9B18     		add	r3, r3, r2
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 22
 
 
- 253 002b 04       		.uleb128 0x4
- 254 002c 16       		.uleb128 0x16
- 255 002d 00       		.byte	0
- 256 002e 03       		.uleb128 0x3
- 257 002f 0E       		.uleb128 0xe
- 258 0030 3A       		.uleb128 0x3a
- 259 0031 0B       		.uleb128 0xb
- 260 0032 3B       		.uleb128 0x3b
- 261 0033 0B       		.uleb128 0xb
- 262 0034 49       		.uleb128 0x49
- 263 0035 13       		.uleb128 0x13
- 264 0036 00       		.byte	0
- 265 0037 00       		.byte	0
- 266 0038 05       		.uleb128 0x5
- 267 0039 35       		.uleb128 0x35
- 268 003a 00       		.byte	0
- 269 003b 49       		.uleb128 0x49
- 270 003c 13       		.uleb128 0x13
- 271 003d 00       		.byte	0
- 272 003e 00       		.byte	0
- 273 003f 06       		.uleb128 0x6
- 274 0040 2E       		.uleb128 0x2e
- 275 0041 01       		.byte	0x1
- 276 0042 3F       		.uleb128 0x3f
- 277 0043 0C       		.uleb128 0xc
- 278 0044 03       		.uleb128 0x3
- 279 0045 0E       		.uleb128 0xe
- 280 0046 3A       		.uleb128 0x3a
- 281 0047 0B       		.uleb128 0xb
- 282 0048 3B       		.uleb128 0x3b
- 283 0049 0B       		.uleb128 0xb
- 284 004a 49       		.uleb128 0x49
- 285 004b 13       		.uleb128 0x13
- 286 004c 11       		.uleb128 0x11
- 287 004d 01       		.uleb128 0x1
- 288 004e 12       		.uleb128 0x12
- 289 004f 01       		.uleb128 0x1
- 290 0050 40       		.uleb128 0x40
- 291 0051 06       		.uleb128 0x6
- 292 0052 9742     		.uleb128 0x2117
- 293 0054 0C       		.uleb128 0xc
- 294 0055 00       		.byte	0
- 295 0056 00       		.byte	0
- 296 0057 07       		.uleb128 0x7
- 297 0058 34       		.uleb128 0x34
- 298 0059 00       		.byte	0
- 299 005a 03       		.uleb128 0x3
- 300 005b 08       		.uleb128 0x8
- 301 005c 3A       		.uleb128 0x3a
- 302 005d 0B       		.uleb128 0xb
- 303 005e 3B       		.uleb128 0x3b
- 304 005f 0B       		.uleb128 0xb
- 305 0060 49       		.uleb128 0x49
- 306 0061 13       		.uleb128 0x13
- 307 0062 02       		.uleb128 0x2
- 308 0063 0A       		.uleb128 0xa
- 309 0064 00       		.byte	0
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNhIVry.s 			page 7
+ 447 001e 181C     		mov	r0, r3
+ 448 0020 0921     		mov	r1, #9
+ 449 0022 FFF7FEFF 		bl	WS2812driver_1_write2fifo
+  83:.\main.c      ****         current_led += 3;
+ 450              		.loc 2 83 0
+ 451 0026 114B     		ldr	r3, .L30
+ 452 0028 1B68     		ldr	r3, [r3]
+ 453 002a DA1C     		add	r2, r3, #3
+ 454 002c 0F4B     		ldr	r3, .L30
+ 455 002e 1A60     		str	r2, [r3]
+ 456 0030 19E0     		b	.L27
+ 457              	.L28:
+  84:.\main.c      ****     }else{
+  85:.\main.c      ****         len = LED_LENGTH - current_led;
+ 458              		.loc 2 85 0
+ 459 0032 0E4B     		ldr	r3, .L30
+ 460 0034 1B68     		ldr	r3, [r3]
+ 461 0036 DAB2     		uxtb	r2, r3
+ 462 0038 FB1D     		add	r3, r7, #7
+ 463 003a 5242     		neg	r2, r2
+ 464 003c 1A70     		strb	r2, [r3]
+  86:.\main.c      ****         WS2812driver_1_write2fifo((unsigned char*)&rgb[current_led], len * 3);
+ 465              		.loc 2 86 0
+ 466 003e 0B4B     		ldr	r3, .L30
+ 467 0040 1A68     		ldr	r2, [r3]
+ 468 0042 131C     		mov	r3, r2
+ 469 0044 5B00     		lsl	r3, r3, #1
+ 470 0046 9B18     		add	r3, r3, r2
+ 471 0048 094A     		ldr	r2, .L30+4
+ 472 004a 9A18     		add	r2, r3, r2
+ 473 004c FB1D     		add	r3, r7, #7
+ 474 004e 1B78     		ldrb	r3, [r3]
+ 475 0050 191C     		add	r1, r3, #0
+ 476 0052 4900     		lsl	r1, r1, #1
+ 477 0054 CB18     		add	r3, r1, r3
+ 478 0056 DBB2     		uxtb	r3, r3
+ 479 0058 101C     		mov	r0, r2
+ 480 005a 191C     		mov	r1, r3
+ 481 005c FFF7FEFF 		bl	WS2812driver_1_write2fifo
+  87:.\main.c      ****         current_led = 0;
+ 482              		.loc 2 87 0
+ 483 0060 024B     		ldr	r3, .L30
+ 484 0062 0022     		mov	r2, #0
+ 485 0064 1A60     		str	r2, [r3]
+ 486              	.L27:
+  88:.\main.c      ****     }
+  89:.\main.c      **** }
+ 487              		.loc 2 89 0
+ 488 0066 BD46     		mov	sp, r7
+ 489 0068 02B0     		add	sp, sp, #8
+ 490              		@ sp needed for prologue
+ 491 006a 80BD     		pop	{r7, pc}
+ 492              	.L31:
+ 493              		.align	2
+ 494              	.L30:
+ 495 006c 00000000 		.word	current_led
+ 496 0070 00000000 		.word	rgb
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 23
 
 
- 310 0065 00       		.byte	0
- 311 0066 00       		.byte	0
- 312              		.section	.debug_loc,"",%progbits
- 313              	.Ldebug_loc0:
- 314              	.LLST0:
- 315 0000 00000000 		.4byte	.LFB33
- 316 0004 02000000 		.4byte	.LCFI0
- 317 0008 0200     		.2byte	0x2
- 318 000a 7D       		.byte	0x7d
- 319 000b 00       		.sleb128 0
- 320 000c 02000000 		.4byte	.LCFI0
- 321 0010 04000000 		.4byte	.LCFI1
- 322 0014 0200     		.2byte	0x2
- 323 0016 7D       		.byte	0x7d
- 324 0017 08       		.sleb128 8
- 325 0018 04000000 		.4byte	.LCFI1
- 326 001c 06000000 		.4byte	.LCFI2
- 327 0020 0200     		.2byte	0x2
- 328 0022 7D       		.byte	0x7d
- 329 0023 10       		.sleb128 16
- 330 0024 06000000 		.4byte	.LCFI2
- 331 0028 60000000 		.4byte	.LFE33
- 332 002c 0200     		.2byte	0x2
- 333 002e 77       		.byte	0x77
- 334 002f 10       		.sleb128 16
- 335 0030 00000000 		.4byte	0
- 336 0034 00000000 		.4byte	0
- 337              		.section	.debug_aranges,"",%progbits
- 338 0000 1C000000 		.4byte	0x1c
- 339 0004 0200     		.2byte	0x2
- 340 0006 00000000 		.4byte	.Ldebug_info0
- 341 000a 04       		.byte	0x4
- 342 000b 00       		.byte	0
- 343 000c 0000     		.2byte	0
- 344 000e 0000     		.2byte	0
- 345 0010 00000000 		.4byte	.LFB33
- 346 0014 60000000 		.4byte	.LFE33-.LFB33
- 347 0018 00000000 		.4byte	0
- 348 001c 00000000 		.4byte	0
- 349              		.section	.debug_ranges,"",%progbits
- 350              	.Ldebug_ranges0:
- 351 0000 00000000 		.4byte	.LFB33
- 352 0004 60000000 		.4byte	.LFE33
- 353 0008 00000000 		.4byte	0
- 354 000c 00000000 		.4byte	0
- 355              		.section	.debug_line,"",%progbits
- 356              	.Ldebug_line0:
- 357 0000 71000000 		.section	.debug_str,"MS",%progbits,1
- 357      02004500 
- 357      00000201 
- 357      FB0E0D00 
- 357      01010101 
- 358              	.LASF6:
- 359 0000 6C6F6E67 		.ascii	"long long int\000"
- 359      206C6F6E 
- 359      6720696E 
- 359      7400
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNhIVry.s 			page 8
+ 497              		.cfi_endproc
+ 498              	.LFE37:
+ 499              		.size	transfer_LEDdriver, .-transfer_LEDdriver
+ 500              		.section	.text.set_next_color,"ax",%progbits
+ 501              		.align	2
+ 502              		.global	set_next_color
+ 503              		.code	16
+ 504              		.thumb_func
+ 505              		.type	set_next_color, %function
+ 506              	set_next_color:
+ 507              	.LFB38:
+  90:.\main.c      **** 
+  91:.\main.c      **** // exec each 16ms
+  92:.\main.c      **** void set_next_color(){
+ 508              		.loc 2 92 0
+ 509              		.cfi_startproc
+ 510 0000 80B5     		push	{r7, lr}
+ 511              	.LCFI17:
+ 512              		.cfi_def_cfa_offset 8
+ 513              		.cfi_offset 7, -8
+ 514              		.cfi_offset 14, -4
+ 515 0002 82B0     		sub	sp, sp, #8
+ 516              	.LCFI18:
+ 517              		.cfi_def_cfa_offset 16
+ 518 0004 00AF     		add	r7, sp, #0
+ 519              	.LCFI19:
+ 520              		.cfi_def_cfa_register 7
+  93:.\main.c      ****     static unsigned char val;
+  94:.\main.c      ****     int i;
+  95:.\main.c      ****     
+  96:.\main.c      ****     // shift
+  97:.\main.c      ****     for(i=LED_LENGTH-1;i>0;i--){
+ 521              		.loc 2 97 0
+ 522 0006 FF23     		mov	r3, #255
+ 523 0008 7B60     		str	r3, [r7, #4]
+ 524 000a 30E0     		b	.L33
+ 525              	.L34:
+  98:.\main.c      ****         rgb[i].r = rgb[i-1].r;
+ 526              		.loc 2 98 0 discriminator 2
+ 527 000c 7B68     		ldr	r3, [r7, #4]
+ 528 000e 5A1E     		sub	r2, r3, #1
+ 529 0010 3E49     		ldr	r1, .L40
+ 530 0012 131C     		mov	r3, r2
+ 531 0014 5B00     		lsl	r3, r3, #1
+ 532 0016 9B18     		add	r3, r3, r2
+ 533 0018 CB18     		add	r3, r1, r3
+ 534 001a 5978     		ldrb	r1, [r3, #1]
+ 535 001c 3B48     		ldr	r0, .L40
+ 536 001e 7A68     		ldr	r2, [r7, #4]
+ 537 0020 131C     		mov	r3, r2
+ 538 0022 5B00     		lsl	r3, r3, #1
+ 539 0024 9B18     		add	r3, r3, r2
+ 540 0026 C318     		add	r3, r0, r3
+ 541 0028 0A1C     		add	r2, r1, #0
+ 542 002a 5A70     		strb	r2, [r3, #1]
+  99:.\main.c      ****         rgb[i].g = rgb[i-1].g;
+ 543              		.loc 2 99 0 discriminator 2
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 24
 
 
- 360              	.LASF8:
- 361 000e 756E7369 		.ascii	"unsigned int\000"
- 361      676E6564 
- 361      20696E74 
- 361      00
- 362              	.LASF18:
- 363 001b 6D61696E 		.ascii	"main\000"
- 363      00
- 364              	.LASF15:
- 365 0020 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 365      4320342E 
- 365      372E3320 
- 365      32303133 
- 365      30333132 
- 366 0053 616E6368 		.ascii	"anch revision 196615]\000"
- 366      20726576 
- 366      6973696F 
- 366      6E203139 
- 366      36363135 
- 367              	.LASF12:
- 368 0069 75696E74 		.ascii	"uint8\000"
- 368      3800
- 369              	.LASF5:
- 370 006f 6C6F6E67 		.ascii	"long unsigned int\000"
- 370      20756E73 
- 370      69676E65 
- 370      6420696E 
- 370      7400
- 371              	.LASF7:
- 372 0081 6C6F6E67 		.ascii	"long long unsigned int\000"
- 372      206C6F6E 
- 372      6720756E 
- 372      7369676E 
- 372      65642069 
- 373              	.LASF1:
- 374 0098 756E7369 		.ascii	"unsigned char\000"
- 374      676E6564 
- 374      20636861 
- 374      7200
- 375              	.LASF17:
- 376 00a6 433A5C55 		.ascii	"C:\\Users\\Tsubasa Maruyama\\Documents\\PSoC Creato"
- 376      73657273 
- 376      5C547375 
- 376      62617361 
- 376      204D6172 
- 377 00d5 725C4C74 		.ascii	"r\\Lticker\\Lticker.cydsn\000"
- 377      69636B65 
- 377      725C4C74 
- 377      69636B65 
- 377      722E6379 
- 378              	.LASF11:
- 379 00ed 63686172 		.ascii	"char\000"
- 379      00
- 380              	.LASF4:
- 381 00f2 6C6F6E67 		.ascii	"long int\000"
- 381      20696E74 
- 381      00
-ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNhIVry.s 			page 9
+ 544 002c 7B68     		ldr	r3, [r7, #4]
+ 545 002e 5A1E     		sub	r2, r3, #1
+ 546 0030 3649     		ldr	r1, .L40
+ 547 0032 131C     		mov	r3, r2
+ 548 0034 5B00     		lsl	r3, r3, #1
+ 549 0036 9B18     		add	r3, r3, r2
+ 550 0038 585C     		ldrb	r0, [r3, r1]
+ 551 003a 3449     		ldr	r1, .L40
+ 552 003c 7A68     		ldr	r2, [r7, #4]
+ 553 003e 131C     		mov	r3, r2
+ 554 0040 5B00     		lsl	r3, r3, #1
+ 555 0042 9B18     		add	r3, r3, r2
+ 556 0044 021C     		add	r2, r0, #0
+ 557 0046 5A54     		strb	r2, [r3, r1]
+ 100:.\main.c      ****         rgb[i].b = rgb[i-1].b;
+ 558              		.loc 2 100 0 discriminator 2
+ 559 0048 7B68     		ldr	r3, [r7, #4]
+ 560 004a 5A1E     		sub	r2, r3, #1
+ 561 004c 2F49     		ldr	r1, .L40
+ 562 004e 131C     		mov	r3, r2
+ 563 0050 5B00     		lsl	r3, r3, #1
+ 564 0052 9B18     		add	r3, r3, r2
+ 565 0054 CB18     		add	r3, r1, r3
+ 566 0056 9978     		ldrb	r1, [r3, #2]
+ 567 0058 2C48     		ldr	r0, .L40
+ 568 005a 7A68     		ldr	r2, [r7, #4]
+ 569 005c 131C     		mov	r3, r2
+ 570 005e 5B00     		lsl	r3, r3, #1
+ 571 0060 9B18     		add	r3, r3, r2
+ 572 0062 C318     		add	r3, r0, r3
+ 573 0064 0A1C     		add	r2, r1, #0
+ 574 0066 9A70     		strb	r2, [r3, #2]
+  97:.\main.c      ****     for(i=LED_LENGTH-1;i>0;i--){
+ 575              		.loc 2 97 0 discriminator 2
+ 576 0068 7B68     		ldr	r3, [r7, #4]
+ 577 006a 013B     		sub	r3, r3, #1
+ 578 006c 7B60     		str	r3, [r7, #4]
+ 579              	.L33:
+  97:.\main.c      ****     for(i=LED_LENGTH-1;i>0;i--){
+ 580              		.loc 2 97 0 is_stmt 0 discriminator 1
+ 581 006e 7B68     		ldr	r3, [r7, #4]
+ 582 0070 002B     		cmp	r3, #0
+ 583 0072 CBDC     		bgt	.L34
+ 101:.\main.c      ****     }
+ 102:.\main.c      ****     
+ 103:.\main.c      ****     if(val<32){
+ 584              		.loc 2 103 0 is_stmt 1
+ 585 0074 264B     		ldr	r3, .L40+4
+ 586 0076 1B78     		ldrb	r3, [r3]
+ 587 0078 1F2B     		cmp	r3, #31
+ 588 007a 0ED8     		bhi	.L35
+ 104:.\main.c      ****         rgb[0].r = val;
+ 589              		.loc 2 104 0
+ 590 007c 244B     		ldr	r3, .L40+4
+ 591 007e 1A78     		ldrb	r2, [r3]
+ 592 0080 224B     		ldr	r3, .L40
+ 593 0082 5A70     		strb	r2, [r3, #1]
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 25
 
 
- 382              	.LASF2:
- 383 00fb 73686F72 		.ascii	"short int\000"
- 383      7420696E 
- 383      7400
- 384              	.LASF10:
- 385 0105 646F7562 		.ascii	"double\000"
- 385      6C6500
- 386              	.LASF3:
- 387 010c 73686F72 		.ascii	"short unsigned int\000"
- 387      7420756E 
- 387      7369676E 
- 387      65642069 
- 387      6E7400
- 388              	.LASF0:
- 389 011f 7369676E 		.ascii	"signed char\000"
- 389      65642063 
- 389      68617200 
- 390              	.LASF9:
- 391 012b 666C6F61 		.ascii	"float\000"
- 391      7400
- 392              	.LASF16:
- 393 0131 2E5C6D61 		.ascii	".\\main.c\000"
- 393      696E2E63 
- 393      00
- 394              	.LASF13:
- 395 013a 72656738 		.ascii	"reg8\000"
- 395      00
- 396              	.LASF14:
- 397 013f 73697A65 		.ascii	"sizetype\000"
- 397      74797065 
- 397      00
- 398              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
+ 105:.\main.c      ****         rgb[0].g = 0;
+ 594              		.loc 2 105 0
+ 595 0084 214B     		ldr	r3, .L40
+ 596 0086 0022     		mov	r2, #0
+ 597 0088 1A70     		strb	r2, [r3]
+ 106:.\main.c      ****         rgb[0].b = 32 - val;
+ 598              		.loc 2 106 0
+ 599 008a 214B     		ldr	r3, .L40+4
+ 600 008c 1B78     		ldrb	r3, [r3]
+ 601 008e 2022     		mov	r2, #32
+ 602 0090 D31A     		sub	r3, r2, r3
+ 603 0092 DAB2     		uxtb	r2, r3
+ 604 0094 1D4B     		ldr	r3, .L40
+ 605 0096 9A70     		strb	r2, [r3, #2]
+ 606 0098 24E0     		b	.L36
+ 607              	.L35:
+ 107:.\main.c      ****     }else if(val<64){
+ 608              		.loc 2 107 0
+ 609 009a 1D4B     		ldr	r3, .L40+4
+ 610 009c 1B78     		ldrb	r3, [r3]
+ 611 009e 3F2B     		cmp	r3, #63
+ 612 00a0 10D8     		bhi	.L37
+ 108:.\main.c      ****         rgb[0].r = 64 - val;
+ 613              		.loc 2 108 0
+ 614 00a2 1B4B     		ldr	r3, .L40+4
+ 615 00a4 1B78     		ldrb	r3, [r3]
+ 616 00a6 4022     		mov	r2, #64
+ 617 00a8 D31A     		sub	r3, r2, r3
+ 618 00aa DAB2     		uxtb	r2, r3
+ 619 00ac 174B     		ldr	r3, .L40
+ 620 00ae 5A70     		strb	r2, [r3, #1]
+ 109:.\main.c      ****         rgb[0].g = val - 32;
+ 621              		.loc 2 109 0
+ 622 00b0 174B     		ldr	r3, .L40+4
+ 623 00b2 1B78     		ldrb	r3, [r3]
+ 624 00b4 203B     		sub	r3, r3, #32
+ 625 00b6 DAB2     		uxtb	r2, r3
+ 626 00b8 144B     		ldr	r3, .L40
+ 627 00ba 1A70     		strb	r2, [r3]
+ 110:.\main.c      ****         rgb[0].b = 0;
+ 628              		.loc 2 110 0
+ 629 00bc 134B     		ldr	r3, .L40
+ 630 00be 0022     		mov	r2, #0
+ 631 00c0 9A70     		strb	r2, [r3, #2]
+ 632 00c2 0FE0     		b	.L36
+ 633              	.L37:
+ 111:.\main.c      ****     }else{
+ 112:.\main.c      ****         rgb[0].r = 0;
+ 634              		.loc 2 112 0
+ 635 00c4 114B     		ldr	r3, .L40
+ 636 00c6 0022     		mov	r2, #0
+ 637 00c8 5A70     		strb	r2, [r3, #1]
+ 113:.\main.c      ****         rgb[0].g = 96 - val;
+ 638              		.loc 2 113 0
+ 639 00ca 114B     		ldr	r3, .L40+4
+ 640 00cc 1B78     		ldrb	r3, [r3]
+ 641 00ce 6022     		mov	r2, #96
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 26
+
+
+ 642 00d0 D31A     		sub	r3, r2, r3
+ 643 00d2 DAB2     		uxtb	r2, r3
+ 644 00d4 0D4B     		ldr	r3, .L40
+ 645 00d6 1A70     		strb	r2, [r3]
+ 114:.\main.c      ****         rgb[0].b = val - 64;
+ 646              		.loc 2 114 0
+ 647 00d8 0D4B     		ldr	r3, .L40+4
+ 648 00da 1B78     		ldrb	r3, [r3]
+ 649 00dc 403B     		sub	r3, r3, #64
+ 650 00de DAB2     		uxtb	r2, r3
+ 651 00e0 0A4B     		ldr	r3, .L40
+ 652 00e2 9A70     		strb	r2, [r3, #2]
+ 653              	.L36:
+ 115:.\main.c      ****     }
+ 116:.\main.c      ****     
+ 117:.\main.c      ****     transfer_LEDdriver();
+ 654              		.loc 2 117 0
+ 655 00e4 FFF7FEFF 		bl	transfer_LEDdriver
+ 118:.\main.c      ****     
+ 119:.\main.c      ****     if(val<96){
+ 656              		.loc 2 119 0
+ 657 00e8 094B     		ldr	r3, .L40+4
+ 658 00ea 1B78     		ldrb	r3, [r3]
+ 659 00ec 5F2B     		cmp	r3, #95
+ 660 00ee 06D8     		bhi	.L38
+ 120:.\main.c      ****         val++;
+ 661              		.loc 2 120 0
+ 662 00f0 074B     		ldr	r3, .L40+4
+ 663 00f2 1B78     		ldrb	r3, [r3]
+ 664 00f4 0133     		add	r3, r3, #1
+ 665 00f6 DAB2     		uxtb	r2, r3
+ 666 00f8 054B     		ldr	r3, .L40+4
+ 667 00fa 1A70     		strb	r2, [r3]
+ 668 00fc 02E0     		b	.L32
+ 669              	.L38:
+ 121:.\main.c      ****     }else{
+ 122:.\main.c      ****         val = 0;
+ 670              		.loc 2 122 0
+ 671 00fe 044B     		ldr	r3, .L40+4
+ 672 0100 0022     		mov	r2, #0
+ 673 0102 1A70     		strb	r2, [r3]
+ 674              	.L32:
+ 123:.\main.c      ****     }
+ 124:.\main.c      **** }
+ 675              		.loc 2 124 0
+ 676 0104 BD46     		mov	sp, r7
+ 677 0106 02B0     		add	sp, sp, #8
+ 678              		@ sp needed for prologue
+ 679 0108 80BD     		pop	{r7, pc}
+ 680              	.L41:
+ 681 010a C046     		.align	2
+ 682              	.L40:
+ 683 010c 00000000 		.word	rgb
+ 684 0110 00000000 		.word	val.4977
+ 685              		.cfi_endproc
+ 686              	.LFE38:
+ 687              		.size	set_next_color, .-set_next_color
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 27
+
+
+ 688              		.bss
+ 689              	val.4977:
+ 690 0000 00       		.space	1
+ 691              		.text
+ 692              	.Letext0:
+ 693              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.0\\psoc creator\\import\\gnu_cs\\arm\\4
+ 694              		.file 4 "./Generated_Source/PSoC4/core_cm0_psoc4.h"
+ 695              		.section	.debug_info,"",%progbits
+ 696              	.Ldebug_info0:
+ 697 0000 84040000 		.4byte	0x484
+ 698 0004 0200     		.2byte	0x2
+ 699 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 700 000a 04       		.byte	0x4
+ 701 000b 01       		.uleb128 0x1
+ 702 000c 76010000 		.4byte	.LASF51
+ 703 0010 01       		.byte	0x1
+ 704 0011 47000000 		.4byte	.LASF52
+ 705 0015 73020000 		.4byte	.LASF53
+ 706 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 707 001d 00000000 		.4byte	0
+ 708 0021 00000000 		.4byte	0
+ 709 0025 00000000 		.4byte	.Ldebug_line0
+ 710 0029 02       		.uleb128 0x2
+ 711 002a 01       		.byte	0x1
+ 712 002b 06       		.byte	0x6
+ 713 002c 3B000000 		.4byte	.LASF0
+ 714 0030 02       		.uleb128 0x2
+ 715 0031 01       		.byte	0x1
+ 716 0032 08       		.byte	0x8
+ 717 0033 CB010000 		.4byte	.LASF1
+ 718 0037 02       		.uleb128 0x2
+ 719 0038 02       		.byte	0x2
+ 720 0039 05       		.byte	0x5
+ 721 003a DF010000 		.4byte	.LASF2
+ 722 003e 02       		.uleb128 0x2
+ 723 003f 02       		.byte	0x2
+ 724 0040 07       		.byte	0x7
+ 725 0041 B7000000 		.4byte	.LASF3
+ 726 0045 02       		.uleb128 0x2
+ 727 0046 04       		.byte	0x4
+ 728 0047 05       		.byte	0x5
+ 729 0048 50000000 		.4byte	.LASF4
+ 730 004c 03       		.uleb128 0x3
+ 731 004d 15020000 		.4byte	.LASF18
+ 732 0051 03       		.byte	0x3
+ 733 0052 50       		.byte	0x50
+ 734 0053 57000000 		.4byte	0x57
+ 735 0057 02       		.uleb128 0x2
+ 736 0058 04       		.byte	0x4
+ 737 0059 07       		.byte	0x7
+ 738 005a 8A000000 		.4byte	.LASF5
+ 739 005e 02       		.uleb128 0x2
+ 740 005f 08       		.byte	0x8
+ 741 0060 05       		.byte	0x5
+ 742 0061 2D000000 		.4byte	.LASF6
+ 743 0065 02       		.uleb128 0x2
+ 744 0066 08       		.byte	0x8
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 28
+
+
+ 745 0067 07       		.byte	0x7
+ 746 0068 05000000 		.4byte	.LASF7
+ 747 006c 04       		.uleb128 0x4
+ 748 006d 04       		.byte	0x4
+ 749 006e 05       		.byte	0x5
+ 750 006f 696E7400 		.ascii	"int\000"
+ 751 0073 02       		.uleb128 0x2
+ 752 0074 04       		.byte	0x4
+ 753 0075 07       		.byte	0x7
+ 754 0076 7D000000 		.4byte	.LASF8
+ 755 007a 02       		.uleb128 0x2
+ 756 007b 04       		.byte	0x4
+ 757 007c 04       		.byte	0x4
+ 758 007d 3E010000 		.4byte	.LASF9
+ 759 0081 02       		.uleb128 0x2
+ 760 0082 08       		.byte	0x8
+ 761 0083 04       		.byte	0x4
+ 762 0084 59000000 		.4byte	.LASF10
+ 763 0088 02       		.uleb128 0x2
+ 764 0089 01       		.byte	0x1
+ 765 008a 08       		.byte	0x8
+ 766 008b 2A020000 		.4byte	.LASF11
+ 767 008f 02       		.uleb128 0x2
+ 768 0090 04       		.byte	0x4
+ 769 0091 07       		.byte	0x7
+ 770 0092 1F010000 		.4byte	.LASF12
+ 771 0096 05       		.uleb128 0x5
+ 772 0097 1A010000 		.4byte	.LASF41
+ 773 009b 01       		.byte	0x1
+ 774 009c 04       		.byte	0x4
+ 775 009d 19       		.byte	0x19
+ 776 009e C1000000 		.4byte	0xc1
+ 777 00a2 06       		.uleb128 0x6
+ 778 00a3 2F020000 		.4byte	.LASF13
+ 779 00a7 72       		.sleb128 -14
+ 780 00a8 06       		.uleb128 0x6
+ 781 00a9 65000000 		.4byte	.LASF14
+ 782 00ad 73       		.sleb128 -13
+ 783 00ae 06       		.uleb128 0x6
+ 784 00af AB000000 		.4byte	.LASF15
+ 785 00b3 7B       		.sleb128 -5
+ 786 00b4 06       		.uleb128 0x6
+ 787 00b5 1E020000 		.4byte	.LASF16
+ 788 00b9 7E       		.sleb128 -2
+ 789 00ba 06       		.uleb128 0x6
+ 790 00bb 0D010000 		.4byte	.LASF17
+ 791 00bf 7F       		.sleb128 -1
+ 792 00c0 00       		.byte	0
+ 793 00c1 03       		.uleb128 0x3
+ 794 00c2 0B020000 		.4byte	.LASF19
+ 795 00c6 04       		.byte	0x4
+ 796 00c7 23       		.byte	0x23
+ 797 00c8 96000000 		.4byte	0x96
+ 798 00cc 07       		.uleb128 0x7
+ 799 00cd 2003     		.2byte	0x320
+ 800 00cf 01       		.byte	0x1
+ 801 00d0 1801     		.2byte	0x118
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 29
+
+
+ 802 00d2 74010000 		.4byte	0x174
+ 803 00d6 08       		.uleb128 0x8
+ 804 00d7 E9010000 		.4byte	.LASF20
+ 805 00db 01       		.byte	0x1
+ 806 00dc 1A01     		.2byte	0x11a
+ 807 00de 84010000 		.4byte	0x184
+ 808 00e2 02       		.byte	0x2
+ 809 00e3 23       		.byte	0x23
+ 810 00e4 00       		.uleb128 0
+ 811 00e5 08       		.uleb128 0x8
+ 812 00e6 44010000 		.4byte	.LASF21
+ 813 00ea 01       		.byte	0x1
+ 814 00eb 1B01     		.2byte	0x11b
+ 815 00ed 89010000 		.4byte	0x189
+ 816 00f1 02       		.byte	0x2
+ 817 00f2 23       		.byte	0x23
+ 818 00f3 04       		.uleb128 0x4
+ 819 00f4 08       		.uleb128 0x8
+ 820 00f5 33010000 		.4byte	.LASF22
+ 821 00f9 01       		.byte	0x1
+ 822 00fa 1C01     		.2byte	0x11c
+ 823 00fc 99010000 		.4byte	0x199
+ 824 0100 03       		.byte	0x3
+ 825 0101 23       		.byte	0x23
+ 826 0102 8001     		.uleb128 0x80
+ 827 0104 08       		.uleb128 0x8
+ 828 0105 5D020000 		.4byte	.LASF23
+ 829 0109 01       		.byte	0x1
+ 830 010a 1D01     		.2byte	0x11d
+ 831 010c 89010000 		.4byte	0x189
+ 832 0110 03       		.byte	0x3
+ 833 0111 23       		.byte	0x23
+ 834 0112 8401     		.uleb128 0x84
+ 835 0114 08       		.uleb128 0x8
+ 836 0115 28000000 		.4byte	.LASF24
+ 837 0119 01       		.byte	0x1
+ 838 011a 1E01     		.2byte	0x11e
+ 839 011c 9E010000 		.4byte	0x19e
+ 840 0120 03       		.byte	0x3
+ 841 0121 23       		.byte	0x23
+ 842 0122 8002     		.uleb128 0x100
+ 843 0124 08       		.uleb128 0x8
+ 844 0125 58010000 		.4byte	.LASF25
+ 845 0129 01       		.byte	0x1
+ 846 012a 1F01     		.2byte	0x11f
+ 847 012c 89010000 		.4byte	0x189
+ 848 0130 03       		.byte	0x3
+ 849 0131 23       		.byte	0x23
+ 850 0132 8402     		.uleb128 0x104
+ 851 0134 08       		.uleb128 0x8
+ 852 0135 00000000 		.4byte	.LASF26
+ 853 0139 01       		.byte	0x1
+ 854 013a 2001     		.2byte	0x120
+ 855 013c A3010000 		.4byte	0x1a3
+ 856 0140 03       		.byte	0x3
+ 857 0141 23       		.byte	0x23
+ 858 0142 8003     		.uleb128 0x180
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 30
+
+
+ 859 0144 08       		.uleb128 0x8
+ 860 0145 62010000 		.4byte	.LASF27
+ 861 0149 01       		.byte	0x1
+ 862 014a 2101     		.2byte	0x121
+ 863 014c 89010000 		.4byte	0x189
+ 864 0150 03       		.byte	0x3
+ 865 0151 23       		.byte	0x23
+ 866 0152 8403     		.uleb128 0x184
+ 867 0154 08       		.uleb128 0x8
+ 868 0155 6C010000 		.4byte	.LASF28
+ 869 0159 01       		.byte	0x1
+ 870 015a 2201     		.2byte	0x122
+ 871 015c A8010000 		.4byte	0x1a8
+ 872 0160 03       		.byte	0x3
+ 873 0161 23       		.byte	0x23
+ 874 0162 8004     		.uleb128 0x200
+ 875 0164 09       		.uleb128 0x9
+ 876 0165 495000   		.ascii	"IP\000"
+ 877 0168 01       		.byte	0x1
+ 878 0169 2301     		.2byte	0x123
+ 879 016b C8010000 		.4byte	0x1c8
+ 880 016f 03       		.byte	0x3
+ 881 0170 23       		.byte	0x23
+ 882 0171 8006     		.uleb128 0x300
+ 883 0173 00       		.byte	0
+ 884 0174 0A       		.uleb128 0xa
+ 885 0175 4C000000 		.4byte	0x4c
+ 886 0179 84010000 		.4byte	0x184
+ 887 017d 0B       		.uleb128 0xb
+ 888 017e 8F000000 		.4byte	0x8f
+ 889 0182 00       		.byte	0
+ 890 0183 00       		.byte	0
+ 891 0184 0C       		.uleb128 0xc
+ 892 0185 74010000 		.4byte	0x174
+ 893 0189 0A       		.uleb128 0xa
+ 894 018a 4C000000 		.4byte	0x4c
+ 895 018e 99010000 		.4byte	0x199
+ 896 0192 0B       		.uleb128 0xb
+ 897 0193 8F000000 		.4byte	0x8f
+ 898 0197 1E       		.byte	0x1e
+ 899 0198 00       		.byte	0
+ 900 0199 0C       		.uleb128 0xc
+ 901 019a 74010000 		.4byte	0x174
+ 902 019e 0C       		.uleb128 0xc
+ 903 019f 74010000 		.4byte	0x174
+ 904 01a3 0C       		.uleb128 0xc
+ 905 01a4 74010000 		.4byte	0x174
+ 906 01a8 0A       		.uleb128 0xa
+ 907 01a9 4C000000 		.4byte	0x4c
+ 908 01ad B8010000 		.4byte	0x1b8
+ 909 01b1 0B       		.uleb128 0xb
+ 910 01b2 8F000000 		.4byte	0x8f
+ 911 01b6 3F       		.byte	0x3f
+ 912 01b7 00       		.byte	0
+ 913 01b8 0A       		.uleb128 0xa
+ 914 01b9 4C000000 		.4byte	0x4c
+ 915 01bd C8010000 		.4byte	0x1c8
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 31
+
+
+ 916 01c1 0B       		.uleb128 0xb
+ 917 01c2 8F000000 		.4byte	0x8f
+ 918 01c6 07       		.byte	0x7
+ 919 01c7 00       		.byte	0
+ 920 01c8 0C       		.uleb128 0xc
+ 921 01c9 B8010000 		.4byte	0x1b8
+ 922 01cd 0D       		.uleb128 0xd
+ 923 01ce EE010000 		.4byte	.LASF29
+ 924 01d2 01       		.byte	0x1
+ 925 01d3 2401     		.2byte	0x124
+ 926 01d5 CC000000 		.4byte	0xcc
+ 927 01d9 0E       		.uleb128 0xe
+ 928 01da 28       		.byte	0x28
+ 929 01db 01       		.byte	0x1
+ 930 01dc 3101     		.2byte	0x131
+ 931 01de 6A020000 		.4byte	0x26a
+ 932 01e2 08       		.uleb128 0x8
+ 933 01e3 38010000 		.4byte	.LASF30
+ 934 01e7 01       		.byte	0x1
+ 935 01e8 3301     		.2byte	0x133
+ 936 01ea 6A020000 		.4byte	0x26a
+ 937 01ee 02       		.byte	0x2
+ 938 01ef 23       		.byte	0x23
+ 939 01f0 00       		.uleb128 0
+ 940 01f1 08       		.uleb128 0x8
+ 941 01f2 DD000000 		.4byte	.LASF31
+ 942 01f6 01       		.byte	0x1
+ 943 01f7 3401     		.2byte	0x134
+ 944 01f9 6F020000 		.4byte	0x26f
+ 945 01fd 02       		.byte	0x2
+ 946 01fe 23       		.byte	0x23
+ 947 01ff 04       		.uleb128 0x4
+ 948 0200 08       		.uleb128 0x8
+ 949 0201 44010000 		.4byte	.LASF21
+ 950 0205 01       		.byte	0x1
+ 951 0206 3501     		.2byte	0x135
+ 952 0208 4C000000 		.4byte	0x4c
+ 953 020c 02       		.byte	0x2
+ 954 020d 23       		.byte	0x23
+ 955 020e 08       		.uleb128 0x8
+ 956 020f 08       		.uleb128 0x8
+ 957 0210 F1000000 		.4byte	.LASF32
+ 958 0214 01       		.byte	0x1
+ 959 0215 3601     		.2byte	0x136
+ 960 0217 6F020000 		.4byte	0x26f
+ 961 021b 02       		.byte	0x2
+ 962 021c 23       		.byte	0x23
+ 963 021d 0C       		.uleb128 0xc
+ 964 021e 09       		.uleb128 0x9
+ 965 021f 53435200 		.ascii	"SCR\000"
+ 966 0223 01       		.byte	0x1
+ 967 0224 3701     		.2byte	0x137
+ 968 0226 6F020000 		.4byte	0x26f
+ 969 022a 02       		.byte	0x2
+ 970 022b 23       		.byte	0x23
+ 971 022c 10       		.uleb128 0x10
+ 972 022d 09       		.uleb128 0x9
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 32
+
+
+ 973 022e 43435200 		.ascii	"CCR\000"
+ 974 0232 01       		.byte	0x1
+ 975 0233 3801     		.2byte	0x138
+ 976 0235 6F020000 		.4byte	0x26f
+ 977 0239 02       		.byte	0x2
+ 978 023a 23       		.byte	0x23
+ 979 023b 14       		.uleb128 0x14
+ 980 023c 08       		.uleb128 0x8
+ 981 023d 4E010000 		.4byte	.LASF33
+ 982 0241 01       		.byte	0x1
+ 983 0242 3901     		.2byte	0x139
+ 984 0244 4C000000 		.4byte	0x4c
+ 985 0248 02       		.byte	0x2
+ 986 0249 23       		.byte	0x23
+ 987 024a 18       		.uleb128 0x18
+ 988 024b 09       		.uleb128 0x9
+ 989 024c 53485000 		.ascii	"SHP\000"
+ 990 0250 01       		.byte	0x1
+ 991 0251 3A01     		.2byte	0x13a
+ 992 0253 84020000 		.4byte	0x284
+ 993 0257 02       		.byte	0x2
+ 994 0258 23       		.byte	0x23
+ 995 0259 1C       		.uleb128 0x1c
+ 996 025a 08       		.uleb128 0x8
+ 997 025b D9010000 		.4byte	.LASF34
+ 998 025f 01       		.byte	0x1
+ 999 0260 3B01     		.2byte	0x13b
+ 1000 0262 6F020000 		.4byte	0x26f
+ 1001 0266 02       		.byte	0x2
+ 1002 0267 23       		.byte	0x23
+ 1003 0268 24       		.uleb128 0x24
+ 1004 0269 00       		.byte	0
+ 1005 026a 0F       		.uleb128 0xf
+ 1006 026b 6F020000 		.4byte	0x26f
+ 1007 026f 0C       		.uleb128 0xc
+ 1008 0270 4C000000 		.4byte	0x4c
+ 1009 0274 0A       		.uleb128 0xa
+ 1010 0275 4C000000 		.4byte	0x4c
+ 1011 0279 84020000 		.4byte	0x284
+ 1012 027d 0B       		.uleb128 0xb
+ 1013 027e 8F000000 		.4byte	0x8f
+ 1014 0282 01       		.byte	0x1
+ 1015 0283 00       		.byte	0
+ 1016 0284 0C       		.uleb128 0xc
+ 1017 0285 74020000 		.4byte	0x274
+ 1018 0289 0D       		.uleb128 0xd
+ 1019 028a 74000000 		.4byte	.LASF35
+ 1020 028e 01       		.byte	0x1
+ 1021 028f 3C01     		.2byte	0x13c
+ 1022 0291 D9010000 		.4byte	0x1d9
+ 1023 0295 0E       		.uleb128 0xe
+ 1024 0296 10       		.byte	0x10
+ 1025 0297 01       		.byte	0x1
+ 1026 0298 9A01     		.2byte	0x19a
+ 1027 029a DB020000 		.4byte	0x2db
+ 1028 029e 08       		.uleb128 0x8
+ 1029 029f 52020000 		.4byte	.LASF36
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 33
+
+
+ 1030 02a3 01       		.byte	0x1
+ 1031 02a4 9C01     		.2byte	0x19c
+ 1032 02a6 6F020000 		.4byte	0x26f
+ 1033 02aa 02       		.byte	0x2
+ 1034 02ab 23       		.byte	0x23
+ 1035 02ac 00       		.uleb128 0
+ 1036 02ad 08       		.uleb128 0x8
+ 1037 02ae 28010000 		.4byte	.LASF37
+ 1038 02b2 01       		.byte	0x1
+ 1039 02b3 9D01     		.2byte	0x19d
+ 1040 02b5 6F020000 		.4byte	0x26f
+ 1041 02b9 02       		.byte	0x2
+ 1042 02ba 23       		.byte	0x23
+ 1043 02bb 04       		.uleb128 0x4
+ 1044 02bc 09       		.uleb128 0x9
+ 1045 02bd 56414C00 		.ascii	"VAL\000"
+ 1046 02c1 01       		.byte	0x1
+ 1047 02c2 9E01     		.2byte	0x19e
+ 1048 02c4 6F020000 		.4byte	0x26f
+ 1049 02c8 02       		.byte	0x2
+ 1050 02c9 23       		.byte	0x23
+ 1051 02ca 08       		.uleb128 0x8
+ 1052 02cb 08       		.uleb128 0x8
+ 1053 02cc 57020000 		.4byte	.LASF38
+ 1054 02d0 01       		.byte	0x1
+ 1055 02d1 9F01     		.2byte	0x19f
+ 1056 02d3 6A020000 		.4byte	0x26a
+ 1057 02d7 02       		.byte	0x2
+ 1058 02d8 23       		.byte	0x23
+ 1059 02d9 0C       		.uleb128 0xc
+ 1060 02da 00       		.byte	0
+ 1061 02db 0D       		.uleb128 0xd
+ 1062 02dc F7000000 		.4byte	.LASF39
+ 1063 02e0 01       		.byte	0x1
+ 1064 02e1 A001     		.2byte	0x1a0
+ 1065 02e3 95020000 		.4byte	0x295
+ 1066 02e7 10       		.uleb128 0x10
+ 1067 02e8 F8010000 		.4byte	.LASF54
+ 1068 02ec 03       		.byte	0x3
+ 1069 02ed 02       		.byte	0x2
+ 1070 02ee 10       		.byte	0x10
+ 1071 02ef 18030000 		.4byte	0x318
+ 1072 02f3 11       		.uleb128 0x11
+ 1073 02f4 6700     		.ascii	"g\000"
+ 1074 02f6 02       		.byte	0x2
+ 1075 02f7 11       		.byte	0x11
+ 1076 02f8 30000000 		.4byte	0x30
+ 1077 02fc 02       		.byte	0x2
+ 1078 02fd 23       		.byte	0x23
+ 1079 02fe 00       		.uleb128 0
+ 1080 02ff 11       		.uleb128 0x11
+ 1081 0300 7200     		.ascii	"r\000"
+ 1082 0302 02       		.byte	0x2
+ 1083 0303 12       		.byte	0x12
+ 1084 0304 30000000 		.4byte	0x30
+ 1085 0308 02       		.byte	0x2
+ 1086 0309 23       		.byte	0x23
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 34
+
+
+ 1087 030a 01       		.uleb128 0x1
+ 1088 030b 11       		.uleb128 0x11
+ 1089 030c 6200     		.ascii	"b\000"
+ 1090 030e 02       		.byte	0x2
+ 1091 030f 13       		.byte	0x13
+ 1092 0310 30000000 		.4byte	0x30
+ 1093 0314 02       		.byte	0x2
+ 1094 0315 23       		.byte	0x23
+ 1095 0316 02       		.uleb128 0x2
+ 1096 0317 00       		.byte	0
+ 1097 0318 03       		.uleb128 0x3
+ 1098 0319 66020000 		.4byte	.LASF40
+ 1099 031d 02       		.byte	0x2
+ 1100 031e 14       		.byte	0x14
+ 1101 031f E7020000 		.4byte	0x2e7
+ 1102 0323 12       		.uleb128 0x12
+ 1103 0324 BA020000 		.4byte	.LASF55
+ 1104 0328 01       		.byte	0x1
+ 1105 0329 4602     		.2byte	0x246
+ 1106 032b 01       		.byte	0x1
+ 1107 032c 00000000 		.4byte	.LFB29
+ 1108 0330 E0000000 		.4byte	.LFE29
+ 1109 0334 00000000 		.4byte	.LLST0
+ 1110 0338 01       		.byte	0x1
+ 1111 0339 5C030000 		.4byte	0x35c
+ 1112 033d 13       		.uleb128 0x13
+ 1113 033e 1A010000 		.4byte	.LASF41
+ 1114 0342 01       		.byte	0x1
+ 1115 0343 4602     		.2byte	0x246
+ 1116 0345 C1000000 		.4byte	0xc1
+ 1117 0349 02       		.byte	0x2
+ 1118 034a 91       		.byte	0x91
+ 1119 034b 6F       		.sleb128 -17
+ 1120 034c 13       		.uleb128 0x13
+ 1121 034d 04010000 		.4byte	.LASF42
+ 1122 0351 01       		.byte	0x1
+ 1123 0352 4602     		.2byte	0x246
+ 1124 0354 4C000000 		.4byte	0x4c
+ 1125 0358 02       		.byte	0x2
+ 1126 0359 91       		.byte	0x91
+ 1127 035a 68       		.sleb128 -24
+ 1128 035b 00       		.byte	0
+ 1129 035c 14       		.uleb128 0x14
+ 1130 035d 43020000 		.4byte	.LASF56
+ 1131 0361 01       		.byte	0x1
+ 1132 0362 9002     		.2byte	0x290
+ 1133 0364 01       		.byte	0x1
+ 1134 0365 4C000000 		.4byte	0x4c
+ 1135 0369 00000000 		.4byte	.LFB32
+ 1136 036d 48000000 		.4byte	.LFE32
+ 1137 0371 38000000 		.4byte	.LLST1
+ 1138 0375 01       		.byte	0x1
+ 1139 0376 8A030000 		.4byte	0x38a
+ 1140 037a 13       		.uleb128 0x13
+ 1141 037b 2D010000 		.4byte	.LASF43
+ 1142 037f 01       		.byte	0x1
+ 1143 0380 9002     		.2byte	0x290
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 35
+
+
+ 1144 0382 4C000000 		.4byte	0x4c
+ 1145 0386 02       		.byte	0x2
+ 1146 0387 91       		.byte	0x91
+ 1147 0388 74       		.sleb128 -12
+ 1148 0389 00       		.byte	0
+ 1149 038a 15       		.uleb128 0x15
+ 1150 038b 01       		.byte	0x1
+ 1151 038c 6E020000 		.4byte	.LASF57
+ 1152 0390 02       		.byte	0x2
+ 1153 0391 1F       		.byte	0x1f
+ 1154 0392 6C000000 		.4byte	0x6c
+ 1155 0396 00000000 		.4byte	.LFB33
+ 1156 039a 58000000 		.4byte	.LFE33
+ 1157 039e 70000000 		.4byte	.LLST2
+ 1158 03a2 01       		.byte	0x1
+ 1159 03a3 16       		.uleb128 0x16
+ 1160 03a4 01       		.byte	0x1
+ 1161 03a5 BF010000 		.4byte	.LASF44
+ 1162 03a9 02       		.byte	0x2
+ 1163 03aa 3B       		.byte	0x3b
+ 1164 03ab 00000000 		.4byte	.LFB34
+ 1165 03af 24000000 		.4byte	.LFE34
+ 1166 03b3 9C000000 		.4byte	.LLST3
+ 1167 03b7 01       		.byte	0x1
+ 1168 03b8 17       		.uleb128 0x17
+ 1169 03b9 01       		.byte	0x1
+ 1170 03ba 01020000 		.4byte	.LASF45
+ 1171 03be 02       		.byte	0x2
+ 1172 03bf 43       		.byte	0x43
+ 1173 03c0 00000000 		.4byte	.LFB35
+ 1174 03c4 08000000 		.4byte	.LFE35
+ 1175 03c8 C8000000 		.4byte	.LLST4
+ 1176 03cc 01       		.byte	0x1
+ 1177 03cd 16       		.uleb128 0x16
+ 1178 03ce 01       		.byte	0x1
+ 1179 03cf 9C000000 		.4byte	.LASF46
+ 1180 03d3 02       		.byte	0x2
+ 1181 03d4 48       		.byte	0x48
+ 1182 03d5 00000000 		.4byte	.LFB36
+ 1183 03d9 18000000 		.4byte	.LFE36
+ 1184 03dd F4000000 		.4byte	.LLST5
+ 1185 03e1 01       		.byte	0x1
+ 1186 03e2 18       		.uleb128 0x18
+ 1187 03e3 01       		.byte	0x1
+ 1188 03e4 CA000000 		.4byte	.LASF47
+ 1189 03e8 02       		.byte	0x2
+ 1190 03e9 4F       		.byte	0x4f
+ 1191 03ea 00000000 		.4byte	.LFB37
+ 1192 03ee 74000000 		.4byte	.LFE37
+ 1193 03f2 20010000 		.4byte	.LLST6
+ 1194 03f6 01       		.byte	0x1
+ 1195 03f7 0A040000 		.4byte	0x40a
+ 1196 03fb 19       		.uleb128 0x19
+ 1197 03fc 6C656E00 		.ascii	"len\000"
+ 1198 0400 02       		.byte	0x2
+ 1199 0401 50       		.byte	0x50
+ 1200 0402 30000000 		.4byte	0x30
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 36
+
+
+ 1201 0406 02       		.byte	0x2
+ 1202 0407 91       		.byte	0x91
+ 1203 0408 77       		.sleb128 -9
+ 1204 0409 00       		.byte	0
+ 1205 040a 18       		.uleb128 0x18
+ 1206 040b 01       		.byte	0x1
+ 1207 040c E2000000 		.4byte	.LASF48
+ 1208 0410 02       		.byte	0x2
+ 1209 0411 5C       		.byte	0x5c
+ 1210 0412 00000000 		.4byte	.LFB38
+ 1211 0416 14010000 		.4byte	.LFE38
+ 1212 041a 58010000 		.4byte	.LLST7
+ 1213 041e 01       		.byte	0x1
+ 1214 041f 41040000 		.4byte	0x441
+ 1215 0423 19       		.uleb128 0x19
+ 1216 0424 76616C00 		.ascii	"val\000"
+ 1217 0428 02       		.byte	0x2
+ 1218 0429 5D       		.byte	0x5d
+ 1219 042a 30000000 		.4byte	0x30
+ 1220 042e 05       		.byte	0x5
+ 1221 042f 03       		.byte	0x3
+ 1222 0430 00000000 		.4byte	val.4977
+ 1223 0434 19       		.uleb128 0x19
+ 1224 0435 6900     		.ascii	"i\000"
+ 1225 0437 02       		.byte	0x2
+ 1226 0438 5E       		.byte	0x5e
+ 1227 0439 6C000000 		.4byte	0x6c
+ 1228 043d 02       		.byte	0x2
+ 1229 043e 91       		.byte	0x91
+ 1230 043f 74       		.sleb128 -12
+ 1231 0440 00       		.byte	0
+ 1232 0441 0A       		.uleb128 0xa
+ 1233 0442 18030000 		.4byte	0x318
+ 1234 0446 51040000 		.4byte	0x451
+ 1235 044a 0B       		.uleb128 0xb
+ 1236 044b 8F000000 		.4byte	0x8f
+ 1237 044f FF       		.byte	0xff
+ 1238 0450 00       		.byte	0
+ 1239 0451 1A       		.uleb128 0x1a
+ 1240 0452 72676200 		.ascii	"rgb\000"
+ 1241 0456 02       		.byte	0x2
+ 1242 0457 16       		.byte	0x16
+ 1243 0458 41040000 		.4byte	0x441
+ 1244 045c 01       		.byte	0x1
+ 1245 045d 05       		.byte	0x5
+ 1246 045e 03       		.byte	0x3
+ 1247 045f 00000000 		.4byte	rgb
+ 1248 0463 1B       		.uleb128 0x1b
+ 1249 0464 60000000 		.4byte	.LASF49
+ 1250 0468 02       		.byte	0x2
+ 1251 0469 17       		.byte	0x17
+ 1252 046a 73000000 		.4byte	0x73
+ 1253 046e 01       		.byte	0x1
+ 1254 046f 05       		.byte	0x5
+ 1255 0470 03       		.byte	0x3
+ 1256 0471 00000000 		.4byte	tick
+ 1257 0475 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 37
+
+
+ 1258 0476 1C000000 		.4byte	.LASF50
+ 1259 047a 02       		.byte	0x2
+ 1260 047b 17       		.byte	0x17
+ 1261 047c 73000000 		.4byte	0x73
+ 1262 0480 01       		.byte	0x1
+ 1263 0481 05       		.byte	0x5
+ 1264 0482 03       		.byte	0x3
+ 1265 0483 00000000 		.4byte	current_led
+ 1266 0487 00       		.byte	0
+ 1267              		.section	.debug_abbrev,"",%progbits
+ 1268              	.Ldebug_abbrev0:
+ 1269 0000 01       		.uleb128 0x1
+ 1270 0001 11       		.uleb128 0x11
+ 1271 0002 01       		.byte	0x1
+ 1272 0003 25       		.uleb128 0x25
+ 1273 0004 0E       		.uleb128 0xe
+ 1274 0005 13       		.uleb128 0x13
+ 1275 0006 0B       		.uleb128 0xb
+ 1276 0007 03       		.uleb128 0x3
+ 1277 0008 0E       		.uleb128 0xe
+ 1278 0009 1B       		.uleb128 0x1b
+ 1279 000a 0E       		.uleb128 0xe
+ 1280 000b 55       		.uleb128 0x55
+ 1281 000c 06       		.uleb128 0x6
+ 1282 000d 11       		.uleb128 0x11
+ 1283 000e 01       		.uleb128 0x1
+ 1284 000f 52       		.uleb128 0x52
+ 1285 0010 01       		.uleb128 0x1
+ 1286 0011 10       		.uleb128 0x10
+ 1287 0012 06       		.uleb128 0x6
+ 1288 0013 00       		.byte	0
+ 1289 0014 00       		.byte	0
+ 1290 0015 02       		.uleb128 0x2
+ 1291 0016 24       		.uleb128 0x24
+ 1292 0017 00       		.byte	0
+ 1293 0018 0B       		.uleb128 0xb
+ 1294 0019 0B       		.uleb128 0xb
+ 1295 001a 3E       		.uleb128 0x3e
+ 1296 001b 0B       		.uleb128 0xb
+ 1297 001c 03       		.uleb128 0x3
+ 1298 001d 0E       		.uleb128 0xe
+ 1299 001e 00       		.byte	0
+ 1300 001f 00       		.byte	0
+ 1301 0020 03       		.uleb128 0x3
+ 1302 0021 16       		.uleb128 0x16
+ 1303 0022 00       		.byte	0
+ 1304 0023 03       		.uleb128 0x3
+ 1305 0024 0E       		.uleb128 0xe
+ 1306 0025 3A       		.uleb128 0x3a
+ 1307 0026 0B       		.uleb128 0xb
+ 1308 0027 3B       		.uleb128 0x3b
+ 1309 0028 0B       		.uleb128 0xb
+ 1310 0029 49       		.uleb128 0x49
+ 1311 002a 13       		.uleb128 0x13
+ 1312 002b 00       		.byte	0
+ 1313 002c 00       		.byte	0
+ 1314 002d 04       		.uleb128 0x4
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 38
+
+
+ 1315 002e 24       		.uleb128 0x24
+ 1316 002f 00       		.byte	0
+ 1317 0030 0B       		.uleb128 0xb
+ 1318 0031 0B       		.uleb128 0xb
+ 1319 0032 3E       		.uleb128 0x3e
+ 1320 0033 0B       		.uleb128 0xb
+ 1321 0034 03       		.uleb128 0x3
+ 1322 0035 08       		.uleb128 0x8
+ 1323 0036 00       		.byte	0
+ 1324 0037 00       		.byte	0
+ 1325 0038 05       		.uleb128 0x5
+ 1326 0039 04       		.uleb128 0x4
+ 1327 003a 01       		.byte	0x1
+ 1328 003b 03       		.uleb128 0x3
+ 1329 003c 0E       		.uleb128 0xe
+ 1330 003d 0B       		.uleb128 0xb
+ 1331 003e 0B       		.uleb128 0xb
+ 1332 003f 3A       		.uleb128 0x3a
+ 1333 0040 0B       		.uleb128 0xb
+ 1334 0041 3B       		.uleb128 0x3b
+ 1335 0042 0B       		.uleb128 0xb
+ 1336 0043 01       		.uleb128 0x1
+ 1337 0044 13       		.uleb128 0x13
+ 1338 0045 00       		.byte	0
+ 1339 0046 00       		.byte	0
+ 1340 0047 06       		.uleb128 0x6
+ 1341 0048 28       		.uleb128 0x28
+ 1342 0049 00       		.byte	0
+ 1343 004a 03       		.uleb128 0x3
+ 1344 004b 0E       		.uleb128 0xe
+ 1345 004c 1C       		.uleb128 0x1c
+ 1346 004d 0D       		.uleb128 0xd
+ 1347 004e 00       		.byte	0
+ 1348 004f 00       		.byte	0
+ 1349 0050 07       		.uleb128 0x7
+ 1350 0051 13       		.uleb128 0x13
+ 1351 0052 01       		.byte	0x1
+ 1352 0053 0B       		.uleb128 0xb
+ 1353 0054 05       		.uleb128 0x5
+ 1354 0055 3A       		.uleb128 0x3a
+ 1355 0056 0B       		.uleb128 0xb
+ 1356 0057 3B       		.uleb128 0x3b
+ 1357 0058 05       		.uleb128 0x5
+ 1358 0059 01       		.uleb128 0x1
+ 1359 005a 13       		.uleb128 0x13
+ 1360 005b 00       		.byte	0
+ 1361 005c 00       		.byte	0
+ 1362 005d 08       		.uleb128 0x8
+ 1363 005e 0D       		.uleb128 0xd
+ 1364 005f 00       		.byte	0
+ 1365 0060 03       		.uleb128 0x3
+ 1366 0061 0E       		.uleb128 0xe
+ 1367 0062 3A       		.uleb128 0x3a
+ 1368 0063 0B       		.uleb128 0xb
+ 1369 0064 3B       		.uleb128 0x3b
+ 1370 0065 05       		.uleb128 0x5
+ 1371 0066 49       		.uleb128 0x49
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 39
+
+
+ 1372 0067 13       		.uleb128 0x13
+ 1373 0068 38       		.uleb128 0x38
+ 1374 0069 0A       		.uleb128 0xa
+ 1375 006a 00       		.byte	0
+ 1376 006b 00       		.byte	0
+ 1377 006c 09       		.uleb128 0x9
+ 1378 006d 0D       		.uleb128 0xd
+ 1379 006e 00       		.byte	0
+ 1380 006f 03       		.uleb128 0x3
+ 1381 0070 08       		.uleb128 0x8
+ 1382 0071 3A       		.uleb128 0x3a
+ 1383 0072 0B       		.uleb128 0xb
+ 1384 0073 3B       		.uleb128 0x3b
+ 1385 0074 05       		.uleb128 0x5
+ 1386 0075 49       		.uleb128 0x49
+ 1387 0076 13       		.uleb128 0x13
+ 1388 0077 38       		.uleb128 0x38
+ 1389 0078 0A       		.uleb128 0xa
+ 1390 0079 00       		.byte	0
+ 1391 007a 00       		.byte	0
+ 1392 007b 0A       		.uleb128 0xa
+ 1393 007c 01       		.uleb128 0x1
+ 1394 007d 01       		.byte	0x1
+ 1395 007e 49       		.uleb128 0x49
+ 1396 007f 13       		.uleb128 0x13
+ 1397 0080 01       		.uleb128 0x1
+ 1398 0081 13       		.uleb128 0x13
+ 1399 0082 00       		.byte	0
+ 1400 0083 00       		.byte	0
+ 1401 0084 0B       		.uleb128 0xb
+ 1402 0085 21       		.uleb128 0x21
+ 1403 0086 00       		.byte	0
+ 1404 0087 49       		.uleb128 0x49
+ 1405 0088 13       		.uleb128 0x13
+ 1406 0089 2F       		.uleb128 0x2f
+ 1407 008a 0B       		.uleb128 0xb
+ 1408 008b 00       		.byte	0
+ 1409 008c 00       		.byte	0
+ 1410 008d 0C       		.uleb128 0xc
+ 1411 008e 35       		.uleb128 0x35
+ 1412 008f 00       		.byte	0
+ 1413 0090 49       		.uleb128 0x49
+ 1414 0091 13       		.uleb128 0x13
+ 1415 0092 00       		.byte	0
+ 1416 0093 00       		.byte	0
+ 1417 0094 0D       		.uleb128 0xd
+ 1418 0095 16       		.uleb128 0x16
+ 1419 0096 00       		.byte	0
+ 1420 0097 03       		.uleb128 0x3
+ 1421 0098 0E       		.uleb128 0xe
+ 1422 0099 3A       		.uleb128 0x3a
+ 1423 009a 0B       		.uleb128 0xb
+ 1424 009b 3B       		.uleb128 0x3b
+ 1425 009c 05       		.uleb128 0x5
+ 1426 009d 49       		.uleb128 0x49
+ 1427 009e 13       		.uleb128 0x13
+ 1428 009f 00       		.byte	0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 40
+
+
+ 1429 00a0 00       		.byte	0
+ 1430 00a1 0E       		.uleb128 0xe
+ 1431 00a2 13       		.uleb128 0x13
+ 1432 00a3 01       		.byte	0x1
+ 1433 00a4 0B       		.uleb128 0xb
+ 1434 00a5 0B       		.uleb128 0xb
+ 1435 00a6 3A       		.uleb128 0x3a
+ 1436 00a7 0B       		.uleb128 0xb
+ 1437 00a8 3B       		.uleb128 0x3b
+ 1438 00a9 05       		.uleb128 0x5
+ 1439 00aa 01       		.uleb128 0x1
+ 1440 00ab 13       		.uleb128 0x13
+ 1441 00ac 00       		.byte	0
+ 1442 00ad 00       		.byte	0
+ 1443 00ae 0F       		.uleb128 0xf
+ 1444 00af 26       		.uleb128 0x26
+ 1445 00b0 00       		.byte	0
+ 1446 00b1 49       		.uleb128 0x49
+ 1447 00b2 13       		.uleb128 0x13
+ 1448 00b3 00       		.byte	0
+ 1449 00b4 00       		.byte	0
+ 1450 00b5 10       		.uleb128 0x10
+ 1451 00b6 13       		.uleb128 0x13
+ 1452 00b7 01       		.byte	0x1
+ 1453 00b8 03       		.uleb128 0x3
+ 1454 00b9 0E       		.uleb128 0xe
+ 1455 00ba 0B       		.uleb128 0xb
+ 1456 00bb 0B       		.uleb128 0xb
+ 1457 00bc 3A       		.uleb128 0x3a
+ 1458 00bd 0B       		.uleb128 0xb
+ 1459 00be 3B       		.uleb128 0x3b
+ 1460 00bf 0B       		.uleb128 0xb
+ 1461 00c0 01       		.uleb128 0x1
+ 1462 00c1 13       		.uleb128 0x13
+ 1463 00c2 00       		.byte	0
+ 1464 00c3 00       		.byte	0
+ 1465 00c4 11       		.uleb128 0x11
+ 1466 00c5 0D       		.uleb128 0xd
+ 1467 00c6 00       		.byte	0
+ 1468 00c7 03       		.uleb128 0x3
+ 1469 00c8 08       		.uleb128 0x8
+ 1470 00c9 3A       		.uleb128 0x3a
+ 1471 00ca 0B       		.uleb128 0xb
+ 1472 00cb 3B       		.uleb128 0x3b
+ 1473 00cc 0B       		.uleb128 0xb
+ 1474 00cd 49       		.uleb128 0x49
+ 1475 00ce 13       		.uleb128 0x13
+ 1476 00cf 38       		.uleb128 0x38
+ 1477 00d0 0A       		.uleb128 0xa
+ 1478 00d1 00       		.byte	0
+ 1479 00d2 00       		.byte	0
+ 1480 00d3 12       		.uleb128 0x12
+ 1481 00d4 2E       		.uleb128 0x2e
+ 1482 00d5 01       		.byte	0x1
+ 1483 00d6 03       		.uleb128 0x3
+ 1484 00d7 0E       		.uleb128 0xe
+ 1485 00d8 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 41
+
+
+ 1486 00d9 0B       		.uleb128 0xb
+ 1487 00da 3B       		.uleb128 0x3b
+ 1488 00db 05       		.uleb128 0x5
+ 1489 00dc 27       		.uleb128 0x27
+ 1490 00dd 0C       		.uleb128 0xc
+ 1491 00de 11       		.uleb128 0x11
+ 1492 00df 01       		.uleb128 0x1
+ 1493 00e0 12       		.uleb128 0x12
+ 1494 00e1 01       		.uleb128 0x1
+ 1495 00e2 40       		.uleb128 0x40
+ 1496 00e3 06       		.uleb128 0x6
+ 1497 00e4 9742     		.uleb128 0x2117
+ 1498 00e6 0C       		.uleb128 0xc
+ 1499 00e7 01       		.uleb128 0x1
+ 1500 00e8 13       		.uleb128 0x13
+ 1501 00e9 00       		.byte	0
+ 1502 00ea 00       		.byte	0
+ 1503 00eb 13       		.uleb128 0x13
+ 1504 00ec 05       		.uleb128 0x5
+ 1505 00ed 00       		.byte	0
+ 1506 00ee 03       		.uleb128 0x3
+ 1507 00ef 0E       		.uleb128 0xe
+ 1508 00f0 3A       		.uleb128 0x3a
+ 1509 00f1 0B       		.uleb128 0xb
+ 1510 00f2 3B       		.uleb128 0x3b
+ 1511 00f3 05       		.uleb128 0x5
+ 1512 00f4 49       		.uleb128 0x49
+ 1513 00f5 13       		.uleb128 0x13
+ 1514 00f6 02       		.uleb128 0x2
+ 1515 00f7 0A       		.uleb128 0xa
+ 1516 00f8 00       		.byte	0
+ 1517 00f9 00       		.byte	0
+ 1518 00fa 14       		.uleb128 0x14
+ 1519 00fb 2E       		.uleb128 0x2e
+ 1520 00fc 01       		.byte	0x1
+ 1521 00fd 03       		.uleb128 0x3
+ 1522 00fe 0E       		.uleb128 0xe
+ 1523 00ff 3A       		.uleb128 0x3a
+ 1524 0100 0B       		.uleb128 0xb
+ 1525 0101 3B       		.uleb128 0x3b
+ 1526 0102 05       		.uleb128 0x5
+ 1527 0103 27       		.uleb128 0x27
+ 1528 0104 0C       		.uleb128 0xc
+ 1529 0105 49       		.uleb128 0x49
+ 1530 0106 13       		.uleb128 0x13
+ 1531 0107 11       		.uleb128 0x11
+ 1532 0108 01       		.uleb128 0x1
+ 1533 0109 12       		.uleb128 0x12
+ 1534 010a 01       		.uleb128 0x1
+ 1535 010b 40       		.uleb128 0x40
+ 1536 010c 06       		.uleb128 0x6
+ 1537 010d 9642     		.uleb128 0x2116
+ 1538 010f 0C       		.uleb128 0xc
+ 1539 0110 01       		.uleb128 0x1
+ 1540 0111 13       		.uleb128 0x13
+ 1541 0112 00       		.byte	0
+ 1542 0113 00       		.byte	0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 42
+
+
+ 1543 0114 15       		.uleb128 0x15
+ 1544 0115 2E       		.uleb128 0x2e
+ 1545 0116 00       		.byte	0
+ 1546 0117 3F       		.uleb128 0x3f
+ 1547 0118 0C       		.uleb128 0xc
+ 1548 0119 03       		.uleb128 0x3
+ 1549 011a 0E       		.uleb128 0xe
+ 1550 011b 3A       		.uleb128 0x3a
+ 1551 011c 0B       		.uleb128 0xb
+ 1552 011d 3B       		.uleb128 0x3b
+ 1553 011e 0B       		.uleb128 0xb
+ 1554 011f 49       		.uleb128 0x49
+ 1555 0120 13       		.uleb128 0x13
+ 1556 0121 11       		.uleb128 0x11
+ 1557 0122 01       		.uleb128 0x1
+ 1558 0123 12       		.uleb128 0x12
+ 1559 0124 01       		.uleb128 0x1
+ 1560 0125 40       		.uleb128 0x40
+ 1561 0126 06       		.uleb128 0x6
+ 1562 0127 9642     		.uleb128 0x2116
+ 1563 0129 0C       		.uleb128 0xc
+ 1564 012a 00       		.byte	0
+ 1565 012b 00       		.byte	0
+ 1566 012c 16       		.uleb128 0x16
+ 1567 012d 2E       		.uleb128 0x2e
+ 1568 012e 00       		.byte	0
+ 1569 012f 3F       		.uleb128 0x3f
+ 1570 0130 0C       		.uleb128 0xc
+ 1571 0131 03       		.uleb128 0x3
+ 1572 0132 0E       		.uleb128 0xe
+ 1573 0133 3A       		.uleb128 0x3a
+ 1574 0134 0B       		.uleb128 0xb
+ 1575 0135 3B       		.uleb128 0x3b
+ 1576 0136 0B       		.uleb128 0xb
+ 1577 0137 11       		.uleb128 0x11
+ 1578 0138 01       		.uleb128 0x1
+ 1579 0139 12       		.uleb128 0x12
+ 1580 013a 01       		.uleb128 0x1
+ 1581 013b 40       		.uleb128 0x40
+ 1582 013c 06       		.uleb128 0x6
+ 1583 013d 9642     		.uleb128 0x2116
+ 1584 013f 0C       		.uleb128 0xc
+ 1585 0140 00       		.byte	0
+ 1586 0141 00       		.byte	0
+ 1587 0142 17       		.uleb128 0x17
+ 1588 0143 2E       		.uleb128 0x2e
+ 1589 0144 00       		.byte	0
+ 1590 0145 3F       		.uleb128 0x3f
+ 1591 0146 0C       		.uleb128 0xc
+ 1592 0147 03       		.uleb128 0x3
+ 1593 0148 0E       		.uleb128 0xe
+ 1594 0149 3A       		.uleb128 0x3a
+ 1595 014a 0B       		.uleb128 0xb
+ 1596 014b 3B       		.uleb128 0x3b
+ 1597 014c 0B       		.uleb128 0xb
+ 1598 014d 11       		.uleb128 0x11
+ 1599 014e 01       		.uleb128 0x1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 43
+
+
+ 1600 014f 12       		.uleb128 0x12
+ 1601 0150 01       		.uleb128 0x1
+ 1602 0151 40       		.uleb128 0x40
+ 1603 0152 06       		.uleb128 0x6
+ 1604 0153 9742     		.uleb128 0x2117
+ 1605 0155 0C       		.uleb128 0xc
+ 1606 0156 00       		.byte	0
+ 1607 0157 00       		.byte	0
+ 1608 0158 18       		.uleb128 0x18
+ 1609 0159 2E       		.uleb128 0x2e
+ 1610 015a 01       		.byte	0x1
+ 1611 015b 3F       		.uleb128 0x3f
+ 1612 015c 0C       		.uleb128 0xc
+ 1613 015d 03       		.uleb128 0x3
+ 1614 015e 0E       		.uleb128 0xe
+ 1615 015f 3A       		.uleb128 0x3a
+ 1616 0160 0B       		.uleb128 0xb
+ 1617 0161 3B       		.uleb128 0x3b
+ 1618 0162 0B       		.uleb128 0xb
+ 1619 0163 11       		.uleb128 0x11
+ 1620 0164 01       		.uleb128 0x1
+ 1621 0165 12       		.uleb128 0x12
+ 1622 0166 01       		.uleb128 0x1
+ 1623 0167 40       		.uleb128 0x40
+ 1624 0168 06       		.uleb128 0x6
+ 1625 0169 9642     		.uleb128 0x2116
+ 1626 016b 0C       		.uleb128 0xc
+ 1627 016c 01       		.uleb128 0x1
+ 1628 016d 13       		.uleb128 0x13
+ 1629 016e 00       		.byte	0
+ 1630 016f 00       		.byte	0
+ 1631 0170 19       		.uleb128 0x19
+ 1632 0171 34       		.uleb128 0x34
+ 1633 0172 00       		.byte	0
+ 1634 0173 03       		.uleb128 0x3
+ 1635 0174 08       		.uleb128 0x8
+ 1636 0175 3A       		.uleb128 0x3a
+ 1637 0176 0B       		.uleb128 0xb
+ 1638 0177 3B       		.uleb128 0x3b
+ 1639 0178 0B       		.uleb128 0xb
+ 1640 0179 49       		.uleb128 0x49
+ 1641 017a 13       		.uleb128 0x13
+ 1642 017b 02       		.uleb128 0x2
+ 1643 017c 0A       		.uleb128 0xa
+ 1644 017d 00       		.byte	0
+ 1645 017e 00       		.byte	0
+ 1646 017f 1A       		.uleb128 0x1a
+ 1647 0180 34       		.uleb128 0x34
+ 1648 0181 00       		.byte	0
+ 1649 0182 03       		.uleb128 0x3
+ 1650 0183 08       		.uleb128 0x8
+ 1651 0184 3A       		.uleb128 0x3a
+ 1652 0185 0B       		.uleb128 0xb
+ 1653 0186 3B       		.uleb128 0x3b
+ 1654 0187 0B       		.uleb128 0xb
+ 1655 0188 49       		.uleb128 0x49
+ 1656 0189 13       		.uleb128 0x13
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 44
+
+
+ 1657 018a 3F       		.uleb128 0x3f
+ 1658 018b 0C       		.uleb128 0xc
+ 1659 018c 02       		.uleb128 0x2
+ 1660 018d 0A       		.uleb128 0xa
+ 1661 018e 00       		.byte	0
+ 1662 018f 00       		.byte	0
+ 1663 0190 1B       		.uleb128 0x1b
+ 1664 0191 34       		.uleb128 0x34
+ 1665 0192 00       		.byte	0
+ 1666 0193 03       		.uleb128 0x3
+ 1667 0194 0E       		.uleb128 0xe
+ 1668 0195 3A       		.uleb128 0x3a
+ 1669 0196 0B       		.uleb128 0xb
+ 1670 0197 3B       		.uleb128 0x3b
+ 1671 0198 0B       		.uleb128 0xb
+ 1672 0199 49       		.uleb128 0x49
+ 1673 019a 13       		.uleb128 0x13
+ 1674 019b 3F       		.uleb128 0x3f
+ 1675 019c 0C       		.uleb128 0xc
+ 1676 019d 02       		.uleb128 0x2
+ 1677 019e 0A       		.uleb128 0xa
+ 1678 019f 00       		.byte	0
+ 1679 01a0 00       		.byte	0
+ 1680 01a1 00       		.byte	0
+ 1681              		.section	.debug_loc,"",%progbits
+ 1682              	.Ldebug_loc0:
+ 1683              	.LLST0:
+ 1684 0000 00000000 		.4byte	.LFB29
+ 1685 0004 02000000 		.4byte	.LCFI0
+ 1686 0008 0200     		.2byte	0x2
+ 1687 000a 7D       		.byte	0x7d
+ 1688 000b 00       		.sleb128 0
+ 1689 000c 02000000 		.4byte	.LCFI0
+ 1690 0010 04000000 		.4byte	.LCFI1
+ 1691 0014 0200     		.2byte	0x2
+ 1692 0016 7D       		.byte	0x7d
+ 1693 0017 10       		.sleb128 16
+ 1694 0018 04000000 		.4byte	.LCFI1
+ 1695 001c 06000000 		.4byte	.LCFI2
+ 1696 0020 0200     		.2byte	0x2
+ 1697 0022 7D       		.byte	0x7d
+ 1698 0023 18       		.sleb128 24
+ 1699 0024 06000000 		.4byte	.LCFI2
+ 1700 0028 E0000000 		.4byte	.LFE29
+ 1701 002c 0200     		.2byte	0x2
+ 1702 002e 77       		.byte	0x77
+ 1703 002f 18       		.sleb128 24
+ 1704 0030 00000000 		.4byte	0
+ 1705 0034 00000000 		.4byte	0
+ 1706              	.LLST1:
+ 1707 0038 00000000 		.4byte	.LFB32
+ 1708 003c 02000000 		.4byte	.LCFI3
+ 1709 0040 0200     		.2byte	0x2
+ 1710 0042 7D       		.byte	0x7d
+ 1711 0043 00       		.sleb128 0
+ 1712 0044 02000000 		.4byte	.LCFI3
+ 1713 0048 04000000 		.4byte	.LCFI4
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 45
+
+
+ 1714 004c 0200     		.2byte	0x2
+ 1715 004e 7D       		.byte	0x7d
+ 1716 004f 08       		.sleb128 8
+ 1717 0050 04000000 		.4byte	.LCFI4
+ 1718 0054 06000000 		.4byte	.LCFI5
+ 1719 0058 0200     		.2byte	0x2
+ 1720 005a 7D       		.byte	0x7d
+ 1721 005b 10       		.sleb128 16
+ 1722 005c 06000000 		.4byte	.LCFI5
+ 1723 0060 48000000 		.4byte	.LFE32
+ 1724 0064 0200     		.2byte	0x2
+ 1725 0066 77       		.byte	0x77
+ 1726 0067 10       		.sleb128 16
+ 1727 0068 00000000 		.4byte	0
+ 1728 006c 00000000 		.4byte	0
+ 1729              	.LLST2:
+ 1730 0070 00000000 		.4byte	.LFB33
+ 1731 0074 02000000 		.4byte	.LCFI6
+ 1732 0078 0200     		.2byte	0x2
+ 1733 007a 7D       		.byte	0x7d
+ 1734 007b 00       		.sleb128 0
+ 1735 007c 02000000 		.4byte	.LCFI6
+ 1736 0080 04000000 		.4byte	.LCFI7
+ 1737 0084 0200     		.2byte	0x2
+ 1738 0086 7D       		.byte	0x7d
+ 1739 0087 08       		.sleb128 8
+ 1740 0088 04000000 		.4byte	.LCFI7
+ 1741 008c 58000000 		.4byte	.LFE33
+ 1742 0090 0200     		.2byte	0x2
+ 1743 0092 77       		.byte	0x77
+ 1744 0093 08       		.sleb128 8
+ 1745 0094 00000000 		.4byte	0
+ 1746 0098 00000000 		.4byte	0
+ 1747              	.LLST3:
+ 1748 009c 00000000 		.4byte	.LFB34
+ 1749 00a0 02000000 		.4byte	.LCFI8
+ 1750 00a4 0200     		.2byte	0x2
+ 1751 00a6 7D       		.byte	0x7d
+ 1752 00a7 00       		.sleb128 0
+ 1753 00a8 02000000 		.4byte	.LCFI8
+ 1754 00ac 04000000 		.4byte	.LCFI9
+ 1755 00b0 0200     		.2byte	0x2
+ 1756 00b2 7D       		.byte	0x7d
+ 1757 00b3 08       		.sleb128 8
+ 1758 00b4 04000000 		.4byte	.LCFI9
+ 1759 00b8 24000000 		.4byte	.LFE34
+ 1760 00bc 0200     		.2byte	0x2
+ 1761 00be 77       		.byte	0x77
+ 1762 00bf 08       		.sleb128 8
+ 1763 00c0 00000000 		.4byte	0
+ 1764 00c4 00000000 		.4byte	0
+ 1765              	.LLST4:
+ 1766 00c8 00000000 		.4byte	.LFB35
+ 1767 00cc 02000000 		.4byte	.LCFI10
+ 1768 00d0 0200     		.2byte	0x2
+ 1769 00d2 7D       		.byte	0x7d
+ 1770 00d3 00       		.sleb128 0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 46
+
+
+ 1771 00d4 02000000 		.4byte	.LCFI10
+ 1772 00d8 04000000 		.4byte	.LCFI11
+ 1773 00dc 0200     		.2byte	0x2
+ 1774 00de 7D       		.byte	0x7d
+ 1775 00df 08       		.sleb128 8
+ 1776 00e0 04000000 		.4byte	.LCFI11
+ 1777 00e4 08000000 		.4byte	.LFE35
+ 1778 00e8 0200     		.2byte	0x2
+ 1779 00ea 77       		.byte	0x77
+ 1780 00eb 08       		.sleb128 8
+ 1781 00ec 00000000 		.4byte	0
+ 1782 00f0 00000000 		.4byte	0
+ 1783              	.LLST5:
+ 1784 00f4 00000000 		.4byte	.LFB36
+ 1785 00f8 02000000 		.4byte	.LCFI12
+ 1786 00fc 0200     		.2byte	0x2
+ 1787 00fe 7D       		.byte	0x7d
+ 1788 00ff 00       		.sleb128 0
+ 1789 0100 02000000 		.4byte	.LCFI12
+ 1790 0104 04000000 		.4byte	.LCFI13
+ 1791 0108 0200     		.2byte	0x2
+ 1792 010a 7D       		.byte	0x7d
+ 1793 010b 08       		.sleb128 8
+ 1794 010c 04000000 		.4byte	.LCFI13
+ 1795 0110 18000000 		.4byte	.LFE36
+ 1796 0114 0200     		.2byte	0x2
+ 1797 0116 77       		.byte	0x77
+ 1798 0117 08       		.sleb128 8
+ 1799 0118 00000000 		.4byte	0
+ 1800 011c 00000000 		.4byte	0
+ 1801              	.LLST6:
+ 1802 0120 00000000 		.4byte	.LFB37
+ 1803 0124 02000000 		.4byte	.LCFI14
+ 1804 0128 0200     		.2byte	0x2
+ 1805 012a 7D       		.byte	0x7d
+ 1806 012b 00       		.sleb128 0
+ 1807 012c 02000000 		.4byte	.LCFI14
+ 1808 0130 04000000 		.4byte	.LCFI15
+ 1809 0134 0200     		.2byte	0x2
+ 1810 0136 7D       		.byte	0x7d
+ 1811 0137 08       		.sleb128 8
+ 1812 0138 04000000 		.4byte	.LCFI15
+ 1813 013c 06000000 		.4byte	.LCFI16
+ 1814 0140 0200     		.2byte	0x2
+ 1815 0142 7D       		.byte	0x7d
+ 1816 0143 10       		.sleb128 16
+ 1817 0144 06000000 		.4byte	.LCFI16
+ 1818 0148 74000000 		.4byte	.LFE37
+ 1819 014c 0200     		.2byte	0x2
+ 1820 014e 77       		.byte	0x77
+ 1821 014f 10       		.sleb128 16
+ 1822 0150 00000000 		.4byte	0
+ 1823 0154 00000000 		.4byte	0
+ 1824              	.LLST7:
+ 1825 0158 00000000 		.4byte	.LFB38
+ 1826 015c 02000000 		.4byte	.LCFI17
+ 1827 0160 0200     		.2byte	0x2
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 47
+
+
+ 1828 0162 7D       		.byte	0x7d
+ 1829 0163 00       		.sleb128 0
+ 1830 0164 02000000 		.4byte	.LCFI17
+ 1831 0168 04000000 		.4byte	.LCFI18
+ 1832 016c 0200     		.2byte	0x2
+ 1833 016e 7D       		.byte	0x7d
+ 1834 016f 08       		.sleb128 8
+ 1835 0170 04000000 		.4byte	.LCFI18
+ 1836 0174 06000000 		.4byte	.LCFI19
+ 1837 0178 0200     		.2byte	0x2
+ 1838 017a 7D       		.byte	0x7d
+ 1839 017b 10       		.sleb128 16
+ 1840 017c 06000000 		.4byte	.LCFI19
+ 1841 0180 14010000 		.4byte	.LFE38
+ 1842 0184 0200     		.2byte	0x2
+ 1843 0186 77       		.byte	0x77
+ 1844 0187 10       		.sleb128 16
+ 1845 0188 00000000 		.4byte	0
+ 1846 018c 00000000 		.4byte	0
+ 1847              		.section	.debug_aranges,"",%progbits
+ 1848 0000 54000000 		.4byte	0x54
+ 1849 0004 0200     		.2byte	0x2
+ 1850 0006 00000000 		.4byte	.Ldebug_info0
+ 1851 000a 04       		.byte	0x4
+ 1852 000b 00       		.byte	0
+ 1853 000c 0000     		.2byte	0
+ 1854 000e 0000     		.2byte	0
+ 1855 0010 00000000 		.4byte	.LFB29
+ 1856 0014 E0000000 		.4byte	.LFE29-.LFB29
+ 1857 0018 00000000 		.4byte	.LFB32
+ 1858 001c 48000000 		.4byte	.LFE32-.LFB32
+ 1859 0020 00000000 		.4byte	.LFB33
+ 1860 0024 58000000 		.4byte	.LFE33-.LFB33
+ 1861 0028 00000000 		.4byte	.LFB34
+ 1862 002c 24000000 		.4byte	.LFE34-.LFB34
+ 1863 0030 00000000 		.4byte	.LFB35
+ 1864 0034 08000000 		.4byte	.LFE35-.LFB35
+ 1865 0038 00000000 		.4byte	.LFB36
+ 1866 003c 18000000 		.4byte	.LFE36-.LFB36
+ 1867 0040 00000000 		.4byte	.LFB37
+ 1868 0044 74000000 		.4byte	.LFE37-.LFB37
+ 1869 0048 00000000 		.4byte	.LFB38
+ 1870 004c 14010000 		.4byte	.LFE38-.LFB38
+ 1871 0050 00000000 		.4byte	0
+ 1872 0054 00000000 		.4byte	0
+ 1873              		.section	.debug_ranges,"",%progbits
+ 1874              	.Ldebug_ranges0:
+ 1875 0000 00000000 		.4byte	.LFB29
+ 1876 0004 E0000000 		.4byte	.LFE29
+ 1877 0008 00000000 		.4byte	.LFB32
+ 1878 000c 48000000 		.4byte	.LFE32
+ 1879 0010 00000000 		.4byte	.LFB33
+ 1880 0014 58000000 		.4byte	.LFE33
+ 1881 0018 00000000 		.4byte	.LFB34
+ 1882 001c 24000000 		.4byte	.LFE34
+ 1883 0020 00000000 		.4byte	.LFB35
+ 1884 0024 08000000 		.4byte	.LFE35
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 48
+
+
+ 1885 0028 00000000 		.4byte	.LFB36
+ 1886 002c 18000000 		.4byte	.LFE36
+ 1887 0030 00000000 		.4byte	.LFB37
+ 1888 0034 74000000 		.4byte	.LFE37
+ 1889 0038 00000000 		.4byte	.LFB38
+ 1890 003c 14010000 		.4byte	.LFE38
+ 1891 0040 00000000 		.4byte	0
+ 1892 0044 00000000 		.4byte	0
+ 1893              		.section	.debug_line,"",%progbits
+ 1894              	.Ldebug_line0:
+ 1895 0000 FD010000 		.section	.debug_str,"MS",%progbits,1
+ 1895      02000001 
+ 1895      00000201 
+ 1895      FB0E0D00 
+ 1895      01010101 
+ 1896              	.LASF26:
+ 1897 0000 49435052 		.ascii	"ICPR\000"
+ 1897      00
+ 1898              	.LASF7:
+ 1899 0005 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1899      206C6F6E 
+ 1899      6720756E 
+ 1899      7369676E 
+ 1899      65642069 
+ 1900              	.LASF50:
+ 1901 001c 63757272 		.ascii	"current_led\000"
+ 1901      656E745F 
+ 1901      6C656400 
+ 1902              	.LASF24:
+ 1903 0028 49535052 		.ascii	"ISPR\000"
+ 1903      00
+ 1904              	.LASF6:
+ 1905 002d 6C6F6E67 		.ascii	"long long int\000"
+ 1905      206C6F6E 
+ 1905      6720696E 
+ 1905      7400
+ 1906              	.LASF0:
+ 1907 003b 7369676E 		.ascii	"signed char\000"
+ 1907      65642063 
+ 1907      68617200 
+ 1908              	.LASF52:
+ 1909 0047 2E5C6D61 		.ascii	".\\main.c\000"
+ 1909      696E2E63 
+ 1909      00
+ 1910              	.LASF4:
+ 1911 0050 6C6F6E67 		.ascii	"long int\000"
+ 1911      20696E74 
+ 1911      00
+ 1912              	.LASF10:
+ 1913 0059 646F7562 		.ascii	"double\000"
+ 1913      6C6500
+ 1914              	.LASF49:
+ 1915 0060 7469636B 		.ascii	"tick\000"
+ 1915      00
+ 1916              	.LASF14:
+ 1917 0065 48617264 		.ascii	"HardFault_IRQn\000"
+ 1917      4661756C 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 49
+
+
+ 1917      745F4952 
+ 1917      516E00
+ 1918              	.LASF35:
+ 1919 0074 5343425F 		.ascii	"SCB_Type\000"
+ 1919      54797065 
+ 1919      00
+ 1920              	.LASF8:
+ 1921 007d 756E7369 		.ascii	"unsigned int\000"
+ 1921      676E6564 
+ 1921      20696E74 
+ 1921      00
+ 1922              	.LASF5:
+ 1923 008a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1923      20756E73 
+ 1923      69676E65 
+ 1923      6420696E 
+ 1923      7400
+ 1924              	.LASF46:
+ 1925 009c 6973725F 		.ascii	"isr_fifo_empty\000"
+ 1925      6669666F 
+ 1925      5F656D70 
+ 1925      747900
+ 1926              	.LASF15:
+ 1927 00ab 53564361 		.ascii	"SVCall_IRQn\000"
+ 1927      6C6C5F49 
+ 1927      52516E00 
+ 1928              	.LASF3:
+ 1929 00b7 73686F72 		.ascii	"short unsigned int\000"
+ 1929      7420756E 
+ 1929      7369676E 
+ 1929      65642069 
+ 1929      6E7400
+ 1930              	.LASF47:
+ 1931 00ca 7472616E 		.ascii	"transfer_LEDdriver\000"
+ 1931      73666572 
+ 1931      5F4C4544 
+ 1931      64726976 
+ 1931      657200
+ 1932              	.LASF31:
+ 1933 00dd 49435352 		.ascii	"ICSR\000"
+ 1933      00
+ 1934              	.LASF48:
+ 1935 00e2 7365745F 		.ascii	"set_next_color\000"
+ 1935      6E657874 
+ 1935      5F636F6C 
+ 1935      6F7200
+ 1936              	.LASF32:
+ 1937 00f1 41495243 		.ascii	"AIRCR\000"
+ 1937      5200
+ 1938              	.LASF39:
+ 1939 00f7 53797354 		.ascii	"SysTick_Type\000"
+ 1939      69636B5F 
+ 1939      54797065 
+ 1939      00
+ 1940              	.LASF42:
+ 1941 0104 7072696F 		.ascii	"priority\000"
+ 1941      72697479 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 50
+
+
+ 1941      00
+ 1942              	.LASF17:
+ 1943 010d 53797354 		.ascii	"SysTick_IRQn\000"
+ 1943      69636B5F 
+ 1943      4952516E 
+ 1943      00
+ 1944              	.LASF41:
+ 1945 011a 4952516E 		.ascii	"IRQn\000"
+ 1945      00
+ 1946              	.LASF12:
+ 1947 011f 73697A65 		.ascii	"sizetype\000"
+ 1947      74797065 
+ 1947      00
+ 1948              	.LASF37:
+ 1949 0128 4C4F4144 		.ascii	"LOAD\000"
+ 1949      00
+ 1950              	.LASF43:
+ 1951 012d 7469636B 		.ascii	"ticks\000"
+ 1951      7300
+ 1952              	.LASF22:
+ 1953 0133 49434552 		.ascii	"ICER\000"
+ 1953      00
+ 1954              	.LASF30:
+ 1955 0138 43505549 		.ascii	"CPUID\000"
+ 1955      4400
+ 1956              	.LASF9:
+ 1957 013e 666C6F61 		.ascii	"float\000"
+ 1957      7400
+ 1958              	.LASF21:
+ 1959 0144 52455345 		.ascii	"RESERVED0\000"
+ 1959      52564544 
+ 1959      3000
+ 1960              	.LASF33:
+ 1961 014e 52455345 		.ascii	"RESERVED1\000"
+ 1961      52564544 
+ 1961      3100
+ 1962              	.LASF25:
+ 1963 0158 52455345 		.ascii	"RESERVED2\000"
+ 1963      52564544 
+ 1963      3200
+ 1964              	.LASF27:
+ 1965 0162 52455345 		.ascii	"RESERVED3\000"
+ 1965      52564544 
+ 1965      3300
+ 1966              	.LASF28:
+ 1967 016c 52455345 		.ascii	"RESERVED4\000"
+ 1967      52564544 
+ 1967      3400
+ 1968              	.LASF51:
+ 1969 0176 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 1969      4320342E 
+ 1969      372E3320 
+ 1969      32303133 
+ 1969      30333132 
+ 1970 01a9 616E6368 		.ascii	"anch revision 196615]\000"
+ 1970      20726576 
+ 1970      6973696F 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 51
+
+
+ 1970      6E203139 
+ 1970      36363135 
+ 1971              	.LASF44:
+ 1972 01bf 6973725F 		.ascii	"isr_systick\000"
+ 1972      73797374 
+ 1972      69636B00 
+ 1973              	.LASF1:
+ 1974 01cb 756E7369 		.ascii	"unsigned char\000"
+ 1974      676E6564 
+ 1974      20636861 
+ 1974      7200
+ 1975              	.LASF34:
+ 1976 01d9 53484353 		.ascii	"SHCSR\000"
+ 1976      5200
+ 1977              	.LASF2:
+ 1978 01df 73686F72 		.ascii	"short int\000"
+ 1978      7420696E 
+ 1978      7400
+ 1979              	.LASF20:
+ 1980 01e9 49534552 		.ascii	"ISER\000"
+ 1980      00
+ 1981              	.LASF29:
+ 1982 01ee 4E564943 		.ascii	"NVIC_Type\000"
+ 1982      5F547970 
+ 1982      6500
+ 1983              	.LASF54:
+ 1984 01f8 5F524742 		.ascii	"_RGB_tag\000"
+ 1984      5F746167 
+ 1984      00
+ 1985              	.LASF45:
+ 1986 0201 6973725F 		.ascii	"isr_reset\000"
+ 1986      72657365 
+ 1986      7400
+ 1987              	.LASF19:
+ 1988 020b 4952516E 		.ascii	"IRQn_Type\000"
+ 1988      5F547970 
+ 1988      6500
+ 1989              	.LASF18:
+ 1990 0215 75696E74 		.ascii	"uint32_t\000"
+ 1990      33325F74 
+ 1990      00
+ 1991              	.LASF16:
+ 1992 021e 50656E64 		.ascii	"PendSV_IRQn\000"
+ 1992      53565F49 
+ 1992      52516E00 
+ 1993              	.LASF11:
+ 1994 022a 63686172 		.ascii	"char\000"
+ 1994      00
+ 1995              	.LASF13:
+ 1996 022f 4E6F6E4D 		.ascii	"NonMaskableInt_IRQn\000"
+ 1996      61736B61 
+ 1996      626C6549 
+ 1996      6E745F49 
+ 1996      52516E00 
+ 1997              	.LASF56:
+ 1998 0243 53797354 		.ascii	"SysTick_Config\000"
+ 1998      69636B5F 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccNrnqYh.s 			page 52
+
+
+ 1998      436F6E66 
+ 1998      696700
+ 1999              	.LASF36:
+ 2000 0252 4354524C 		.ascii	"CTRL\000"
+ 2000      00
+ 2001              	.LASF38:
+ 2002 0257 43414C49 		.ascii	"CALIB\000"
+ 2002      4200
+ 2003              	.LASF23:
+ 2004 025d 52534552 		.ascii	"RSERVED1\000"
+ 2004      56454431 
+ 2004      00
+ 2005              	.LASF40:
+ 2006 0266 7267625F 		.ascii	"rgb_tag\000"
+ 2006      74616700 
+ 2007              	.LASF57:
+ 2008 026e 6D61696E 		.ascii	"main\000"
+ 2008      00
+ 2009              	.LASF53:
+ 2010 0273 433A5C55 		.ascii	"C:\\Users\\Tsubasa Maruyama\\Documents\\PSoC Creato"
+ 2010      73657273 
+ 2010      5C547375 
+ 2010      62617361 
+ 2010      204D6172 
+ 2011 02a2 725C4C74 		.ascii	"r\\Lticker\\Lticker.cydsn\000"
+ 2011      69636B65 
+ 2011      725C4C74 
+ 2011      69636B65 
+ 2011      722E6379 
+ 2012              	.LASF55:
+ 2013 02ba 4E564943 		.ascii	"NVIC_SetPriority\000"
+ 2013      5F536574 
+ 2013      5072696F 
+ 2013      72697479 
+ 2013      00
+ 2014              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

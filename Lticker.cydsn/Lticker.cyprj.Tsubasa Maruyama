@@ -12,20 +12,10 @@
 <CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
-<file name=".\CortexM0\ARM_GCC_473\Debug\WS2812driver_1.o">
-<dep name=".\Generated_Source\PSoC4\WS2812driver_1.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-<dep name=".\Generated_Source\PSoC4\WS2812driver_1.c" />
-</file>
-<file name=".\Generated_Source\PSoC4\WS2812driver_1.h" />
-<file name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<file name=".\Generated_Source\PSoC4\cyfitter.h" />
-<file name=".\Generated_Source\PSoC4\cytypes.h" />
-<file name=".\Generated_Source\PSoC4\WS2812driver_1.c" />
 <file name=".\CortexM0\ARM_GCC_473\Debug\main.o">
 <dep name=".\Generated_Source\PSoC4\Clock_1.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_2.h" />
+<dep name=".\Generated_Source\PSoC4\Counter_reset_gen.h" />
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
 <dep name=".\Generated_Source\PSoC4\Pin_1.h" />
@@ -34,7 +24,7 @@
 <dep name=".\Generated_Source\PSoC4\Pin_2_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\Pin_3.h" />
 <dep name=".\Generated_Source\PSoC4\Pin_3_aliases.h" />
-<dep name=".\Generated_Source\PSoC4\WS2812driver_1_WS2812driver.h" />
+<dep name=".\Generated_Source\PSoC4\WS2812driver_1.h" />
 <dep name=".\Generated_Source\PSoC4\core_cm0.h" />
 <dep name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
 <dep name=".\Generated_Source\PSoC4\core_cmFunc.h" />
@@ -46,10 +36,14 @@
 <dep name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
 <dep name=".\Generated_Source\PSoC4\cypins.h" />
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\isr_fifo_empty.h" />
+<dep name=".\Generated_Source\PSoC4\isr_reset_done.h" />
 <dep name=".\Generated_Source\PSoC4\project.h" />
 <dep name=".\main.c" />
 </file>
 <file name=".\Generated_Source\PSoC4\Clock_1.h" />
+<file name=".\Generated_Source\PSoC4\Clock_2.h" />
+<file name=".\Generated_Source\PSoC4\Counter_reset_gen.h" />
 <file name=".\Generated_Source\PSoC4\CyFlash.h" />
 <file name=".\Generated_Source\PSoC4\CyLib.h" />
 <file name=".\Generated_Source\PSoC4\Pin_1.h" />
@@ -58,15 +52,20 @@
 <file name=".\Generated_Source\PSoC4\Pin_2_aliases.h" />
 <file name=".\Generated_Source\PSoC4\Pin_3.h" />
 <file name=".\Generated_Source\PSoC4\Pin_3_aliases.h" />
-<file name=".\Generated_Source\PSoC4\WS2812driver_1_WS2812driver.h" />
+<file name=".\Generated_Source\PSoC4\WS2812driver_1.h" />
 <file name=".\Generated_Source\PSoC4\core_cm0.h" />
 <file name=".\Generated_Source\PSoC4\core_cm0_psoc4.h" />
 <file name=".\Generated_Source\PSoC4\core_cmFunc.h" />
 <file name=".\Generated_Source\PSoC4\core_cmInstr.h" />
 <file name=".\Generated_Source\PSoC4\cyPm.h" />
+<file name=".\Generated_Source\PSoC4\cydevice_trm.h" />
 <file name=".\Generated_Source\PSoC4\cydisabledsheets.h" />
+<file name=".\Generated_Source\PSoC4\cyfitter.h" />
 <file name=".\Generated_Source\PSoC4\cyfitter_cfg.h" />
 <file name=".\Generated_Source\PSoC4\cypins.h" />
+<file name=".\Generated_Source\PSoC4\cytypes.h" />
+<file name=".\Generated_Source\PSoC4\isr_fifo_empty.h" />
+<file name=".\Generated_Source\PSoC4\isr_reset_done.h" />
 <file name=".\Generated_Source\PSoC4\project.h" />
 <file name=".\main.c" />
 <file name=".\CortexM0\ARM_GCC_473\Debug\Clock_1.o">
@@ -77,6 +76,14 @@
 <dep name=".\Generated_Source\PSoC4\Clock_1.c" />
 </file>
 <file name=".\Generated_Source\PSoC4\Clock_1.c" />
+<file name=".\CortexM0\ARM_GCC_473\Debug\Clock_2.o">
+<dep name=".\Generated_Source\PSoC4\Clock_2.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\Clock_2.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\Clock_2.c" />
 <file name=".\CortexM0\ARM_GCC_473\Debug\Cm0Start.o">
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
 <dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
@@ -86,6 +93,24 @@
 <dep name=".\Generated_Source\PSoC4\Cm0Start.c" />
 </file>
 <file name=".\Generated_Source\PSoC4\Cm0Start.c" />
+<file name=".\CortexM0\ARM_GCC_473\Debug\Counter_reset_gen.o">
+<dep name=".\Generated_Source\PSoC4\Counter_reset_gen.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\Counter_reset_gen.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\Counter_reset_gen.c" />
+<file name=".\CortexM0\ARM_GCC_473\Debug\Counter_reset_gen_PM.o">
+<dep name=".\Generated_Source\PSoC4\Counter_reset_gen.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\Counter_reset_gen_PM.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\Counter_reset_gen_PM.c" />
 <file name=".\CortexM0\ARM_GCC_473\Debug\CyFlash.o">
 <dep name=".\Generated_Source\PSoC4\CyFlash.h" />
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
@@ -131,6 +156,14 @@
 <dep name=".\Generated_Source\PSoC4\Pin_3.c" />
 </file>
 <file name=".\Generated_Source\PSoC4\Pin_3.c" />
+<file name=".\CortexM0\ARM_GCC_473\Debug\WS2812driver_1.o">
+<dep name=".\Generated_Source\PSoC4\WS2812driver_1.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\WS2812driver_1.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\WS2812driver_1.c" />
 <file name=".\CortexM0\ARM_GCC_473\Debug\cyPm.o">
 <dep name=".\Generated_Source\PSoC4\CyLib.h" />
 <dep name=".\Generated_Source\PSoC4\cyPm.h" />
@@ -163,14 +196,52 @@
 <dep name=".\Generated_Source\PSoC4\cyutils.c" />
 </file>
 <file name=".\Generated_Source\PSoC4\cyutils.c" />
-<file name=".\CortexM0\ARM_GCC_473\Debug\WS2812driver_1_WS2812driver.o">
-<dep name=".\Generated_Source\PSoC4\WS2812driver_1_WS2812driver.c" />
+<file name=".\CortexM0\ARM_GCC_473\Debug\isr_fifo_empty.o">
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\isr_fifo_empty.h" />
+<dep name=".\Generated_Source\PSoC4\isr_fifo_empty.c" />
 </file>
-<file name=".\Generated_Source\PSoC4\WS2812driver_1_WS2812driver.c" />
+<file name=".\Generated_Source\PSoC4\isr_fifo_empty.c" />
+<file name=".\CortexM0\ARM_GCC_473\Debug\isr_reset_done.o">
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\isr_reset_done.h" />
+<dep name=".\Generated_Source\PSoC4\isr_reset_done.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\isr_reset_done.c" />
+<file name=".\Generated_Source\PSoC4\Counter_1.h" />
+<file name=".\CortexM0\ARM_GCC_473\Debug\Counter_1.o">
+<dep name=".\Generated_Source\PSoC4\Counter_1.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\Counter_1.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\Counter_1.c" />
+<file name=".\CortexM0\ARM_GCC_473\Debug\Counter_1_PM.o">
+<dep name=".\Generated_Source\PSoC4\Counter_1.h" />
+<dep name=".\Generated_Source\PSoC4\CyLib.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+<dep name=".\Generated_Source\PSoC4\Counter_1_PM.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\Counter_1_PM.c" />
 <file name=".\CortexM0\ARM_GCC_473\Debug\CyBootAsmGnu.o">
 <dep name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
 </file>
 <file name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
+<file name=".\Generated_Source\PSoC4\WS2812driver_1_WS2812driver.h" />
+<file name=".\CortexM0\ARM_GCC_473\Debug\WS2812driver_1_WS2812driver.o">
+<dep name=".\Generated_Source\PSoC4\WS2812driver_1_WS2812driver.c" />
+</file>
+<file name=".\Generated_Source\PSoC4\WS2812driver_1_WS2812driver.c" />
 <file name=".\Generated_Source\PSoC4\EZI2C_1.h" />
 <file name=".\Generated_Source\PSoC4\EZI2C_1_EZI2C.h" />
 <file name=".\Generated_Source\PSoC4\EZI2C_1_EZI2C_PVT.h" />
@@ -386,6 +457,11 @@
 <dep name=".\CortexM0\ARM_GCC_473\Debug\Pin_2.o" />
 <dep name=".\CortexM0\ARM_GCC_473\Debug\Pin_3.o" />
 <dep name=".\CortexM0\ARM_GCC_473\Debug\WS2812driver_1.o" />
+<dep name=".\CortexM0\ARM_GCC_473\Debug\Clock_2.o" />
+<dep name=".\CortexM0\ARM_GCC_473\Debug\isr_fifo_empty.o" />
+<dep name=".\CortexM0\ARM_GCC_473\Debug\isr_reset_done.o" />
+<dep name=".\CortexM0\ARM_GCC_473\Debug\Counter_reset_gen.o" />
+<dep name=".\CortexM0\ARM_GCC_473\Debug\Counter_reset_gen_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_473\Debug\Lticker.a" />
 <dep name="${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_473\Debug\CyComponentLibrary.a" />
 </file>
@@ -431,6 +507,13 @@
 <name_val_pair name=".\Generated_Source\PSoC4\WS2812driver_1_WS2812driver.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC4 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m0 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
 <name_val_pair name=".\Generated_Source\PSoC4\WS2812driver_1_untitled01.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC4 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m0 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
 <name_val_pair name=".\Generated_Source\PSoC4\WS2812driver_1.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC4 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m0 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
+<name_val_pair name=".\Generated_Source\PSoC4\Counter_1.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC4 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m0 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
+<name_val_pair name=".\Generated_Source\PSoC4\Counter_1_PM.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC4 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m0 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
+<name_val_pair name=".\Generated_Source\PSoC4\Clock_2.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC4 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m0 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
+<name_val_pair name=".\Generated_Source\PSoC4\isr_fifo_empty.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC4 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m0 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
+<name_val_pair name=".\Generated_Source\PSoC4\isr_reset_done.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC4 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m0 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
+<name_val_pair name=".\Generated_Source\PSoC4\Counter_reset_gen.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC4 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m0 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
+<name_val_pair name=".\Generated_Source\PSoC4\Counter_reset_gen_PM.c" v="&quot;-I. &quot;&quot;-I./Generated_Source/PSoC4 &quot;&quot;-Wno-main &quot;&quot;-mcpu=cortex-m0 &quot;&quot;-mthumb &quot;&quot;-Wall &quot;&quot;-g &quot;&quot;-D &quot;&quot;DEBUG &quot;&quot;-Wa,-alh=${OutputDir}\${CompileFile}.lst &quot;&quot;-ffunction-sections &quot;" />
 </name>
 </genericCmdLineData>
 <codeGenCmdLineTag v="&quot;-.appdatapath&quot; &quot;C:\Users\Tsubasa Maruyama\AppData\Local\Cypress Semiconductor\PSoC Creator\3.0&quot; &quot;-.fdsnotice&quot; &quot;-.fdswarpdepfile=warp_dependencies.txt&quot; &quot;-.fdselabdepfile=elab_dependencies.txt&quot; &quot;-.fdsbldfile=generated_files.txt&quot; &quot;-p&quot; &quot;C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\Lticker.cyprj&quot; &quot;-d&quot; &quot;CY8C4245AXI-483&quot; &quot;-s&quot; &quot;C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\Generated_Source\PSoC4&quot; &quot;--&quot; &quot;-yv2&quot; &quot;-v3&quot; &quot;-ygs&quot; &quot;-q10&quot; &quot;-o2&quot; &quot;-.fftcfgtype=LE&quot; " />
@@ -453,40 +536,47 @@
 <v>Off-Chip</v>
 </tree_states_tab_names>
 <tree_states>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Cypress Component Catalog\Communications\I2C\EZI2C Slave (SCB mode) [v1.20]">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Cypress Component Catalog\Digital\Functions">
 <ExpandedNodeIds>
 <v>Cypress Component Catalog</v>
 <v>Cypress Component Catalog\Analog</v>
 <v>Cypress Component Catalog\Analog\Amplifiers</v>
 <v>Cypress Component Catalog\Analog\DAC</v>
 <v>Cypress Component Catalog\Communications</v>
-<v>Cypress Component Catalog\Communications\I2C</v>
+<v>Cypress Component Catalog\Digital</v>
+<v>Cypress Component Catalog\Digital\Logic</v>
 <v>Cypress Component Catalog\System</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Cypress Component Catalog</v>
-<v>Cypress Component Catalog\Analog</v>
-<v>Cypress Component Catalog\Analog\ADC</v>
-<v>Cypress Component Catalog\Analog\Amplifiers</v>
-<v>Cypress Component Catalog\Analog\Amplifiers\Opamp [v1.0]</v>
-<v>Cypress Component Catalog\Analog\Analog MUX</v>
-<v>Cypress Component Catalog\Analog\Comparators</v>
-<v>Cypress Component Catalog\Analog\DAC</v>
-<v>Cypress Component Catalog\Analog\DAC\Current DAC (7 or 8-bit) [v1.0]</v>
-<v>Cypress Component Catalog\Analog\Manual Routing</v>
-<v>Cypress Component Catalog\CapSense</v>
-<v>Cypress Component Catalog\Communications</v>
-<v>Cypress Component Catalog\Communications\I2C</v>
-<v>Cypress Component Catalog\Communications\I2C\EZI2C Slave (SCB mode) [v1.20]</v>
-<v>Cypress Component Catalog\Communications\I2C\I2C (SCB mode) [v1.20]</v>
-<v>Cypress Component Catalog\Communications\I2S</v>
-<v>Cypress Component Catalog\Communications\Serial Communication Block (SCB) [v1.20]</v>
 <v>Cypress Component Catalog\Communications\SMBus/PMBus Slave</v>
 <v>Cypress Component Catalog\Communications\Software Transmit UART [v1.20]</v>
 <v>Cypress Component Catalog\Communications\SPI</v>
 <v>Cypress Component Catalog\Communications\UART (SCB mode) [v1.20]</v>
 <v>Cypress Component Catalog\Communications\UART [v2.30]</v>
 <v>Cypress Component Catalog\Digital</v>
+<v>Cypress Component Catalog\Digital\Functions</v>
+<v>Cypress Component Catalog\Digital\Logic</v>
+<v>Cypress Component Catalog\Digital\Logic\And [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\Bufoe [v1.10]</v>
+<v>Cypress Component Catalog\Digital\Logic\D Flip Flop [v1.30]</v>
+<v>Cypress Component Catalog\Digital\Logic\D Flip Flop w/ Enable [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\De-Multiplexer [v1.10]</v>
+<v>Cypress Component Catalog\Digital\Logic\Digital Constant [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\Logic High '1' [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\Logic Low '0' [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\Lookup Table [v1.50]</v>
+<v>Cypress Component Catalog\Digital\Logic\Multiplexer [v1.10]</v>
+<v>Cypress Component Catalog\Digital\Logic\Nand [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\Nor [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\Not [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\Or [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\SR Flip Flop [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\Toggle Flip Flop [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\Virtual Mux [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\Xnor [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\Xor [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Registers</v>
+<v>Cypress Component Catalog\Digital\Utility</v>
 <v>Cypress Component Catalog\Display</v>
 <v>Cypress Component Catalog\Ports and Pins</v>
 <v>Cypress Component Catalog\System</v>
@@ -496,9 +586,6 @@
 <v>Cypress Component Catalog\System\Die Temperature [v1.0]</v>
 <v>Cypress Component Catalog\System\Emulated EEPROM [v1.10]</v>
 <v>Cypress Component Catalog\System\Global Signal Reference [v2.0]</v>
-<v>Cypress Component Catalog\System\ILO Trim [v1.0]</v>
-<v>Cypress Component Catalog\System\Interrupt [v1.70]</v>
-<v>Cypress Component Catalog\Thermal Management</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Default Component Catalog\Components\WS2812driver [v0.0]">
@@ -512,14 +599,24 @@
 <v>Default Component Catalog\Components\WS2812driver [v0.0]</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Off-Chip Component Catalog\Diodes\LED [v1.0]">
 <ExpandedNodeIds>
 <v>Off-Chip Component Catalog</v>
+<v>Off-Chip Component Catalog\Diodes</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Off-Chip Component Catalog</v>
 <v>Off-Chip Component Catalog\Active</v>
 <v>Off-Chip Component Catalog\Diodes</v>
+<v>Off-Chip Component Catalog\Diodes\Bridge Rectifier [v1.0]</v>
+<v>Off-Chip Component Catalog\Diodes\Diode [v1.0]</v>
+<v>Off-Chip Component Catalog\Diodes\LED [v1.0]</v>
+<v>Off-Chip Component Catalog\Diodes\Photo Diode [v1.0]</v>
+<v>Off-Chip Component Catalog\Diodes\Schottky Diode [v1.0]</v>
+<v>Off-Chip Component Catalog\Diodes\SCR [v1.0]</v>
+<v>Off-Chip Component Catalog\Diodes\Triac [v1.0]</v>
+<v>Off-Chip Component Catalog\Diodes\Varactor Diode [v1.0]</v>
+<v>Off-Chip Component Catalog\Diodes\Zener Diode [v1.0]</v>
 <v>Off-Chip Component Catalog\Electro-Mechanical</v>
 <v>Off-Chip Component Catalog\Passive</v>
 <v>Off-Chip Component Catalog\Power</v>
@@ -532,7 +629,7 @@
 </dataGuid>
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
-<deps_time v="130595875053323235" />
+<deps_time v="130598402465776713" />
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
 <dataGuid v="bf610382-39c6-441f-80b8-b04622ea7845">
@@ -690,6 +787,66 @@
 <v>.\WS2812driver\WS2812driver.v</v>
 <v>.\WS2812driver\API\.h</v>
 <v>.\WS2812driver\API\.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Counter_v2_40.cysym</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Counter_v2_40.pdf</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Counter_v2_40.cystate</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Counter_v2_40.cycdx</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\API\Counter.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\API\Counter.h</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\API\Counter_PM.c</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Custom\cycountercontrol.cs</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Custom\cycountercontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Custom\cycountercontroladv.cs</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Custom\cycountercontroladv.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Custom\CyCounterCustomizer.cs</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Custom\cycounterparameters.cs</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Custom\Resources.Designer.cs</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Custom\cycountercontrol.resx</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Custom\cycountercontroladv.resx</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\Custom\Resources.resx</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\Counter_v2_40\PSoC4\Counter_v2_40.cysch</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Counter_v2_40\B_Counter_v2_40.cysym</v>
+<v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Counter_v2_40\B_Counter_v2_40.v</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.cyprimitive</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\PSoC4\API\clk.c</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\PSoC4\API\clk.h</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.primitive</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC4\API\intc.c</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC4\API\intc.h</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.primitive</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\cy_isr_v1_70.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC4\API\intc.c</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_isr_v1_70\PSoC4\API\intc.h</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.cystate</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0</v>
+<v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\LED_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\LED_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\LED_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\LED_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\LED_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\LED_v1_0\LED_v1_0.pdf</v>
 <v>.\Lticker.cydwr</v>
 <v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v4_11\PSoC4\API\cm0gcc.ld</v>
 <v>${CyRoot}\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v4_11\PSoC4\API\Cm0RealView.scat</v>
@@ -790,16 +947,32 @@
 <v>.\Generated_Source\PSoC4\WS2812driver_1_untitled01.c</v>
 <v>.\Generated_Source\PSoC4\WS2812driver_1.h</v>
 <v>.\Generated_Source\PSoC4\WS2812driver_1.c</v>
+<v>.\Generated_Source\PSoC4\Counter_1.c</v>
+<v>.\Generated_Source\PSoC4\Counter_1.h</v>
+<v>.\Generated_Source\PSoC4\Counter_1_PM.c</v>
+<v>.\Generated_Source\PSoC4\Clock_2.c</v>
+<v>.\Generated_Source\PSoC4\Clock_2.h</v>
+<v>.\Generated_Source\PSoC4\isr_fifo_empty.c</v>
+<v>.\Generated_Source\PSoC4\isr_fifo_empty.h</v>
+<v>.\Generated_Source\PSoC4\isr_reset_done.c</v>
+<v>.\Generated_Source\PSoC4\isr_reset_done.h</v>
+<v>.\Generated_Source\PSoC4\Counter_reset_gen.c</v>
+<v>.\Generated_Source\PSoC4\Counter_reset_gen.h</v>
+<v>.\Generated_Source\PSoC4\Counter_reset_gen_PM.c</v>
 </gen_list>
 <warp_dep>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\cypress.v</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\cy_psoc3_inc.v</v>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v</v>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v</v>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\B_Counter_v2_40\B_Counter_v2_40.v</v>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 </warp_dep>
-<deps_time v="130595875046112823" />
+<deps_time v="130598388158258370" />
 <top_block v="TopDesign" />
 <last_generation v="11" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>

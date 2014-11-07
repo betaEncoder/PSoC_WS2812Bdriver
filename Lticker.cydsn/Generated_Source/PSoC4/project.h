@@ -26,6 +26,10 @@
 #include <Pin_3.h>
 #include <Pin_3_aliases.h>
 #include <WS2812driver_1.h>
+#include <Counter_reset_gen.h>
+#include <Clock_2.h>
+#include <isr_fifo_empty.h>
+#include <isr_reset_done.h>
 #include <core_cm0_psoc4.h>
 #include <core_cm0.h>
 #include <CyFlash.h>

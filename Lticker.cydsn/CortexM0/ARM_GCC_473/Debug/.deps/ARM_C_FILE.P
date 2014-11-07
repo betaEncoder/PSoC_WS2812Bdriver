@@ -1,6 +1,6 @@
-C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/WS2812driver_1.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/WS2812driver_1.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/WS2812driver_1.c 
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/Clock_1.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Clock_1.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Clock_1.c 
 
-C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/WS2812driver_1.h : 
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Clock_1.h : 
 
 C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
 
@@ -8,5 +8,99 @@ C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generat
 
 C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h : 
 
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Clock_1.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/Clock_2.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Clock_2.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Clock_2.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Clock_2.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Clock_2.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/Cm0Start.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Cm0Start.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Cm0Start.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/Counter_reset_gen.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Counter_reset_gen.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Counter_reset_gen.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Counter_reset_gen.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Counter_reset_gen.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/Counter_reset_gen_PM.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Counter_reset_gen.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Counter_reset_gen_PM.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Counter_reset_gen_PM.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/CyFlash.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyFlash.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyFlash.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyPm.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyFlash.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/CyLib.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyLib.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyLib.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/Pin_1.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_1.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_1_aliases.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_1.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_1.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_1_aliases.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_1.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/Pin_2.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_2.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_2_aliases.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_2.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_2.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_2_aliases.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_2.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/Pin_3.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_3.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_3_aliases.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_3.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_3.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_3_aliases.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/Pin_3.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/WS2812driver_1.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/WS2812driver_1.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/WS2812driver_1.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/WS2812driver_1.h : 
+
 C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/WS2812driver_1.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/cyPm.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyPm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyPm.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyPm.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/cyfitter_cfg.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/cymetadata.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cymetadata.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cymetadata.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/cyutils.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyutils.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyutils.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/isr_fifo_empty.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/isr_fifo_empty.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/isr_fifo_empty.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/isr_fifo_empty.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/isr_fifo_empty.c : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/CortexM0/ARM_GCC_473/Debug/isr_reset_done.o : C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/CyLib.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cydevice_trm.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cyfitter.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/cytypes.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/isr_reset_done.h C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/isr_reset_done.c 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/isr_reset_done.h : 
+
+C:/Users/Tsubasa\ Maruyama/Documents/PSoC\ Creator/Lticker/Lticker.cydsn/Generated_Source/PSoC4/isr_reset_done.c : 
 

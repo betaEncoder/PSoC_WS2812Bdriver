@@ -1,0 +1,2395 @@
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"Counter_reset_gen.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.global	Counter_reset_gen_initVar
+  18              		.bss
+  19              		.type	Counter_reset_gen_initVar, %object
+  20              		.size	Counter_reset_gen_initVar, 1
+  21              	Counter_reset_gen_initVar:
+  22 0000 00       		.space	1
+  23              		.section	.text.Counter_reset_gen_Init,"ax",%progbits
+  24              		.align	2
+  25              		.global	Counter_reset_gen_Init
+  26              		.code	16
+  27              		.thumb_func
+  28              		.type	Counter_reset_gen_Init, %function
+  29              	Counter_reset_gen_Init:
+  30              	.LFB0:
+  31              		.file 1 ".\\Generated_Source\\PSoC4\\Counter_reset_gen.c"
+   1:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * File Name: Counter_reset_gen.c  
+   3:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Version 2.40
+   4:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+   5:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  Description:
+   6:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *     The Counter component consists of a 8, 16, 24 or 32-bit counter with
+   7:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *     a selectable period between 2 and 2^Width - 1.  
+   8:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+   9:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *   Note:
+  10:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *     None
+  11:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+  12:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************
+  13:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  14:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  15:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  16:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * the software package with which this file was provided.
+  17:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************/
+  18:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+  19:.\Generated_Source\PSoC4/Counter_reset_gen.c **** #include "Counter_reset_gen.h"
+  20:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+  21:.\Generated_Source\PSoC4/Counter_reset_gen.c **** uint8 Counter_reset_gen_initVar = 0u;
+  22:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+  23:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+  24:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+  25:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_Init
+  26:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 2
+
+
+  27:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+  28:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *     Initialize to the schematic state
+  29:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * 
+  30:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+  31:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void  
+  32:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+  33:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+  34:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+  35:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+  36:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+  37:.\Generated_Source\PSoC4/Counter_reset_gen.c **** void Counter_reset_gen_Init(void) 
+  38:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+  32              		.loc 1 38 0
+  33              		.cfi_startproc
+  34 0000 90B5     		push	{r4, r7, lr}
+  35              	.LCFI0:
+  36              		.cfi_def_cfa_offset 12
+  37              		.cfi_offset 4, -12
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  40 0002 83B0     		sub	sp, sp, #12
+  41              	.LCFI1:
+  42              		.cfi_def_cfa_offset 24
+  43 0004 00AF     		add	r7, sp, #0
+  44              	.LCFI2:
+  45              		.cfi_def_cfa_register 7
+  39:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #if (!Counter_reset_gen_UsingFixedFunction && !Counter_reset_gen_ControlRegRemoved)
+  40:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             uint8 ctrl;
+  41:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #endif /* (!Counter_reset_gen_UsingFixedFunction && !Counter_reset_gen_ControlRegRemoved) *
+  42:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         
+  43:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #if(!Counter_reset_gen_UsingFixedFunction) 
+  44:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Interrupt State Backup for Critical Region*/
+  45:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             uint8 Counter_reset_gen_interruptState;
+  46:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #endif /* (!Counter_reset_gen_UsingFixedFunction) */
+  47:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         
+  48:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #if (Counter_reset_gen_UsingFixedFunction)
+  49:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Clear all bits but the enable bit (if it's already set for Timer operation */
+  50:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             Counter_reset_gen_CONTROL &= Counter_reset_gen_CTRL_ENABLE;
+  51:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             
+  52:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Clear the mode bits for continuous run mode */
+  53:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             #if (CY_PSOC5A)
+  54:.\Generated_Source\PSoC4/Counter_reset_gen.c ****                 Counter_reset_gen_CONTROL2 &= ((uint8)(~Counter_reset_gen_CTRL_MODE_MASK));
+  55:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             #endif /* (CY_PSOC5A) */
+  56:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  57:.\Generated_Source\PSoC4/Counter_reset_gen.c ****                 Counter_reset_gen_CONTROL3 &= ((uint8)(~Counter_reset_gen_CTRL_MODE_MASK));        
+  58:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             #endif /* (CY_PSOC3 || CY_PSOC5LP) */
+  59:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Check if One Shot mode is enabled i.e. RunMode !=0*/
+  60:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             #if (Counter_reset_gen_RunModeUsed != 0x0u)
+  61:.\Generated_Source\PSoC4/Counter_reset_gen.c ****                 /* Set 3rd bit of Control register to enable one shot mode */
+  62:.\Generated_Source\PSoC4/Counter_reset_gen.c ****                 Counter_reset_gen_CONTROL |= Counter_reset_gen_ONESHOT;
+  63:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             #endif /* (Counter_reset_gen_RunModeUsed != 0x0u) */
+  64:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             
+  65:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Set the IRQ to use the status register interrupts */
+  66:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             Counter_reset_gen_CONTROL2 |= Counter_reset_gen_CTRL2_IRQ_SEL;
+  67:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             
+  68:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
+  69:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             Counter_reset_gen_RT1 &= ((uint8)(~Counter_reset_gen_RT1_MASK));
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 3
+
+
+  70:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             Counter_reset_gen_RT1 |= Counter_reset_gen_SYNC;     
+  71:.\Generated_Source\PSoC4/Counter_reset_gen.c ****                     
+  72:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /*Enable DSI Sync all all inputs of the Timer*/
+  73:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             Counter_reset_gen_RT1 &= ((uint8)(~Counter_reset_gen_SYNCDSI_MASK));
+  74:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             Counter_reset_gen_RT1 |= Counter_reset_gen_SYNCDSI_EN;
+  75:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+  76:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #else
+  77:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             #if(!Counter_reset_gen_ControlRegRemoved)
+  78:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Set the default compare mode defined in the parameter */
+  79:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             ctrl = Counter_reset_gen_CONTROL & ((uint8)(~Counter_reset_gen_CTRL_CMPMODE_MASK));
+  80:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             Counter_reset_gen_CONTROL = ctrl | Counter_reset_gen_DEFAULT_COMPARE_MODE;
+  81:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             
+  82:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Set the default capture mode defined in the parameter */
+  83:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             ctrl = Counter_reset_gen_CONTROL & ((uint8)(~Counter_reset_gen_CTRL_CAPMODE_MASK));
+  84:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             
+  85:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             #if( 0 != Counter_reset_gen_CAPTURE_MODE_CONF)
+  86:.\Generated_Source\PSoC4/Counter_reset_gen.c ****                 Counter_reset_gen_CONTROL = ctrl | Counter_reset_gen_DEFAULT_CAPTURE_MODE;
+  87:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             #else
+  88:.\Generated_Source\PSoC4/Counter_reset_gen.c ****                 Counter_reset_gen_CONTROL = ctrl;
+  89:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             #endif /* 0 != Counter_reset_gen_CAPTURE_MODE */ 
+  90:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             
+  91:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             #endif /* (!Counter_reset_gen_ControlRegRemoved) */
+  92:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #endif /* (Counter_reset_gen_UsingFixedFunction) */
+  93:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         
+  94:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         /* Clear all data in the FIFO's */
+  95:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #if (!Counter_reset_gen_UsingFixedFunction)
+  96:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             Counter_reset_gen_ClearFIFO();
+  46              		.loc 1 96 0
+  47 0006 FFF7FEFF 		bl	Counter_reset_gen_ClearFIFO
+  97:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #endif /* (!Counter_reset_gen_UsingFixedFunction) */
+  98:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         
+  99:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         /* Set Initial values from Configuration */
+ 100:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         Counter_reset_gen_WritePeriod(Counter_reset_gen_INIT_PERIOD_VALUE);
+  48              		.loc 1 100 0
+  49 000a F920     		mov	r0, #249
+  50 000c FFF7FEFF 		bl	Counter_reset_gen_WritePeriod
+ 101:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #if (!(Counter_reset_gen_UsingFixedFunction && (CY_PSOC5A)))
+ 102:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             Counter_reset_gen_WriteCounter(Counter_reset_gen_INIT_COUNTER_VALUE);
+  51              		.loc 1 102 0
+  52 0010 F920     		mov	r0, #249
+  53 0012 FFF7FEFF 		bl	Counter_reset_gen_WriteCounter
+ 103:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #endif /* (!(Counter_reset_gen_UsingFixedFunction && (CY_PSOC5A))) */
+ 104:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         Counter_reset_gen_SetInterruptMode(Counter_reset_gen_INIT_INTERRUPTS_MASK);
+  54              		.loc 1 104 0
+  55 0016 0C20     		mov	r0, #12
+  56 0018 FFF7FEFF 		bl	Counter_reset_gen_SetInterruptMode
+ 105:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         
+ 106:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #if (!Counter_reset_gen_UsingFixedFunction)
+ 107:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Read the status register to clear the unwanted interrupts */
+ 108:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             (void)Counter_reset_gen_ReadStatusRegister();
+  57              		.loc 1 108 0
+  58 001c FFF7FEFF 		bl	Counter_reset_gen_ReadStatusRegister
+ 109:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Set the compare value (only available to non-fixed function implementation */
+ 110:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             Counter_reset_gen_WriteCompare(Counter_reset_gen_INIT_COMPARE_VALUE);
+  59              		.loc 1 110 0
+  60 0020 8020     		mov	r0, #128
+  61 0022 FFF7FEFF 		bl	Counter_reset_gen_WriteCompare
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 4
+
+
+ 111:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Use the interrupt output of the status register for IRQ output */
+ 112:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             
+ 113:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region cri
+ 114:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Enter Critical Region*/
+ 115:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             Counter_reset_gen_interruptState = CyEnterCriticalSection();
+  62              		.loc 1 115 0
+  63 0026 FC1D     		add	r4, r7, #7
+  64 0028 FFF7FEFF 		bl	CyEnterCriticalSection
+  65 002c 031C     		mov	r3, r0
+  66 002e 2370     		strb	r3, [r4]
+ 116:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             
+ 117:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             Counter_reset_gen_STATUS_AUX_CTRL |= Counter_reset_gen_STATUS_ACTL_INT_EN_MASK;
+  67              		.loc 1 117 0
+  68 0030 074B     		ldr	r3, .L2
+  69 0032 074A     		ldr	r2, .L2
+  70 0034 1278     		ldrb	r2, [r2]
+  71 0036 D2B2     		uxtb	r2, r2
+  72 0038 1021     		mov	r1, #16
+  73 003a 0A43     		orr	r2, r1
+  74 003c D2B2     		uxtb	r2, r2
+  75 003e 1A70     		strb	r2, [r3]
+ 118:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             
+ 119:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             /* Exit Critical Region*/
+ 120:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             CyExitCriticalSection(Counter_reset_gen_interruptState);
+  76              		.loc 1 120 0
+  77 0040 FB1D     		add	r3, r7, #7
+  78 0042 1B78     		ldrb	r3, [r3]
+  79 0044 181C     		mov	r0, r3
+  80 0046 FFF7FEFF 		bl	CyExitCriticalSection
+ 121:.\Generated_Source\PSoC4/Counter_reset_gen.c ****             
+ 122:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         #endif /* (!Counter_reset_gen_UsingFixedFunction) */
+ 123:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+  81              		.loc 1 123 0
+  82 004a BD46     		mov	sp, r7
+  83 004c 03B0     		add	sp, sp, #12
+  84              		@ sp needed for prologue
+  85 004e 90BD     		pop	{r4, r7, pc}
+  86              	.L3:
+  87              		.align	2
+  88              	.L2:
+  89 0050 91000F40 		.word	1074725009
+  90              		.cfi_endproc
+  91              	.LFE0:
+  92              		.size	Counter_reset_gen_Init, .-Counter_reset_gen_Init
+  93              		.section	.text.Counter_reset_gen_Enable,"ax",%progbits
+  94              		.align	2
+  95              		.global	Counter_reset_gen_Enable
+  96              		.code	16
+  97              		.thumb_func
+  98              		.type	Counter_reset_gen_Enable, %function
+  99              	Counter_reset_gen_Enable:
+ 100              	.LFB1:
+ 124:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 125:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 126:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 127:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_Enable
+ 128:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 5
+
+
+ 129:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 130:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *     Enable the Counter
+ 131:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * 
+ 132:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 133:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void  
+ 134:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 135:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 136:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+ 137:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 138:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Side Effects: 
+ 139:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *   If the Enable mode is set to Hardware only then this function has no effect 
+ 140:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *   on the operation of the counter.
+ 141:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 142:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 143:.\Generated_Source\PSoC4/Counter_reset_gen.c **** void Counter_reset_gen_Enable(void) 
+ 144:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 101              		.loc 1 144 0
+ 102              		.cfi_startproc
+ 103 0000 80B5     		push	{r7, lr}
+ 104              	.LCFI3:
+ 105              		.cfi_def_cfa_offset 8
+ 106              		.cfi_offset 7, -8
+ 107              		.cfi_offset 14, -4
+ 108 0002 00AF     		add	r7, sp, #0
+ 109              	.LCFI4:
+ 110              		.cfi_def_cfa_register 7
+ 145:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* Globally Enable the Fixed Function Block chosen */
+ 146:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #if (Counter_reset_gen_UsingFixedFunction)
+ 147:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         Counter_reset_gen_GLOBAL_ENABLE |= Counter_reset_gen_BLOCK_EN_MASK;
+ 148:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         Counter_reset_gen_GLOBAL_STBY_ENABLE |= Counter_reset_gen_BLOCK_STBY_EN_MASK;
+ 149:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #endif /* (Counter_reset_gen_UsingFixedFunction) */  
+ 150:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         
+ 151:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* Enable the counter from the control register  */
+ 152:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* If Fixed Function then make sure Mode is set correctly */
+ 153:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* else make sure reset is clear */
+ 154:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #if(!Counter_reset_gen_ControlRegRemoved || Counter_reset_gen_UsingFixedFunction)
+ 155:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         Counter_reset_gen_CONTROL |= Counter_reset_gen_CTRL_ENABLE;                
+ 156:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #endif /* (!Counter_reset_gen_ControlRegRemoved || Counter_reset_gen_UsingFixedFunction) */
+ 157:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     
+ 158:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 111              		.loc 1 158 0
+ 112 0004 BD46     		mov	sp, r7
+ 113              		@ sp needed for prologue
+ 114 0006 80BD     		pop	{r7, pc}
+ 115              		.cfi_endproc
+ 116              	.LFE1:
+ 117              		.size	Counter_reset_gen_Enable, .-Counter_reset_gen_Enable
+ 118              		.section	.text.Counter_reset_gen_Start,"ax",%progbits
+ 119              		.align	2
+ 120              		.global	Counter_reset_gen_Start
+ 121              		.code	16
+ 122              		.thumb_func
+ 123              		.type	Counter_reset_gen_Start, %function
+ 124              	Counter_reset_gen_Start:
+ 125              	.LFB2:
+ 159:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 160:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 6
+
+
+ 161:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 162:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_Start
+ 163:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 164:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 165:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  Enables the counter for operation 
+ 166:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 167:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 168:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void  
+ 169:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 170:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 171:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+ 172:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 173:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Global variables:
+ 174:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  Counter_reset_gen_initVar: Is modified when this function is called for the  
+ 175:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *   first time. Is used to ensure that initialization happens only once.
+ 176:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 177:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 178:.\Generated_Source\PSoC4/Counter_reset_gen.c **** void Counter_reset_gen_Start(void) 
+ 179:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 126              		.loc 1 179 0
+ 127              		.cfi_startproc
+ 128 0000 80B5     		push	{r7, lr}
+ 129              	.LCFI5:
+ 130              		.cfi_def_cfa_offset 8
+ 131              		.cfi_offset 7, -8
+ 132              		.cfi_offset 14, -4
+ 133 0002 00AF     		add	r7, sp, #0
+ 134              	.LCFI6:
+ 135              		.cfi_def_cfa_register 7
+ 180:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     if(Counter_reset_gen_initVar == 0u)
+ 136              		.loc 1 180 0
+ 137 0004 064B     		ldr	r3, .L7
+ 138 0006 1B78     		ldrb	r3, [r3]
+ 139 0008 002B     		cmp	r3, #0
+ 140 000a 04D1     		bne	.L6
+ 181:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     {
+ 182:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         Counter_reset_gen_Init();
+ 141              		.loc 1 182 0
+ 142 000c FFF7FEFF 		bl	Counter_reset_gen_Init
+ 183:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         
+ 184:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         Counter_reset_gen_initVar = 1u; /* Clear this bit for Initialization */        
+ 143              		.loc 1 184 0
+ 144 0010 034B     		ldr	r3, .L7
+ 145 0012 0122     		mov	r2, #1
+ 146 0014 1A70     		strb	r2, [r3]
+ 147              	.L6:
+ 185:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     }
+ 186:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     
+ 187:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* Enable the Counter */
+ 188:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     Counter_reset_gen_Enable();        
+ 148              		.loc 1 188 0
+ 149 0016 FFF7FEFF 		bl	Counter_reset_gen_Enable
+ 189:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 150              		.loc 1 189 0
+ 151 001a BD46     		mov	sp, r7
+ 152              		@ sp needed for prologue
+ 153 001c 80BD     		pop	{r7, pc}
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 7
+
+
+ 154              	.L8:
+ 155 001e C046     		.align	2
+ 156              	.L7:
+ 157 0020 00000000 		.word	Counter_reset_gen_initVar
+ 158              		.cfi_endproc
+ 159              	.LFE2:
+ 160              		.size	Counter_reset_gen_Start, .-Counter_reset_gen_Start
+ 161              		.section	.text.Counter_reset_gen_Stop,"ax",%progbits
+ 162              		.align	2
+ 163              		.global	Counter_reset_gen_Stop
+ 164              		.code	16
+ 165              		.thumb_func
+ 166              		.type	Counter_reset_gen_Stop, %function
+ 167              	Counter_reset_gen_Stop:
+ 168              	.LFB3:
+ 190:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 191:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 192:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 193:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_Stop
+ 194:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 195:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 196:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Halts the counter, but does not change any modes or disable interrupts.
+ 197:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 198:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 199:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void  
+ 200:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 201:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 202:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+ 203:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 204:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Side Effects: If the Enable mode is set to Hardware only then this function
+ 205:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *               has no effect on the operation of the counter.
+ 206:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 207:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 208:.\Generated_Source\PSoC4/Counter_reset_gen.c **** void Counter_reset_gen_Stop(void) 
+ 209:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 169              		.loc 1 209 0
+ 170              		.cfi_startproc
+ 171 0000 80B5     		push	{r7, lr}
+ 172              	.LCFI7:
+ 173              		.cfi_def_cfa_offset 8
+ 174              		.cfi_offset 7, -8
+ 175              		.cfi_offset 14, -4
+ 176 0002 00AF     		add	r7, sp, #0
+ 177              	.LCFI8:
+ 178              		.cfi_def_cfa_register 7
+ 210:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* Disable Counter */
+ 211:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #if(!Counter_reset_gen_ControlRegRemoved || Counter_reset_gen_UsingFixedFunction)
+ 212:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         Counter_reset_gen_CONTROL &= ((uint8)(~Counter_reset_gen_CTRL_ENABLE));        
+ 213:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #endif /* (!Counter_reset_gen_ControlRegRemoved || Counter_reset_gen_UsingFixedFunction) */
+ 214:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     
+ 215:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* Globally disable the Fixed Function Block chosen */
+ 216:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #if (Counter_reset_gen_UsingFixedFunction)
+ 217:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         Counter_reset_gen_GLOBAL_ENABLE &= ((uint8)(~Counter_reset_gen_BLOCK_EN_MASK));
+ 218:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         Counter_reset_gen_GLOBAL_STBY_ENABLE &= ((uint8)(~Counter_reset_gen_BLOCK_STBY_EN_MASK));
+ 219:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #endif /* (Counter_reset_gen_UsingFixedFunction) */
+ 220:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 179              		.loc 1 220 0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 8
+
+
+ 180 0004 BD46     		mov	sp, r7
+ 181              		@ sp needed for prologue
+ 182 0006 80BD     		pop	{r7, pc}
+ 183              		.cfi_endproc
+ 184              	.LFE3:
+ 185              		.size	Counter_reset_gen_Stop, .-Counter_reset_gen_Stop
+ 186              		.section	.text.Counter_reset_gen_SetInterruptMode,"ax",%progbits
+ 187              		.align	2
+ 188              		.global	Counter_reset_gen_SetInterruptMode
+ 189              		.code	16
+ 190              		.thumb_func
+ 191              		.type	Counter_reset_gen_SetInterruptMode, %function
+ 192              	Counter_reset_gen_SetInterruptMode:
+ 193              	.LFB4:
+ 221:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 222:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 223:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 224:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_SetInterruptMode
+ 225:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 226:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 227:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Configures which interrupt sources are enabled to generate the final interrupt
+ 228:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 229:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 230:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  InterruptsMask: This parameter is an or'd collection of the status bits
+ 231:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *                   which will be allowed to generate the counters interrupt.   
+ 232:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 233:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 234:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+ 235:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 236:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 237:.\Generated_Source\PSoC4/Counter_reset_gen.c **** void Counter_reset_gen_SetInterruptMode(uint8 interruptsMask) 
+ 238:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 194              		.loc 1 238 0
+ 195              		.cfi_startproc
+ 196 0000 80B5     		push	{r7, lr}
+ 197              	.LCFI9:
+ 198              		.cfi_def_cfa_offset 8
+ 199              		.cfi_offset 7, -8
+ 200              		.cfi_offset 14, -4
+ 201 0002 82B0     		sub	sp, sp, #8
+ 202              	.LCFI10:
+ 203              		.cfi_def_cfa_offset 16
+ 204 0004 00AF     		add	r7, sp, #0
+ 205              	.LCFI11:
+ 206              		.cfi_def_cfa_register 7
+ 207 0006 021C     		mov	r2, r0
+ 208 0008 FB1D     		add	r3, r7, #7
+ 209 000a 1A70     		strb	r2, [r3]
+ 239:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     Counter_reset_gen_STATUS_MASK = interruptsMask;
+ 210              		.loc 1 239 0
+ 211 000c 034B     		ldr	r3, .L11
+ 212 000e FA1D     		add	r2, r7, #7
+ 213 0010 1278     		ldrb	r2, [r2]
+ 214 0012 1A70     		strb	r2, [r3]
+ 240:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 215              		.loc 1 240 0
+ 216 0014 BD46     		mov	sp, r7
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 9
+
+
+ 217 0016 02B0     		add	sp, sp, #8
+ 218              		@ sp needed for prologue
+ 219 0018 80BD     		pop	{r7, pc}
+ 220              	.L12:
+ 221 001a C046     		.align	2
+ 222              	.L11:
+ 223 001c 81000F40 		.word	1074724993
+ 224              		.cfi_endproc
+ 225              	.LFE4:
+ 226              		.size	Counter_reset_gen_SetInterruptMode, .-Counter_reset_gen_SetInterruptMode
+ 227              		.section	.text.Counter_reset_gen_ReadStatusRegister,"ax",%progbits
+ 228              		.align	2
+ 229              		.global	Counter_reset_gen_ReadStatusRegister
+ 230              		.code	16
+ 231              		.thumb_func
+ 232              		.type	Counter_reset_gen_ReadStatusRegister, %function
+ 233              	Counter_reset_gen_ReadStatusRegister:
+ 234              	.LFB5:
+ 241:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 242:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 243:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 244:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_ReadStatusRegister
+ 245:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 246:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 247:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *   Reads the status register and returns it's state. This function should use
+ 248:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *       defined types for the bit-field information as the bits in this
+ 249:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *       register may be permuteable.
+ 250:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 251:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 252:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+ 253:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 254:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 255:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  (uint8) The contents of the status register
+ 256:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 257:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Side Effects:
+ 258:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *   Status register bits may be clear on read. 
+ 259:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 260:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 261:.\Generated_Source\PSoC4/Counter_reset_gen.c **** uint8   Counter_reset_gen_ReadStatusRegister(void) 
+ 262:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 235              		.loc 1 262 0
+ 236              		.cfi_startproc
+ 237 0000 80B5     		push	{r7, lr}
+ 238              	.LCFI12:
+ 239              		.cfi_def_cfa_offset 8
+ 240              		.cfi_offset 7, -8
+ 241              		.cfi_offset 14, -4
+ 242 0002 00AF     		add	r7, sp, #0
+ 243              	.LCFI13:
+ 244              		.cfi_def_cfa_register 7
+ 263:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     return Counter_reset_gen_STATUS;
+ 245              		.loc 1 263 0
+ 246 0004 024B     		ldr	r3, .L15
+ 247 0006 1B78     		ldrb	r3, [r3]
+ 248 0008 DBB2     		uxtb	r3, r3
+ 264:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 249              		.loc 1 264 0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 10
+
+
+ 250 000a 181C     		mov	r0, r3
+ 251 000c BD46     		mov	sp, r7
+ 252              		@ sp needed for prologue
+ 253 000e 80BD     		pop	{r7, pc}
+ 254              	.L16:
+ 255              		.align	2
+ 256              	.L15:
+ 257 0010 61000F40 		.word	1074724961
+ 258              		.cfi_endproc
+ 259              	.LFE5:
+ 260              		.size	Counter_reset_gen_ReadStatusRegister, .-Counter_reset_gen_ReadStatusRegister
+ 261              		.section	.text.Counter_reset_gen_WriteCounter,"ax",%progbits
+ 262              		.align	2
+ 263              		.global	Counter_reset_gen_WriteCounter
+ 264              		.code	16
+ 265              		.thumb_func
+ 266              		.type	Counter_reset_gen_WriteCounter, %function
+ 267              	Counter_reset_gen_WriteCounter:
+ 268              	.LFB6:
+ 265:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 266:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 267:.\Generated_Source\PSoC4/Counter_reset_gen.c **** #if(!Counter_reset_gen_ControlRegRemoved)
+ 268:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 269:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_ReadControlRegister
+ 270:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 271:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 272:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *   Reads the control register and returns it's state. This function should use
+ 273:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *       defined types for the bit-field information as the bits in this
+ 274:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *       register may be permuteable.
+ 275:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 276:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 277:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+ 278:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 279:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 280:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  (uint8) The contents of the control register
+ 281:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 282:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 283:.\Generated_Source\PSoC4/Counter_reset_gen.c **** uint8   Counter_reset_gen_ReadControlRegister(void) 
+ 284:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 285:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     return Counter_reset_gen_CONTROL;
+ 286:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 287:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 288:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 289:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 290:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_WriteControlRegister
+ 291:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 292:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 293:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *   Sets the bit-field of the control register.  This function should use
+ 294:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *       defined types for the bit-field information as the bits in this
+ 295:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *       register may be permuteable.
+ 296:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 297:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 298:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+ 299:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 300:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 301:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  (uint8) The contents of the control register
+ 302:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 11
+
+
+ 303:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 304:.\Generated_Source\PSoC4/Counter_reset_gen.c **** void    Counter_reset_gen_WriteControlRegister(uint8 control) 
+ 305:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 306:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     Counter_reset_gen_CONTROL = control;
+ 307:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 308:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 309:.\Generated_Source\PSoC4/Counter_reset_gen.c **** #endif  /* (!Counter_reset_gen_ControlRegRemoved) */
+ 310:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 311:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 312:.\Generated_Source\PSoC4/Counter_reset_gen.c **** #if (!(Counter_reset_gen_UsingFixedFunction && (CY_PSOC5A)))
+ 313:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 314:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_WriteCounter
+ 315:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 316:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 317:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *   This funtion is used to set the counter to a specific value
+ 318:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 319:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 320:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  counter:  New counter value. 
+ 321:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 322:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 323:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void 
+ 324:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 325:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 326:.\Generated_Source\PSoC4/Counter_reset_gen.c **** void Counter_reset_gen_WriteCounter(uint8 counter) \
+ 327:.\Generated_Source\PSoC4/Counter_reset_gen.c ****                                    
+ 328:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 269              		.loc 1 328 0
+ 270              		.cfi_startproc
+ 271 0000 80B5     		push	{r7, lr}
+ 272              	.LCFI14:
+ 273              		.cfi_def_cfa_offset 8
+ 274              		.cfi_offset 7, -8
+ 275              		.cfi_offset 14, -4
+ 276 0002 82B0     		sub	sp, sp, #8
+ 277              	.LCFI15:
+ 278              		.cfi_def_cfa_offset 16
+ 279 0004 00AF     		add	r7, sp, #0
+ 280              	.LCFI16:
+ 281              		.cfi_def_cfa_register 7
+ 282 0006 021C     		mov	r2, r0
+ 283 0008 FB1D     		add	r3, r7, #7
+ 284 000a 1A70     		strb	r2, [r3]
+ 329:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #if(Counter_reset_gen_UsingFixedFunction)
+ 330:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         /* assert if block is already enabled */
+ 331:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         CYASSERT (0u == (Counter_reset_gen_GLOBAL_ENABLE & Counter_reset_gen_BLOCK_EN_MASK));
+ 332:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         /* If block is disabled, enable it and then write the counter */
+ 333:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         Counter_reset_gen_GLOBAL_ENABLE |= Counter_reset_gen_BLOCK_EN_MASK;
+ 334:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         CY_SET_REG16(Counter_reset_gen_COUNTER_LSB_PTR, (uint16)counter);
+ 335:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         Counter_reset_gen_GLOBAL_ENABLE &= ((uint8)(~Counter_reset_gen_BLOCK_EN_MASK));
+ 336:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #else
+ 337:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         CY_SET_REG8(Counter_reset_gen_COUNTER_LSB_PTR, counter);
+ 285              		.loc 1 337 0
+ 286 000c 034B     		ldr	r3, .L18
+ 287 000e FA1D     		add	r2, r7, #7
+ 288 0010 1278     		ldrb	r2, [r2]
+ 289 0012 1A70     		strb	r2, [r3]
+ 338:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #endif /* (Counter_reset_gen_UsingFixedFunction) */
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 12
+
+
+ 339:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 290              		.loc 1 339 0
+ 291 0014 BD46     		mov	sp, r7
+ 292 0016 02B0     		add	sp, sp, #8
+ 293              		@ sp needed for prologue
+ 294 0018 80BD     		pop	{r7, pc}
+ 295              	.L19:
+ 296 001a C046     		.align	2
+ 297              	.L18:
+ 298 001c 01000F40 		.word	1074724865
+ 299              		.cfi_endproc
+ 300              	.LFE6:
+ 301              		.size	Counter_reset_gen_WriteCounter, .-Counter_reset_gen_WriteCounter
+ 302              		.section	.text.Counter_reset_gen_ReadCounter,"ax",%progbits
+ 303              		.align	2
+ 304              		.global	Counter_reset_gen_ReadCounter
+ 305              		.code	16
+ 306              		.thumb_func
+ 307              		.type	Counter_reset_gen_ReadCounter, %function
+ 308              	Counter_reset_gen_ReadCounter:
+ 309              	.LFB7:
+ 340:.\Generated_Source\PSoC4/Counter_reset_gen.c **** #endif /* (!(Counter_reset_gen_UsingFixedFunction && (CY_PSOC5A))) */
+ 341:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 342:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 343:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 344:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_ReadCounter
+ 345:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 346:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 347:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Returns the current value of the counter.  It doesn't matter
+ 348:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * if the counter is enabled or running.
+ 349:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 350:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 351:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void:  
+ 352:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 353:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 354:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  (uint8) The present value of the counter.
+ 355:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 356:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 357:.\Generated_Source\PSoC4/Counter_reset_gen.c **** uint8 Counter_reset_gen_ReadCounter(void) 
+ 358:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 310              		.loc 1 358 0
+ 311              		.cfi_startproc
+ 312 0000 80B5     		push	{r7, lr}
+ 313              	.LCFI17:
+ 314              		.cfi_def_cfa_offset 8
+ 315              		.cfi_offset 7, -8
+ 316              		.cfi_offset 14, -4
+ 317 0002 00AF     		add	r7, sp, #0
+ 318              	.LCFI18:
+ 319              		.cfi_def_cfa_register 7
+ 359:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* Force capture by reading Accumulator */
+ 360:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* Must first do a software capture to be able to read the counter */
+ 361:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
+ 362:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #if(Counter_reset_gen_UsingFixedFunction)
+ 363:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 		(void)CY_GET_REG16(Counter_reset_gen_COUNTER_LSB_PTR);
+ 364:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 	#else
+ 365:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 		(void)CY_GET_REG8(Counter_reset_gen_COUNTER_LSB_PTR_8BIT);
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 13
+
+
+ 320              		.loc 1 365 0
+ 321 0004 034B     		ldr	r3, .L22
+ 322 0006 1B78     		ldrb	r3, [r3]
+ 366:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 	#endif/* (Counter_reset_gen_UsingFixedFunction) */
+ 367:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     
+ 368:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* Read the data from the FIFO (or capture register for Fixed Function)*/
+ 369:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #if(Counter_reset_gen_UsingFixedFunction)
+ 370:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         return ((uint8)CY_GET_REG16(Counter_reset_gen_STATICCOUNT_LSB_PTR));
+ 371:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #else
+ 372:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         return (CY_GET_REG8(Counter_reset_gen_STATICCOUNT_LSB_PTR));
+ 323              		.loc 1 372 0
+ 324 0008 034B     		ldr	r3, .L22+4
+ 325 000a 1B78     		ldrb	r3, [r3]
+ 326 000c DBB2     		uxtb	r3, r3
+ 373:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #endif /* (Counter_reset_gen_UsingFixedFunction) */
+ 374:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 327              		.loc 1 374 0
+ 328 000e 181C     		mov	r0, r3
+ 329 0010 BD46     		mov	sp, r7
+ 330              		@ sp needed for prologue
+ 331 0012 80BD     		pop	{r7, pc}
+ 332              	.L23:
+ 333              		.align	2
+ 334              	.L22:
+ 335 0014 01000F40 		.word	1074724865
+ 336 0018 41000F40 		.word	1074724929
+ 337              		.cfi_endproc
+ 338              	.LFE7:
+ 339              		.size	Counter_reset_gen_ReadCounter, .-Counter_reset_gen_ReadCounter
+ 340              		.section	.text.Counter_reset_gen_ReadCapture,"ax",%progbits
+ 341              		.align	2
+ 342              		.global	Counter_reset_gen_ReadCapture
+ 343              		.code	16
+ 344              		.thumb_func
+ 345              		.type	Counter_reset_gen_ReadCapture, %function
+ 346              	Counter_reset_gen_ReadCapture:
+ 347              	.LFB8:
+ 375:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 376:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 377:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 378:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_ReadCapture
+ 379:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 380:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 381:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *   This function returns the last value captured.
+ 382:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 383:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 384:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+ 385:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 386:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 387:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  (uint8) Present Capture value.
+ 388:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 389:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 390:.\Generated_Source\PSoC4/Counter_reset_gen.c **** uint8 Counter_reset_gen_ReadCapture(void) 
+ 391:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 348              		.loc 1 391 0
+ 349              		.cfi_startproc
+ 350 0000 80B5     		push	{r7, lr}
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 14
+
+
+ 351              	.LCFI19:
+ 352              		.cfi_def_cfa_offset 8
+ 353              		.cfi_offset 7, -8
+ 354              		.cfi_offset 14, -4
+ 355 0002 00AF     		add	r7, sp, #0
+ 356              	.LCFI20:
+ 357              		.cfi_def_cfa_register 7
+ 392:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #if(Counter_reset_gen_UsingFixedFunction)
+ 393:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         return ((uint8)CY_GET_REG16(Counter_reset_gen_STATICCOUNT_LSB_PTR));
+ 394:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #else
+ 395:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         return (CY_GET_REG8(Counter_reset_gen_STATICCOUNT_LSB_PTR));
+ 358              		.loc 1 395 0
+ 359 0004 024B     		ldr	r3, .L26
+ 360 0006 1B78     		ldrb	r3, [r3]
+ 361 0008 DBB2     		uxtb	r3, r3
+ 396:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #endif /* (Counter_reset_gen_UsingFixedFunction) */
+ 397:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 362              		.loc 1 397 0
+ 363 000a 181C     		mov	r0, r3
+ 364 000c BD46     		mov	sp, r7
+ 365              		@ sp needed for prologue
+ 366 000e 80BD     		pop	{r7, pc}
+ 367              	.L27:
+ 368              		.align	2
+ 369              	.L26:
+ 370 0010 41000F40 		.word	1074724929
+ 371              		.cfi_endproc
+ 372              	.LFE8:
+ 373              		.size	Counter_reset_gen_ReadCapture, .-Counter_reset_gen_ReadCapture
+ 374              		.section	.text.Counter_reset_gen_WritePeriod,"ax",%progbits
+ 375              		.align	2
+ 376              		.global	Counter_reset_gen_WritePeriod
+ 377              		.code	16
+ 378              		.thumb_func
+ 379              		.type	Counter_reset_gen_WritePeriod, %function
+ 380              	Counter_reset_gen_WritePeriod:
+ 381              	.LFB9:
+ 398:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 399:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 400:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 401:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_WritePeriod
+ 402:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 403:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 404:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Changes the period of the counter.  The new period 
+ 405:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * will be loaded the next time terminal count is detected.
+ 406:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 407:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 408:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  period: (uint8) A value of 0 will result in
+ 409:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *         the counter remaining at zero.  
+ 410:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 411:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 412:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+ 413:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 414:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 415:.\Generated_Source\PSoC4/Counter_reset_gen.c **** void Counter_reset_gen_WritePeriod(uint8 period) 
+ 416:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 382              		.loc 1 416 0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 15
+
+
+ 383              		.cfi_startproc
+ 384 0000 80B5     		push	{r7, lr}
+ 385              	.LCFI21:
+ 386              		.cfi_def_cfa_offset 8
+ 387              		.cfi_offset 7, -8
+ 388              		.cfi_offset 14, -4
+ 389 0002 82B0     		sub	sp, sp, #8
+ 390              	.LCFI22:
+ 391              		.cfi_def_cfa_offset 16
+ 392 0004 00AF     		add	r7, sp, #0
+ 393              	.LCFI23:
+ 394              		.cfi_def_cfa_register 7
+ 395 0006 021C     		mov	r2, r0
+ 396 0008 FB1D     		add	r3, r7, #7
+ 397 000a 1A70     		strb	r2, [r3]
+ 417:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #if(Counter_reset_gen_UsingFixedFunction)
+ 418:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         CY_SET_REG16(Counter_reset_gen_PERIOD_LSB_PTR,(uint16)period);
+ 419:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #else
+ 420:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         CY_SET_REG8(Counter_reset_gen_PERIOD_LSB_PTR, period);
+ 398              		.loc 1 420 0
+ 399 000c 034B     		ldr	r3, .L29
+ 400 000e FA1D     		add	r2, r7, #7
+ 401 0010 1278     		ldrb	r2, [r2]
+ 402 0012 1A70     		strb	r2, [r3]
+ 421:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #endif /* (Counter_reset_gen_UsingFixedFunction) */
+ 422:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 403              		.loc 1 422 0
+ 404 0014 BD46     		mov	sp, r7
+ 405 0016 02B0     		add	sp, sp, #8
+ 406              		@ sp needed for prologue
+ 407 0018 80BD     		pop	{r7, pc}
+ 408              	.L30:
+ 409 001a C046     		.align	2
+ 410              	.L29:
+ 411 001c 21000F40 		.word	1074724897
+ 412              		.cfi_endproc
+ 413              	.LFE9:
+ 414              		.size	Counter_reset_gen_WritePeriod, .-Counter_reset_gen_WritePeriod
+ 415              		.section	.text.Counter_reset_gen_ReadPeriod,"ax",%progbits
+ 416              		.align	2
+ 417              		.global	Counter_reset_gen_ReadPeriod
+ 418              		.code	16
+ 419              		.thumb_func
+ 420              		.type	Counter_reset_gen_ReadPeriod, %function
+ 421              	Counter_reset_gen_ReadPeriod:
+ 422              	.LFB10:
+ 423:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 424:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 425:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 426:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_ReadPeriod
+ 427:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 428:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 429:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Reads the current period value without affecting counter operation.
+ 430:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 431:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 432:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void:  
+ 433:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 16
+
+
+ 434:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 435:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  (uint8) Present period value.
+ 436:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 437:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 438:.\Generated_Source\PSoC4/Counter_reset_gen.c **** uint8 Counter_reset_gen_ReadPeriod(void) 
+ 439:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 423              		.loc 1 439 0
+ 424              		.cfi_startproc
+ 425 0000 80B5     		push	{r7, lr}
+ 426              	.LCFI24:
+ 427              		.cfi_def_cfa_offset 8
+ 428              		.cfi_offset 7, -8
+ 429              		.cfi_offset 14, -4
+ 430 0002 00AF     		add	r7, sp, #0
+ 431              	.LCFI25:
+ 432              		.cfi_def_cfa_register 7
+ 440:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #if(Counter_reset_gen_UsingFixedFunction)
+ 441:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         return ((uint8)CY_GET_REG16(Counter_reset_gen_PERIOD_LSB_PTR));
+ 442:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #else
+ 443:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         return (CY_GET_REG8(Counter_reset_gen_PERIOD_LSB_PTR));
+ 433              		.loc 1 443 0
+ 434 0004 024B     		ldr	r3, .L33
+ 435 0006 1B78     		ldrb	r3, [r3]
+ 436 0008 DBB2     		uxtb	r3, r3
+ 444:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #endif /* (Counter_reset_gen_UsingFixedFunction) */
+ 445:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 437              		.loc 1 445 0
+ 438 000a 181C     		mov	r0, r3
+ 439 000c BD46     		mov	sp, r7
+ 440              		@ sp needed for prologue
+ 441 000e 80BD     		pop	{r7, pc}
+ 442              	.L34:
+ 443              		.align	2
+ 444              	.L33:
+ 445 0010 21000F40 		.word	1074724897
+ 446              		.cfi_endproc
+ 447              	.LFE10:
+ 448              		.size	Counter_reset_gen_ReadPeriod, .-Counter_reset_gen_ReadPeriod
+ 449              		.section	.text.Counter_reset_gen_WriteCompare,"ax",%progbits
+ 450              		.align	2
+ 451              		.global	Counter_reset_gen_WriteCompare
+ 452              		.code	16
+ 453              		.thumb_func
+ 454              		.type	Counter_reset_gen_WriteCompare, %function
+ 455              	Counter_reset_gen_WriteCompare:
+ 456              	.LFB11:
+ 446:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 447:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 448:.\Generated_Source\PSoC4/Counter_reset_gen.c **** #if (!Counter_reset_gen_UsingFixedFunction)
+ 449:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 450:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_WriteCompare
+ 451:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 452:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 453:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Changes the compare value.  The compare output will 
+ 454:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * reflect the new value on the next UDB clock.  The compare output will be 
+ 455:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * driven high when the present counter value compares true based on the 
+ 456:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * configured compare mode setting. 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 17
+
+
+ 457:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 458:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 459:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  Compare:  New compare value. 
+ 460:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 461:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 462:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+ 463:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 464:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 465:.\Generated_Source\PSoC4/Counter_reset_gen.c **** void Counter_reset_gen_WriteCompare(uint8 compare) \
+ 466:.\Generated_Source\PSoC4/Counter_reset_gen.c ****                                    
+ 467:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 457              		.loc 1 467 0
+ 458              		.cfi_startproc
+ 459 0000 80B5     		push	{r7, lr}
+ 460              	.LCFI26:
+ 461              		.cfi_def_cfa_offset 8
+ 462              		.cfi_offset 7, -8
+ 463              		.cfi_offset 14, -4
+ 464 0002 82B0     		sub	sp, sp, #8
+ 465              	.LCFI27:
+ 466              		.cfi_def_cfa_offset 16
+ 467 0004 00AF     		add	r7, sp, #0
+ 468              	.LCFI28:
+ 469              		.cfi_def_cfa_register 7
+ 470 0006 021C     		mov	r2, r0
+ 471 0008 FB1D     		add	r3, r7, #7
+ 472 000a 1A70     		strb	r2, [r3]
+ 468:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #if(Counter_reset_gen_UsingFixedFunction)
+ 469:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         CY_SET_REG16(Counter_reset_gen_COMPARE_LSB_PTR, (uint16)compare);
+ 470:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #else
+ 471:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         CY_SET_REG8(Counter_reset_gen_COMPARE_LSB_PTR, compare);
+ 473              		.loc 1 471 0
+ 474 000c 034B     		ldr	r3, .L36
+ 475 000e FA1D     		add	r2, r7, #7
+ 476 0010 1278     		ldrb	r2, [r2]
+ 477 0012 1A70     		strb	r2, [r3]
+ 472:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     #endif /* (Counter_reset_gen_UsingFixedFunction) */
+ 473:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 478              		.loc 1 473 0
+ 479 0014 BD46     		mov	sp, r7
+ 480 0016 02B0     		add	sp, sp, #8
+ 481              		@ sp needed for prologue
+ 482 0018 80BD     		pop	{r7, pc}
+ 483              	.L37:
+ 484 001a C046     		.align	2
+ 485              	.L36:
+ 486 001c 31000F40 		.word	1074724913
+ 487              		.cfi_endproc
+ 488              	.LFE11:
+ 489              		.size	Counter_reset_gen_WriteCompare, .-Counter_reset_gen_WriteCompare
+ 490              		.section	.text.Counter_reset_gen_ReadCompare,"ax",%progbits
+ 491              		.align	2
+ 492              		.global	Counter_reset_gen_ReadCompare
+ 493              		.code	16
+ 494              		.thumb_func
+ 495              		.type	Counter_reset_gen_ReadCompare, %function
+ 496              	Counter_reset_gen_ReadCompare:
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 18
+
+
+ 497              	.LFB12:
+ 474:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 475:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 476:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 477:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_ReadCompare
+ 478:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 479:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 480:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Returns the compare value.
+ 481:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 482:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 483:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void:
+ 484:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 485:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 486:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  (uint8) Present compare value.
+ 487:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 488:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 489:.\Generated_Source\PSoC4/Counter_reset_gen.c **** uint8 Counter_reset_gen_ReadCompare(void) 
+ 490:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 498              		.loc 1 490 0
+ 499              		.cfi_startproc
+ 500 0000 80B5     		push	{r7, lr}
+ 501              	.LCFI29:
+ 502              		.cfi_def_cfa_offset 8
+ 503              		.cfi_offset 7, -8
+ 504              		.cfi_offset 14, -4
+ 505 0002 00AF     		add	r7, sp, #0
+ 506              	.LCFI30:
+ 507              		.cfi_def_cfa_register 7
+ 491:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     return (CY_GET_REG8(Counter_reset_gen_COMPARE_LSB_PTR));
+ 508              		.loc 1 491 0
+ 509 0004 024B     		ldr	r3, .L40
+ 510 0006 1B78     		ldrb	r3, [r3]
+ 511 0008 DBB2     		uxtb	r3, r3
+ 492:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 512              		.loc 1 492 0
+ 513 000a 181C     		mov	r0, r3
+ 514 000c BD46     		mov	sp, r7
+ 515              		@ sp needed for prologue
+ 516 000e 80BD     		pop	{r7, pc}
+ 517              	.L41:
+ 518              		.align	2
+ 519              	.L40:
+ 520 0010 31000F40 		.word	1074724913
+ 521              		.cfi_endproc
+ 522              	.LFE12:
+ 523              		.size	Counter_reset_gen_ReadCompare, .-Counter_reset_gen_ReadCompare
+ 524              		.section	.text.Counter_reset_gen_ClearFIFO,"ax",%progbits
+ 525              		.align	2
+ 526              		.global	Counter_reset_gen_ClearFIFO
+ 527              		.code	16
+ 528              		.thumb_func
+ 529              		.type	Counter_reset_gen_ClearFIFO, %function
+ 530              	Counter_reset_gen_ClearFIFO:
+ 531              	.LFB13:
+ 493:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 494:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 495:.\Generated_Source\PSoC4/Counter_reset_gen.c **** #if (Counter_reset_gen_COMPARE_MODE_SOFTWARE)
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 19
+
+
+ 496:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 497:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_SetCompareMode
+ 498:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 499:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 500:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  Sets the software controlled Compare Mode.
+ 501:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 502:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:
+ 503:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  compareMode:  Compare Mode Enumerated Type.
+ 504:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 505:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return:
+ 506:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+ 507:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 508:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 509:.\Generated_Source\PSoC4/Counter_reset_gen.c **** void Counter_reset_gen_SetCompareMode(uint8 compareMode) 
+ 510:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 511:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* Clear the compare mode bits in the control register */
+ 512:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     Counter_reset_gen_CONTROL &= ((uint8)(~Counter_reset_gen_CTRL_CMPMODE_MASK));
+ 513:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     
+ 514:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* Write the new setting */
+ 515:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     Counter_reset_gen_CONTROL |= compareMode;
+ 516:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 517:.\Generated_Source\PSoC4/Counter_reset_gen.c **** #endif  /* (Counter_reset_gen_COMPARE_MODE_SOFTWARE) */
+ 518:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 519:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 520:.\Generated_Source\PSoC4/Counter_reset_gen.c **** #if (Counter_reset_gen_CAPTURE_MODE_SOFTWARE)
+ 521:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 522:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_SetCaptureMode
+ 523:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 524:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 525:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  Sets the software controlled Capture Mode.
+ 526:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 527:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:
+ 528:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  captureMode:  Capture Mode Enumerated Type.
+ 529:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 530:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return:
+ 531:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void
+ 532:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 533:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 534:.\Generated_Source\PSoC4/Counter_reset_gen.c **** void Counter_reset_gen_SetCaptureMode(uint8 captureMode) 
+ 535:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 536:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* Clear the capture mode bits in the control register */
+ 537:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     Counter_reset_gen_CONTROL &= ((uint8)(~Counter_reset_gen_CTRL_CAPMODE_MASK));
+ 538:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     
+ 539:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     /* Write the new setting */
+ 540:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     Counter_reset_gen_CONTROL |= ((uint8)((uint8)captureMode << Counter_reset_gen_CTRL_CAPMODE0_SHI
+ 541:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 542:.\Generated_Source\PSoC4/Counter_reset_gen.c **** #endif  /* (Counter_reset_gen_CAPTURE_MODE_SOFTWARE) */
+ 543:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 544:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 545:.\Generated_Source\PSoC4/Counter_reset_gen.c **** /*******************************************************************************
+ 546:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Function Name: Counter_reset_gen_ClearFIFO
+ 547:.\Generated_Source\PSoC4/Counter_reset_gen.c **** ********************************************************************************
+ 548:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Summary:
+ 549:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *   This function clears all capture data from the capture FIFO
+ 550:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 551:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Parameters:  
+ 552:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  void:
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 20
+
+
+ 553:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 554:.\Generated_Source\PSoC4/Counter_reset_gen.c **** * Return: 
+ 555:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *  None
+ 556:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *
+ 557:.\Generated_Source\PSoC4/Counter_reset_gen.c **** *******************************************************************************/
+ 558:.\Generated_Source\PSoC4/Counter_reset_gen.c **** void Counter_reset_gen_ClearFIFO(void) 
+ 559:.\Generated_Source\PSoC4/Counter_reset_gen.c **** {
+ 532              		.loc 1 559 0
+ 533              		.cfi_startproc
+ 534 0000 80B5     		push	{r7, lr}
+ 535              	.LCFI31:
+ 536              		.cfi_def_cfa_offset 8
+ 537              		.cfi_offset 7, -8
+ 538              		.cfi_offset 14, -4
+ 539 0002 00AF     		add	r7, sp, #0
+ 540              	.LCFI32:
+ 541              		.cfi_def_cfa_register 7
+ 560:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 561:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     while(0u != (Counter_reset_gen_ReadStatusRegister() & Counter_reset_gen_STATUS_FIFONEMP))
+ 542              		.loc 1 561 0
+ 543 0004 01E0     		b	.L43
+ 544              	.L44:
+ 562:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     {
+ 563:.\Generated_Source\PSoC4/Counter_reset_gen.c ****         (void)Counter_reset_gen_ReadCapture();
+ 545              		.loc 1 563 0
+ 546 0006 FFF7FEFF 		bl	Counter_reset_gen_ReadCapture
+ 547              	.L43:
+ 561:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     while(0u != (Counter_reset_gen_ReadStatusRegister() & Counter_reset_gen_STATUS_FIFONEMP))
+ 548              		.loc 1 561 0 discriminator 1
+ 549 000a FFF7FEFF 		bl	Counter_reset_gen_ReadStatusRegister
+ 550 000e 031C     		mov	r3, r0
+ 551 0010 1A1C     		mov	r2, r3
+ 552 0012 4023     		mov	r3, #64
+ 553 0014 1340     		and	r3, r2
+ 554 0016 F6D1     		bne	.L44
+ 564:.\Generated_Source\PSoC4/Counter_reset_gen.c ****     }
+ 565:.\Generated_Source\PSoC4/Counter_reset_gen.c **** 
+ 566:.\Generated_Source\PSoC4/Counter_reset_gen.c **** }
+ 555              		.loc 1 566 0
+ 556 0018 BD46     		mov	sp, r7
+ 557              		@ sp needed for prologue
+ 558 001a 80BD     		pop	{r7, pc}
+ 559              		.cfi_endproc
+ 560              	.LFE13:
+ 561              		.size	Counter_reset_gen_ClearFIFO, .-Counter_reset_gen_ClearFIFO
+ 562              		.text
+ 563              	.Letext0:
+ 564              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 565              		.section	.debug_info,"",%progbits
+ 566              	.Ldebug_info0:
+ 567 0000 68020000 		.4byte	0x268
+ 568 0004 0200     		.2byte	0x2
+ 569 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 570 000a 04       		.byte	0x4
+ 571 000b 01       		.uleb128 0x1
+ 572 000c 57020000 		.4byte	.LASF33
+ 573 0010 01       		.byte	0x1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 21
+
+
+ 574 0011 7E010000 		.4byte	.LASF34
+ 575 0015 37000000 		.4byte	.LASF35
+ 576 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 577 001d 00000000 		.4byte	0
+ 578 0021 00000000 		.4byte	0
+ 579 0025 00000000 		.4byte	.Ldebug_line0
+ 580 0029 02       		.uleb128 0x2
+ 581 002a 01       		.byte	0x1
+ 582 002b 06       		.byte	0x6
+ 583 002c 8C000000 		.4byte	.LASF0
+ 584 0030 02       		.uleb128 0x2
+ 585 0031 01       		.byte	0x1
+ 586 0032 08       		.byte	0x8
+ 587 0033 CA010000 		.4byte	.LASF1
+ 588 0037 02       		.uleb128 0x2
+ 589 0038 02       		.byte	0x2
+ 590 0039 05       		.byte	0x5
+ 591 003a 4D020000 		.4byte	.LASF2
+ 592 003e 02       		.uleb128 0x2
+ 593 003f 02       		.byte	0x2
+ 594 0040 07       		.byte	0x7
+ 595 0041 24000000 		.4byte	.LASF3
+ 596 0045 02       		.uleb128 0x2
+ 597 0046 04       		.byte	0x4
+ 598 0047 05       		.byte	0x5
+ 599 0048 DB020000 		.4byte	.LASF4
+ 600 004c 02       		.uleb128 0x2
+ 601 004d 04       		.byte	0x4
+ 602 004e 07       		.byte	0x7
+ 603 004f D2000000 		.4byte	.LASF5
+ 604 0053 02       		.uleb128 0x2
+ 605 0054 08       		.byte	0x8
+ 606 0055 05       		.byte	0x5
+ 607 0056 3A020000 		.4byte	.LASF6
+ 608 005a 02       		.uleb128 0x2
+ 609 005b 08       		.byte	0x8
+ 610 005c 07       		.byte	0x7
+ 611 005d FC010000 		.4byte	.LASF7
+ 612 0061 03       		.uleb128 0x3
+ 613 0062 04       		.byte	0x4
+ 614 0063 05       		.byte	0x5
+ 615 0064 696E7400 		.ascii	"int\000"
+ 616 0068 02       		.uleb128 0x2
+ 617 0069 04       		.byte	0x4
+ 618 006a 07       		.byte	0x7
+ 619 006b D8010000 		.4byte	.LASF8
+ 620 006f 04       		.uleb128 0x4
+ 621 0070 FC000000 		.4byte	.LASF12
+ 622 0074 02       		.byte	0x2
+ 623 0075 5B       		.byte	0x5b
+ 624 0076 30000000 		.4byte	0x30
+ 625 007a 02       		.uleb128 0x2
+ 626 007b 04       		.byte	0x4
+ 627 007c 04       		.byte	0x4
+ 628 007d 7E000000 		.4byte	.LASF9
+ 629 0081 02       		.uleb128 0x2
+ 630 0082 08       		.byte	0x8
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 22
+
+
+ 631 0083 04       		.byte	0x4
+ 632 0084 77010000 		.4byte	.LASF10
+ 633 0088 02       		.uleb128 0x2
+ 634 0089 01       		.byte	0x1
+ 635 008a 08       		.byte	0x8
+ 636 008b 48020000 		.4byte	.LASF11
+ 637 008f 04       		.uleb128 0x4
+ 638 0090 CD000000 		.4byte	.LASF13
+ 639 0094 02       		.byte	0x2
+ 640 0095 F0       		.byte	0xf0
+ 641 0096 9A000000 		.4byte	0x9a
+ 642 009a 05       		.uleb128 0x5
+ 643 009b 6F000000 		.4byte	0x6f
+ 644 009f 02       		.uleb128 0x2
+ 645 00a0 04       		.byte	0x4
+ 646 00a1 07       		.byte	0x7
+ 647 00a2 31020000 		.4byte	.LASF14
+ 648 00a6 06       		.uleb128 0x6
+ 649 00a7 01       		.byte	0x1
+ 650 00a8 E5010000 		.4byte	.LASF18
+ 651 00ac 01       		.byte	0x1
+ 652 00ad 25       		.byte	0x25
+ 653 00ae 01       		.byte	0x1
+ 654 00af 00000000 		.4byte	.LFB0
+ 655 00b3 54000000 		.4byte	.LFE0
+ 656 00b7 00000000 		.4byte	.LLST0
+ 657 00bb 01       		.byte	0x1
+ 658 00bc CF000000 		.4byte	0xcf
+ 659 00c0 07       		.uleb128 0x7
+ 660 00c1 BA020000 		.4byte	.LASF36
+ 661 00c5 01       		.byte	0x1
+ 662 00c6 2D       		.byte	0x2d
+ 663 00c7 6F000000 		.4byte	0x6f
+ 664 00cb 02       		.byte	0x2
+ 665 00cc 91       		.byte	0x91
+ 666 00cd 6F       		.sleb128 -17
+ 667 00ce 00       		.byte	0
+ 668 00cf 08       		.uleb128 0x8
+ 669 00d0 01       		.byte	0x1
+ 670 00d1 98000000 		.4byte	.LASF15
+ 671 00d5 01       		.byte	0x1
+ 672 00d6 8F       		.byte	0x8f
+ 673 00d7 01       		.byte	0x1
+ 674 00d8 00000000 		.4byte	.LFB1
+ 675 00dc 08000000 		.4byte	.LFE1
+ 676 00e0 38000000 		.4byte	.LLST1
+ 677 00e4 01       		.byte	0x1
+ 678 00e5 09       		.uleb128 0x9
+ 679 00e6 01       		.byte	0x1
+ 680 00e7 E4000000 		.4byte	.LASF16
+ 681 00eb 01       		.byte	0x1
+ 682 00ec B2       		.byte	0xb2
+ 683 00ed 01       		.byte	0x1
+ 684 00ee 00000000 		.4byte	.LFB2
+ 685 00f2 24000000 		.4byte	.LFE2
+ 686 00f6 64000000 		.4byte	.LLST2
+ 687 00fa 01       		.byte	0x1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 23
+
+
+ 688 00fb 08       		.uleb128 0x8
+ 689 00fc 01       		.byte	0x1
+ 690 00fd E4020000 		.4byte	.LASF17
+ 691 0101 01       		.byte	0x1
+ 692 0102 D0       		.byte	0xd0
+ 693 0103 01       		.byte	0x1
+ 694 0104 00000000 		.4byte	.LFB3
+ 695 0108 08000000 		.4byte	.LFE3
+ 696 010c 90000000 		.4byte	.LLST3
+ 697 0110 01       		.byte	0x1
+ 698 0111 0A       		.uleb128 0xa
+ 699 0112 01       		.byte	0x1
+ 700 0113 11010000 		.4byte	.LASF19
+ 701 0117 01       		.byte	0x1
+ 702 0118 ED       		.byte	0xed
+ 703 0119 01       		.byte	0x1
+ 704 011a 00000000 		.4byte	.LFB4
+ 705 011e 20000000 		.4byte	.LFE4
+ 706 0122 BC000000 		.4byte	.LLST4
+ 707 0126 01       		.byte	0x1
+ 708 0127 3A010000 		.4byte	0x13a
+ 709 012b 0B       		.uleb128 0xb
+ 710 012c 02010000 		.4byte	.LASF21
+ 711 0130 01       		.byte	0x1
+ 712 0131 ED       		.byte	0xed
+ 713 0132 6F000000 		.4byte	0x6f
+ 714 0136 02       		.byte	0x2
+ 715 0137 91       		.byte	0x91
+ 716 0138 77       		.sleb128 -9
+ 717 0139 00       		.byte	0
+ 718 013a 0C       		.uleb128 0xc
+ 719 013b 01       		.byte	0x1
+ 720 013c 52010000 		.4byte	.LASF23
+ 721 0140 01       		.byte	0x1
+ 722 0141 0501     		.2byte	0x105
+ 723 0143 01       		.byte	0x1
+ 724 0144 6F000000 		.4byte	0x6f
+ 725 0148 00000000 		.4byte	.LFB5
+ 726 014c 14000000 		.4byte	.LFE5
+ 727 0150 F4000000 		.4byte	.LLST5
+ 728 0154 01       		.byte	0x1
+ 729 0155 0D       		.uleb128 0xd
+ 730 0156 01       		.byte	0x1
+ 731 0157 03030000 		.4byte	.LASF20
+ 732 015b 01       		.byte	0x1
+ 733 015c 4601     		.2byte	0x146
+ 734 015e 01       		.byte	0x1
+ 735 015f 00000000 		.4byte	.LFB6
+ 736 0163 20000000 		.4byte	.LFE6
+ 737 0167 20010000 		.4byte	.LLST6
+ 738 016b 01       		.byte	0x1
+ 739 016c 80010000 		.4byte	0x180
+ 740 0170 0E       		.uleb128 0xe
+ 741 0171 84000000 		.4byte	.LASF22
+ 742 0175 01       		.byte	0x1
+ 743 0176 4601     		.2byte	0x146
+ 744 0178 6F000000 		.4byte	0x6f
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 24
+
+
+ 745 017c 02       		.byte	0x2
+ 746 017d 91       		.byte	0x91
+ 747 017e 77       		.sleb128 -9
+ 748 017f 00       		.byte	0
+ 749 0180 0C       		.uleb128 0xc
+ 750 0181 01       		.byte	0x1
+ 751 0182 22030000 		.4byte	.LASF24
+ 752 0186 01       		.byte	0x1
+ 753 0187 6501     		.2byte	0x165
+ 754 0189 01       		.byte	0x1
+ 755 018a 6F000000 		.4byte	0x6f
+ 756 018e 00000000 		.4byte	.LFB7
+ 757 0192 1C000000 		.4byte	.LFE7
+ 758 0196 58010000 		.4byte	.LLST7
+ 759 019a 01       		.byte	0x1
+ 760 019b 0C       		.uleb128 0xc
+ 761 019c 01       		.byte	0x1
+ 762 019d 34010000 		.4byte	.LASF25
+ 763 01a1 01       		.byte	0x1
+ 764 01a2 8601     		.2byte	0x186
+ 765 01a4 01       		.byte	0x1
+ 766 01a5 6F000000 		.4byte	0x6f
+ 767 01a9 00000000 		.4byte	.LFB8
+ 768 01ad 14000000 		.4byte	.LFE8
+ 769 01b1 84010000 		.4byte	.LLST8
+ 770 01b5 01       		.byte	0x1
+ 771 01b6 0D       		.uleb128 0xd
+ 772 01b7 01       		.byte	0x1
+ 773 01b8 40030000 		.4byte	.LASF26
+ 774 01bc 01       		.byte	0x1
+ 775 01bd 9F01     		.2byte	0x19f
+ 776 01bf 01       		.byte	0x1
+ 777 01c0 00000000 		.4byte	.LFB9
+ 778 01c4 20000000 		.4byte	.LFE9
+ 779 01c8 B0010000 		.4byte	.LLST9
+ 780 01cc 01       		.byte	0x1
+ 781 01cd E1010000 		.4byte	0x1e1
+ 782 01d1 0E       		.uleb128 0xe
+ 783 01d2 1D000000 		.4byte	.LASF27
+ 784 01d6 01       		.byte	0x1
+ 785 01d7 9F01     		.2byte	0x19f
+ 786 01d9 6F000000 		.4byte	0x6f
+ 787 01dd 02       		.byte	0x2
+ 788 01de 91       		.byte	0x91
+ 789 01df 77       		.sleb128 -9
+ 790 01e0 00       		.byte	0
+ 791 01e1 0C       		.uleb128 0xc
+ 792 01e2 01       		.byte	0x1
+ 793 01e3 00000000 		.4byte	.LASF28
+ 794 01e7 01       		.byte	0x1
+ 795 01e8 B601     		.2byte	0x1b6
+ 796 01ea 01       		.byte	0x1
+ 797 01eb 6F000000 		.4byte	0x6f
+ 798 01ef 00000000 		.4byte	.LFB10
+ 799 01f3 14000000 		.4byte	.LFE10
+ 800 01f7 E8010000 		.4byte	.LLST10
+ 801 01fb 01       		.byte	0x1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 25
+
+
+ 802 01fc 0D       		.uleb128 0xd
+ 803 01fd 01       		.byte	0x1
+ 804 01fe AB010000 		.4byte	.LASF29
+ 805 0202 01       		.byte	0x1
+ 806 0203 D101     		.2byte	0x1d1
+ 807 0205 01       		.byte	0x1
+ 808 0206 00000000 		.4byte	.LFB11
+ 809 020a 20000000 		.4byte	.LFE11
+ 810 020e 14020000 		.4byte	.LLST11
+ 811 0212 01       		.byte	0x1
+ 812 0213 27020000 		.4byte	0x227
+ 813 0217 0E       		.uleb128 0xe
+ 814 0218 FB020000 		.4byte	.LASF30
+ 815 021c 01       		.byte	0x1
+ 816 021d D101     		.2byte	0x1d1
+ 817 021f 6F000000 		.4byte	0x6f
+ 818 0223 02       		.byte	0x2
+ 819 0224 91       		.byte	0x91
+ 820 0225 77       		.sleb128 -9
+ 821 0226 00       		.byte	0
+ 822 0227 0C       		.uleb128 0xc
+ 823 0228 01       		.byte	0x1
+ 824 0229 13020000 		.4byte	.LASF31
+ 825 022d 01       		.byte	0x1
+ 826 022e E901     		.2byte	0x1e9
+ 827 0230 01       		.byte	0x1
+ 828 0231 6F000000 		.4byte	0x6f
+ 829 0235 00000000 		.4byte	.LFB12
+ 830 0239 14000000 		.4byte	.LFE12
+ 831 023d 4C020000 		.4byte	.LLST12
+ 832 0241 01       		.byte	0x1
+ 833 0242 0F       		.uleb128 0xf
+ 834 0243 01       		.byte	0x1
+ 835 0244 B1000000 		.4byte	.LASF32
+ 836 0248 01       		.byte	0x1
+ 837 0249 2E02     		.2byte	0x22e
+ 838 024b 01       		.byte	0x1
+ 839 024c 00000000 		.4byte	.LFB13
+ 840 0250 1C000000 		.4byte	.LFE13
+ 841 0254 78020000 		.4byte	.LLST13
+ 842 0258 01       		.byte	0x1
+ 843 0259 10       		.uleb128 0x10
+ 844 025a A0020000 		.4byte	.LASF37
+ 845 025e 01       		.byte	0x1
+ 846 025f 15       		.byte	0x15
+ 847 0260 6F000000 		.4byte	0x6f
+ 848 0264 01       		.byte	0x1
+ 849 0265 05       		.byte	0x5
+ 850 0266 03       		.byte	0x3
+ 851 0267 00000000 		.4byte	Counter_reset_gen_initVar
+ 852 026b 00       		.byte	0
+ 853              		.section	.debug_abbrev,"",%progbits
+ 854              	.Ldebug_abbrev0:
+ 855 0000 01       		.uleb128 0x1
+ 856 0001 11       		.uleb128 0x11
+ 857 0002 01       		.byte	0x1
+ 858 0003 25       		.uleb128 0x25
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 26
+
+
+ 859 0004 0E       		.uleb128 0xe
+ 860 0005 13       		.uleb128 0x13
+ 861 0006 0B       		.uleb128 0xb
+ 862 0007 03       		.uleb128 0x3
+ 863 0008 0E       		.uleb128 0xe
+ 864 0009 1B       		.uleb128 0x1b
+ 865 000a 0E       		.uleb128 0xe
+ 866 000b 55       		.uleb128 0x55
+ 867 000c 06       		.uleb128 0x6
+ 868 000d 11       		.uleb128 0x11
+ 869 000e 01       		.uleb128 0x1
+ 870 000f 52       		.uleb128 0x52
+ 871 0010 01       		.uleb128 0x1
+ 872 0011 10       		.uleb128 0x10
+ 873 0012 06       		.uleb128 0x6
+ 874 0013 00       		.byte	0
+ 875 0014 00       		.byte	0
+ 876 0015 02       		.uleb128 0x2
+ 877 0016 24       		.uleb128 0x24
+ 878 0017 00       		.byte	0
+ 879 0018 0B       		.uleb128 0xb
+ 880 0019 0B       		.uleb128 0xb
+ 881 001a 3E       		.uleb128 0x3e
+ 882 001b 0B       		.uleb128 0xb
+ 883 001c 03       		.uleb128 0x3
+ 884 001d 0E       		.uleb128 0xe
+ 885 001e 00       		.byte	0
+ 886 001f 00       		.byte	0
+ 887 0020 03       		.uleb128 0x3
+ 888 0021 24       		.uleb128 0x24
+ 889 0022 00       		.byte	0
+ 890 0023 0B       		.uleb128 0xb
+ 891 0024 0B       		.uleb128 0xb
+ 892 0025 3E       		.uleb128 0x3e
+ 893 0026 0B       		.uleb128 0xb
+ 894 0027 03       		.uleb128 0x3
+ 895 0028 08       		.uleb128 0x8
+ 896 0029 00       		.byte	0
+ 897 002a 00       		.byte	0
+ 898 002b 04       		.uleb128 0x4
+ 899 002c 16       		.uleb128 0x16
+ 900 002d 00       		.byte	0
+ 901 002e 03       		.uleb128 0x3
+ 902 002f 0E       		.uleb128 0xe
+ 903 0030 3A       		.uleb128 0x3a
+ 904 0031 0B       		.uleb128 0xb
+ 905 0032 3B       		.uleb128 0x3b
+ 906 0033 0B       		.uleb128 0xb
+ 907 0034 49       		.uleb128 0x49
+ 908 0035 13       		.uleb128 0x13
+ 909 0036 00       		.byte	0
+ 910 0037 00       		.byte	0
+ 911 0038 05       		.uleb128 0x5
+ 912 0039 35       		.uleb128 0x35
+ 913 003a 00       		.byte	0
+ 914 003b 49       		.uleb128 0x49
+ 915 003c 13       		.uleb128 0x13
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 27
+
+
+ 916 003d 00       		.byte	0
+ 917 003e 00       		.byte	0
+ 918 003f 06       		.uleb128 0x6
+ 919 0040 2E       		.uleb128 0x2e
+ 920 0041 01       		.byte	0x1
+ 921 0042 3F       		.uleb128 0x3f
+ 922 0043 0C       		.uleb128 0xc
+ 923 0044 03       		.uleb128 0x3
+ 924 0045 0E       		.uleb128 0xe
+ 925 0046 3A       		.uleb128 0x3a
+ 926 0047 0B       		.uleb128 0xb
+ 927 0048 3B       		.uleb128 0x3b
+ 928 0049 0B       		.uleb128 0xb
+ 929 004a 27       		.uleb128 0x27
+ 930 004b 0C       		.uleb128 0xc
+ 931 004c 11       		.uleb128 0x11
+ 932 004d 01       		.uleb128 0x1
+ 933 004e 12       		.uleb128 0x12
+ 934 004f 01       		.uleb128 0x1
+ 935 0050 40       		.uleb128 0x40
+ 936 0051 06       		.uleb128 0x6
+ 937 0052 9642     		.uleb128 0x2116
+ 938 0054 0C       		.uleb128 0xc
+ 939 0055 01       		.uleb128 0x1
+ 940 0056 13       		.uleb128 0x13
+ 941 0057 00       		.byte	0
+ 942 0058 00       		.byte	0
+ 943 0059 07       		.uleb128 0x7
+ 944 005a 34       		.uleb128 0x34
+ 945 005b 00       		.byte	0
+ 946 005c 03       		.uleb128 0x3
+ 947 005d 0E       		.uleb128 0xe
+ 948 005e 3A       		.uleb128 0x3a
+ 949 005f 0B       		.uleb128 0xb
+ 950 0060 3B       		.uleb128 0x3b
+ 951 0061 0B       		.uleb128 0xb
+ 952 0062 49       		.uleb128 0x49
+ 953 0063 13       		.uleb128 0x13
+ 954 0064 02       		.uleb128 0x2
+ 955 0065 0A       		.uleb128 0xa
+ 956 0066 00       		.byte	0
+ 957 0067 00       		.byte	0
+ 958 0068 08       		.uleb128 0x8
+ 959 0069 2E       		.uleb128 0x2e
+ 960 006a 00       		.byte	0
+ 961 006b 3F       		.uleb128 0x3f
+ 962 006c 0C       		.uleb128 0xc
+ 963 006d 03       		.uleb128 0x3
+ 964 006e 0E       		.uleb128 0xe
+ 965 006f 3A       		.uleb128 0x3a
+ 966 0070 0B       		.uleb128 0xb
+ 967 0071 3B       		.uleb128 0x3b
+ 968 0072 0B       		.uleb128 0xb
+ 969 0073 27       		.uleb128 0x27
+ 970 0074 0C       		.uleb128 0xc
+ 971 0075 11       		.uleb128 0x11
+ 972 0076 01       		.uleb128 0x1
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 28
+
+
+ 973 0077 12       		.uleb128 0x12
+ 974 0078 01       		.uleb128 0x1
+ 975 0079 40       		.uleb128 0x40
+ 976 007a 06       		.uleb128 0x6
+ 977 007b 9742     		.uleb128 0x2117
+ 978 007d 0C       		.uleb128 0xc
+ 979 007e 00       		.byte	0
+ 980 007f 00       		.byte	0
+ 981 0080 09       		.uleb128 0x9
+ 982 0081 2E       		.uleb128 0x2e
+ 983 0082 00       		.byte	0
+ 984 0083 3F       		.uleb128 0x3f
+ 985 0084 0C       		.uleb128 0xc
+ 986 0085 03       		.uleb128 0x3
+ 987 0086 0E       		.uleb128 0xe
+ 988 0087 3A       		.uleb128 0x3a
+ 989 0088 0B       		.uleb128 0xb
+ 990 0089 3B       		.uleb128 0x3b
+ 991 008a 0B       		.uleb128 0xb
+ 992 008b 27       		.uleb128 0x27
+ 993 008c 0C       		.uleb128 0xc
+ 994 008d 11       		.uleb128 0x11
+ 995 008e 01       		.uleb128 0x1
+ 996 008f 12       		.uleb128 0x12
+ 997 0090 01       		.uleb128 0x1
+ 998 0091 40       		.uleb128 0x40
+ 999 0092 06       		.uleb128 0x6
+ 1000 0093 9642     		.uleb128 0x2116
+ 1001 0095 0C       		.uleb128 0xc
+ 1002 0096 00       		.byte	0
+ 1003 0097 00       		.byte	0
+ 1004 0098 0A       		.uleb128 0xa
+ 1005 0099 2E       		.uleb128 0x2e
+ 1006 009a 01       		.byte	0x1
+ 1007 009b 3F       		.uleb128 0x3f
+ 1008 009c 0C       		.uleb128 0xc
+ 1009 009d 03       		.uleb128 0x3
+ 1010 009e 0E       		.uleb128 0xe
+ 1011 009f 3A       		.uleb128 0x3a
+ 1012 00a0 0B       		.uleb128 0xb
+ 1013 00a1 3B       		.uleb128 0x3b
+ 1014 00a2 0B       		.uleb128 0xb
+ 1015 00a3 27       		.uleb128 0x27
+ 1016 00a4 0C       		.uleb128 0xc
+ 1017 00a5 11       		.uleb128 0x11
+ 1018 00a6 01       		.uleb128 0x1
+ 1019 00a7 12       		.uleb128 0x12
+ 1020 00a8 01       		.uleb128 0x1
+ 1021 00a9 40       		.uleb128 0x40
+ 1022 00aa 06       		.uleb128 0x6
+ 1023 00ab 9742     		.uleb128 0x2117
+ 1024 00ad 0C       		.uleb128 0xc
+ 1025 00ae 01       		.uleb128 0x1
+ 1026 00af 13       		.uleb128 0x13
+ 1027 00b0 00       		.byte	0
+ 1028 00b1 00       		.byte	0
+ 1029 00b2 0B       		.uleb128 0xb
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 29
+
+
+ 1030 00b3 05       		.uleb128 0x5
+ 1031 00b4 00       		.byte	0
+ 1032 00b5 03       		.uleb128 0x3
+ 1033 00b6 0E       		.uleb128 0xe
+ 1034 00b7 3A       		.uleb128 0x3a
+ 1035 00b8 0B       		.uleb128 0xb
+ 1036 00b9 3B       		.uleb128 0x3b
+ 1037 00ba 0B       		.uleb128 0xb
+ 1038 00bb 49       		.uleb128 0x49
+ 1039 00bc 13       		.uleb128 0x13
+ 1040 00bd 02       		.uleb128 0x2
+ 1041 00be 0A       		.uleb128 0xa
+ 1042 00bf 00       		.byte	0
+ 1043 00c0 00       		.byte	0
+ 1044 00c1 0C       		.uleb128 0xc
+ 1045 00c2 2E       		.uleb128 0x2e
+ 1046 00c3 00       		.byte	0
+ 1047 00c4 3F       		.uleb128 0x3f
+ 1048 00c5 0C       		.uleb128 0xc
+ 1049 00c6 03       		.uleb128 0x3
+ 1050 00c7 0E       		.uleb128 0xe
+ 1051 00c8 3A       		.uleb128 0x3a
+ 1052 00c9 0B       		.uleb128 0xb
+ 1053 00ca 3B       		.uleb128 0x3b
+ 1054 00cb 05       		.uleb128 0x5
+ 1055 00cc 27       		.uleb128 0x27
+ 1056 00cd 0C       		.uleb128 0xc
+ 1057 00ce 49       		.uleb128 0x49
+ 1058 00cf 13       		.uleb128 0x13
+ 1059 00d0 11       		.uleb128 0x11
+ 1060 00d1 01       		.uleb128 0x1
+ 1061 00d2 12       		.uleb128 0x12
+ 1062 00d3 01       		.uleb128 0x1
+ 1063 00d4 40       		.uleb128 0x40
+ 1064 00d5 06       		.uleb128 0x6
+ 1065 00d6 9742     		.uleb128 0x2117
+ 1066 00d8 0C       		.uleb128 0xc
+ 1067 00d9 00       		.byte	0
+ 1068 00da 00       		.byte	0
+ 1069 00db 0D       		.uleb128 0xd
+ 1070 00dc 2E       		.uleb128 0x2e
+ 1071 00dd 01       		.byte	0x1
+ 1072 00de 3F       		.uleb128 0x3f
+ 1073 00df 0C       		.uleb128 0xc
+ 1074 00e0 03       		.uleb128 0x3
+ 1075 00e1 0E       		.uleb128 0xe
+ 1076 00e2 3A       		.uleb128 0x3a
+ 1077 00e3 0B       		.uleb128 0xb
+ 1078 00e4 3B       		.uleb128 0x3b
+ 1079 00e5 05       		.uleb128 0x5
+ 1080 00e6 27       		.uleb128 0x27
+ 1081 00e7 0C       		.uleb128 0xc
+ 1082 00e8 11       		.uleb128 0x11
+ 1083 00e9 01       		.uleb128 0x1
+ 1084 00ea 12       		.uleb128 0x12
+ 1085 00eb 01       		.uleb128 0x1
+ 1086 00ec 40       		.uleb128 0x40
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 30
+
+
+ 1087 00ed 06       		.uleb128 0x6
+ 1088 00ee 9742     		.uleb128 0x2117
+ 1089 00f0 0C       		.uleb128 0xc
+ 1090 00f1 01       		.uleb128 0x1
+ 1091 00f2 13       		.uleb128 0x13
+ 1092 00f3 00       		.byte	0
+ 1093 00f4 00       		.byte	0
+ 1094 00f5 0E       		.uleb128 0xe
+ 1095 00f6 05       		.uleb128 0x5
+ 1096 00f7 00       		.byte	0
+ 1097 00f8 03       		.uleb128 0x3
+ 1098 00f9 0E       		.uleb128 0xe
+ 1099 00fa 3A       		.uleb128 0x3a
+ 1100 00fb 0B       		.uleb128 0xb
+ 1101 00fc 3B       		.uleb128 0x3b
+ 1102 00fd 05       		.uleb128 0x5
+ 1103 00fe 49       		.uleb128 0x49
+ 1104 00ff 13       		.uleb128 0x13
+ 1105 0100 02       		.uleb128 0x2
+ 1106 0101 0A       		.uleb128 0xa
+ 1107 0102 00       		.byte	0
+ 1108 0103 00       		.byte	0
+ 1109 0104 0F       		.uleb128 0xf
+ 1110 0105 2E       		.uleb128 0x2e
+ 1111 0106 00       		.byte	0
+ 1112 0107 3F       		.uleb128 0x3f
+ 1113 0108 0C       		.uleb128 0xc
+ 1114 0109 03       		.uleb128 0x3
+ 1115 010a 0E       		.uleb128 0xe
+ 1116 010b 3A       		.uleb128 0x3a
+ 1117 010c 0B       		.uleb128 0xb
+ 1118 010d 3B       		.uleb128 0x3b
+ 1119 010e 05       		.uleb128 0x5
+ 1120 010f 27       		.uleb128 0x27
+ 1121 0110 0C       		.uleb128 0xc
+ 1122 0111 11       		.uleb128 0x11
+ 1123 0112 01       		.uleb128 0x1
+ 1124 0113 12       		.uleb128 0x12
+ 1125 0114 01       		.uleb128 0x1
+ 1126 0115 40       		.uleb128 0x40
+ 1127 0116 06       		.uleb128 0x6
+ 1128 0117 9642     		.uleb128 0x2116
+ 1129 0119 0C       		.uleb128 0xc
+ 1130 011a 00       		.byte	0
+ 1131 011b 00       		.byte	0
+ 1132 011c 10       		.uleb128 0x10
+ 1133 011d 34       		.uleb128 0x34
+ 1134 011e 00       		.byte	0
+ 1135 011f 03       		.uleb128 0x3
+ 1136 0120 0E       		.uleb128 0xe
+ 1137 0121 3A       		.uleb128 0x3a
+ 1138 0122 0B       		.uleb128 0xb
+ 1139 0123 3B       		.uleb128 0x3b
+ 1140 0124 0B       		.uleb128 0xb
+ 1141 0125 49       		.uleb128 0x49
+ 1142 0126 13       		.uleb128 0x13
+ 1143 0127 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 31
+
+
+ 1144 0128 0C       		.uleb128 0xc
+ 1145 0129 02       		.uleb128 0x2
+ 1146 012a 0A       		.uleb128 0xa
+ 1147 012b 00       		.byte	0
+ 1148 012c 00       		.byte	0
+ 1149 012d 00       		.byte	0
+ 1150              		.section	.debug_loc,"",%progbits
+ 1151              	.Ldebug_loc0:
+ 1152              	.LLST0:
+ 1153 0000 00000000 		.4byte	.LFB0
+ 1154 0004 02000000 		.4byte	.LCFI0
+ 1155 0008 0200     		.2byte	0x2
+ 1156 000a 7D       		.byte	0x7d
+ 1157 000b 00       		.sleb128 0
+ 1158 000c 02000000 		.4byte	.LCFI0
+ 1159 0010 04000000 		.4byte	.LCFI1
+ 1160 0014 0200     		.2byte	0x2
+ 1161 0016 7D       		.byte	0x7d
+ 1162 0017 0C       		.sleb128 12
+ 1163 0018 04000000 		.4byte	.LCFI1
+ 1164 001c 06000000 		.4byte	.LCFI2
+ 1165 0020 0200     		.2byte	0x2
+ 1166 0022 7D       		.byte	0x7d
+ 1167 0023 18       		.sleb128 24
+ 1168 0024 06000000 		.4byte	.LCFI2
+ 1169 0028 54000000 		.4byte	.LFE0
+ 1170 002c 0200     		.2byte	0x2
+ 1171 002e 77       		.byte	0x77
+ 1172 002f 18       		.sleb128 24
+ 1173 0030 00000000 		.4byte	0
+ 1174 0034 00000000 		.4byte	0
+ 1175              	.LLST1:
+ 1176 0038 00000000 		.4byte	.LFB1
+ 1177 003c 02000000 		.4byte	.LCFI3
+ 1178 0040 0200     		.2byte	0x2
+ 1179 0042 7D       		.byte	0x7d
+ 1180 0043 00       		.sleb128 0
+ 1181 0044 02000000 		.4byte	.LCFI3
+ 1182 0048 04000000 		.4byte	.LCFI4
+ 1183 004c 0200     		.2byte	0x2
+ 1184 004e 7D       		.byte	0x7d
+ 1185 004f 08       		.sleb128 8
+ 1186 0050 04000000 		.4byte	.LCFI4
+ 1187 0054 08000000 		.4byte	.LFE1
+ 1188 0058 0200     		.2byte	0x2
+ 1189 005a 77       		.byte	0x77
+ 1190 005b 08       		.sleb128 8
+ 1191 005c 00000000 		.4byte	0
+ 1192 0060 00000000 		.4byte	0
+ 1193              	.LLST2:
+ 1194 0064 00000000 		.4byte	.LFB2
+ 1195 0068 02000000 		.4byte	.LCFI5
+ 1196 006c 0200     		.2byte	0x2
+ 1197 006e 7D       		.byte	0x7d
+ 1198 006f 00       		.sleb128 0
+ 1199 0070 02000000 		.4byte	.LCFI5
+ 1200 0074 04000000 		.4byte	.LCFI6
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 32
+
+
+ 1201 0078 0200     		.2byte	0x2
+ 1202 007a 7D       		.byte	0x7d
+ 1203 007b 08       		.sleb128 8
+ 1204 007c 04000000 		.4byte	.LCFI6
+ 1205 0080 24000000 		.4byte	.LFE2
+ 1206 0084 0200     		.2byte	0x2
+ 1207 0086 77       		.byte	0x77
+ 1208 0087 08       		.sleb128 8
+ 1209 0088 00000000 		.4byte	0
+ 1210 008c 00000000 		.4byte	0
+ 1211              	.LLST3:
+ 1212 0090 00000000 		.4byte	.LFB3
+ 1213 0094 02000000 		.4byte	.LCFI7
+ 1214 0098 0200     		.2byte	0x2
+ 1215 009a 7D       		.byte	0x7d
+ 1216 009b 00       		.sleb128 0
+ 1217 009c 02000000 		.4byte	.LCFI7
+ 1218 00a0 04000000 		.4byte	.LCFI8
+ 1219 00a4 0200     		.2byte	0x2
+ 1220 00a6 7D       		.byte	0x7d
+ 1221 00a7 08       		.sleb128 8
+ 1222 00a8 04000000 		.4byte	.LCFI8
+ 1223 00ac 08000000 		.4byte	.LFE3
+ 1224 00b0 0200     		.2byte	0x2
+ 1225 00b2 77       		.byte	0x77
+ 1226 00b3 08       		.sleb128 8
+ 1227 00b4 00000000 		.4byte	0
+ 1228 00b8 00000000 		.4byte	0
+ 1229              	.LLST4:
+ 1230 00bc 00000000 		.4byte	.LFB4
+ 1231 00c0 02000000 		.4byte	.LCFI9
+ 1232 00c4 0200     		.2byte	0x2
+ 1233 00c6 7D       		.byte	0x7d
+ 1234 00c7 00       		.sleb128 0
+ 1235 00c8 02000000 		.4byte	.LCFI9
+ 1236 00cc 04000000 		.4byte	.LCFI10
+ 1237 00d0 0200     		.2byte	0x2
+ 1238 00d2 7D       		.byte	0x7d
+ 1239 00d3 08       		.sleb128 8
+ 1240 00d4 04000000 		.4byte	.LCFI10
+ 1241 00d8 06000000 		.4byte	.LCFI11
+ 1242 00dc 0200     		.2byte	0x2
+ 1243 00de 7D       		.byte	0x7d
+ 1244 00df 10       		.sleb128 16
+ 1245 00e0 06000000 		.4byte	.LCFI11
+ 1246 00e4 20000000 		.4byte	.LFE4
+ 1247 00e8 0200     		.2byte	0x2
+ 1248 00ea 77       		.byte	0x77
+ 1249 00eb 10       		.sleb128 16
+ 1250 00ec 00000000 		.4byte	0
+ 1251 00f0 00000000 		.4byte	0
+ 1252              	.LLST5:
+ 1253 00f4 00000000 		.4byte	.LFB5
+ 1254 00f8 02000000 		.4byte	.LCFI12
+ 1255 00fc 0200     		.2byte	0x2
+ 1256 00fe 7D       		.byte	0x7d
+ 1257 00ff 00       		.sleb128 0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 33
+
+
+ 1258 0100 02000000 		.4byte	.LCFI12
+ 1259 0104 04000000 		.4byte	.LCFI13
+ 1260 0108 0200     		.2byte	0x2
+ 1261 010a 7D       		.byte	0x7d
+ 1262 010b 08       		.sleb128 8
+ 1263 010c 04000000 		.4byte	.LCFI13
+ 1264 0110 14000000 		.4byte	.LFE5
+ 1265 0114 0200     		.2byte	0x2
+ 1266 0116 77       		.byte	0x77
+ 1267 0117 08       		.sleb128 8
+ 1268 0118 00000000 		.4byte	0
+ 1269 011c 00000000 		.4byte	0
+ 1270              	.LLST6:
+ 1271 0120 00000000 		.4byte	.LFB6
+ 1272 0124 02000000 		.4byte	.LCFI14
+ 1273 0128 0200     		.2byte	0x2
+ 1274 012a 7D       		.byte	0x7d
+ 1275 012b 00       		.sleb128 0
+ 1276 012c 02000000 		.4byte	.LCFI14
+ 1277 0130 04000000 		.4byte	.LCFI15
+ 1278 0134 0200     		.2byte	0x2
+ 1279 0136 7D       		.byte	0x7d
+ 1280 0137 08       		.sleb128 8
+ 1281 0138 04000000 		.4byte	.LCFI15
+ 1282 013c 06000000 		.4byte	.LCFI16
+ 1283 0140 0200     		.2byte	0x2
+ 1284 0142 7D       		.byte	0x7d
+ 1285 0143 10       		.sleb128 16
+ 1286 0144 06000000 		.4byte	.LCFI16
+ 1287 0148 20000000 		.4byte	.LFE6
+ 1288 014c 0200     		.2byte	0x2
+ 1289 014e 77       		.byte	0x77
+ 1290 014f 10       		.sleb128 16
+ 1291 0150 00000000 		.4byte	0
+ 1292 0154 00000000 		.4byte	0
+ 1293              	.LLST7:
+ 1294 0158 00000000 		.4byte	.LFB7
+ 1295 015c 02000000 		.4byte	.LCFI17
+ 1296 0160 0200     		.2byte	0x2
+ 1297 0162 7D       		.byte	0x7d
+ 1298 0163 00       		.sleb128 0
+ 1299 0164 02000000 		.4byte	.LCFI17
+ 1300 0168 04000000 		.4byte	.LCFI18
+ 1301 016c 0200     		.2byte	0x2
+ 1302 016e 7D       		.byte	0x7d
+ 1303 016f 08       		.sleb128 8
+ 1304 0170 04000000 		.4byte	.LCFI18
+ 1305 0174 1C000000 		.4byte	.LFE7
+ 1306 0178 0200     		.2byte	0x2
+ 1307 017a 77       		.byte	0x77
+ 1308 017b 08       		.sleb128 8
+ 1309 017c 00000000 		.4byte	0
+ 1310 0180 00000000 		.4byte	0
+ 1311              	.LLST8:
+ 1312 0184 00000000 		.4byte	.LFB8
+ 1313 0188 02000000 		.4byte	.LCFI19
+ 1314 018c 0200     		.2byte	0x2
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 34
+
+
+ 1315 018e 7D       		.byte	0x7d
+ 1316 018f 00       		.sleb128 0
+ 1317 0190 02000000 		.4byte	.LCFI19
+ 1318 0194 04000000 		.4byte	.LCFI20
+ 1319 0198 0200     		.2byte	0x2
+ 1320 019a 7D       		.byte	0x7d
+ 1321 019b 08       		.sleb128 8
+ 1322 019c 04000000 		.4byte	.LCFI20
+ 1323 01a0 14000000 		.4byte	.LFE8
+ 1324 01a4 0200     		.2byte	0x2
+ 1325 01a6 77       		.byte	0x77
+ 1326 01a7 08       		.sleb128 8
+ 1327 01a8 00000000 		.4byte	0
+ 1328 01ac 00000000 		.4byte	0
+ 1329              	.LLST9:
+ 1330 01b0 00000000 		.4byte	.LFB9
+ 1331 01b4 02000000 		.4byte	.LCFI21
+ 1332 01b8 0200     		.2byte	0x2
+ 1333 01ba 7D       		.byte	0x7d
+ 1334 01bb 00       		.sleb128 0
+ 1335 01bc 02000000 		.4byte	.LCFI21
+ 1336 01c0 04000000 		.4byte	.LCFI22
+ 1337 01c4 0200     		.2byte	0x2
+ 1338 01c6 7D       		.byte	0x7d
+ 1339 01c7 08       		.sleb128 8
+ 1340 01c8 04000000 		.4byte	.LCFI22
+ 1341 01cc 06000000 		.4byte	.LCFI23
+ 1342 01d0 0200     		.2byte	0x2
+ 1343 01d2 7D       		.byte	0x7d
+ 1344 01d3 10       		.sleb128 16
+ 1345 01d4 06000000 		.4byte	.LCFI23
+ 1346 01d8 20000000 		.4byte	.LFE9
+ 1347 01dc 0200     		.2byte	0x2
+ 1348 01de 77       		.byte	0x77
+ 1349 01df 10       		.sleb128 16
+ 1350 01e0 00000000 		.4byte	0
+ 1351 01e4 00000000 		.4byte	0
+ 1352              	.LLST10:
+ 1353 01e8 00000000 		.4byte	.LFB10
+ 1354 01ec 02000000 		.4byte	.LCFI24
+ 1355 01f0 0200     		.2byte	0x2
+ 1356 01f2 7D       		.byte	0x7d
+ 1357 01f3 00       		.sleb128 0
+ 1358 01f4 02000000 		.4byte	.LCFI24
+ 1359 01f8 04000000 		.4byte	.LCFI25
+ 1360 01fc 0200     		.2byte	0x2
+ 1361 01fe 7D       		.byte	0x7d
+ 1362 01ff 08       		.sleb128 8
+ 1363 0200 04000000 		.4byte	.LCFI25
+ 1364 0204 14000000 		.4byte	.LFE10
+ 1365 0208 0200     		.2byte	0x2
+ 1366 020a 77       		.byte	0x77
+ 1367 020b 08       		.sleb128 8
+ 1368 020c 00000000 		.4byte	0
+ 1369 0210 00000000 		.4byte	0
+ 1370              	.LLST11:
+ 1371 0214 00000000 		.4byte	.LFB11
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 35
+
+
+ 1372 0218 02000000 		.4byte	.LCFI26
+ 1373 021c 0200     		.2byte	0x2
+ 1374 021e 7D       		.byte	0x7d
+ 1375 021f 00       		.sleb128 0
+ 1376 0220 02000000 		.4byte	.LCFI26
+ 1377 0224 04000000 		.4byte	.LCFI27
+ 1378 0228 0200     		.2byte	0x2
+ 1379 022a 7D       		.byte	0x7d
+ 1380 022b 08       		.sleb128 8
+ 1381 022c 04000000 		.4byte	.LCFI27
+ 1382 0230 06000000 		.4byte	.LCFI28
+ 1383 0234 0200     		.2byte	0x2
+ 1384 0236 7D       		.byte	0x7d
+ 1385 0237 10       		.sleb128 16
+ 1386 0238 06000000 		.4byte	.LCFI28
+ 1387 023c 20000000 		.4byte	.LFE11
+ 1388 0240 0200     		.2byte	0x2
+ 1389 0242 77       		.byte	0x77
+ 1390 0243 10       		.sleb128 16
+ 1391 0244 00000000 		.4byte	0
+ 1392 0248 00000000 		.4byte	0
+ 1393              	.LLST12:
+ 1394 024c 00000000 		.4byte	.LFB12
+ 1395 0250 02000000 		.4byte	.LCFI29
+ 1396 0254 0200     		.2byte	0x2
+ 1397 0256 7D       		.byte	0x7d
+ 1398 0257 00       		.sleb128 0
+ 1399 0258 02000000 		.4byte	.LCFI29
+ 1400 025c 04000000 		.4byte	.LCFI30
+ 1401 0260 0200     		.2byte	0x2
+ 1402 0262 7D       		.byte	0x7d
+ 1403 0263 08       		.sleb128 8
+ 1404 0264 04000000 		.4byte	.LCFI30
+ 1405 0268 14000000 		.4byte	.LFE12
+ 1406 026c 0200     		.2byte	0x2
+ 1407 026e 77       		.byte	0x77
+ 1408 026f 08       		.sleb128 8
+ 1409 0270 00000000 		.4byte	0
+ 1410 0274 00000000 		.4byte	0
+ 1411              	.LLST13:
+ 1412 0278 00000000 		.4byte	.LFB13
+ 1413 027c 02000000 		.4byte	.LCFI31
+ 1414 0280 0200     		.2byte	0x2
+ 1415 0282 7D       		.byte	0x7d
+ 1416 0283 00       		.sleb128 0
+ 1417 0284 02000000 		.4byte	.LCFI31
+ 1418 0288 04000000 		.4byte	.LCFI32
+ 1419 028c 0200     		.2byte	0x2
+ 1420 028e 7D       		.byte	0x7d
+ 1421 028f 08       		.sleb128 8
+ 1422 0290 04000000 		.4byte	.LCFI32
+ 1423 0294 1C000000 		.4byte	.LFE13
+ 1424 0298 0200     		.2byte	0x2
+ 1425 029a 77       		.byte	0x77
+ 1426 029b 08       		.sleb128 8
+ 1427 029c 00000000 		.4byte	0
+ 1428 02a0 00000000 		.4byte	0
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 36
+
+
+ 1429              		.section	.debug_aranges,"",%progbits
+ 1430 0000 84000000 		.4byte	0x84
+ 1431 0004 0200     		.2byte	0x2
+ 1432 0006 00000000 		.4byte	.Ldebug_info0
+ 1433 000a 04       		.byte	0x4
+ 1434 000b 00       		.byte	0
+ 1435 000c 0000     		.2byte	0
+ 1436 000e 0000     		.2byte	0
+ 1437 0010 00000000 		.4byte	.LFB0
+ 1438 0014 54000000 		.4byte	.LFE0-.LFB0
+ 1439 0018 00000000 		.4byte	.LFB1
+ 1440 001c 08000000 		.4byte	.LFE1-.LFB1
+ 1441 0020 00000000 		.4byte	.LFB2
+ 1442 0024 24000000 		.4byte	.LFE2-.LFB2
+ 1443 0028 00000000 		.4byte	.LFB3
+ 1444 002c 08000000 		.4byte	.LFE3-.LFB3
+ 1445 0030 00000000 		.4byte	.LFB4
+ 1446 0034 20000000 		.4byte	.LFE4-.LFB4
+ 1447 0038 00000000 		.4byte	.LFB5
+ 1448 003c 14000000 		.4byte	.LFE5-.LFB5
+ 1449 0040 00000000 		.4byte	.LFB6
+ 1450 0044 20000000 		.4byte	.LFE6-.LFB6
+ 1451 0048 00000000 		.4byte	.LFB7
+ 1452 004c 1C000000 		.4byte	.LFE7-.LFB7
+ 1453 0050 00000000 		.4byte	.LFB8
+ 1454 0054 14000000 		.4byte	.LFE8-.LFB8
+ 1455 0058 00000000 		.4byte	.LFB9
+ 1456 005c 20000000 		.4byte	.LFE9-.LFB9
+ 1457 0060 00000000 		.4byte	.LFB10
+ 1458 0064 14000000 		.4byte	.LFE10-.LFB10
+ 1459 0068 00000000 		.4byte	.LFB11
+ 1460 006c 20000000 		.4byte	.LFE11-.LFB11
+ 1461 0070 00000000 		.4byte	.LFB12
+ 1462 0074 14000000 		.4byte	.LFE12-.LFB12
+ 1463 0078 00000000 		.4byte	.LFB13
+ 1464 007c 1C000000 		.4byte	.LFE13-.LFB13
+ 1465 0080 00000000 		.4byte	0
+ 1466 0084 00000000 		.4byte	0
+ 1467              		.section	.debug_ranges,"",%progbits
+ 1468              	.Ldebug_ranges0:
+ 1469 0000 00000000 		.4byte	.LFB0
+ 1470 0004 54000000 		.4byte	.LFE0
+ 1471 0008 00000000 		.4byte	.LFB1
+ 1472 000c 08000000 		.4byte	.LFE1
+ 1473 0010 00000000 		.4byte	.LFB2
+ 1474 0014 24000000 		.4byte	.LFE2
+ 1475 0018 00000000 		.4byte	.LFB3
+ 1476 001c 08000000 		.4byte	.LFE3
+ 1477 0020 00000000 		.4byte	.LFB4
+ 1478 0024 20000000 		.4byte	.LFE4
+ 1479 0028 00000000 		.4byte	.LFB5
+ 1480 002c 14000000 		.4byte	.LFE5
+ 1481 0030 00000000 		.4byte	.LFB6
+ 1482 0034 20000000 		.4byte	.LFE6
+ 1483 0038 00000000 		.4byte	.LFB7
+ 1484 003c 1C000000 		.4byte	.LFE7
+ 1485 0040 00000000 		.4byte	.LFB8
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 37
+
+
+ 1486 0044 14000000 		.4byte	.LFE8
+ 1487 0048 00000000 		.4byte	.LFB9
+ 1488 004c 20000000 		.4byte	.LFE9
+ 1489 0050 00000000 		.4byte	.LFB10
+ 1490 0054 14000000 		.4byte	.LFE10
+ 1491 0058 00000000 		.4byte	.LFB11
+ 1492 005c 20000000 		.4byte	.LFE11
+ 1493 0060 00000000 		.4byte	.LFB12
+ 1494 0064 14000000 		.4byte	.LFE12
+ 1495 0068 00000000 		.4byte	.LFB13
+ 1496 006c 1C000000 		.4byte	.LFE13
+ 1497 0070 00000000 		.4byte	0
+ 1498 0074 00000000 		.4byte	0
+ 1499              		.section	.debug_line,"",%progbits
+ 1500              	.Ldebug_line0:
+ 1501 0000 69010000 		.section	.debug_str,"MS",%progbits,1
+ 1501      02005000 
+ 1501      00000201 
+ 1501      FB0E0D00 
+ 1501      01010101 
+ 1502              	.LASF28:
+ 1503 0000 436F756E 		.ascii	"Counter_reset_gen_ReadPeriod\000"
+ 1503      7465725F 
+ 1503      72657365 
+ 1503      745F6765 
+ 1503      6E5F5265 
+ 1504              	.LASF27:
+ 1505 001d 70657269 		.ascii	"period\000"
+ 1505      6F6400
+ 1506              	.LASF3:
+ 1507 0024 73686F72 		.ascii	"short unsigned int\000"
+ 1507      7420756E 
+ 1507      7369676E 
+ 1507      65642069 
+ 1507      6E7400
+ 1508              	.LASF35:
+ 1509 0037 433A5C55 		.ascii	"C:\\Users\\Tsubasa Maruyama\\Documents\\PSoC Creato"
+ 1509      73657273 
+ 1509      5C547375 
+ 1509      62617361 
+ 1509      204D6172 
+ 1510 0066 725C4C74 		.ascii	"r\\Lticker\\Lticker.cydsn\000"
+ 1510      69636B65 
+ 1510      725C4C74 
+ 1510      69636B65 
+ 1510      722E6379 
+ 1511              	.LASF9:
+ 1512 007e 666C6F61 		.ascii	"float\000"
+ 1512      7400
+ 1513              	.LASF22:
+ 1514 0084 636F756E 		.ascii	"counter\000"
+ 1514      74657200 
+ 1515              	.LASF0:
+ 1516 008c 7369676E 		.ascii	"signed char\000"
+ 1516      65642063 
+ 1516      68617200 
+ 1517              	.LASF15:
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 38
+
+
+ 1518 0098 436F756E 		.ascii	"Counter_reset_gen_Enable\000"
+ 1518      7465725F 
+ 1518      72657365 
+ 1518      745F6765 
+ 1518      6E5F456E 
+ 1519              	.LASF32:
+ 1520 00b1 436F756E 		.ascii	"Counter_reset_gen_ClearFIFO\000"
+ 1520      7465725F 
+ 1520      72657365 
+ 1520      745F6765 
+ 1520      6E5F436C 
+ 1521              	.LASF13:
+ 1522 00cd 72656738 		.ascii	"reg8\000"
+ 1522      00
+ 1523              	.LASF5:
+ 1524 00d2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1524      20756E73 
+ 1524      69676E65 
+ 1524      6420696E 
+ 1524      7400
+ 1525              	.LASF16:
+ 1526 00e4 436F756E 		.ascii	"Counter_reset_gen_Start\000"
+ 1526      7465725F 
+ 1526      72657365 
+ 1526      745F6765 
+ 1526      6E5F5374 
+ 1527              	.LASF12:
+ 1528 00fc 75696E74 		.ascii	"uint8\000"
+ 1528      3800
+ 1529              	.LASF21:
+ 1530 0102 696E7465 		.ascii	"interruptsMask\000"
+ 1530      72727570 
+ 1530      74734D61 
+ 1530      736B00
+ 1531              	.LASF19:
+ 1532 0111 436F756E 		.ascii	"Counter_reset_gen_SetInterruptMode\000"
+ 1532      7465725F 
+ 1532      72657365 
+ 1532      745F6765 
+ 1532      6E5F5365 
+ 1533              	.LASF25:
+ 1534 0134 436F756E 		.ascii	"Counter_reset_gen_ReadCapture\000"
+ 1534      7465725F 
+ 1534      72657365 
+ 1534      745F6765 
+ 1534      6E5F5265 
+ 1535              	.LASF23:
+ 1536 0152 436F756E 		.ascii	"Counter_reset_gen_ReadStatusRegister\000"
+ 1536      7465725F 
+ 1536      72657365 
+ 1536      745F6765 
+ 1536      6E5F5265 
+ 1537              	.LASF10:
+ 1538 0177 646F7562 		.ascii	"double\000"
+ 1538      6C6500
+ 1539              	.LASF34:
+ 1540 017e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\Counter_reset_gen.c\000"
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 39
+
+
+ 1540      6E657261 
+ 1540      7465645F 
+ 1540      536F7572 
+ 1540      63655C50 
+ 1541              	.LASF29:
+ 1542 01ab 436F756E 		.ascii	"Counter_reset_gen_WriteCompare\000"
+ 1542      7465725F 
+ 1542      72657365 
+ 1542      745F6765 
+ 1542      6E5F5772 
+ 1543              	.LASF1:
+ 1544 01ca 756E7369 		.ascii	"unsigned char\000"
+ 1544      676E6564 
+ 1544      20636861 
+ 1544      7200
+ 1545              	.LASF8:
+ 1546 01d8 756E7369 		.ascii	"unsigned int\000"
+ 1546      676E6564 
+ 1546      20696E74 
+ 1546      00
+ 1547              	.LASF18:
+ 1548 01e5 436F756E 		.ascii	"Counter_reset_gen_Init\000"
+ 1548      7465725F 
+ 1548      72657365 
+ 1548      745F6765 
+ 1548      6E5F496E 
+ 1549              	.LASF7:
+ 1550 01fc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1550      206C6F6E 
+ 1550      6720756E 
+ 1550      7369676E 
+ 1550      65642069 
+ 1551              	.LASF31:
+ 1552 0213 436F756E 		.ascii	"Counter_reset_gen_ReadCompare\000"
+ 1552      7465725F 
+ 1552      72657365 
+ 1552      745F6765 
+ 1552      6E5F5265 
+ 1553              	.LASF14:
+ 1554 0231 73697A65 		.ascii	"sizetype\000"
+ 1554      74797065 
+ 1554      00
+ 1555              	.LASF6:
+ 1556 023a 6C6F6E67 		.ascii	"long long int\000"
+ 1556      206C6F6E 
+ 1556      6720696E 
+ 1556      7400
+ 1557              	.LASF11:
+ 1558 0248 63686172 		.ascii	"char\000"
+ 1558      00
+ 1559              	.LASF2:
+ 1560 024d 73686F72 		.ascii	"short int\000"
+ 1560      7420696E 
+ 1560      7400
+ 1561              	.LASF33:
+ 1562 0257 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 1562      4320342E 
+ARM GAS  C:\Users\TSUBAS~1\AppData\Local\Temp\ccW5s39m.s 			page 40
+
+
+ 1562      372E3320 
+ 1562      32303133 
+ 1562      30333132 
+ 1563 028a 616E6368 		.ascii	"anch revision 196615]\000"
+ 1563      20726576 
+ 1563      6973696F 
+ 1563      6E203139 
+ 1563      36363135 
+ 1564              	.LASF37:
+ 1565 02a0 436F756E 		.ascii	"Counter_reset_gen_initVar\000"
+ 1565      7465725F 
+ 1565      72657365 
+ 1565      745F6765 
+ 1565      6E5F696E 
+ 1566              	.LASF36:
+ 1567 02ba 436F756E 		.ascii	"Counter_reset_gen_interruptState\000"
+ 1567      7465725F 
+ 1567      72657365 
+ 1567      745F6765 
+ 1567      6E5F696E 
+ 1568              	.LASF4:
+ 1569 02db 6C6F6E67 		.ascii	"long int\000"
+ 1569      20696E74 
+ 1569      00
+ 1570              	.LASF17:
+ 1571 02e4 436F756E 		.ascii	"Counter_reset_gen_Stop\000"
+ 1571      7465725F 
+ 1571      72657365 
+ 1571      745F6765 
+ 1571      6E5F5374 
+ 1572              	.LASF30:
+ 1573 02fb 636F6D70 		.ascii	"compare\000"
+ 1573      61726500 
+ 1574              	.LASF20:
+ 1575 0303 436F756E 		.ascii	"Counter_reset_gen_WriteCounter\000"
+ 1575      7465725F 
+ 1575      72657365 
+ 1575      745F6765 
+ 1575      6E5F5772 
+ 1576              	.LASF24:
+ 1577 0322 436F756E 		.ascii	"Counter_reset_gen_ReadCounter\000"
+ 1577      7465725F 
+ 1577      72657365 
+ 1577      745F6765 
+ 1577      6E5F5265 
+ 1578              	.LASF26:
+ 1579 0340 436F756E 		.ascii	"Counter_reset_gen_WritePeriod\000"
+ 1579      7465725F 
+ 1579      72657365 
+ 1579      745F6765 
+ 1579      6E5F5772 
+ 1580              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

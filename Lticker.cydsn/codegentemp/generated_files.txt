@@ -27,6 +27,15 @@
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Pin_3_aliases.h" value="NONE;Pin_3" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\WS2812driver_1.h" value="NONE;WS2812driver_1" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\WS2812driver_1.c" value="ARM_C_FILE;WS2812driver_1" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Counter_reset_gen.c" value="ARM_C_FILE;Counter_reset_gen" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Counter_reset_gen.h" value="NONE;Counter_reset_gen" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Counter_reset_gen_PM.c" value="ARM_C_FILE;Counter_reset_gen" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Clock_2.c" value="ARM_C_FILE;Clock_2" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Clock_2.h" value="NONE;Clock_2" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\isr_fifo_empty.c" value="ARM_C_FILE;isr_fifo_empty" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\isr_fifo_empty.h" value="NONE;isr_fifo_empty" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\isr_reset_done.c" value="ARM_C_FILE;isr_reset_done" />
+  <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\isr_reset_done.h" value="NONE;isr_reset_done" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\cm0gcc.ld" value="NONE;cy_boot" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Cm0RealView.scat" value="NONE;cy_boot" />
   <file name="C:\Users\Tsubasa Maruyama\Documents\PSoC Creator\Lticker\Lticker.cydsn\codegentemp\Cm0Start.c" value="ARM_C_FILE;cy_boot" />
