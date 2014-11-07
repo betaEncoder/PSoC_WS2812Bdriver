@@ -65,7 +65,12 @@ Period=249で50usになります．<br>
 <img src="img/06_counter_period.png"><br>
 <br>
 ワンショット動作にしたいのでAdvanceタブはこんな感じに．<br>
-<img src="img/07_counter_one_shot.png"><br></p>
+<img src="img/07_counter_one_shot.png"><br>
+<br>
+さらに，このモジュールの出力信号で割り込みを発生させるためには，ISRの Interrupt Type をRISING_EDGEにしておきます．<br>
+<img src="img/08_isr_fifo_empty.png"><br>
+割り込み毎にFIFOへデータを流し込む事で別の処理の合間に処理できます．<br>
+もちろん，FIFO_EMPTYをポーリングして流しこむこともできますが，最後のパルス出力が終わる前に書き込まないと途切れて表示が更新されてしまう可能性があります．割り込み時も直ちにFIFOへデータを流し込む必要があります．</p>
 <hr>
 <h3>コーディングのtips</h3>
 <p>WS2812へ送り込むバイト列は，GRBの順で送り込みます．<br>
